@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full-featured Demo (Open Source) - Editflo Documentation</title>
+    <title>Cloud Quick Start - Editflo Documentation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -85,6 +85,16 @@
             }
         }
 
+        @media (max-width: 1024px) {
+            .right-sidebar-lg {
+                display: none;
+            }
+
+            .main-content-lg {
+                margin-right: 0;
+            }
+        }
+
         body {
             font-family: "Inter", sans-serif;
             font-optical-sizing: auto;
@@ -124,6 +134,22 @@
             background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
             transform: rotate(30deg);
         }
+
+        /* Right sidebar table of contents styles */
+        .toc-link {
+            transition: all 0.2s ease;
+        }
+
+        .toc-link:hover {
+            background-color: #f7fafc;
+            border-left-color: #4299e1;
+        }
+
+        .toc-link.active {
+            background-color: #ebf8ff;
+            border-left-color: #4299e1;
+            color: #2b6cb0;
+        }
     </style>
 </head>
 
@@ -143,7 +169,7 @@
 
     <div class="flex min-h-screen">
         <!-- Left Sidebar - Hidden on Mobile -->
-        <nav class="w-80 bg-gray-800 text-white h-screen fixed left-0 overflow-y-auto z-30 border-r border-gray-700 sidebar-transition lg:translate-x-0 -translate-x-full"
+        <nav class="w-60 lg:w-[240px] bg-gray-800 text-white h-screen fixed left-0 overflow-y-auto z-30 border-r border-gray-700 sidebar-transition lg:translate-x-0 -translate-x-full"
             id="leftSidebar">
             <div class="p-6 border-b border-gray-700 bg-gray-900 lg:block hidden">
                 <h1 class="text-lg font-semibold text-blue-400">Editflo</h1>
@@ -162,17 +188,17 @@
                     <!-- Getting Started Dropdown -->
                     <div class="mb-2">
                         <button
-                            class="flex items-center justify-between w-full px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors "
+                            class="flex items-center justify-between w-full px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors bg-gray-700 text-blue-400"
                             onclick="toggleDropdown('getting-started-dropdown')">
                             <div class="flex items-center">
                                 <i class="fas fa-rocket mr-3 w-4 text-center"></i>
                                 <span class="font-medium">Getting started</span>
                             </div>
-                            <i class="fas fa-chevron-down text-xs transition-transform duration-300 "
+                            <i class="fas fa-chevron-down text-xs transition-transform duration-300 rotate-180"
                                 id="getting-started-arrow"></i>
                         </button>
 
-                        <div class="mt-1 hidden"
+                        <div class="mt-1 block"
                             id="getting-started-dropdown">
                             <!-- Introduction -->
                             <a href="http://localhost/editflo/documentation/getting-started/introduction"
@@ -184,14 +210,14 @@
                             <!-- Installation Dropdown -->
                             <div class="mt-1">
                                 <button
-                                    class="flex items-center justify-between w-full pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors "
+                                    class="flex items-center justify-between w-full pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors bg-gray-700 text-blue-400"
                                     onclick="toggleDropdown('installation-dropdown')">
                                     <span>Installation</span>
-                                    <i class="fas fa-chevron-down text-xs transition-transform duration-300 "
+                                    <i class="fas fa-chevron-down text-xs transition-transform duration-300 rotate-180"
                                         id="installation-arrow"></i>
                                 </button>
 
-                                <div class="mt-1 hidden"
+                                <div class="mt-1 block"
                                     id="installation-dropdown">
 
                                     <!-- Cloud Installation Dropdown -->
@@ -200,20 +226,20 @@
                                             class="flex items-center justify-between w-full pl-16 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors "
                                             onclick="toggleDropdown('cloud-dropdown')">
                                             <span>Cloud</span>
-                                            <i class="fas fa-chevron-down text-xs transition-transform duration-300 "
+                                            <i class="fas fa-chevron-down text-xs transition-transform duration-300 rotate-180"
                                                 id="cloud-arrow"></i>
                                         </button>
 
-                                        <div class="mt-1 hidden"
+                                        <div class="mt-1 block"
                                             id="cloud-dropdown">
                                             <a href="http://localhost/editflo/documentation/getting_started_cloud"
-                                                class="block pl-20 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors "
+                                                class="block pl-20 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors bg-gray-700 text-blue-400"
                                                 onclick="closeMobileSidebar()">
                                                 • Cloud Start
                                             </a>
 
                                             <a href="http://localhost/editflo/documentation/getting-started/installation/cloud/quick-start"
-                                                class="block pl-20 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors "
+                                                class="block pl-20 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors bg-gray-700 text-blue-400"
                                                 onclick="closeMobileSidebar()">
                                                 • Quick start guide
                                             </a>
@@ -672,28 +698,28 @@
                     <!-- Examples Section -->
                     <div class="mb-2">
                         <a href="http://localhost/editflo/documentation/examples"
-                            class="flex items-center justify-between w-full px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors bg-gray-700 text-blue-400"
+                            class="flex items-center justify-between w-full px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors "
                             onclick="toggleDropdown('examples-dropdown'); closeMobileSidebar();">
                             <div class="flex items-center">
                                 <i class="fas fa-laptop-code mr-3 w-4 text-center"></i>
                                 <span class="font-medium">Examples</span>
                             </div>
-                            <i class="fas fa-chevron-down text-xs transition-transform duration-300 rotate-180"
+                            <i class="fas fa-chevron-down text-xs transition-transform duration-300 "
                                 id="examples-arrow"></i>
                         </a>
 
-                        <div class="mt-1 block"
+                        <div class="mt-1 hidden"
                             id="examples-dropdown">
                             <!-- General Examples -->
                             <div class="mt-1">
                                 <a href="http://localhost/editflo/documentation/examples/general"
-                                    class="flex items-center justify-between w-full pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors bg-gray-700 text-blue-400"
+                                    class="flex items-center justify-between w-full pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors "
                                     onclick="toggleDropdown('general-examples-dropdown'); closeMobileSidebar();">
                                     <span>General examples</span>
-                                    <i class="fas fa-chevron-down text-xs transition-transform duration-300 rotate-180"
+                                    <i class="fas fa-chevron-down text-xs transition-transform duration-300 "
                                         id="general-examples-arrow"></i>
                                 </a>
-                                <div class="mt-1 block"
+                                <div class="mt-1 hidden"
                                     id="general-examples-dropdown">
                                     <a href="http://localhost/editflo/documentation/examples/general/basic"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors "
@@ -701,7 +727,7 @@
                                         • Basic example
                                     </a>
                                     <a href="http://localhost/editflo/documentation/examples/general/full-featured-open-source"
-                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors bg-gray-700 text-blue-400"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors "
                                         onclick="closeMobileSidebar()">
                                         • Full-featured demo / Open Source features
                                     </a>
@@ -864,7 +890,7 @@
         </nav>
 
         <!-- Main Content -->
-        <main class="flex-1 lg:ml-80 lg:mr-80 min-h-screen mobile-full main-content-full">
+        <main class="flex-1 lg:ml-[240px] lg:mr-[240px] min-h-screen bg-gray-50">
             <!-- Top Bar - Hidden on Mobile -->
             <div
                 class="bg-white border-b border-gray-200 px-8 py-4 justify-between items-center sticky top-0 z-20 lg:flex hidden">
@@ -872,11 +898,11 @@
                     <a href="http://localhost/editflo/documentation"
                         class="text-blue-500 hover:text-blue-700">Documentation</a>
                                             <span class="mx-2">></span>
-                        <span class="text-gray-800">Examples</span>
+                        <span class="text-gray-800">Getting started</span>
                                                     <span class="mx-2">></span>
-                            <span class="text-gray-800">General examples</span>
+                            <span class="text-gray-800">Installation</span>
                                                             <span class="mx-2">></span>
-                                <span class="text-gray-800">Full featured opensource</span>
+                                <span class="text-gray-800">Cloud quickstart</span>
                                                                                         </div>
             </div>
 
@@ -887,23 +913,27 @@
                         class="text-blue-500 hover:text-blue-700">Docs</a>
                                             <span class="mx-2">></span>
                         <span class="text-gray-800 truncate">
-                            Examples > General examples > Full featured opensource                        </span>
+                            Getting started > Installation > Cloud quickstart                        </span>
                                     </div>
             </div>
 
             <!-- Content Area -->
             <div class="p-4 lg:p-8 max-w-full">
-                <div class="mx-auto min-h-screen">
+                <div class="max-w-4xl mx-auto content-area">
+                    <div class="mx-auto min-h-screen">
     <!-- Header Section -->
     <div class="mb-8">
-        <h1 class="text-3xl font-bold text-gray-800 mb-2">Full featured demo: Non-Premium Plugins only</h1>
-        <p class="text-lg text-gray-600">This example includes only non-premium plugins. These plugins are also used in the <a href="" class="text-blue-500">Full featured demo: Including Premium Plugins</a>.</p>
+        <h1 class="text-3xl font-bold text-gray-800 mb-2">Quick start: Editflo with Editflo Cloud</h1>
+        <p class="text-lg text-gray-600">Install Editflo using the Editflo Cloud</p>
     </div>
     <!-- Introduction Section -->
-    <!-- <div class="bg-white rounded-lg border border-gray-200 p-6 mb-8">
+    <div class="bg-white rounded-lg border border-gray-200 p-6 mb-8">
         <p class="text-gray-700 mb-6">
-            This example contains the plugins needed for the most common use cases.
+            Editflo 8 is a powerful and flexible rich text editor that can be embedded in web applications. This quick
+            start covers how to add a Editflo editor to a web page using the Editflo Cloud.
         </p>
+
+        <!-- Sign Up Section -->
         <div class="bg-blue-50 border-l-4 border-blue-500 p-4">
             <p class="text-blue-800 mb-2">
                 It only takes 2 minutes to create your free Editflo account and get the API key:
@@ -922,43 +952,119 @@
                 </button>
             </div>
         </div>
-    </div> -->
+    </div>
 
+    <!-- Include Script Section -->
+    <div class="bg-white rounded-lg border border-gray-200 p-6 mb-8">
+        <h2 class="text-xl font-semibold text-gray-800 mb-4">Include the Editflo script</h2>
+        <p class="text-gray-700 mb-4">
+            Include the following line of code in the <code
+                class="bg-gray-100 px-1 py-0.5 rounded text-sm">&lt;head&gt;</code> of an HTML page:
+        </p>
 
-    <p class="p-2 text-gray-700">Adding this content to an HTML file and opening it in a web browser will load a Editflo
-        editor.</p>
+        <!-- Code Block -->
+        <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+            <span class="text-blue-400">&lt;script </span>
+            <span class="text-green-400">src=</span>
+            <span class="text-yellow-300">"https://cdn.Editflo.cloud/1/no-api-key/Editflomce/8/Editflomce.min.js"</span>
+            <span class="text-green-400"> referrerpolicy=</span>
+            <span class="text-yellow-300">"origin"</span>
+            <span class="text-green-400"> crossorigin=</span>
+            <span class="text-yellow-300">"anonymous"</span>
+            <span class="text-blue-400">&gt;&lt;/script&gt;</span>
+        </div>
+    </div>
 
-    <!-- Editor Preview Section -->
-    <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden mb-8">
+    <!-- Initialize Section -->
+    <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <h2 class="text-xl font-semibold text-gray-800 mb-4">Initialize Editflo as part of a web form</h2>
+        <p class="text-gray-700 mb-4">
+            Initialize Editflo 8 on any element (or elements) on the web page by passing an object containing a <code
+                class="bg-gray-100 px-1 py-0.5 rounded text-sm">selector</code> value to <code
+                class="bg-gray-100 px-1 py-0.5 rounded text-sm">editflo.init()</code>. The <code
+                class="bg-gray-100 px-1 py-0.5 rounded text-sm">selector</code> value can be any valid CSS selector.
+        </p>
+
+        <p class="text-gray-700 mb-4">
+            For example, to replace <code
+                class="bg-gray-100 px-1 py-0.5 rounded text-sm">&lt;textarea id="mytextarea"&gt;</code> with a Editflo 8
+            editor instance, pass the selector <code
+                class="bg-gray-100 px-1 py-0.5 rounded text-sm">'#mytextarea'</code> to <code
+                class="bg-gray-100 px-1 py-0.5 rounded text-sm">editflo.init()</code>:
+        </p>
+
+        <!-- Complete HTML Code Block -->
+        <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+            <span class="text-blue-400">&lt;!DOCTYPE html&gt;</span><br>
+            <span class="text-blue-400">&lt;html lang="en"&gt;</span><br>
+            <span class="text-blue-400">&lt;head&gt;</span><br>
+            <span class="text-gray-300 ml-4"></span><span class="text-blue-400">&lt;meta charset="UTF-8"&gt;</span><br>
+            <span class="text-gray-300 ml-4"></span><span class="text-blue-400">&lt;meta name="viewport"
+                content="width=device-width, initial-scale=1"&gt;</span><br>
+            <br>
+            <span class="text-gray-300 ml-4"></span><span class="text-blue-400">&lt;script </span><span
+                class="text-green-400">src=</span><span
+                class="text-yellow-300">"https://cdn.Editflo.cloud/1/no-api-key/Editflomce/8/Editflomce.min.js"</span><span
+                class="text-green-400"> referrerpolicy=</span><span class="text-yellow-300">"origin"</span><span
+                class="text-green-400"> crossorigin=</span><span class="text-yellow-300">"anonymous"</span><span
+                class="text-blue-400">&gt;&lt;/script&gt;</span><br>
+            <span class="text-gray-300 ml-4"></span><span class="text-blue-400">&lt;script&gt;</span><br>
+            <span class="text-gray-300 ml-8"></span><span class="text-purple-400">Editflomce</span><span
+                class="text-gray-300">.</span><span class="text-yellow-300">init</span><span
+                class="text-gray-300">({</span><br>
+            <span class="text-gray-300 ml-12"></span><span class="text-blue-400">selector</span><span
+                class="text-gray-300">: </span><span class="text-green-400">'#mytextarea'</span><br>
+            <span class="text-gray-300 ml-8"></span><span class="text-gray-300">});</span><br>
+            <span class="text-gray-300 ml-4"></span><span class="text-blue-400">&lt;/script&gt;</span><br>
+            <span class="text-blue-400">&lt;/head&gt;</span><br>
+            <br>
+            <span class="text-blue-400">&lt;body&gt;</span><br>
+            <span class="text-gray-300 ml-4"></span><span class="text-blue-400">&lt;h1&gt;</span><span
+                class="text-gray-300">EditfloMCE Quick Start Guide</span><span
+                class="text-blue-400">&lt;/h1&gt;</span><br>
+            <span class="text-gray-300 ml-4"></span><span class="text-blue-400">&lt;form method="post"&gt;</span><br>
+            <span class="text-gray-300 ml-8"></span><span class="text-blue-400">&lt;textarea </span><span
+                class="text-green-400">id=</span><span class="text-yellow-300">"mytextarea"</span><span
+                class="text-blue-400">&gt;</span><span class="text-gray-300">Hello, World!</span><span
+                class="text-blue-400">&lt;/textarea&gt;</span><br>
+            <span class="text-gray-300 ml-4"></span><span class="text-blue-400">&lt;/form&gt;</span><br>
+            <span class="text-blue-400">&lt;/body&gt;</span><br>
+            <span class="text-blue-400">&lt;/html&gt;</span>
+        </div>
+    </div>
+
+    <p class="p-4">Adding this content to an HTML file and opening it in a web browser will load a EditfloMCE editor,
+        such as:</p>
+    <!-- Editor Table with Tabs -->
+    <div class="bg-white rounded-lg shadow-sm border border-border-light overflow-hidden mb-8">
         <!-- Tabs -->
-        <div class="border-b border-gray-200">
+        <div class="border-b border-border-light">
             <div class="flex">
-                <button class="tab-button py-3 px-6 border-b-2 border-blue-600 text-blue-600 font-medium"
+                <button class="tab-button py-3 px-6 border-b-2 border-primary text-primary font-medium"
                     data-tab="editflo">
                     Editflo
                 </button>
                 <button
-                    class="tab-button py-3 px-6 border-b-2 border-transparent text-gray-500 hover:text-gray-700 font-medium"
+                    class="tab-button py-3 px-6 border-b-2 border-transparent text-text-light hover:text-text-dark font-medium"
                     data-tab="html">
                     HTML
                 </button>
                 <button
-                    class="tab-button py-3 px-6 border-b-2 border-transparent text-gray-500 hover:text-gray-700 font-medium"
+                    class="tab-button py-3 px-6 border-b-2 border-transparent text-text-light hover:text-text-dark font-medium"
                     data-tab="js">
                     JS
                 </button>
             </div>
         </div>
+
         <!-- Tab Content -->
         <div class="p-6">
-            <!-- Editflo Tab (Main Preview) -->
-            <div id="editflo-tab" class="tab-content">
-                <img src="http://localhost/editflo/assets/image.png" class="w-full max-w-4xl mx-auto rounded-lg shadow-sm"
-                    alt="Editflo Editor Preview">
-            </div>
+            <img src="http://localhost/editflo/assets/image.png" width="full" height="200" alt="">
+
+
             <!-- HTML Tab -->
             <div id="html-tab" class="tab-content hidden">
-                <div class="bg-gray-900 text-gray-100 p-6 rounded-lg font-mono text-sm">
+                <div class="bg-code-bg text-gray-200 p-4 rounded-md font-mono text-sm">
                     <span class="text-blue-400">&lt;!DOCTYPE html&gt;</span><br>
                     <span class="text-blue-400">&lt;html&gt;</span><br>
                     <span class="text-blue-400">&lt;head&gt;</span><br>
@@ -973,76 +1079,120 @@
                     <span class="text-blue-400">&lt;/html&gt;</span>
                 </div>
             </div>
+
             <!-- JS Tab -->
             <div id="js-tab" class="tab-content hidden">
-                <div class="bg-gray-900 text-gray-100 p-6 rounded-lg font-mono text-sm">
+                <div class="bg-code-bg text-gray-200 p-4 rounded-md font-mono text-sm">
                     <span class="text-green-400">// Initialize Editflo</span><br>
-                    <span class="text-purple-400">editflo</span><span class="text-gray-300">.</span><span
-                        class="text-yellow-300">init</span><span class="text-gray-300">({</span><br>
-                    &nbsp;&nbsp;<span class="text-blue-400">selector</span><span class="text-gray-300">: </span><span
-                        class="text-green-400">'#mytextarea'</span><span class="text-gray-300">,</span><br>
-                    &nbsp;&nbsp;<span class="text-blue-400">license_key</span><span class="text-gray-300">: </span><span
-                        class="text-green-400">'gpl'</span><span class="text-gray-300">,</span><br>
-                    &nbsp;&nbsp;<span class="text-blue-400">height</span><span class="text-gray-300">: </span><span
-                        class="text-orange-400">300</span><br>
-                    <span class="text-gray-300">});</span>
+                    <span class="text-purple-400">Editflo</span>.<span class="text-yellow-400">init</span>({<br>
+                    &nbsp;&nbsp;<span class="text-blue-400">selector</span>: <span
+                        class="text-green-400">'#myTextarea'</span>,<br>
+                    &nbsp;&nbsp;<span class="text-blue-400">plugins</span>: <span class="text-green-400">'advlist
+                        autolink lists link image charmap print preview anchor'</span>,<br>
+                    &nbsp;&nbsp;<span class="text-blue-400">toolbar</span>: <span class="text-green-400">'undo redo |
+                        styleselect | bold italic | alignleft aligncenter alignright alignjustify'</span>,<br>
+                    &nbsp;&nbsp;<span class="text-blue-400">height</span>: <span class="text-orange-400">300</span><br>
+                    });
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Save Content Section -->
-    <div class="bg-white rounded-lg border border-gray-200 p-4 md:p-6 mb-8">
-        <h2 class="text-lg md:text-xl font-semibold text-gray-800 mb-4">Excluded plugins</h2>
-
-        <div class="overflow-x-auto -mx-4 md:mx-0">
-            <table class="min-w-full border-collapse">
-                <thead>
-                    <tr class="border-b border-gray-300">
-                        <th class="text-left py-3 px-4 font-medium text-gray-700 w-3/5 md:w-2/3">Excluded plugins</th>
-                        <th class="text-left py-3 px-4 font-medium text-gray-700 w-2/5 md:w-1/3">Notes</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="border-b border-gray-200">
-                        <td class="py-3 px-4 text-gray-800 align-top">All premium plugins.</td>
-                        <td class="py-3 px-4 text-gray-600 align-top">Use the Full featured demo including Premium Plugins</td>
-                    </tr>
-                    <tr class="border-b border-gray-200">
-                        <td class="py-3 px-4 text-gray-800 align-top">Autoresize</td>
-                        <td class="py-3 px-4 text-gray-600 align-top">Resizes the editor to fit the content.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="mt-6 md:mt-8">
-            <h2 class="text-lg md:text-xl font-semibold text-gray-800 mb-3 md:mb-4">Save the content from the editor</h2>
-            <p class="text-gray-700 mb-3 md:mb-4 text-sm md:text-base">
-                To retrieve content from the editor, either process the content with a form handler or use the
-                <code class="bg-gray-100 px-1 py-0.5 rounded text-xs md:text-sm font-mono">getContent</code> API.
+        <!-- Update API Key Section -->
+        <div class="bg-white rounded-lg border border-gray-200 p-6 mb-8">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Update the "no-api-key" placeholder with your API key
+            </h2>
+            <p class="text-gray-700 mb-6">
+                To remove the notice:
             </p>
-            <p class="text-gray-700 text-sm md:text-base">
-                If you use a form handler, once the
-                <code class="bg-gray-100 px-1 py-0.5 rounded text-xs md:text-sm font-mono">&lt;form&gt;</code>
-                is submitted, Editflo 8 will
-                <code class="bg-gray-100 px-1 py-0.5 rounded text-xs md:text-sm font-mono">POST</code>
-                the content in the same way as a normal HTML
-                <code class="bg-gray-100 px-1 py-0.5 rounded text-xs md:text-sm font-mono">&lt;textarea&gt;</code>,
-                including the HTML elements and inline CSS of the editor content. The host's form handler can process
-                the submitted content in the same way as content from a regular
-                <code class="bg-gray-100 px-1 py-0.5 rounded text-xs md:text-sm font-mono">&lt;textarea&gt;</code>.
+
+            <!-- Warning Box -->
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0">
+                        <i class="fas fa-exclamation-triangle text-yellow-500 mt-1"></i>
+                    </div>
+                    <div class="ml-3">
+                        <p class="text-yellow-700 font-medium">Warning</p>
+                        <p class="text-yellow-600 mt-1">This domain is not registered with Editflo Cloud. Please see the
+                            quick start guide or create an account.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-gray-700 mb-4">
+                Update the <code class="bg-gray-100 px-1 py-0.5 rounded text-sm">[no-api-key]</code> placeholder in the
+                source script (<code class="bg-gray-100 px-1 py-0.5 rounded text-sm">&lt;script src...&gt;</code>) with
+                your Editflo Cloud API key, which is created when signing up to the Editflo Cloud.
+            </p>
+
+            <p class="text-gray-700 mb-6">
+                Signing up for a Editflo Cloud API key will also provide a trial of the Premium Plugins.
             </p>
         </div>
+
+        <!-- Save Content Section -->
+        <div class="bg-white rounded-lg  p-6 mb-8">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Save the content from the editor</h2>
+            <p class="text-gray-700 mb-4">
+                To retrieve content from the editor, either process the content with a form handler or use the <code
+                    class="bg-gray-100 px-1 py-0.5 rounded text-sm">getContent</code> API.
+            </p>
+            <p class="text-gray-700">
+                If you use a form handler, once the <code
+                    class="bg-gray-100 px-1 py-0.5 rounded text-sm">&lt;form&gt;</code> is submitted, Editflo 8 will
+                <code class="bg-gray-100 px-1 py-0.5 rounded text-sm">POST</code> the content in the same way as a
+                normal HTML <code class="bg-gray-100 px-1 py-0.5 rounded text-sm">&lt;textarea&gt;</code>, including the
+                HTML elements and inline CSS of the editor content. The hosts form handler can process the submitted
+                content in the same way as content from a regular <code
+                    class="bg-gray-100 px-1 py-0.5 rounded text-sm">&lt;textarea&gt;</code>.
+            </p>
+        </div>
+        <!-- Next Steps Section -->
+        <div class="bg-white border border-gray-200 p-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Next Steps</h2>
+            <p class="text-gray-700 mb-4">For information on:</p>
+
+            <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                <li>Customizing Editflo, see: <a href="#" class="text-blue-600 hover:text-blue-800 underline">Basic
+                        Setup</a>.</li>
+                <li>The three editor modes, see:
+                    <ul class="list-circle list-inside ml-6 mt-2 space-y-1">
+                        <li><a href="#" class="text-blue-600 hover:text-blue-800 underline">Editflo classic editing
+                                mode</a>.</li>
+                        <li><a href="#" class="text-blue-600 hover:text-blue-800 underline">Editflo inline editing
+                                mode</a>.</li>
+                        <li><a href="#" class="text-blue-600 hover:text-blue-800 underline">Editflo distraction-free
+                                editing mode</a>.</li>
+                    </ul>
+                </li>
+                <li>Adding Editflo plugins, see: <a href="#" class="text-blue-600 hover:text-blue-800 underline">Work
+                        with plugins to extend Editflo</a>.</li>
+                <li>Localizing the Editflo editor, see: <a href="#"
+                        class="text-blue-600 hover:text-blue-800 underline">Localize Editflo</a>.</li>
+                <li>For information on the CSS required to render some Editflo elements outside of the editor, see: <a
+                        href="#" class="text-blue-600 hover:text-blue-800 underline">CSS for rendering Editflo content
+                        outside the editor</a>.</li>
+            </ul>
+            <!-- Code Block for API Key Update -->
+            <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                <span class="text-blue-400">&lt;script </span>
+                <span class="text-green-400">src=</span>
+                <span class="text-yellow-300">"https://cdn.Editflo.cloud/1/</span>
+                <span class="text-red-400">YOUR-API-KEY-HERE</span>
+                <span class="text-yellow-300">/Editflomce/8/Editflomce.min.js"</span>
+                <span class="text-green-400"> referrerpolicy=</span>
+                <span class="text-yellow-300">"origin"</span>
+                <span class="text-green-400"> crossorigin=</span>
+                <span class="text-yellow-300">"anonymous"</span>
+                <span class="text-blue-400">&gt;&lt;/script&gt;</span>
+            </div>
+        </div>
+
     </div>
-
-    <!-- Next Steps Section -->
-
 </div>
 
 <script>
     // Tab functionality
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContents = document.querySelectorAll('.tab-content');
 
@@ -1052,13 +1202,13 @@
 
                 // Remove active class from all buttons
                 tabButtons.forEach(btn => {
-                    btn.classList.remove('border-blue-600', 'text-blue-600');
-                    btn.classList.add('border-transparent', 'text-gray-500', 'hover:text-gray-700');
+                    btn.classList.remove('border-primary', 'text-primary');
+                    btn.classList.add('border-transparent', 'text-text-light');
                 });
 
                 // Add active class to clicked button
-                button.classList.add('border-blue-600', 'text-blue-600');
-                button.classList.remove('border-transparent', 'text-gray-500', 'hover:text-gray-700');
+                button.classList.add('border-primary', 'text-primary');
+                button.classList.remove('border-transparent', 'text-text-light');
 
                 // Hide all tab contents
                 tabContents.forEach(content => {
@@ -1066,32 +1216,38 @@
                 });
 
                 // Show selected tab content
-                const targetTab = document.getElementById(`${tabId}-tab`);
-                if (targetTab) {
-                    targetTab.classList.remove('hidden');
-                }
+                document.getElementById(`${tabId}-tab`).classList.remove('hidden');
             });
         });
-
-        // Set default active tab
-        const defaultTab = document.querySelector('.tab-button[data-tab="editflo"]');
-        if (defaultTab) {
-            defaultTab.click();
-        }
     });
-</script>            </div>
+</script>                </div>
+            </div>
         </main>
 
-        <!-- Right Sidebar - Only Help Card -->
-        <aside
-            class="w-80 bg-white border-l border-gray-200 h-screen fixed right-0 overflow-y-auto z-20 hidden xl:block right-sidebar">
+        <!-- Right Sidebar - Table of Contents -->
+        <aside class="w-60 lg:w-[240px] bg-white border-l border-gray-200 h-screen fixed right-0 top-0 overflow-y-auto z-20 hidden lg:block">
             <div class="p-6">
+                <!-- Table of Contents Header -->
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2 flex items-center">
+                        <i class="fas fa-list-ol text-blue-500 mr-2"></i>
+                        On This Page
+                    </h3>
+                    <p class="text-sm text-gray-600">Jump to specific sections</p>
+                </div>
+
+                <!-- Table of Contents Navigation -->
+                <nav class="space-y-1" id="pageToc">
+                    <!-- TOC items will be generated by JavaScript -->
+                </nav>
+
+                <!-- Divider -->
+                <div class="my-6 border-t border-gray-200"></div>
+
                 <!-- Help Card -->
-                <div
-                    class="bg-gradient-to-br from-orange-50 to-red-50 border border-orange-200 rounded-xl p-4 shadow-sm">
+                <div class="bg-gradient-to-br from-orange-50 to-red-50 border border-orange-200 rounded-xl p-4 shadow-sm">
                     <div class="flex items-start mb-3">
-                        <div
-                            class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                        <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
                             <i class="fas fa-life-ring text-orange-600"></i>
                         </div>
                         <div>
@@ -1099,11 +1255,24 @@
                             <p class="text-xs text-gray-600">Stuck somewhere? Get support from our team.</p>
                         </div>
                     </div>
-                    <button
-                        class="w-full bg-white hover:bg-orange-50 text-orange-600 border border-orange-300 text-sm font-medium py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center">
+                    <button class="w-full bg-white hover:bg-orange-50 text-orange-600 border border-orange-300 text-sm font-medium py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center">
                         <i class="fas fa-headset mr-2"></i>
                         Contact Support
                     </button>
+                </div>
+
+                <!-- Promotional Section -->
+                <div class="mt-6 promo-card p-4 text-white">
+                    <div class="relative z-10">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-gem text-yellow-300 mr-2"></i>
+                            <h4 class="font-semibold text-sm">Free 14-Day Trial</h4>
+                        </div>
+                        <p class="text-xs mb-3 opacity-90">Try every feature in our Professional Plan for 14 days with no commitment.</p>
+                        <button class="w-full bg-white text-purple-600 hover:bg-gray-100 text-xs font-semibold py-2 px-3 rounded-lg transition-colors">
+                            Start Trial
+                        </button>
+                    </div>
                 </div>
             </div>
         </aside>
@@ -1111,16 +1280,13 @@
 
     <!-- Mobile TOC Button -->
     <div class="fixed bottom-6 right-6 z-40 lg:hidden">
-        <button
-            class="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200"
-            onclick="toggleMobileTOC()">
+        <button class="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200" onclick="toggleMobileTOC()">
             <i class="fas fa-list-ol text-xl"></i>
         </button>
     </div>
 
     <!-- Mobile TOC Panel -->
-    <div class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 lg:hidden"
-        id="mobileTOC">
+    <div class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 lg:hidden" id="mobileTOC">
         <div class="p-6 h-full overflow-y-auto">
             <!-- Enhanced Header -->
             <div class="flex justify-between items-center mb-6 pb-4 border-b border-gray-200">
@@ -1128,8 +1294,7 @@
                     <i class="fas fa-list-ol text-blue-500 text-xl mr-3"></i>
                     <h3 class="text-xl font-semibold text-gray-800">Table of Contents</h3>
                 </div>
-                <button class="text-gray-500 hover:text-gray-700 p-2 rounded-lg hover:bg-gray-100 transition-colors"
-                    onclick="toggleMobileTOC()">
+                <button class="text-gray-500 hover:text-gray-700 p-2 rounded-lg hover:bg-gray-100 transition-colors" onclick="toggleMobileTOC()">
                     <i class="fas fa-times text-2xl"></i>
                 </button>
             </div>
@@ -1151,12 +1316,13 @@
                 leftSidebar.classList.remove('-translate-x-full');
             });
 
-            // Generate Table of Contents for mobile
+            // Generate Table of Contents for desktop and mobile
             generateTOC();
 
             function generateTOC() {
                 const contentArea = document.querySelector('.content-area');
                 const headings = contentArea?.querySelectorAll('h2, h3, h4');
+                const tocContainer = document.getElementById('pageToc');
                 const mobileTocContainer = document.getElementById('mobilePageToc');
 
                 if (headings && headings.length > 0) {
@@ -1167,27 +1333,59 @@
 
                         const level = parseInt(heading.tagName.substring(1));
                         let indentClass = '';
+                        let prefix = '';
 
-                        if (level === 3) {
-                            indentClass = 'ml-4';
+                        if (level === 2) {
+                            prefix = '';
+                            indentClass = 'pl-0';
+                        } else if (level === 3) {
+                            prefix = '— ';
+                            indentClass = 'pl-4';
                         } else if (level === 4) {
-                            indentClass = 'ml-8';
+                            prefix = '—— ';
+                            indentClass = 'pl-8';
                         }
+
+                        // Desktop TOC Item
+                        const listItem = document.createElement('div');
+                        listItem.className = `toc-item ${indentClass}`;
+                        listItem.innerHTML = `
+                            <a href="#${heading.id}" class="toc-link flex items-center py-2 px-3 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 group border-l-2 border-transparent">
+                                <span class="text-sm flex-1">${prefix}${heading.textContent}</span>
+                                <i class="fas fa-arrow-right text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                            </a>
+                        `;
+                        if (tocContainer) tocContainer.appendChild(listItem);
 
                         // Mobile TOC Item
                         const mobileListItem = document.createElement('div');
                         mobileListItem.className = `toc-item ${indentClass}`;
                         mobileListItem.innerHTML = `
-                        <a href="#${heading.id}" class="flex items-center py-3 px-3 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 group border-l-2 border-transparent">
-                            <span class="text-sm flex-1">${heading.textContent}</span>
-                        </a>
-                    `;
+                            <a href="#${heading.id}" class="flex items-center py-3 px-3 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 group border-l-2 border-transparent">
+                                <span class="text-sm flex-1">${prefix}${heading.textContent}</span>
+                            </a>
+                        `;
                         if (mobileTocContainer) mobileTocContainer.appendChild(mobileListItem);
 
-                        // Add click event
-                        const link = mobileListItem.querySelector('a');
+                        // Add click events
+                        const link = listItem.querySelector('a');
+                        const mobileLink = mobileListItem.querySelector('a');
+
                         link.addEventListener('click', function(e) {
                             e.preventDefault();
+                            setActiveTOCLink(this);
+                            const target = document.getElementById(heading.id);
+                            if (target) {
+                                target.scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'start'
+                                });
+                            }
+                        });
+
+                        mobileLink.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            setActiveTOCLink(this);
                             const target = document.getElementById(heading.id);
                             if (target) {
                                 target.scrollIntoView({
@@ -1200,8 +1398,62 @@
                     });
                 } else {
                     const noContentMsg = '<div class="text-gray-500 text-sm text-center py-4">No sections available</div>';
+                    if (tocContainer) tocContainer.innerHTML = noContentMsg;
                     if (mobileTocContainer) mobileTocContainer.innerHTML = noContentMsg;
                 }
+
+                // Add scroll spy to highlight active TOC link
+                window.addEventListener('scroll', debounce(highlightActiveTOCLink, 100));
+                highlightActiveTOCLink(); // Initial highlight
+            }
+
+            function setActiveTOCLink(link) {
+                // Remove active class from all TOC links
+                document.querySelectorAll('.toc-link').forEach(el => {
+                    el.classList.remove('active');
+                    el.classList.remove('bg-blue-50', 'text-blue-600', 'border-blue-500');
+                    el.classList.add('border-transparent');
+                });
+
+                // Add active class to clicked link
+                link.classList.add('active', 'bg-blue-50', 'text-blue-600', 'border-blue-500');
+                link.classList.remove('border-transparent');
+            }
+
+            function highlightActiveTOCLink() {
+                const headings = document.querySelectorAll('.content-area h2, .content-area h3, .content-area h4');
+                let currentActive = null;
+
+                headings.forEach(heading => {
+                    const rect = heading.getBoundingClientRect();
+                    if (rect.top >= 0 && rect.top <= window.innerHeight / 3) {
+                        currentActive = heading.id;
+                    }
+                });
+
+                if (currentActive) {
+                    document.querySelectorAll('.toc-link').forEach(link => {
+                        if (link.getAttribute('href') === `#${currentActive}`) {
+                            link.classList.add('active', 'bg-blue-50', 'text-blue-600', 'border-blue-500');
+                            link.classList.remove('border-transparent');
+                        } else {
+                            link.classList.remove('active', 'bg-blue-50', 'text-blue-600', 'border-blue-500');
+                            link.classList.add('border-transparent');
+                        }
+                    });
+                }
+            }
+
+            function debounce(func, wait) {
+                let timeout;
+                return function executedFunction(...args) {
+                    const later = () => {
+                        clearTimeout(timeout);
+                        func(...args);
+                    };
+                    clearTimeout(timeout);
+                    timeout = setTimeout(later, wait);
+                };
             }
         });
 
@@ -1247,6 +1499,11 @@
                 }
             }
 
+                            openDropdown('getting-started-dropdown', 'getting-started-arrow');
+            
+                            openDropdown('installation-dropdown', 'installation-arrow');
+            
+                            openDropdown('cloud-dropdown', 'cloud-arrow');
             
             
             
@@ -1264,10 +1521,6 @@
             
             
             
-            
-                            openDropdown('examples-dropdown', 'examples-arrow');
-            
-                            openDropdown('general-examples-dropdown', 'general-examples-arrow');
             
             
                     });

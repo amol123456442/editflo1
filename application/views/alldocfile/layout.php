@@ -168,7 +168,7 @@
 
     <div class="flex min-h-screen">
         <!-- Left Sidebar - Hidden on Mobile -->
-        <nav class="w-80 bg-gray-800 text-white h-screen fixed left-0 overflow-y-auto z-30 border-r border-gray-700 sidebar-transition lg:translate-x-0 -translate-x-full"
+        <nav class="w-64 lg:w-[260px] bg-gray-800 text-white h-screen fixed left-0 overflow-y-auto z-30 border-r border-gray-700 sidebar-transition lg:translate-x-0 -translate-x-full"
             id="leftSidebar">
             <div class="p-6 border-b border-gray-700 bg-gray-900 lg:block hidden">
                 <h1 class="text-lg font-semibold text-blue-400">Editflo</h1>
@@ -889,7 +889,7 @@
         </nav>
 
         <!-- Main Content -->
-        <main class="flex-1 lg:ml-80 lg:mr-80 min-h-screen mobile-full main-content-full main-content-lg">
+        <main class="flex-1 lg:pl-[260px] lg:pr-[260px] min-h-screen bg-gray-50 pt-16 lg:pt-0">
             <!-- Top Bar - Hidden on Mobile -->
             <div
                 class="bg-white border-b border-gray-200 px-8 py-4 justify-between items-center sticky top-0 z-20 lg:flex hidden">
@@ -912,7 +912,7 @@
             </div>
 
             <!-- Mobile Breadcrumb -->
-            <div class="lg:hidden bg-white border-b border-gray-200 px-4 py-3">
+            <div class="p-4 lg:p-8 max-w-4xl mx-auto">
                 <div class="text-sm text-gray-600 truncate">
                     <a href="<?php echo base_url('documentation'); ?>"
                         class="text-blue-500 hover:text-blue-700">Docs</a>
@@ -1127,7 +1127,7 @@
         </main>
 
         <!-- Right Sidebar - Table of Contents -->
-        <aside class="w-80 bg-white border-l border-gray-200 h-screen fixed right-0 overflow-y-auto z-20 hidden lg:block right-sidebar-lg">
+        <aside class="w-60 lg:w-[240px] bg-white border-l border-gray-200 h-screen fixed right-0 top-0 overflow-y-auto z-20 hidden lg:block">
             <div class="p-6">
                 <!-- Table of Contents Header -->
                 <div class="mb-6">

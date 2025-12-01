@@ -137,6 +137,14 @@ $route['documentation/examples/skins-icons/outside'] = 'documentation/examples_s
 $route['documentation/examples/skins-icons/small-icons'] = 'documentation/examples_skins_icons_small';
 $route['documentation/examples/skins-icons/snow'] = 'documentation/examples_skins_icons_snow';
 
+// Initial Configuration Routes
+// Initial Configuration Routes
+$route['documentation/initial-configuration'] = 'Documentation/initial_configuration';
+$route['documentation/initial-configuration/integration-options'] = 'Documentation/integration_options';
+$route['documentation/initial-configuration/size'] = 'Documentation/size';
+$route['documentation/initial-configuration/save-submit'] = 'Documentation/save_and_submit';
+$route['documentation/initial-configuration/promotions'] = 'Documentation/promotions';
+
 
 
 // Other main sections

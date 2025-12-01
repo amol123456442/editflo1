@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloud Quick Start - Editflo Documentation</title>
+    <title>Integration Options - Editflo Documentation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -169,7 +169,7 @@
 
     <div class="flex min-h-screen">
         <!-- Left Sidebar - Hidden on Mobile -->
-        <nav class="w-60 lg:w-[240px] bg-gray-800 text-white h-screen fixed left-0 overflow-y-auto z-30 border-r border-gray-700 sidebar-transition lg:translate-x-0 -translate-x-full"
+        <nav class="w-64 lg:w-[260px] bg-gray-800 text-white h-screen fixed left-0 overflow-y-auto z-30 border-r border-gray-700 sidebar-transition lg:translate-x-0 -translate-x-full"
             id="leftSidebar">
             <div class="p-6 border-b border-gray-700 bg-gray-900 lg:block hidden">
                 <h1 class="text-lg font-semibold text-blue-400">Editflo</h1>
@@ -188,17 +188,17 @@
                     <!-- Getting Started Dropdown -->
                     <div class="mb-2">
                         <button
-                            class="flex items-center justify-between w-full px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors bg-gray-700 text-blue-400"
+                            class="flex items-center justify-between w-full px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors "
                             onclick="toggleDropdown('getting-started-dropdown')">
                             <div class="flex items-center">
                                 <i class="fas fa-rocket mr-3 w-4 text-center"></i>
                                 <span class="font-medium">Getting started</span>
                             </div>
-                            <i class="fas fa-chevron-down text-xs transition-transform duration-300 rotate-180"
+                            <i class="fas fa-chevron-down text-xs transition-transform duration-300 "
                                 id="getting-started-arrow"></i>
                         </button>
 
-                        <div class="mt-1 block"
+                        <div class="mt-1 hidden"
                             id="getting-started-dropdown">
                             <!-- Introduction -->
                             <a href="http://localhost/editflo/documentation/getting-started/introduction"
@@ -210,14 +210,14 @@
                             <!-- Installation Dropdown -->
                             <div class="mt-1">
                                 <button
-                                    class="flex items-center justify-between w-full pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors bg-gray-700 text-blue-400"
+                                    class="flex items-center justify-between w-full pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors "
                                     onclick="toggleDropdown('installation-dropdown')">
                                     <span>Installation</span>
-                                    <i class="fas fa-chevron-down text-xs transition-transform duration-300 rotate-180"
+                                    <i class="fas fa-chevron-down text-xs transition-transform duration-300 "
                                         id="installation-arrow"></i>
                                 </button>
 
-                                <div class="mt-1 block"
+                                <div class="mt-1 hidden"
                                     id="installation-dropdown">
 
                                     <!-- Cloud Installation Dropdown -->
@@ -226,20 +226,20 @@
                                             class="flex items-center justify-between w-full pl-16 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors "
                                             onclick="toggleDropdown('cloud-dropdown')">
                                             <span>Cloud</span>
-                                            <i class="fas fa-chevron-down text-xs transition-transform duration-300 rotate-180"
+                                            <i class="fas fa-chevron-down text-xs transition-transform duration-300 "
                                                 id="cloud-arrow"></i>
                                         </button>
 
-                                        <div class="mt-1 block"
+                                        <div class="mt-1 hidden"
                                             id="cloud-dropdown">
                                             <a href="http://localhost/editflo/documentation/getting_started_cloud"
-                                                class="block pl-20 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors bg-gray-700 text-blue-400"
+                                                class="block pl-20 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors "
                                                 onclick="closeMobileSidebar()">
                                                 • Cloud Start
                                             </a>
 
                                             <a href="http://localhost/editflo/documentation/getting-started/installation/cloud/quick-start"
-                                                class="block pl-20 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors bg-gray-700 text-blue-400"
+                                                class="block pl-20 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors "
                                                 onclick="closeMobileSidebar()">
                                                 • Quick start guide
                                             </a>
@@ -697,28 +697,46 @@
 
                     <!-- Examples Section -->
                     <div class="mb-2">
-                        <a href="http://localhost/editflo/documentation/examples"
-                            class="flex items-center justify-between w-full px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors "
-                            onclick="toggleDropdown('examples-dropdown'); closeMobileSidebar();">
-                            <div class="flex items-center">
-                                <i class="fas fa-laptop-code mr-3 w-4 text-center"></i>
-                                <span class="font-medium">Examples</span>
-                            </div>
-                            <i class="fas fa-chevron-down text-xs transition-transform duration-300 "
-                                id="examples-arrow"></i>
-                        </a>
+                        <div class="relative">
+                            <!-- 1. Text + Icon (Click = Page Open) -->
+                            <a href="http://localhost/editflo/documentation/examples"
+                                class="flex items-center justify-between w-full px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors  pr-12"
+                                onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
+                                <div class="flex items-center flex-1">
+                                    <i class="fas fa-laptop-code mr-3 w-4 text-center"></i>
+                                    <span class="font-medium">Examples</span>
+                                </div>
+                            </a>
+
+                            <!-- 2. Arrow Button (Click = Only Dropdown Toggle) -->
+                            <button type="button"
+                                class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
+                                onclick="event.stopPropagation(); toggleDropdown('examples-dropdown');">
+                                <i class="fas fa-chevron-down text-xs transition-transform duration-300 "
+                                    id="examples-arrow"></i>
+                            </button>
+                        </div>
 
                         <div class="mt-1 hidden"
                             id="examples-dropdown">
                             <!-- General Examples -->
                             <div class="mt-1">
-                                <a href="http://localhost/editflo/documentation/examples/general"
-                                    class="flex items-center justify-between w-full pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors "
-                                    onclick="toggleDropdown('general-examples-dropdown'); closeMobileSidebar();">
-                                    <span>General examples</span>
-                                    <i class="fas fa-chevron-down text-xs transition-transform duration-300 "
-                                        id="general-examples-arrow"></i>
-                                </a>
+                                <div class="relative">
+                                    <!-- 1. Text Part - Click = Open Page -->
+                                    <a href="http://localhost/editflo/documentation/examples/general"
+                                        class="flex items-center w-full pl-12 pr-16 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors "
+                                        onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
+                                        <span>General examples</span>
+                                    </a>
+
+                                    <!-- 2. Arrow Button - Click = Only Toggle Dropdown -->
+                                    <button type="button"
+                                        class="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
+                                        onclick="event.stopPropagation(); toggleDropdown('general-examples-dropdown');">
+                                        <i class="fas fa-chevron-down text-xs transition-transform duration-300 "
+                                            id="general-examples-arrow"></i>
+                                    </button>
+                                </div>
                                 <div class="mt-1 hidden"
                                     id="general-examples-dropdown">
                                     <a href="http://localhost/editflo/documentation/examples/general/basic"
@@ -776,13 +794,24 @@
 
                             <!-- Skins and Icons Examples -->
                             <div class="mt-1">
-                                <button
-                                    class="flex items-center justify-between w-full pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors "
-                                    onclick="toggleDropdown('skins-icons-dropdown')">
-                                    <span>Skins and Icons examples</span>
-                                    <i class="fas fa-chevron-down text-xs transition-transform duration-300 "
-                                        id="skins-icons-arrow"></i>
-                                </button>
+                                <div class="relative">
+
+                                    <!-- 1. Text Part - Click = Open Page (Skins & Icons main page) -->
+                                    <a href="http://localhost/editflo/documentation/examples/skins-and-icons"
+                                        class="flex items-center w-full pl-12 pr-16 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors "
+                                        onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
+                                        <span>Skins and Icons examples</span>
+                                    </a>
+
+                                    <!-- 2. Arrow Button - Click = Only Toggle Dropdown (No page navigation) -->
+                                    <button type="button"
+                                        class="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
+                                        onclick="event.stopPropagation(); toggleDropdown('skins-icons-dropdown');">
+                                        <i class="fas fa-chevron-down text-xs transition-transform duration-300 "
+                                            id="skins-icons-arrow"></i>
+                                    </button>
+
+                                </div>
 
                                 <div class="mt-1 hidden"
                                     id="skins-icons-dropdown">
@@ -846,6 +875,60 @@
                         </div>
                     </div>
 
+                    <!-- Initial Configuration Section -->
+                    <div class="mb-2">
+                        <div class="relative">
+                            <!-- 1. Text + Icon (Click = Page Open) -->
+                            <a href="http://localhost/editflo/documentation/initial-configuration"
+                                class="flex items-center justify-between w-full px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors bg-gray-700 text-blue-400 pr-12"
+                                onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
+                                <div class="flex items-center flex-1">
+                                    <i class="fas fa-sliders-h mr-3 w-4 text-center"></i>
+                                    <span class="font-medium">Initial Configuration</span>
+                                </div>
+                            </a>
+
+                            <!-- 2. Arrow Button (Click = Only Dropdown Toggle) -->
+                            <button type="button"
+                                class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
+                                onclick="event.stopPropagation(); toggleDropdown('initial-configuration-dropdown');">
+                                <i class="fas fa-chevron-down text-xs transition-transform duration-300 rotate-180"
+                                    id="initial-configuration-arrow"></i>
+                            </button>
+                        </div>
+
+                        <div class="mt-1 block"
+                            id="initial-configuration-dropdown">
+                            <!-- Integration options -->
+                            <a href="http://localhost/editflo/documentation/initial-configuration/integration-options"
+                                class="block pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors bg-gray-700 text-blue-400"
+                                onclick="closeMobileSidebar()">
+                                Integration options
+                            </a>
+
+                            <!-- Size -->
+                            <a href="http://localhost/editflo/documentation/initial-configuration/size"
+                                class="block pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors "
+                                onclick="closeMobileSidebar()">
+                                Size
+                            </a>
+
+                            <!-- Save and submit -->
+                            <a href="http://localhost/editflo/documentation/initial-configuration/save-submit"
+                                class="block pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors "
+                                onclick="closeMobileSidebar()">
+                                Save and submit
+                            </a>
+
+                            <!-- Promotions -->
+                            <a href="http://localhost/editflo/documentation/initial-configuration/promotions"
+                                class="block pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors "
+                                onclick="closeMobileSidebar()">
+                                Promotions
+                            </a>
+                        </div>
+                    </div>
+
                     <!-- Other Main Navigation Items -->
                     <a href="http://localhost/editflo/documentation/integration"
                         class="flex items-center px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors "
@@ -890,7 +973,7 @@
         </nav>
 
         <!-- Main Content -->
-        <main class="flex-1 lg:ml-[240px] lg:mr-[240px] min-h-screen bg-gray-50">
+        <main class="flex-1 lg:pl-[260px] lg:pr-[260px] min-h-screen bg-gray-50 pt-16 lg:pt-0">
             <!-- Top Bar - Hidden on Mobile -->
             <div
                 class="bg-white border-b border-gray-200 px-8 py-4 justify-between items-center sticky top-0 z-20 lg:flex hidden">
@@ -898,22 +981,20 @@
                     <a href="http://localhost/editflo/documentation"
                         class="text-blue-500 hover:text-blue-700">Documentation</a>
                                             <span class="mx-2">></span>
-                        <span class="text-gray-800">Getting started</span>
+                        <span class="text-gray-800">Initial configuration</span>
                                                     <span class="mx-2">></span>
-                            <span class="text-gray-800">Installation</span>
-                                                            <span class="mx-2">></span>
-                                <span class="text-gray-800">Cloud quickstart</span>
+                            <span class="text-gray-800">Integration options</span>
                                                                                         </div>
             </div>
-
-            <!-- Mobile Breadcrumb -->
-            <div class="lg:hidden bg-white border-b border-gray-200 px-4 py-3">
+            <!-- Mobile Breadcrumb - सिर्फ Mobile पर दिखेगा (Desktop पर 100% hidden) -->
+            <div class="lg:hidden px-4 max-w-4xl mx-auto">
                 <div class="text-sm text-gray-600 truncate">
-                    <a href="http://localhost/editflo/documentation"
-                        class="text-blue-500 hover:text-blue-700">Docs</a>
-                                            <span class="mx-2">></span>
+                    <a href="http://localhost/editflo/documentation" class="text-blue-500 hover:text-blue-700">
+                        Docs
+                    </a>
+                                            <span class="mx-2">&gt;</span>
                         <span class="text-gray-800 truncate">
-                            Getting started > Installation > Cloud quickstart                        </span>
+                            Initial configuration > Integration options                        </span>
                                     </div>
             </div>
 
@@ -1036,163 +1117,722 @@
     <p class="p-4">Adding this content to an HTML file and opening it in a web browser will load a EditfloMCE editor,
         such as:</p>
     <!-- Editor Table with Tabs -->
-    <div class="bg-white rounded-lg shadow-sm border border-border-light overflow-hidden mb-8">
+    <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden mb-8">
         <!-- Tabs -->
-        <div class="border-b border-border-light">
+        <div class="border-b border-gray-200">
             <div class="flex">
-                <button class="tab-button py-3 px-6 border-b-2 border-primary text-primary font-medium"
-                    data-tab="editflo">
+                <button class="tab-button py-3 px-6 border-b-2 font-medium border-blue-600 text-blue-600" data-tab="editflo">
                     Editflo
                 </button>
-                <button
-                    class="tab-button py-3 px-6 border-b-2 border-transparent text-text-light hover:text-text-dark font-medium"
-                    data-tab="html">
+                <button class="tab-button py-3 px-6 border-b-2 font-medium border-transparent text-gray-500 hover:text-gray-700" data-tab="html">
                     HTML
                 </button>
-                <button
-                    class="tab-button py-3 px-6 border-b-2 border-transparent text-text-light hover:text-text-dark font-medium"
-                    data-tab="js">
+                <button class="tab-button py-3 px-6 border-b-2 font-medium border-transparent text-gray-500 hover:text-gray-700" data-tab="js">
                     JS
                 </button>
             </div>
         </div>
-
         <!-- Tab Content -->
         <div class="p-6">
-            <img src="http://localhost/editflo/assets/image.png" width="full" height="200" alt="">
-
-
+            <!-- Editflo Tab (Main Preview) -->
+            <div id="editflo-tab" class="tab-content">
+                <img src="http://localhost/editflo/assets/image.png" class="w-full max-w-4xl mx-auto rounded-lg shadow-sm" alt="Editflo Editor Preview">
+            </div>
             <!-- HTML Tab -->
             <div id="html-tab" class="tab-content hidden">
-                <div class="bg-code-bg text-gray-200 p-4 rounded-md font-mono text-sm">
+                <div class="bg-gray-900 text-gray-100 p-6 rounded-lg font-mono text-sm">
                     <span class="text-blue-400">&lt;!DOCTYPE html&gt;</span><br>
                     <span class="text-blue-400">&lt;html&gt;</span><br>
                     <span class="text-blue-400">&lt;head&gt;</span><br>
-                    &nbsp;&nbsp;<span class="text-blue-400">&lt;title&gt;</span>My Document<span
-                        class="text-blue-400">&lt;/title&gt;</span><br>
+                    &nbsp;&nbsp;<span class="text-blue-400">&lt;title&gt;</span>My Document<span class="text-blue-400">&lt;/title&gt;</span><br>
                     <span class="text-blue-400">&lt;/head&gt;</span><br>
                     <span class="text-blue-400">&lt;body&gt;</span><br>
-                    &nbsp;&nbsp;<span class="text-blue-400">&lt;p&gt;</span>Hello, <span
-                        class="text-blue-400">&lt;strong&gt;</span>World!<span
-                        class="text-blue-400">&lt;/strong&gt;</span><span class="text-blue-400">&lt;/p&gt;</span><br>
+                    &nbsp;&nbsp;<span class="text-blue-400">&lt;p&gt;</span>Hello, <span class="text-blue-400">&lt;strong&gt;</span>World!<span class="text-blue-400">&lt;/strong&gt;</span><span class="text-blue-400">&lt;/p&gt;</span><br>
                     <span class="text-blue-400">&lt;/body&gt;</span><br>
                     <span class="text-blue-400">&lt;/html&gt;</span>
                 </div>
             </div>
-
             <!-- JS Tab -->
             <div id="js-tab" class="tab-content hidden">
-                <div class="bg-code-bg text-gray-200 p-4 rounded-md font-mono text-sm">
+                <div class="bg-gray-900 text-gray-100 p-6 rounded-lg font-mono text-sm">
                     <span class="text-green-400">// Initialize Editflo</span><br>
-                    <span class="text-purple-400">Editflo</span>.<span class="text-yellow-400">init</span>({<br>
-                    &nbsp;&nbsp;<span class="text-blue-400">selector</span>: <span
-                        class="text-green-400">'#myTextarea'</span>,<br>
-                    &nbsp;&nbsp;<span class="text-blue-400">plugins</span>: <span class="text-green-400">'advlist
-                        autolink lists link image charmap print preview anchor'</span>,<br>
-                    &nbsp;&nbsp;<span class="text-blue-400">toolbar</span>: <span class="text-green-400">'undo redo |
-                        styleselect | bold italic | alignleft aligncenter alignright alignjustify'</span>,<br>
-                    &nbsp;&nbsp;<span class="text-blue-400">height</span>: <span class="text-orange-400">300</span><br>
-                    });
+                    <span class="text-purple-400">editflo</span><span class="text-gray-300">.</span><span class="text-yellow-300">init</span><span class="text-gray-300">({</span><br>
+                    &nbsp;&nbsp;<span class="text-blue-400">selector</span><span class="text-gray-300">: </span><span class="text-green-400">'#mytextarea'</span><span class="text-gray-300">,</span><br>
+                    &nbsp;&nbsp;<span class="text-blue-400">license_key</span><span class="text-gray-300">: </span><span class="text-green-400">'gpl'</span><span class="text-gray-300">,</span><br>
+                    &nbsp;&nbsp;<span class="text-blue-400">height</span><span class="text-gray-300">: </span><span class="text-orange-400">300</span><br>
+                    <span class="text-gray-300">});</span>
                 </div>
             </div>
         </div>
-        <!-- Update API Key Section -->
-        <div class="bg-white rounded-lg border border-gray-200 p-6 mb-8">
-            <h2 class="text-xl font-semibold text-gray-800 mb-4">Update the "no-api-key" placeholder with your API key
-            </h2>
-            <p class="text-gray-700 mb-6">
-                To remove the notice:
-            </p>
+    </div>
 
-            <!-- Warning Box -->
-            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
-                <div class="flex items-start">
-                    <div class="flex-shrink-0">
-                        <i class="fas fa-exclamation-triangle text-yellow-500 mt-1"></i>
+    <!-- Key Editor Options Section -->
+    <div class="bg-white rounded-lg border border-gray-200 p-6 mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">Key editor options for adding Editflo to an application</h2>
+
+        <!-- Target location for Editflo -->
+        <div class="mb-8">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Target location for Editflo</h3>
+
+            <!-- selector Option -->
+            <div class="mb-6">
+                <h4 class="text-lg font-medium text-gray-800 mb-2">selector</h4>
+                <p class="text-gray-700 mb-3">
+                    This option allows a CSS selector to be specified for the areas that Editflo should make editable.
+                </p>
+                <p class="text-gray-700 mb-3">
+                    When using this option in Editflo's regular editing mode, the element will be replaced with an iframe that Editflo will perform all operations within. When using this option in Editflo's inline editing mode, the selector can be used on any block element and will edit the content in place instead of replacing the element with an iframe.
+                </p>
+                <p class="text-gray-700 mb-3">
+                    For more information on the differences between regular and inline editing modes see <a href="#" class="text-blue-600 hover:text-blue-800 underline">Setup inline editing mode</a>.
+                </p>
+                <p class="text-gray-700 mb-3 font-medium">Type: String</p>
+
+                <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                    <p class="text-gray-700 mb-2 font-medium">Example: replace all textarea elements on the page</p>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-purple-400">Editflomce</span><span class="text-gray-300">.</span><span class="text-yellow-300">init</span><span class="text-gray-300">({</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">selector</span><span class="text-gray-300">: </span><span class="text-green-400">'textarea'</span><span class="text-gray-300"> </span><span class="text-green-400">// change this value according to your HTML</span><br>
+                        <span class="text-gray-300">});</span>
                     </div>
-                    <div class="ml-3">
-                        <p class="text-yellow-700 font-medium">Warning</p>
-                        <p class="text-yellow-600 mt-1">This domain is not registered with Editflo Cloud. Please see the
-                            quick start guide or create an account.</p>
+                </div>
+
+                <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                    <p class="text-gray-700 mb-2 font-medium">Example: replace a textarea element with id "editable"</p>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-purple-400">Editflomce</span><span class="text-gray-300">.</span><span class="text-yellow-300">init</span><span class="text-gray-300">({</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">selector</span><span class="text-gray-300">: </span><span class="text-green-400">'textarea#editable'</span><br>
+                        <span class="text-gray-300">});</span>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-gray-700 mb-2 font-medium">Example: inline editing mode on a div element with id "editable"</p>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-purple-400">Editflomce</span><span class="text-gray-300">.</span><span class="text-yellow-300">init</span><span class="text-gray-300">({</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">selector</span><span class="text-gray-300">: </span><span class="text-green-400">'div#editable'</span><span class="text-gray-300">,</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">inline</span><span class="text-gray-300">: </span><span class="text-orange-400">true</span><br>
+                        <span class="text-gray-300">});</span>
                     </div>
                 </div>
             </div>
 
-            <p class="text-gray-700 mb-4">
-                Update the <code class="bg-gray-100 px-1 py-0.5 rounded text-sm">[no-api-key]</code> placeholder in the
-                source script (<code class="bg-gray-100 px-1 py-0.5 rounded text-sm">&lt;script src...&gt;</code>) with
-                your Editflo Cloud API key, which is created when signing up to the Editflo Cloud.
-            </p>
+            <!-- target Option -->
+            <div class="mb-6">
+                <h4 class="text-lg font-medium text-gray-800 mb-2">target</h4>
+                <p class="text-gray-700 mb-3">
+                    Sometimes there might be already a reference to a DOM element at hand, for example when element is created dynamically. In such case initialising editor on it by selector might seem irrational (since selector - id or class should be created first). In such cases you can supply that element directly via target option.
+                </p>
+                <p class="text-gray-700 mb-3">
+                    The selector option has precedence over target, so in order for target to work, do not use the selector option.
+                </p>
+                <p class="text-gray-700 mb-3 font-medium">Type: Node</p>
 
-            <p class="text-gray-700 mb-6">
-                Signing up for a Editflo Cloud API key will also provide a trial of the Premium Plugins.
-            </p>
-        </div>
-
-        <!-- Save Content Section -->
-        <div class="bg-white rounded-lg  p-6 mb-8">
-            <h2 class="text-xl font-semibold text-gray-800 mb-4">Save the content from the editor</h2>
-            <p class="text-gray-700 mb-4">
-                To retrieve content from the editor, either process the content with a form handler or use the <code
-                    class="bg-gray-100 px-1 py-0.5 rounded text-sm">getContent</code> API.
-            </p>
-            <p class="text-gray-700">
-                If you use a form handler, once the <code
-                    class="bg-gray-100 px-1 py-0.5 rounded text-sm">&lt;form&gt;</code> is submitted, Editflo 8 will
-                <code class="bg-gray-100 px-1 py-0.5 rounded text-sm">POST</code> the content in the same way as a
-                normal HTML <code class="bg-gray-100 px-1 py-0.5 rounded text-sm">&lt;textarea&gt;</code>, including the
-                HTML elements and inline CSS of the editor content. The hosts form handler can process the submitted
-                content in the same way as content from a regular <code
-                    class="bg-gray-100 px-1 py-0.5 rounded text-sm">&lt;textarea&gt;</code>.
-            </p>
-        </div>
-        <!-- Next Steps Section -->
-        <div class="bg-white border border-gray-200 p-6">
-            <h2 class="text-xl font-semibold text-gray-800 mb-4">Next Steps</h2>
-            <p class="text-gray-700 mb-4">For information on:</p>
-
-            <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
-                <li>Customizing Editflo, see: <a href="#" class="text-blue-600 hover:text-blue-800 underline">Basic
-                        Setup</a>.</li>
-                <li>The three editor modes, see:
-                    <ul class="list-circle list-inside ml-6 mt-2 space-y-1">
-                        <li><a href="#" class="text-blue-600 hover:text-blue-800 underline">Editflo classic editing
-                                mode</a>.</li>
-                        <li><a href="#" class="text-blue-600 hover:text-blue-800 underline">Editflo inline editing
-                                mode</a>.</li>
-                        <li><a href="#" class="text-blue-600 hover:text-blue-800 underline">Editflo distraction-free
-                                editing mode</a>.</li>
-                    </ul>
-                </li>
-                <li>Adding Editflo plugins, see: <a href="#" class="text-blue-600 hover:text-blue-800 underline">Work
-                        with plugins to extend Editflo</a>.</li>
-                <li>Localizing the Editflo editor, see: <a href="#"
-                        class="text-blue-600 hover:text-blue-800 underline">Localize Editflo</a>.</li>
-                <li>For information on the CSS required to render some Editflo elements outside of the editor, see: <a
-                        href="#" class="text-blue-600 hover:text-blue-800 underline">CSS for rendering Editflo content
-                        outside the editor</a>.</li>
-            </ul>
-            <!-- Code Block for API Key Update -->
-            <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
-                <span class="text-blue-400">&lt;script </span>
-                <span class="text-green-400">src=</span>
-                <span class="text-yellow-300">"https://cdn.Editflo.cloud/1/</span>
-                <span class="text-red-400">YOUR-API-KEY-HERE</span>
-                <span class="text-yellow-300">/Editflomce/8/Editflomce.min.js"</span>
-                <span class="text-green-400"> referrerpolicy=</span>
-                <span class="text-yellow-300">"origin"</span>
-                <span class="text-green-400"> crossorigin=</span>
-                <span class="text-yellow-300">"anonymous"</span>
-                <span class="text-blue-400">&gt;&lt;/script&gt;</span>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-gray-700 mb-2 font-medium">Example: using target</p>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-blue-400">const</span><span class="text-gray-300"> el = document.</span><span class="text-yellow-300">createElement</span><span class="text-gray-300">(</span><span class="text-green-400">'textarea'</span><span class="text-gray-300">);</span><br>
+                        <span class="text-gray-300">document.body.</span><span class="text-yellow-300">appendChild</span><span class="text-gray-300">(el);</span><br>
+                        <br>
+                        <span class="text-green-400">// ...</span><br>
+                        <br>
+                        <span class="text-purple-400">Editflomce</span><span class="text-gray-300">.</span><span class="text-yellow-300">init</span><span class="text-gray-300">({</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">target</span><span class="text-gray-300">: el</span><br>
+                        <span class="text-gray-300">});</span>
+                    </div>
+                </div>
             </div>
         </div>
 
+        <!-- Adding placeholder content to the editor -->
+        <div class="mb-8">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Adding placeholder content to the editor</h3>
+
+            <!-- placeholder Option -->
+            <div class="mb-6">
+                <h4 class="text-lg font-medium text-gray-800 mb-2">placeholder</h4>
+                <p class="text-gray-700 mb-3">
+                    This option adds placeholder content that will be shown when the editor is empty.
+                </p>
+                <p class="text-gray-700 mb-3">
+                    If the editor is initialized on a textarea element, the placeholder attribute can be used instead.
+                </p>
+                <p class="text-gray-700 mb-3 font-medium">Type: String</p>
+
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-gray-700 mb-2 font-medium">Example: using placeholder</p>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-purple-400">Editflomce</span><span class="text-gray-300">.</span><span class="text-yellow-300">init</span><span class="text-gray-300">({</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">selector</span><span class="text-gray-300">: </span><span class="text-green-400">'textarea'</span><span class="text-gray-300">, </span><span class="text-green-400">// change this value according to your HTML</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">placeholder</span><span class="text-gray-300">: </span><span class="text-green-400">'Type here...'</span><br>
+                        <span class="text-gray-300">});</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Configuring the editor iframe -->
+        <div class="mb-8">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Configuring the editor iframe</h3>
+
+            <!-- iframe_attrs Option -->
+            <div class="mb-6">
+                <h4 class="text-lg font-medium text-gray-800 mb-2">iframe_attrs</h4>
+                <p class="text-gray-700 mb-3">
+                    This option allows adding custom attributes to the editor's content iframe element when running in classic mode. The attributes are applied during the iframe creation.
+                </p>
+                <p class="text-gray-700 mb-3">
+                    This option only affects the main editor content iframe, not other iframes such as preview frames, dialog iframes, or iframe elements created within the editor content.
+                </p>
+                <p class="text-gray-700 mb-3 font-medium">Type: Object</p>
+
+                <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                    <p class="text-gray-700 mb-2 font-medium">Example: using iframe_attrs for accessibility</p>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-purple-400">Editflomce</span><span class="text-gray-300">.</span><span class="text-yellow-300">init</span><span class="text-gray-300">({</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">selector</span><span class="text-gray-300">: </span><span class="text-green-400">'textarea'</span><span class="text-gray-300">, </span><span class="text-green-400">// change this value according to your HTML</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">iframe_attrs</span><span class="text-gray-300">: {</span><br>
+                        <span class="text-gray-300 ml-8"></span><span class="text-green-400">'aria-required'</span><span class="text-gray-300">: </span><span class="text-green-400">'true'</span><span class="text-gray-300">,</span><br>
+                        <span class="text-gray-300 ml-8"></span><span class="text-green-400">'aria-describedby'</span><span class="text-gray-300">: </span><span class="text-green-400">'editor-description'</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-gray-300">}</span><br>
+                        <span class="text-gray-300">});</span>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-gray-700 mb-2 font-medium">Example: using iframe_attrs for custom styling</p>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-purple-400">Editflomce</span><span class="text-gray-300">.</span><span class="text-yellow-300">init</span><span class="text-gray-300">({</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">selector</span><span class="text-gray-300">: </span><span class="text-green-400">'textarea'</span><span class="text-gray-300">, </span><span class="text-green-400">// change this value according to your HTML</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">iframe_attrs</span><span class="text-gray-300">: {</span><br>
+                        <span class="text-gray-300 ml-8"></span><span class="text-green-400">'style'</span><span class="text-gray-300">: </span><span class="text-green-400">'background-color:rgb(64, 167, 99); border: 2px solid #ddd;'</span><span class="text-gray-300">,</span><br>
+                        <span class="text-gray-300 ml-8"></span><span class="text-green-400">'class'</span><span class="text-gray-300">: </span><span class="text-green-400">'custom-editor-frame'</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-gray-300">}</span><br>
+                        <span class="text-gray-300">});</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Focusing on the editor -->
+        <div class="mb-8">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Focusing on the editor</h3>
+
+            <!-- Tab order -->
+            <div class="mb-6">
+                <h4 class="text-lg font-medium text-gray-800 mb-2">Tab order</h4>
+                <p class="text-gray-700 mb-3">
+                    The tab order of the elements in a page, including Editflo, should be configured by setting the tabindex attribute on the relevant HTML elements. The browser will then natively handle the tab order.
+                </p>
+                <p class="text-gray-700 mb-3">
+                    To configure tabindex for the Editflo editor, set the attribute on the target element for the editor.
+                </p>
+                <p class="text-gray-700 mb-3">
+                    In iframe (classic editor) mode, Editflo will copy the tabindex attribute from the target element to the editor's iframe, to allow this to work correctly.
+                </p>
+
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-gray-700 mb-2 font-medium">Example: configuring tab order</p>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-blue-400">&lt;script&gt;</span><br>
+                        <span class="text-purple-400">Editflomce</span><span class="text-gray-300">.</span><span class="text-yellow-300">init</span><span class="text-gray-300">({</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">selector</span><span class="text-gray-300">: </span><span class="text-green-400">'textarea'</span><br>
+                        <span class="text-gray-300">});</span><br>
+                        <span class="text-blue-400">&lt;/script&gt;</span><br>
+                        <span class="text-gray-300">...</span><br>
+                        <span class="text-blue-400">&lt;input</span><span class="text-green-400"> tabindex=</span><span class="text-yellow-300">"1"</span><span class="text-blue-400">&gt;</span><br>
+                        <span class="text-blue-400">&lt;textarea</span><span class="text-green-400"> tabindex=</span><span class="text-yellow-300">"2"</span><span class="text-blue-400">&gt;&lt;/textarea&gt;</span><br>
+                        <span class="text-blue-400">&lt;input</span><span class="text-green-400"> tabindex=</span><span class="text-yellow-300">"3"</span><span class="text-blue-400">&gt;</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- auto_focus Option -->
+            <div class="mb-6">
+                <h4 class="text-lg font-medium text-gray-800 mb-2">auto_focus</h4>
+                <p class="text-gray-700 mb-3">
+                    Automatically set the focus to an editor instance. The value of this option should be an editor instance id. The editor instance id is the id for the original textarea or div element that got replaced.
+                </p>
+                <p class="text-gray-700 mb-3 font-medium">Type: String</p>
+
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-gray-700 mb-2 font-medium">Example: using auto_focus</p>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-purple-400">Editflomce</span><span class="text-gray-300">.</span><span class="text-yellow-300">init</span><span class="text-gray-300">({</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">selector</span><span class="text-gray-300">: </span><span class="text-green-400">'textarea'</span><span class="text-gray-300">, </span><span class="text-green-400">// change this value according to your HTML</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">auto_focus</span><span class="text-gray-300">: </span><span class="text-green-400">'element1'</span><br>
+                        <span class="text-gray-300">});</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- custom_ui_selector Option -->
+            <div class="mb-6">
+                <h4 class="text-lg font-medium text-gray-800 mb-2">custom_ui_selector</h4>
+                <p class="text-gray-700 mb-3">
+                    Use the custom_ui_selector option to specify the elements that you want Editflo to treat as a part of the editor UI. Specifying elements enables the editor not to lose the selection even if the focus is moved to the elements matching this selector. The editor blur event is not fired if the focus is moved to elements matching this selector since it's treated as part of the editor UI.
+                </p>
+                <p class="text-gray-700 mb-3 font-medium">Type: String</p>
+
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-gray-700 mb-2 font-medium">Example: using custom_ui_selector</p>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-purple-400">Editflomce</span><span class="text-gray-300">.</span><span class="text-yellow-300">init</span><span class="text-gray-300">({</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">selector</span><span class="text-gray-300">: </span><span class="text-green-400">'textarea'</span><span class="text-gray-300">, </span><span class="text-green-400">// change this value according to your HTML</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">custom_ui_selector</span><span class="text-gray-300">: </span><span class="text-green-400">'.my-custom-button'</span><br>
+                        <span class="text-gray-300">});</span><br>
+                        <span class="text-gray-300">...</span><br>
+                        <span class="text-blue-400">&lt;textarea&gt;&lt;/textarea&gt;</span><br>
+                        <span class="text-blue-400">&lt;button</span><span class="text-green-400"> class=</span><span class="text-yellow-300">"my-custom-button"</span><span class="text-blue-400">&gt;</span><span class="text-gray-300">Button</span><span class="text-blue-400">&lt;/button&gt;</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- highlight_on_focus Option -->
+            <div class="mb-6">
+                <h4 class="text-lg font-medium text-gray-800 mb-2">highlight_on_focus</h4>
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4">
+                    <p class="text-yellow-700">
+                        In Editflo 7.0, the default setting for highlight_on_focus was changed from false to true. Any editors using this highlight_on_focus: true option in Editflo, can remove this option from their Editflo init configuration when upgrading to Editflo 7.0.
+                    </p>
+                </div>
+                <p class="text-gray-700 mb-3">
+                    The highlight_on_focus option adds a blue outline to an instantiated Editflo editor when that editor is made the input focus. When using the oxide-dark skin, the outline is white.
+                </p>
+                <p class="text-gray-700 mb-3">
+                    This allows users to clearly see when the editor is in focus, or which editor has focus if more than one Editflo instance is available.
+                </p>
+                <p class="text-gray-700 mb-3 font-medium">Type: Boolean</p>
+                <p class="text-gray-700 mb-3 font-medium">Default value: true</p>
+                <p class="text-gray-700 mb-3 font-medium">Possible values: true, false</p>
+
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-gray-700 mb-2 font-medium">Example: using highlight_on_focus</p>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-purple-400">Editflomce</span><span class="text-gray-300">.</span><span class="text-yellow-300">init</span><span class="text-gray-300">({</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">selector</span><span class="text-gray-300">: </span><span class="text-green-400">"textarea"</span><span class="text-gray-300">,</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">highlight_on_focus</span><span class="text-gray-300">: </span><span class="text-orange-400">false</span><br>
+                        <span class="text-gray-300">});</span>
+                    </div>
+                </div>
+
+                <div class="mt-4 p-4 bg-gray-50 rounded-lg">
+                    <h5 class="text-md font-medium text-gray-800 mb-2">Using highlight_on_focus with custom skins</h5>
+                    <p class="text-gray-700 mb-3">
+                        If a custom skin is being used, two variables can be updated to match the highlight_on_focus option's appearance with the custom skin.
+                    </p>
+                    <p class="text-gray-700 mb-3">
+                        The two rules and their default values are:
+                    </p>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto mb-3">
+                        <span class="text-blue-400">@edit-area-border-color</span><span class="text-gray-300">: </span><span class="text-green-400">#2D6ADF</span><span class="text-gray-300">;</span><br>
+                        <span class="text-blue-400">@edit-area-border-width</span><span class="text-gray-300">: </span><span class="text-orange-400">2px</span><span class="text-gray-300">;</span>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        This is entirely optional. If the default values are not changed, the highlight_on_focus option works with a custom skin exactly as it does with Editflo default skins.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Extend Editflo with plugins -->
+        <div class="mb-8">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Extend Editflo with plugins</h3>
+            <p class="text-gray-700 mb-4">
+                There are two options for adding plugins to Editflo: plugins and external_plugins. Editflo recommends using the plugins option for plugins bundled with the product or included in your cloud subscription. Custom or third-party plugins should be included using the external_plugins option to simplify updating and upgrading Editflo.
+            </p>
+
+            <!-- plugins Option -->
+            <div class="mb-6">
+                <h4 class="text-lg font-medium text-gray-800 mb-2">plugins</h4>
+                <p class="text-gray-700 mb-3">
+                    This option allows configuring which plugins Editflo will attempt to load when starting up. By default, Editflo will not load any plugins.
+                </p>
+                <p class="text-gray-700 mb-3">
+                    The plugins can be provided as either:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 mb-3 ml-4">
+                    <li>A string of space or comma separated plugin names, such as 'plugin1 plugin2', or</li>
+                    <li>An array of plugin names, such as [ 'plugin1' , 'plugin2' ]</li>
+                </ul>
+                <p class="text-gray-700 mb-3 font-medium">Type: String or Array</p>
+
+                <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                    <p class="text-gray-700 mb-2 font-medium">Example: using plugins with a string</p>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-purple-400">Editflomce</span><span class="text-gray-300">.</span><span class="text-yellow-300">init</span><span class="text-gray-300">({</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">selector</span><span class="text-gray-300">: </span><span class="text-green-400">'textarea'</span><span class="text-gray-300">, </span><span class="text-green-400">// change this value according to your HTML</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">plugins</span><span class="text-gray-300">: </span><span class="text-green-400">'advlist autolink link image lists charmap preview'</span><br>
+                        <span class="text-gray-300">});</span>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-gray-700 mb-2 font-medium">Example: using plugins with an array</p>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-purple-400">Editflomce</span><span class="text-gray-300">.</span><span class="text-yellow-300">init</span><span class="text-gray-300">({</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">selector</span><span class="text-gray-300">: </span><span class="text-green-400">'textarea'</span><span class="text-gray-300">, </span><span class="text-green-400">// change this value according to your HTML</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">plugins</span><span class="text-gray-300">: [ </span><span class="text-green-400">'advlist'</span><span class="text-gray-300">, </span><span class="text-green-400">'autolink'</span><span class="text-gray-300">, </span><span class="text-green-400">'link'</span><span class="text-gray-300">, </span><span class="text-green-400">'image'</span><span class="text-gray-300">, </span><span class="text-green-400">'lists'</span><span class="text-gray-300">, </span><span class="text-green-400">'charmap'</span><span class="text-gray-300">, </span><span class="text-green-400">'preview'</span><span class="text-gray-300"> ]</span><br>
+                        <span class="text-gray-300">});</span>
+                    </div>
+                </div>
+
+                <div class="mt-4 p-4 bg-gray-50 rounded-lg">
+                    <p class="text-gray-700">
+                        Check this documentation page for a list of available plugins.
+                    </p>
+                </div>
+            </div>
+
+            <!-- external_plugins Option -->
+            <div class="mb-6">
+                <h4 class="text-lg font-medium text-gray-800 mb-2">external_plugins</h4>
+                <p class="text-gray-700 mb-3">
+                    This option allows a URL based location of plugins to be provided that are outside of the normal Editflo plugins directory.
+                </p>
+                <p class="text-gray-700 mb-3">
+                    Editflo will attempt to load these as per regular plugins when starting up. This option is useful when loading Editflo from a CDN or when the Editflo directory is separate from custom plugins.
+                </p>
+                <p class="text-gray-700 mb-3">
+                    This value should be set as a JavaScript object that contains a property for each Editflo plugin to be loaded. This property should be named after the plugin and should have a value that contains the location that the plugin that will be loaded from.
+                </p>
+                <p class="text-gray-700 mb-3">
+                    The URLs provided can be:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 mb-3 ml-4">
+                    <li>Absolute URLs: Including the protocol, such as https://www.example.com/plugin.min.js.</li>
+                    <li>Relative to the root directory of the web-server: Including the leading "/" to indicate that it is relative to the web-server root, such as /plugin.min.js.</li>
+                    <li>Relative to the Editflo base_url: A relative path without the leading "/", such as ../../myplugins/plugin.min.js. By default, the base_url is the directory containing Editflo javascript file (such as editflomce.min.js). For information on the base_url option, see: Integration and setup options - base_url.</li>
+                </ul>
+                <p class="text-gray-700 mb-3 font-medium">Type: Object</p>
+
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-gray-700 mb-2 font-medium">Example: using external_plugins</p>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-purple-400">Editflomce</span><span class="text-gray-300">.</span><span class="text-yellow-300">init</span><span class="text-gray-300">({</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">selector</span><span class="text-gray-300">: </span><span class="text-green-400">'textarea'</span><span class="text-gray-300">, </span><span class="text-green-400">// change this value according to your HTML</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">external_plugins</span><span class="text-gray-300">: {</span><br>
+                        <span class="text-gray-300 ml-8"></span><span class="text-green-400">'testing'</span><span class="text-gray-300">: </span><span class="text-green-400">'http://www.testing.com/plugin.min.js'</span><span class="text-gray-300">,</span><br>
+                        <span class="text-gray-300 ml-8"></span><span class="text-green-400">'maths'</span><span class="text-gray-300">: </span><span class="text-green-400">'http://www.maths.com/plugin.min.js'</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-gray-300">}</span><br>
+                        <span class="text-gray-300">});</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Starting the editor in a read-only state -->
+        <div class="mb-8">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Starting the editor in a read-only state</h3>
+
+            <!-- readonly Option -->
+            <div class="mb-6">
+                <h4 class="text-lg font-medium text-gray-800 mb-2">readonly</h4>
+                <p class="text-gray-700 mb-3">
+                    Setting the readonly option to true initializes the editor in readonly mode instead of editing (design) mode. Once initialized, the editor can be switched to design mode using the editflo.editor.mode.set API.
+                </p>
+                <p class="text-gray-700 mb-3 font-medium">Type: Boolean</p>
+                <p class="text-gray-700 mb-3 font-medium">Default value: false</p>
+                <p class="text-gray-700 mb-3 font-medium">Possible values: true, false</p>
+
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-gray-700 mb-2 font-medium">Example: Using readonly</p>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-purple-400">Editflomce</span><span class="text-gray-300">.</span><span class="text-yellow-300">init</span><span class="text-gray-300">({</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">selector</span><span class="text-gray-300">: </span><span class="text-green-400">'textarea'</span><span class="text-gray-300">, </span><span class="text-green-400">// change this value according to your HTML</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">readonly</span><span class="text-gray-300">: </span><span class="text-orange-400">true</span><br>
+                        <span class="text-gray-300">});</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Behavior in readonly mode -->
+            <div class="mb-6">
+                <h4 class="text-lg font-medium text-gray-800 mb-2">Behavior in readonly mode</h4>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white border border-gray-300">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="py-2 px-4 border-b text-left">Behavior</th>
+                                <th class="py-2 px-4 border-b text-left">Details</th>
+                                <th class="py-2 px-4 border-b text-left">Allowed (True/False)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">Navigation and Interaction</td>
+                                <td class="py-2 px-4 border-b">
+                                    Users can place the cursor within the editor<br><br>
+                                    Navigation behaves the same as in design mode, including:<br>
+                                    • Moving through block elements (table of contents, images, media elements)<br>
+                                    • Using arrow keys, Home, End, Page Up, Page Down<br>
+                                    • Media elements can be played<br>
+                                    • Users can select and copy text<br>
+                                    • Users can interact with links
+                                </td>
+                                <td class="py-2 px-4 border-b text-center font-medium">True</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">Prevented Actions</td>
+                                <td class="py-2 px-4 border-b">
+                                    All input events (keyboard and IME input)<br><br>
+                                    Content modifications:<br>
+                                    • Pasting content<br>
+                                    • Cutting content<br>
+                                    • Deleting content<br>
+                                    • Drag and drop operations<br><br>
+                                    Formatting changes:<br>
+                                    • Keyboard shortcuts for formatting (e.g., Cmd/Ctrl + B)<br>
+                                    • Auto-linking when pressing space after URLs<br><br>
+                                    Element modifications:<br>
+                                    • Toggling checklists (via click or Cmd/Ctrl + Enter)<br>
+                                    • Indenting lists<br>
+                                    • Adding new table rows via Tab key<br>
+                                    • Resizing tables, media elements, or images
+                                </td>
+                                <td class="py-2 px-4 border-b text-center font-medium">False</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">Toolbar and UI Behavior</td>
+                                <td class="py-2 px-4 border-b">
+                                    Most toolbar buttons are disabled<br>
+                                    Fields in dialogs (e.g., link dialog) are disabled<br><br>
+                                    When switching from design to readonly mode:<br>
+                                    All open dialogs and UI components adjust to reflect readonly state
+                                </td>
+                                <td class="py-2 px-4 border-b text-center font-medium">False</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">Enabled Features</td>
+                                <td class="py-2 px-4 border-b">
+                                    The following toolbar/menu items remain enabled in readonly mode:<br>
+                                    • Full Screen<br>
+                                    • Help<br>
+                                    • Preview<br>
+                                    • Visual Blocks<br>
+                                    • Visual Characters<br>
+                                    • Word Count<br>
+                                    • Export to PDF<br>
+                                    • Export to Word<br>
+                                    • Visual Aid<br>
+                                    • Copy<br>
+                                    • Select all
+                                </td>
+                                <td class="py-2 px-4 border-b text-center font-medium">True</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Setting the editor in a disabled state -->
+        <div class="mb-8">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Setting the editor in a disabled state</h3>
+
+            <!-- disabled Option -->
+            <div class="mb-6">
+                <h4 class="text-lg font-medium text-gray-800 mb-2">disabled</h4>
+                <p class="text-gray-700 mb-3">
+                    Disables all user interactions with the editor (including cursor placement, content modifications, UI components). This option provides behavior similar to the changes made to Editflo in 7.4.0 readonly mode. When enabled, the editor becomes completely non-interactive.
+                </p>
+                <p class="text-gray-700 mb-3">
+                    To programmatically enable/disable the editor, use editflo.activeEditor.options.set('disabled', false/true).
+                </p>
+                <p class="text-gray-700 mb-3 font-medium">Type: Boolean</p>
+                <p class="text-gray-700 mb-3 font-medium">Default value: false</p>
+                <p class="text-gray-700 mb-3 font-medium">Possible values: true, false</p>
+
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-gray-700 mb-2 font-medium">Example: using disabled</p>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-purple-400">Editflomce</span><span class="text-gray-300">.</span><span class="text-yellow-300">init</span><span class="text-gray-300">({</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">selector</span><span class="text-gray-300">: </span><span class="text-green-400">'textarea'</span><span class="text-gray-300">, </span><span class="text-green-400">// change this value according to your HTML</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">disabled</span><span class="text-gray-300">: </span><span class="text-orange-400">true</span><br>
+                        <span class="text-gray-300">});</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Executing custom functions while the editor starts (initializes) -->
+        <div class="mb-8">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Executing custom functions while the editor starts (initializes)</h3>
+
+            <!-- setup Option -->
+            <div class="mb-6">
+                <h4 class="text-lg font-medium text-gray-800 mb-2">setup</h4>
+                <p class="text-gray-700 mb-3">
+                    This option allows a callback to be provided that will be executed before the Editflo editor instance is rendered.
+                </p>
+                <p class="text-gray-700 mb-3">
+                    To specify a setup callback, provide the setup option with a JavaScript function. This function should have one argument, which is a reference to the editor that is being set up.
+                </p>
+                <p class="text-gray-700 mb-3">
+                    A common use case for this setting is to add editor events to Editflo. For instance, if you would like to add a click event to Editflo, you would add it through the setup configuration setting.
+                </p>
+                <p class="text-gray-700 mb-3 font-medium">Type: Function</p>
+
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-gray-700 mb-2 font-medium">Example: using setup</p>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-purple-400">Editflomce</span><span class="text-gray-300">.</span><span class="text-yellow-300">init</span><span class="text-gray-300">({</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">selector</span><span class="text-gray-300">: </span><span class="text-green-400">'textarea'</span><span class="text-gray-300">, </span><span class="text-green-400">// change this value according to your HTML</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">setup</span><span class="text-gray-300">: </span><span class="text-gray-300">(</span><span class="text-blue-400">editor</span><span class="text-gray-300">) </span><span class="text-blue-400">=></span><span class="text-gray-300"> {</span><br>
+                        <span class="text-gray-300 ml-8"></span><span class="text-blue-400">editor</span><span class="text-gray-300">.</span><span class="text-yellow-300">on</span><span class="text-gray-300">(</span><span class="text-green-400">'click'</span><span class="text-gray-300">, () </span><span class="text-blue-400">=></span><span class="text-gray-300"> {</span><br>
+                        <span class="text-gray-300 ml-12"></span><span class="text-yellow-300">console</span><span class="text-gray-300">.</span><span class="text-yellow-300">log</span><span class="text-gray-300">(</span><span class="text-green-400">'Editor was clicked'</span><span class="text-gray-300">);</span><br>
+                        <span class="text-gray-300 ml-8"></span><span class="text-gray-300">});</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-gray-300">}</span><br>
+                        <span class="text-gray-300">});</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- init_instance_callback Option -->
+            <div class="mb-6">
+                <h4 class="text-lg font-medium text-gray-800 mb-2">init_instance_callback</h4>
+                <p class="text-gray-700 mb-3">
+                    This option allows a function to be provided that will be executed each time an editor instance is initialized. The format of this function is initInstance(editor) where editor is the editor instance object reference.
+                </p>
+                <p class="text-gray-700 mb-3 font-medium">Type: Function</p>
+
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-gray-700 mb-2 font-medium">Example: using init_instance_callback</p>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-purple-400">Editflomce</span><span class="text-gray-300">.</span><span class="text-yellow-300">init</span><span class="text-gray-300">({</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">selector</span><span class="text-gray-300">: </span><span class="text-green-400">'textarea'</span><span class="text-gray-300">, </span><span class="text-green-400">// change this value according to your HTML</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">init_instance_callback</span><span class="text-gray-300">: </span><span class="text-gray-300">(</span><span class="text-blue-400">editor</span><span class="text-gray-300">) </span><span class="text-blue-400">=></span><span class="text-gray-300"> {</span><br>
+                        <span class="text-gray-300 ml-8"></span><span class="text-yellow-300">console</span><span class="text-gray-300">.</span><span class="text-yellow-300">log</span><span class="text-gray-300">(</span><span class="text-green-400">`Editor: </span><span class="text-blue-400">${</span><span class="text-blue-400">editor</span><span class="text-gray-300">.</span><span class="text-blue-400">id</span><span class="text-blue-400">}</span><span class="text-green-400"> is now initialized.`</span><span class="text-gray-300">);</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-gray-300">}</span><br>
+                        <span class="text-gray-300">});</span>
+                    </div>
+                </div>
+
+                <div class="mt-4 p-4 bg-gray-50 rounded-lg">
+                    <p class="text-gray-700">
+                        You may also want to take a look at the setup callback option as it can be used to bind events before the editor instance is initialized.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Changing URL used to load the editor -->
+        <div class="mb-8">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Changing URL used to load the editor</h3>
+
+            <!-- base_url Option -->
+            <div class="mb-6">
+                <h4 class="text-lg font-medium text-gray-800 mb-2">base_url</h4>
+                <p class="text-gray-700 mb-3">
+                    This option allows the base URL for Editflo to be configured. This is useful if Editflo should be loaded from one location while the theme, model and plugins are loaded from another.
+                </p>
+                <p class="text-gray-700 mb-3">
+                    By default, the base_url is the directory containing Editflo javascript file (such as editflomce.min.js).
+                </p>
+                <p class="text-gray-700 mb-3 font-medium">Type: String</p>
+
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-gray-700 mb-2 font-medium">Example: using base_url</p>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-purple-400">Editflomce</span><span class="text-gray-300">.</span><span class="text-yellow-300">init</span><span class="text-gray-300">({</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">selector</span><span class="text-gray-300">: </span><span class="text-green-400">'textarea'</span><span class="text-gray-300">, </span><span class="text-green-400">// change this value according to your HTML</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">base_url</span><span class="text-gray-300">: </span><span class="text-green-400">'/my/editflo/dir'</span><br>
+                        <span class="text-gray-300">});</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- cache_suffix Option -->
+            <div class="mb-6">
+                <h4 class="text-lg font-medium text-gray-800 mb-2">cache_suffix</h4>
+                <p class="text-gray-700 mb-3">
+                    This option allows a custom cache buster URL part to be added at the end of each request Editflo makes to load CSS, scripts, etc. Just add the query string part that should be appended to each URL request, for example "?v=4.1.6".
+                </p>
+                <p class="text-gray-700 mb-3 font-medium">Type: String</p>
+
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-gray-700 mb-2 font-medium">Example: using cache_suffix</p>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-purple-400">Editflomce</span><span class="text-gray-300">.</span><span class="text-yellow-300">init</span><span class="text-gray-300">({</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">selector</span><span class="text-gray-300">: </span><span class="text-green-400">'textarea'</span><span class="text-gray-300">, </span><span class="text-green-400">// change this value according to your HTML</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">cache_suffix</span><span class="text-gray-300">: </span><span class="text-green-400">'?v=4.1.6'</span><br>
+                        <span class="text-gray-300">});</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- content_security_policy Option -->
+            <div class="mb-6">
+                <h4 class="text-lg font-medium text-gray-800 mb-2">content_security_policy</h4>
+                <p class="text-gray-700 mb-3">
+                    This option allows a custom content security policy to be set for the editor's iframe contents.
+                </p>
+                <p class="text-gray-700 mb-3 font-medium">Type: String</p>
+
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-gray-700 mb-2 font-medium">Example: using content_security_policy</p>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-purple-400">Editflomce</span><span class="text-gray-300">.</span><span class="text-yellow-300">init</span><span class="text-gray-300">({</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">selector</span><span class="text-gray-300">: </span><span class="text-green-400">'textarea'</span><span class="text-gray-300">, </span><span class="text-green-400">// change this value according to your HTML</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">content_security_policy</span><span class="text-gray-300">: </span><span class="text-green-400">"default-src 'self'"</span><br>
+                        <span class="text-gray-300">});</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- referrer_policy Option -->
+            <div class="mb-6">
+                <h4 class="text-lg font-medium text-gray-800 mb-2">referrer_policy</h4>
+                <p class="text-gray-700 mb-3">
+                    Used for setting the level of referrer information sent when loading plugins and CSS. Referrer policies can be used to:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 mb-3 ml-4">
+                    <li>Improve the privacy of end-users.</li>
+                    <li>Assist with server-side filtering of cross-origin requests for Editflo resources.</li>
+                </ul>
+                <p class="text-gray-700 mb-3 font-medium">Type: String</p>
+                <div class="mb-3 p-3 bg-gray-50 rounded">
+                    <p class="text-gray-700 text-sm">
+                        For a list of valid referrer policies (directives), see: MDN Web Docs - Referrer-Policy.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-gray-700 mb-2 font-medium">Example: using referrer_policy</p>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-purple-400">Editflomce</span><span class="text-gray-300">.</span><span class="text-yellow-300">init</span><span class="text-gray-300">({</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">selector</span><span class="text-gray-300">: </span><span class="text-green-400">'textarea'</span><span class="text-gray-300">, </span><span class="text-green-400">// change this value according to your HTML</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">referrer_policy</span><span class="text-gray-300">: </span><span class="text-green-400">'origin'</span><br>
+                        <span class="text-gray-300">});</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- suffix Option -->
+            <div class="mb-6">
+                <h4 class="text-lg font-medium text-gray-800 mb-2">suffix</h4>
+                <p class="text-gray-700 mb-3">
+                    This option allows the suffix of Editflo to be manually provided. By default this value will be set to the same as the suffix of the script holding Editflo. When loading things like the theme and plugins this suffix will be inserted into all requests. For example, loading Editflo with a editflomce.min.js file will make Editflo load .min versions of everything it lazy-loads, like theme.min.js and plugin.min.js The suffix option is useful for overriding this behaviour.
+                </p>
+                <p class="text-gray-700 mb-3 font-medium">Type: String</p>
+
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-gray-700 mb-2 font-medium">Example: using suffix</p>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-purple-400">Editflomce</span><span class="text-gray-300">.</span><span class="text-yellow-300">init</span><span class="text-gray-300">({</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">selector</span><span class="text-gray-300">: </span><span class="text-green-400">'textarea'</span><span class="text-gray-300">, </span><span class="text-green-400">// change this value according to your HTML</span><br>
+                        <span class="text-gray-300 ml-4"></span><span class="text-blue-400">suffix</span><span class="text-gray-300">: </span><span class="text-green-400">'.min'</span><br>
+                        <span class="text-gray-300">});</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 <script>
     // Tab functionality
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContents = document.querySelectorAll('.tab-content');
 
@@ -1499,11 +2139,6 @@
                 }
             }
 
-                            openDropdown('getting-started-dropdown', 'getting-started-arrow');
-            
-                            openDropdown('installation-dropdown', 'installation-arrow');
-            
-                            openDropdown('cloud-dropdown', 'cloud-arrow');
             
             
             
@@ -1523,6 +2158,9 @@
             
             
             
+            
+            
+                                        openDropdown('initial-configuration-dropdown', 'initial-configuration-arrow');
                     });
 
         // Enhanced click handler for all dropdown buttons

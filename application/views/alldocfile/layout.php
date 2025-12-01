@@ -165,7 +165,6 @@
             Documentation
         </div>
     </div>
-
     <div class="flex min-h-screen">
         <!-- Left Sidebar - Hidden on Mobile -->
         <nav class="w-64 lg:w-[260px] bg-gray-800 text-white h-screen fixed left-0 overflow-y-auto z-30 border-r border-gray-700 sidebar-transition lg:translate-x-0 -translate-x-full"
@@ -874,6 +873,60 @@
                         </div>
                     </div>
 
+                    <!-- Initial Configuration Section -->
+                    <div class="mb-2">
+                        <div class="relative">
+                            <!-- 1. Text + Icon (Click = Page Open) -->
+                            <a href="<?php echo base_url('documentation/initial-configuration'); ?>"
+                                class="flex items-center justify-between w-full px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'initial-configuration' ? 'bg-gray-700 text-blue-400' : ''; ?> pr-12"
+                                onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
+                                <div class="flex items-center flex-1">
+                                    <i class="fas fa-sliders-h mr-3 w-4 text-center"></i>
+                                    <span class="font-medium">Initial Configuration</span>
+                                </div>
+                            </a>
+
+                            <!-- 2. Arrow Button (Click = Only Dropdown Toggle) -->
+                            <button type="button"
+                                class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
+                                onclick="event.stopPropagation(); toggleDropdown('initial-configuration-dropdown');">
+                                <i class="fas fa-chevron-down text-xs transition-transform duration-300 <?php echo $active_page == 'initial-configuration' ? 'rotate-180' : ''; ?>"
+                                    id="initial-configuration-arrow"></i>
+                            </button>
+                        </div>
+
+                        <div class="mt-1 <?php echo $active_page == 'initial-configuration' ? 'block' : 'hidden'; ?>"
+                            id="initial-configuration-dropdown">
+                            <!-- Integration options -->
+                            <a href="<?php echo base_url('documentation/initial-configuration/integration-options'); ?>"
+                                class="block pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_section == 'integration-options' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                onclick="closeMobileSidebar()">
+                                Integration options
+                            </a>
+
+                            <!-- Size -->
+                            <a href="<?php echo base_url('documentation/initial-configuration/size'); ?>"
+                                class="block pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_section == 'size' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                onclick="closeMobileSidebar()">
+                                Size
+                            </a>
+
+                            <!-- Save and submit -->
+                            <a href="<?php echo base_url('documentation/initial-configuration/save-submit'); ?>"
+                                class="block pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_section == 'save-submit' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                onclick="closeMobileSidebar()">
+                                Save and submit
+                            </a>
+
+                            <!-- Promotions -->
+                            <a href="<?php echo base_url('documentation/initial-configuration/promotions'); ?>"
+                                class="block pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_section == 'promotions' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                onclick="closeMobileSidebar()">
+                                Promotions
+                            </a>
+                        </div>
+                    </div>
+
                     <!-- Other Main Navigation Items -->
                     <a href="<?php echo base_url('documentation/integration'); ?>"
                         class="flex items-center px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'integration' ? 'bg-gray-700 text-blue-400' : ''; ?>"
@@ -918,7 +971,7 @@
         </nav>
 
         <!-- Main Content -->
-        <main class="flex-1 lg:pl-[260px] lg:pr-[260px] min-h-screen bg-gray-50 pt-16 lg:pt-0">
+        <main class="flex-1 lg:pl-[250px] lg:pr-[245px] min-h-screen bg-gray-50 pt-16 lg:pt-0">
             <!-- Top Bar - Hidden on Mobile -->
             <div
                 class="bg-white border-b border-gray-200 px-8 py-4 justify-between items-center sticky top-0 z-20 lg:flex hidden">
@@ -1129,6 +1182,18 @@
                                 $view_file .= 'examples_skins_icons_snow';
                             }
                         }
+                    } elseif ($active_page == 'initial-configuration') {
+                        if ($active_section == 'integration-options') {
+                            $view_file .= 'integration_options';
+                        } elseif ($active_section == 'size') {
+                            $view_file .= 'size';
+                        } elseif ($active_section == 'save-submit') {
+                            $view_file .= 'save_and_submit';
+                        } elseif ($active_section == 'promotions') {
+                            $view_file .= 'promotions';
+                        } else {
+                            $view_file .= 'initial_configuration';
+                        }
                     } elseif ($active_page == 'integration') {
                         $view_file .= 'integration';
                     } elseif ($active_page == 'configuration') {
@@ -1136,7 +1201,6 @@
                     } elseif ($active_page == 'api') {
                         $view_file .= 'api';
                     }
-
                     // Check if view file exists, otherwise show a default message
                     if (file_exists(APPPATH . 'views/' . $view_file . '.php')) {
                         $this->load->view($view_file);
@@ -1156,7 +1220,7 @@
         </main>
 
         <!-- Right Sidebar - Table of Contents -->
-        <aside class="w-60 lg:w-[240px] bg-white border-l border-gray-200 h-screen fixed right-0 top-0 overflow-y-auto z-20 hidden lg:block">
+        <aside class="w-64 lg:w-[240px] bg-white border-l border-gray-200 h-screen fixed right-0 top-0 overflow-y-auto z-20 hidden lg:block">
             <div class="p-6">
                 <!-- Table of Contents Header -->
                 <div class="mb-6">
@@ -1516,6 +1580,9 @@
 
             <?php if ($active_section == 'skins-icons-examples'): ?>
                 openDropdown('skins-icons-dropdown', 'skins-icons-arrow');
+            <?php endif; ?>
+            <?php if ($active_page == 'initial-configuration'): ?>
+                openDropdown('initial-configuration-dropdown', 'initial-configuration-arrow');
             <?php endif; ?>
         });
 

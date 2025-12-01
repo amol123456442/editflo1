@@ -809,6 +809,56 @@ class Documentation extends CI_Controller
         $data['active_subsection'] = 'snow-demo';
         $this->load->view('alldocfile/layout', $data);
     }
+    public function initial_configuration()
+    {
+        $data['page_title'] = 'Initial Configuration - Editflo Documentation';
+        $data['active_page'] = 'initial-configuration';
+        $data['active_section'] = '';
+        $data['active_subsection'] = '';
+        $data['content_view'] = 'alldocfile/initial_configuration'; // Add this line
+        $this->load->view('alldocfile/layout', $data); // Load layout with content_view
+    }
 
-    
+    // Integration options
+    public function integration_options()
+    {
+        $data['page_title'] = 'Integration Options - Editflo Documentation';
+        $data['active_page'] = 'initial-configuration';
+        $data['active_section'] = 'integration-options';
+        $data['active_subsection'] = '';
+        $data['content_view'] = 'alldocfile/integration_options'; // Add this line
+        $this->load->view('alldocfile/layout', $data); // Load layout with content_view
+    }
+    // Size
+    public function size()
+    {
+        $data['page_title'] = 'Size - Editflo Documentation';
+        $data['active_page'] = 'initial-configuration';
+        $data['active_section'] = 'size';
+        $data['active_subsection'] = '';
+        $data['content_view'] = 'alldocfile/size'; // Add this line
+        $this->load->view('alldocfile/layout', $data); // Load layout with content_view
+    }
+
+    // Save and submit
+    public function save_and_submit()
+    {
+        $data['page_title'] = 'Save and Submit - Editflo Documentation';
+        $data['active_page'] = 'initial-configuration';
+        $data['active_section'] = 'save-submit';
+        $data['active_subsection'] = '';
+        $data['content_view'] = 'alldocfile/save_and_submit'; // Add this line
+        $this->load->view('alldocfile/layout', $data); // Load layout with content_view
+    }
+
+    // Promotions
+    public function promotions()
+    {
+        $data['page_title'] = 'Promotions - Editflo Documentation';
+        $data['active_page'] = 'initial-configuration';
+        $data['active_section'] = 'promotions';
+        $data['active_subsection'] = '';
+        $data['content_view'] = 'alldocfile/promotions'; // Add this line
+        $this->load->view('alldocfile/layout', $data); // Load layout with content_view
+    }
 }

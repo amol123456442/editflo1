@@ -927,6 +927,90 @@
                         </div>
                     </div>
 
+                    <!-- Security Section -->
+                    <div class="mb-2">
+                        <div class="relative">
+                            <!-- 1. Clickable area (Text + Icon) - Sirf dropdown open karega -->
+                            <div class="flex items-center justify-between w-full px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'security' ? 'bg-gray-700 text-blue-400' : ''; ?> pr-12 cursor-pointer"
+                                onclick="event.stopPropagation(); toggleDropdown('security-dropdown'); if(window.innerWidth < 1024) closeMobileSidebar();">
+                                <div class="flex items-center flex-1">
+                                    <i class="fas fa-shield-alt mr-3 w-4 text-center"></i>
+                                    <span class="font-medium">Security</span>
+                                </div>
+                                <!-- Arrow ke liye jagah -->
+                                <div class="w-10"></div>
+                            </div>
+
+                            <!-- 2. Arrow button - Sirf dropdown toggle -->
+                            <button type="button"
+                                class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
+                                onclick="event.stopPropagation(); toggleDropdown('security-dropdown');">
+                                <i class="fas fa-chevron-down text-xs transition-transform duration-300 <?php echo $active_page == 'security' ? 'rotate-180' : ''; ?>"
+                                    id="security-arrow"></i>
+                            </button>
+                        </div>
+
+                        <div class="mt-1 <?php echo $active_page == 'security' ? 'block' : 'hidden'; ?>"
+                            id="security-dropdown">
+                            <!-- Security Guide Link -->
+                            <div class="mt-1">
+                                <div class="relative">
+                                    <!-- 1. Text Part - Click = Open Page -->
+                                    <a href="<?php echo base_url('documentation/security/guide'); ?>"
+                                        class="flex items-center w-full pl-12 pr-16 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_section == 'security-guide' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
+                                        <span>Security guide</span>
+                                    </a>
+
+                                    <!-- 2. Arrow Button - Click = Only Toggle Dropdown -->
+                                    <button type="button"
+                                        class="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
+                                        onclick="event.stopPropagation(); toggleDropdown('security-guide-dropdown');">
+                                        <i class="fas fa-chevron-down text-xs transition-transform duration-300 <?php echo $active_section == 'security-guide' ? 'rotate-180' : ''; ?>"
+                                            id="security-guide-arrow"></i>
+                                    </button>
+                                </div>
+
+                                <!-- Security Guide Dropdown Content -->
+                                <div class="mt-1 <?php echo $active_section == 'security-guide' ? 'block' : 'hidden'; ?>"
+                                    id="security-guide-dropdown">
+                                    <a href="<?php echo base_url('documentation/security/guide/reporting-issues'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'reporting-issues' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        • Reporting Editflo security issues
+                                    </a>
+                                    <a href="<?php echo base_url('documentation/security/guide/maintenance'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'maintenance' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        • What we do to maintain security for Editflo
+                                    </a>
+                                    <a href="<?php echo base_url('documentation/security/guide/configuring-csp'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'configuring-csp' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        • Configuring Content Security Policy (CSP) for Editflo
+                                    </a>
+                                    <a href="<?php echo base_url('documentation/security/guide/general-risks'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'general-risks' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        • General security risks for user input elements
+                                    </a>
+                                </div>
+
+                                <!-- Direct Links (outside dropdown) -->
+                                <a href="<?php echo base_url('documentation/security/guide/content-security-policies'); ?>"
+                                    class="block pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'content-security-policies' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                    onclick="closeMobileSidebar()">
+                                    Content Security Policies (CSP)
+                                </a>
+                                <a href="<?php echo base_url('documentation/security/guide/cors'); ?>"
+                                    class="block pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'cors' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                    onclick="closeMobileSidebar()">
+                                    Cross-Origin Resource Sharing (CORS)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Other Main Navigation Items -->
                     <a href="<?php echo base_url('documentation/integration'); ?>"
                         class="flex items-center px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'integration' ? 'bg-gray-700 text-blue-400' : ''; ?>"
@@ -1200,6 +1284,26 @@
                         $view_file .= 'configuration';
                     } elseif ($active_page == 'api') {
                         $view_file .= 'api';
+                    } elseif ($active_page == 'security') {
+                        if ($active_section == 'security-guide') {
+                            if ($active_subsection == '') {
+                                $view_file .= 'security_guide';
+                            } elseif ($active_subsection == 'reporting-issues') {
+                                $view_file .= 'security_reporting_issues';
+                            } elseif ($active_subsection == 'maintenance') {
+                                $view_file .= 'security_maintenance';
+                            } elseif ($active_subsection == 'configuring-csp') {
+                                $view_file .= 'security_configuring_csp';
+                            } elseif ($active_subsection == 'general-risks') {
+                                $view_file .= 'security_general_risks';
+                            } elseif ($active_subsection == 'content-security-policies') {
+                                $view_file .= 'security_content_security_policies';
+                            } elseif ($active_subsection == 'cors') {
+                                $view_file .= 'security_cors';
+                            }
+                        } else {
+                            $view_file .= 'security';
+                        }
                     }
                     // Check if view file exists, otherwise show a default message
                     if (file_exists(APPPATH . 'views/' . $view_file . '.php')) {
@@ -1583,6 +1687,14 @@
             <?php endif; ?>
             <?php if ($active_page == 'initial-configuration'): ?>
                 openDropdown('initial-configuration-dropdown', 'initial-configuration-arrow');
+            <?php endif; ?>
+
+            <?php if ($active_page == 'security'): ?>
+                openDropdown('security-dropdown', 'security-arrow');
+            <?php endif; ?>
+
+            <?php if ($active_section == 'security-guide'): ?>
+                openDropdown('security-guide-dropdown', 'security-guide-arrow');
             <?php endif; ?>
         });
 

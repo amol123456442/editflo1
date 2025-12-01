@@ -861,4 +861,93 @@ class Documentation extends CI_Controller
         $data['content_view'] = 'alldocfile/promotions'; // Add this line
         $this->load->view('alldocfile/layout', $data); // Load layout with content_view
     }
+
+
+    // Security Main
+public function security()
+{
+    $data['page_title'] = 'Security - Editflo Documentation';
+    $data['active_page'] = 'security';
+    $data['active_section'] = '';
+    $data['active_subsection'] = '';
+    $data['content_view'] = 'alldocfile/security'; // security.php
+    $this->load->view('alldocfile/layout', $data);
+}
+
+// Security Guide
+public function security_guide()
+{
+    $data['page_title'] = 'Security Guide - Editflo Documentation';
+    $data['active_page'] = 'security';
+    $data['active_section'] = 'security-guide';
+    $data['active_subsection'] = '';
+    $data['content_view'] = 'alldocfile/security_guide'; // security_guide.php
+    $this->load->view('alldocfile/layout', $data);
+}
+
+// Reporting Security Issues
+public function security_reporting_issues()
+{
+    $data['page_title'] = 'Reporting TinyMCE Security Issues - Editflo Documentation';
+    $data['active_page'] = 'security';
+    $data['active_section'] = 'security-guide';
+    $data['active_subsection'] = 'reporting-issues';
+    $data['content_view'] = 'alldocfile/security_reporting_issues'; // security_reporting_issues.php
+    $this->load->view('alldocfile/layout', $data);
+}
+
+// Security Maintenance
+public function security_maintenance()
+{
+    $data['page_title'] = 'Security Maintenance - Editflo Documentation';
+    $data['active_page'] = 'security';
+    $data['active_section'] = 'security-guide';
+    $data['active_subsection'] = 'maintenance';
+    $data['content_view'] = 'alldocfile/security_maintenance'; // security_maintenance.php
+    $this->load->view('alldocfile/layout', $data);
+}
+
+// Configuring CSP for TinyMCE
+public function security_configuring_csp()
+{
+    $data['page_title'] = 'Configuring Content Security Policy - Editflo Documentation';
+    $data['active_page'] = 'security';
+    $data['active_section'] = 'security-guide';
+    $data['active_subsection'] = 'configuring-csp';
+    $data['content_view'] = 'alldocfile/security_configuring_csp'; // security_configuring_csp.php
+    $this->load->view('alldocfile/layout', $data);
+}
+
+// General Security Risks
+public function security_general_risks()
+{
+    $data['page_title'] = 'General Security Risks - Editflo Documentation';
+    $data['active_page'] = 'security';
+    $data['active_section'] = 'security-guide';
+    $data['active_subsection'] = 'general-risks';
+    $data['content_view'] = 'alldocfile/security_general_risks'; // security_general_risks.php
+    $this->load->view('alldocfile/layout', $data);
+}
+
+// Content Security Policies (CSP)
+public function security_content_security_policies()
+{
+    $data['page_title'] = 'Content Security Policies - Editflo Documentation';
+    $data['active_page'] = 'security';
+    $data['active_section'] = 'security-guide';
+    $data['active_subsection'] = 'content-security-policies';
+    $data['content_view'] = 'alldocfile/security_content_security_policies'; // security_content_security_policies.php
+    $this->load->view('alldocfile/layout', $data);
+}
+
+// Cross-Origin Resource Sharing (CORS)
+public function security_cors()
+{
+    $data['page_title'] = 'Cross-Origin Resource Sharing - Editflo Documentation';
+    $data['active_page'] = 'security';
+    $data['active_section'] = 'security-guide';
+    $data['active_subsection'] = 'cors';
+    $data['content_view'] = 'alldocfile/security_cors'; // security_cors.php
+    $this->load->view('alldocfile/layout', $data);
+}
 }

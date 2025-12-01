@@ -138,12 +138,21 @@ $route['documentation/examples/skins-icons/small-icons'] = 'documentation/exampl
 $route['documentation/examples/skins-icons/snow'] = 'documentation/examples_skins_icons_snow';
 
 // Initial Configuration Routes
-// Initial Configuration Routes
 $route['documentation/initial-configuration'] = 'Documentation/initial_configuration';
 $route['documentation/initial-configuration/integration-options'] = 'Documentation/integration_options';
 $route['documentation/initial-configuration/size'] = 'Documentation/size';
 $route['documentation/initial-configuration/save-submit'] = 'Documentation/save_and_submit';
 $route['documentation/initial-configuration/promotions'] = 'Documentation/promotions';
+
+// Security Routes
+$route['documentation/security'] = 'documentation/security';
+$route['documentation/security/guide'] = 'documentation/security_guide';
+$route['documentation/security/guide/reporting-issues'] = 'documentation/security_reporting_issues';
+$route['documentation/security/guide/maintenance'] = 'documentation/security_maintenance';
+$route['documentation/security/guide/configuring-csp'] = 'documentation/security_configuring_csp';
+$route['documentation/security/guide/general-risks'] = 'documentation/security_general_risks';
+$route['documentation/security/guide/content-security-policies'] = 'documentation/security_content_security_policies';
+$route['documentation/security/guide/cors'] = 'documentation/security_cors';
 
 
 

@@ -696,28 +696,46 @@
 
                     <!-- Examples Section -->
                     <div class="mb-2">
-                        <a href="<?php echo base_url('documentation/examples'); ?>"
-                            class="flex items-center justify-between w-full px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'examples' ? 'bg-gray-700 text-blue-400' : ''; ?>"
-                            onclick="toggleDropdown('examples-dropdown'); closeMobileSidebar();">
-                            <div class="flex items-center">
-                                <i class="fas fa-laptop-code mr-3 w-4 text-center"></i>
-                                <span class="font-medium">Examples</span>
-                            </div>
-                            <i class="fas fa-chevron-down text-xs transition-transform duration-300 <?php echo $active_page == 'examples' ? 'rotate-180' : ''; ?>"
-                                id="examples-arrow"></i>
-                        </a>
+                        <div class="relative">
+                            <!-- 1. Text + Icon (Click = Page Open) -->
+                            <a href="<?php echo base_url('documentation/examples'); ?>"
+                                class="flex items-center justify-between w-full px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'examples' ? 'bg-gray-700 text-blue-400' : ''; ?> pr-12"
+                                onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
+                                <div class="flex items-center flex-1">
+                                    <i class="fas fa-laptop-code mr-3 w-4 text-center"></i>
+                                    <span class="font-medium">Examples</span>
+                                </div>
+                            </a>
+
+                            <!-- 2. Arrow Button (Click = Only Dropdown Toggle) -->
+                            <button type="button"
+                                class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
+                                onclick="event.stopPropagation(); toggleDropdown('examples-dropdown');">
+                                <i class="fas fa-chevron-down text-xs transition-transform duration-300 <?php echo $active_page == 'examples' ? 'rotate-180' : ''; ?>"
+                                    id="examples-arrow"></i>
+                            </button>
+                        </div>
 
                         <div class="mt-1 <?php echo $active_page == 'examples' ? 'block' : 'hidden'; ?>"
                             id="examples-dropdown">
                             <!-- General Examples -->
                             <div class="mt-1">
-                                <a href="<?php echo base_url('documentation/examples/general'); ?>"
-                                    class="flex items-center justify-between w-full pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_section == 'general-examples' ? 'bg-gray-700 text-blue-400' : ''; ?>"
-                                    onclick="toggleDropdown('general-examples-dropdown'); closeMobileSidebar();">
-                                    <span>General examples</span>
-                                    <i class="fas fa-chevron-down text-xs transition-transform duration-300 <?php echo $active_section == 'general-examples' ? 'rotate-180' : ''; ?>"
-                                        id="general-examples-arrow"></i>
-                                </a>
+                                <div class="relative">
+                                    <!-- 1. Text Part - Click = Open Page -->
+                                    <a href="<?php echo base_url('documentation/examples/general'); ?>"
+                                        class="flex items-center w-full pl-12 pr-16 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_section == 'general-examples' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
+                                        <span>General examples</span>
+                                    </a>
+
+                                    <!-- 2. Arrow Button - Click = Only Toggle Dropdown -->
+                                    <button type="button"
+                                        class="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
+                                        onclick="event.stopPropagation(); toggleDropdown('general-examples-dropdown');">
+                                        <i class="fas fa-chevron-down text-xs transition-transform duration-300 <?php echo $active_section == 'general-examples' ? 'rotate-180' : ''; ?>"
+                                            id="general-examples-arrow"></i>
+                                    </button>
+                                </div>
                                 <div class="mt-1 <?php echo $active_section == 'general-examples' ? 'block' : 'hidden'; ?>"
                                     id="general-examples-dropdown">
                                     <a href="<?php echo base_url('documentation/examples/general/basic'); ?>"
@@ -775,13 +793,24 @@
 
                             <!-- Skins and Icons Examples -->
                             <div class="mt-1">
-                                <button
-                                    class="flex items-center justify-between w-full pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_section == 'skins-icons-examples' ? 'bg-gray-700 text-blue-400' : ''; ?>"
-                                    onclick="toggleDropdown('skins-icons-dropdown')">
-                                    <span>Skins and Icons examples</span>
-                                    <i class="fas fa-chevron-down text-xs transition-transform duration-300 <?php echo $active_section == 'skins-icons-examples' ? 'rotate-180' : ''; ?>"
-                                        id="skins-icons-arrow"></i>
-                                </button>
+                                <div class="relative">
+
+                                    <!-- 1. Text Part - Click = Open Page (Skins & Icons main page) -->
+                                    <a href="<?php echo base_url('documentation/examples/skins-and-icons'); ?>"
+                                        class="flex items-center w-full pl-12 pr-16 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_section == 'skins-icons-examples' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
+                                        <span>Skins and Icons examples</span>
+                                    </a>
+
+                                    <!-- 2. Arrow Button - Click = Only Toggle Dropdown (No page navigation) -->
+                                    <button type="button"
+                                        class="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
+                                        onclick="event.stopPropagation(); toggleDropdown('skins-icons-dropdown');">
+                                        <i class="fas fa-chevron-down text-xs transition-transform duration-300 <?php echo $active_section == 'skins-icons-examples' ? 'rotate-180' : ''; ?>"
+                                            id="skins-icons-arrow"></i>
+                                    </button>
+
+                                </div>
 
                                 <div class="mt-1 <?php echo $active_section == 'skins-icons-examples' ? 'block' : 'hidden'; ?>"
                                     id="skins-icons-dropdown">
@@ -910,14 +939,14 @@
                     <?php endif; ?>
                 </div>
             </div>
-
-            <!-- Mobile Breadcrumb -->
-            <div class="p-4 lg:p-8 max-w-4xl mx-auto">
+            <!-- Mobile Breadcrumb - सिर्फ Mobile पर दिखेगा (Desktop पर 100% hidden) -->
+            <div class="lg:hidden px-4 max-w-4xl mx-auto">
                 <div class="text-sm text-gray-600 truncate">
-                    <a href="<?php echo base_url('documentation'); ?>"
-                        class="text-blue-500 hover:text-blue-700">Docs</a>
+                    <a href="<?php echo base_url('documentation'); ?>" class="text-blue-500 hover:text-blue-700">
+                        Docs
+                    </a>
                     <?php if ($active_page != 'overview'): ?>
-                        <span class="mx-2">></span>
+                        <span class="mx-2">&gt;</span>
                         <span class="text-gray-800 truncate">
                             <?php
                             $breadcrumb = ucfirst(str_replace('-', ' ', $active_page));

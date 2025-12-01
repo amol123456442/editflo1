@@ -97,49 +97,65 @@
     </div>
 
     <!-- Save Content Section -->
-    <div class="bg-white rounded-lg border border-gray-200 p-4 md:p-6 mb-8">
-        <h2 class="text-lg md:text-xl font-semibold text-gray-800 mb-4">Excluded plugins</h2>
+ <div class="bg-white rounded-lg border border-gray-200 p-6 mb-8 shadow-sm">
+    <h2 class="text-xl font-semibold text-gray-800 mb-6">Excluded plugins</h2>
 
-        <div class="overflow-x-auto -mx-4 md:mx-0">
-            <table class="min-w-full border-collapse">
-                <thead>
-                    <tr class="border-b border-gray-300">
-                        <th class="text-left py-3 px-4 font-medium text-gray-700 w-3/5 md:w-2/3">Excluded plugins</th>
-                        <th class="text-left py-3 px-4 font-medium text-gray-700 w-2/5 md:w-1/3">Notes</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="border-b border-gray-200">
-                        <td class="py-3 px-4 text-gray-800 align-top">All premium plugins.</td>
-                        <td class="py-3 px-4 text-gray-600 align-top">Use the Full featured demo including Premium Plugins</td>
-                    </tr>
-                    <tr class="border-b border-gray-200">
-                        <td class="py-3 px-4 text-gray-800 align-top">Autoresize</td>
-                        <td class="py-3 px-4 text-gray-600 align-top">Resizes the editor to fit the content.</td>
-                    </tr>
-                </tbody>
-            </table>
+    <div class="space-y-4">
+        <!-- Row 1 -->
+        <div class="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-6 pb-4 border-b border-gray-200 last:border-0">
+            <div class="sm:w-1/3">
+                <a href="<?php echo base_url('documentation/plugins/autoresize'); ?>" 
+                   class="text-blue-600 hover:text-blue-800 font-medium underline-offset-2 hover:underline transition-colors">
+                    Autoresize
+                </a>
+            </div>
+            <div class="sm:w-2/3 text-gray-600 text-sm sm:text-base">
+                Resizes the editor to fit the content.
+            </div>
         </div>
 
-        <div class="mt-6 md:mt-8">
-            <h2 class="text-lg md:text-xl font-semibold text-gray-800 mb-3 md:mb-4">Save the content from the editor</h2>
-            <p class="text-gray-700 mb-3 md:mb-4 text-sm md:text-base">
-                To retrieve content from the editor, either process the content with a form handler or use the
-                <code class="bg-gray-100 px-1 py-0.5 rounded text-xs md:text-sm font-mono">getContent</code> API.
-            </p>
-            <p class="text-gray-700 text-sm md:text-base">
-                If you use a form handler, once the
-                <code class="bg-gray-100 px-1 py-0.5 rounded text-xs md:text-sm font-mono">&lt;form&gt;</code>
-                is submitted, Editflo 8 will
-                <code class="bg-gray-100 px-1 py-0.5 rounded text-xs md:text-sm font-mono">POST</code>
-                the content in the same way as a normal HTML
-                <code class="bg-gray-100 px-1 py-0.5 rounded text-xs md:text-sm font-mono">&lt;textarea&gt;</code>,
-                including the HTML elements and inline CSS of the editor content. The host's form handler can process
-                the submitted content in the same way as content from a regular
-                <code class="bg-gray-100 px-1 py-0.5 rounded text-xs md:text-sm font-mono">&lt;textarea&gt;</code>.
-            </p>
+        <!-- Row 2 -->
+        <div class="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-6 pb-4 border-b border-gray-200 last:border-0">
+            <div class="sm:w-1/3">
+                <a href="<?php echo base_url('documentation/plugins/code'); ?>" 
+                   class="text-blue-600 hover:text-blue-800 font-medium underline-offset-2 hover:underline transition-colors">
+                    Code
+                </a>
+            </div>
+            <div class="sm:w-2/3 text-gray-600 text-sm sm:text-base">
+                Enhanced Code Editor included instead.
+            </div>
         </div>
+
+        <!-- Row 3 -->
+        <div class="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-6 pb-4 border-b border-gray-200 last:border-0">
+            <div class="sm:w-1/3">
+                <a href="<?php echo base_url('documentation/plugins/image-edit'); ?>" 
+                   class="text-blue-600 hover:text-blue-800 font-medium underline-offset-2 hover:underline transition-colors">
+                    Image & Edit Image
+                </a>
+            </div>
+            <div class="sm:w-2/3 text-gray-600 text-sm sm:text-base">
+                Media Optimizer included instead.
+            </div>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-6 pb-4 border-b border-gray-200 last:border-0">
+            <div class="sm:w-1/3">
+                <a href="<?php echo base_url('documentation/plugins/tiny-drive'); ?>" 
+                   class="text-blue-600 hover:text-blue-800 font-medium underline-offset-2 hover:underline transition-colors">
+                    Tiny Drive
+                </a>
+            </div>
+            <div class="sm:w-2/3 text-gray-600 text-sm sm:text-base">
+                Media Optimizer included instead.
+            </div>
+        </div>
+
+        <!-- Add more rows as needed -->
     </div>
+</div>
 
     <!-- Next Steps Section -->
 

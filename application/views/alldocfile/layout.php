@@ -98,7 +98,9 @@
             font-family: "Inter", sans-serif;
             font-optical-sizing: auto;
             font-style: normal;
+            font-size: small;
         }
+
 
         /* Smooth scrolling */
         html {
@@ -152,26 +154,140 @@
     </style>
 </head>
 
-<body class="bg-gray-50">
-    <!-- Mobile Header -->
-    <div class="lg:hidden bg-gray-800 text-white p-4 flex items-center justify-between sticky top-0 z-50">
-        <div class="flex items-center">
-            <button class="text-white mr-4" id="mobileMenuBtn">
-                <i class="fas fa-bars text-xl"></i>
-            </button>
-            <h1 class="text-lg font-semibold text-blue-400">Editflo</h1>
+<body class="bg-gray-50 ">
+    <header class="bg-gray-800 text-white sticky top-0 z-50 shadow-lg">
+        <div class="px-4 sm:px-2 lg:px-2 ">
+            <div class="flex items-center justify-between h-16">
+
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold">Editflo</h1>
+                </div>
+
+                <div class="flex items-center justify-end space-x-4 lg:space-x-6 flex-1">
+                    <!-- Search Bar - Desktop -->
+                    <div class="hidden md:block max-w-md lg:max-w-lg mx-4">
+                        <div class="relative">
+                            <input type="text" placeholder="Search"
+                                class="w-full bg-white text-gray-300 placeholder-gray-400 rounded-md py-2 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-gray-600 transition-all">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fas fa-search text-gray-400 text-sm"></i>
+                            </div>
+                            <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                                <kbd class="text-xs bg-gray-700 text-gray-200 px-2 py-1 rounded border border-gray-700">Ctrl K</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Links - Desktop -->
+                    <div class="hidden lg:flex items-center space-x-6">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors font-medium text-sm">
+                            Pricing
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors font-medium text-sm">
+                            Language Packs
+                        </a>
+                        <div class="h-4 w-px bg-gray-600"></div>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors font-medium text-sm">
+                            Log In
+                        </a>
+                    </div>
+
+                    <!-- Get Free API Key Button - Desktop -->
+                    <div class="hidden lg:block">
+                        <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-md transition-colors flex items-center whitespace-nowrap text-sm">
+                            Get Free API Key
+                        </a>
+                    </div>
+
+                    <!-- Mobile Menu Buttons -->
+                    <div class="flex items-center space-x-4 lg:hidden">
+                        <!-- Mobile Search Button -->
+                        <button class="text-white" id="mobileSearchBtn">
+                            <i class="fas fa-search text-lg"></i>
+                        </button>
+
+                        <!-- Mobile Menu Button -->
+                        <button class="text-white" id="mobileMenuBtn">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Search Bar -->
+            <div class="md:hidden mt-3 hidden" id="mobileSearchBar">
+                <div class="relative">
+                    <input type="text" placeholder="Search"
+                        class="w-full bg-gray-700 text-white placeholder-gray-400 rounded-md py-3 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu - RIGHT SIDE से start होगा -->
+            <div class="lg:hidden hidden" id="mobileMenu">
+                <div class="bg-gray-800 border-t border-gray-700 py-4 px-4">
+                    <!-- Search Bar in Mobile Menu -->
+                    <div class="mb-4">
+                        <div class="relative">
+                            <input type="text" placeholder="Search"
+                                class="w-full bg-gray-700 text-white placeholder-gray-400 rounded-md py-3 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fas fa-search text-gray-400"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Menu Links -->
+                    <div class="space-y-3">
+                        <a href="#" class="block text-gray-300 hover:text-white transition-colors font-medium py-2">
+                            Pricing
+                        </a>
+                        <a href="#" class="block text-gray-300 hover:text-white transition-colors font-medium py-2">
+                            Language Packs
+                        </a>
+                        <a href="#" class="block text-gray-300 hover:text-white transition-colors font-medium py-2">
+                            Log In
+                        </a>
+                        <a href="#" class="block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-3 rounded-md transition-colors text-center mt-4">
+                            Get Free API Key
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="text-sm text-gray-300">
-            Documentation
-        </div>
-    </div>
+    </header>
+
+    <script>
+        // Toggle mobile search
+        document.getElementById('mobileSearchBtn')?.addEventListener('click', function() {
+            const mobileSearchBar = document.getElementById('mobileSearchBar');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            mobileSearchBar.classList.toggle('hidden');
+            // Close mobile menu if open
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Toggle mobile menu
+        document.getElementById('mobileMenuBtn')?.addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileSearchBar = document.getElementById('mobileSearchBar');
+
+            mobileMenu.classList.toggle('hidden');
+            // Close mobile search if open
+            if (!mobileSearchBar.classList.contains('hidden')) {
+                mobileSearchBar.classList.add('hidden');
+            }
+        });
+    </script>
     <div class="flex min-h-screen">
         <!-- Left Sidebar - Hidden on Mobile -->
         <nav class="w-64 lg:w-[260px] bg-gray-800 text-white h-screen fixed left-0 overflow-y-auto z-30 border-r border-gray-700 sidebar-transition lg:translate-x-0 -translate-x-full"
             id="leftSidebar">
-            <div class="p-6 border-b border-gray-700 bg-gray-900 lg:block hidden">
-                <h1 class="text-lg font-semibold text-blue-400">Editflo</h1>
-            </div>
 
             <!-- Close Button for Mobile -->
             <div class="p-4 border-b border-gray-700 lg:hidden flex justify-between items-center">
@@ -974,22 +1090,22 @@
                                 <!-- Security Guide Dropdown Content -->
                                 <div class="mt-1 <?php echo $active_section == 'security-guide' ? 'block' : 'hidden'; ?>"
                                     id="security-guide-dropdown">
-                                    <a href="<?php echo base_url('documentation/security/guide/reporting-issues'); ?>"
+                                    <a href="<?php echo base_url('documentation/security/guide/reporting-issues#reporting-editflo-security-issues'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'reporting-issues' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         • Reporting Editflo security issues
                                     </a>
-                                    <a href="<?php echo base_url('documentation/security/guide/maintenance'); ?>"
+                                    <a href="<?php echo base_url('documentation/security/guide/reporting-issues#what-we-do-to-maintain-security-for-editflo'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'maintenance' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         • What we do to maintain security for Editflo
                                     </a>
-                                    <a href="<?php echo base_url('documentation/security/guide/configuring-csp'); ?>"
+                                    <a href="<?php echo base_url('documentation/security/guide/reporting-issues#configuring-content-security-policy-for-editflo'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'configuring-csp' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         • Configuring Content Security Policy (CSP) for Editflo
                                     </a>
-                                    <a href="<?php echo base_url('documentation/security/guide/general-risks'); ?>"
+                                    <a href="<?php echo base_url('documentation/security/guide/reporting-issues#general-security-risks-for-user-input-elements'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'general-risks' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         • General security risks for user input elements
@@ -1063,13 +1179,13 @@
                     <a href="<?php echo base_url('documentation'); ?>"
                         class="text-blue-500 hover:text-blue-700">Documentation</a>
                     <?php if ($active_page != 'overview'): ?>
-                        <span class="mx-2">></span>
+                        <span class="mx-2">/</span>
                         <span class="text-gray-800"><?php echo ucfirst(str_replace('-', ' ', $active_page)); ?></span>
                         <?php if ($active_section): ?>
-                            <span class="mx-2">></span>
+                            <span class="mx-2">/</span>
                             <span class="text-gray-800"><?php echo ucfirst(str_replace('-', ' ', $active_section)); ?></span>
                             <?php if ($active_subsection): ?>
-                                <span class="mx-2">></span>
+                                <span class="mx-2">/</span>
                                 <span class="text-gray-800"><?php echo ucfirst(str_replace('-', ' ', $active_subsection)); ?></span>
                             <?php endif; ?>
                         <?php endif; ?>
@@ -1325,7 +1441,7 @@
 
         <!-- Right Sidebar - Table of Contents -->
         <aside class="w-64 lg:w-[240px] bg-white border-l border-gray-200 h-screen fixed right-0 top-0 overflow-y-auto z-20 hidden lg:block">
-            <div class="p-6">
+            <div class="p-6 mt-12">
                 <!-- Table of Contents Header -->
                 <div class="mb-6">
                     <h3 class="text-lg font-semibold text-gray-800 mb-2 flex items-center">
@@ -1420,7 +1536,7 @@
 
             function generateTOC() {
                 const contentArea = document.querySelector('.content-area');
-                const headings = contentArea?.querySelectorAll('h2, h3, h4');
+                const headings = contentArea?.querySelectorAll('h2, h3');
                 const tocContainer = document.getElementById('pageToc');
                 const mobileTocContainer = document.getElementById('mobilePageToc');
 
@@ -1438,10 +1554,10 @@
                             prefix = '';
                             indentClass = 'pl-0';
                         } else if (level === 3) {
-                            prefix = '— ';
+                            prefix = '';
                             indentClass = 'pl-4';
                         } else if (level === 4) {
-                            prefix = '—— ';
+                            prefix = '';
                             indentClass = 'pl-8';
                         }
 

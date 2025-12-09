@@ -173,7 +173,8 @@
                                 <i class="fas fa-search text-gray-400 text-sm"></i>
                             </div>
                             <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
-                                <kbd class="text-xs bg-gray-700 text-gray-200 px-2 py-1 rounded border border-gray-700">Ctrl K</kbd>
+                                <kbd class="text-xs bg-gray-700 text-gray-200 px-2 py-1 rounded border border-gray-700 mr-1">Ctrl</kbd>
+                                <kbd class="text-xs bg-gray-700 text-gray-200 px-2 py-1 rounded border border-gray-700">K</kbd>
                             </div>
                         </div>
                     </div>
@@ -1226,12 +1227,6 @@
                         <span class="font-medium">Configuration</span>
                     </a>
 
-                    <a href="<?php echo base_url('documentation/api'); ?>"
-                        class="flex items-center px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'api' ? 'bg-gray-700 text-blue-400' : ''; ?>"
-                        onclick="closeMobileSidebar()">
-                        <i class="fas fa-code mr-3 w-4 text-center"></i>
-                        <span class="font-medium">API Reference</span>
-                    </a>
                 </div>
 
                 <!-- Promotional Card in Sidebar Bottom -->

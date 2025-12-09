@@ -950,4 +950,80 @@ public function security_cors()
     $data['content_view'] = 'alldocfile/security_cors'; // security_cors.php
     $this->load->view('alldocfile/layout', $data);
 }
+// Release notes for Editflo
+public function release_notes_editflo()
+{
+    $data['page_title'] = 'Release notes for Editflo - Editflo Documentation';
+    $data['active_page'] = 'release-notes';
+    $data['active_section'] = 'editflo';
+    $data['active_subsection'] = '';
+    $data['content_view'] = 'alldocfile/release_notes_editflo';
+    $this->load->view('alldocfile/layout', $data);
+}
+
+// Editflo 0.1
+public function editflo_0_1()
+{
+    $data['page_title'] = 'Editflo 0.1 - Editflo Documentation';
+    $data['active_page'] = 'release-notes';
+    $data['active_section'] = 'editflo';
+    $data['active_subsection'] = '0-1';
+    $data['content_view'] = 'alldocfile/editflo_0_1';
+    $this->load->view('alldocfile/layout', $data);
+}
+
+// Editflo 0.1 Overview
+public function editflo_0_1_overview()
+{
+    $data['page_title'] = 'Editflo 0.1 Overview - Editflo Documentation';
+    $data['active_page'] = 'release-notes';
+    $data['active_section'] = 'editflo';
+    $data['active_subsection'] = '0-1-overview'; // Changed to unique value
+    $data['content_view'] = 'alldocfile/editflo_0_1_overview';
+    $this->load->view('alldocfile/layout', $data);
+}
+
+// Editflo 0.1 New Premium plugins
+public function editflo_0_1_new_premium_plugins()
+{
+    $data['page_title'] = 'Editflo 0.1 New Premium plugins - Editflo Documentation';
+    $data['active_page'] = 'release-notes';
+    $data['active_section'] = 'editflo';
+    $data['active_subsection'] = '0-1-new-premium-plugins'; // Changed to unique value
+    $data['content_view'] = 'alldocfile/editflo_0_1_new_premium_plugins';
+    $this->load->view('alldocfile/layout', $data);
+}
+
+// Editflo 0.1 Accompanying Premium plugin changes
+public function editflo_0_1_premium_plugin_changes()
+{
+    $data['page_title'] = 'Editflo 0.1 Accompanying Premium plugin changes - Editflo Documentation';
+    $data['active_page'] = 'release-notes';
+    $data['active_section'] = 'editflo';
+    $data['active_subsection'] = '0-1-premium-plugin-changes'; // Changed to unique value
+    $data['content_view'] = 'alldocfile/editflo_0_1_premium_plugin_changes';
+    $this->load->view('alldocfile/layout', $data);
+}
+
+// Editflo 0.1 Improvements
+public function editflo_0_1_improvements()
+{
+    $data['page_title'] = 'Editflo 0.1 Improvements - Editflo Documentation';
+    $data['active_page'] = 'release-notes';
+    $data['active_section'] = 'editflo';
+    $data['active_subsection'] = '0-1-improvements'; // Changed to unique value
+    $data['content_view'] = 'alldocfile/editflo_0_1_improvements';
+    $this->load->view('alldocfile/layout', $data);
+}
+
+// Editflo 0.1 Additions
+public function editflo_0_1_additions()
+{
+    $data['page_title'] = 'Editflo 0.1 Additions - Editflo Documentation';
+    $data['active_page'] = 'release-notes';
+    $data['active_section'] = 'editflo';
+    $data['active_subsection'] = '0-1-additions'; // Changed to unique value
+    $data['content_view'] = 'alldocfile/editflo_0_1_additions';
+    $this->load->view('alldocfile/layout', $data);
+}
 }

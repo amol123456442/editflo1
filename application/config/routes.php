@@ -154,6 +154,15 @@ $route['documentation/security/guide/general-risks'] = 'documentation/security_g
 $route['documentation/security/guide/content-security-policies'] = 'documentation/security_content_security_policies';
 $route['documentation/security/guide/cors'] = 'documentation/security_cors';
 
+// Release Notes for Editflo Routes
+$route['documentation/release-notes/editflo'] = 'documentation/release_notes_editflo';
+$route['documentation/release-notes/editflo/0-1'] = 'documentation/editflo_0_1';
+$route['documentation/release-notes/editflo/0-1/overview'] = 'documentation/editflo_0_1_overview';
+$route['documentation/release-notes/editflo/0-1/new-premium-plugins'] = 'documentation/editflo_0_1_new_premium_plugins';
+$route['documentation/release-notes/editflo/0-1/premium-plugin-changes'] = 'documentation/editflo_0_1_premium_plugin_changes';
+$route['documentation/release-notes/editflo/0-1/improvements'] = 'documentation/editflo_0_1_improvements';
+$route['documentation/release-notes/editflo/0-1/additions'] = 'documentation/editflo_0_1_additions';
+
 
 
 // Other main sections

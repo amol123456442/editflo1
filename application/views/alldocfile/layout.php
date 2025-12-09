@@ -181,10 +181,13 @@
                     <!-- Navigation Links - Desktop -->
                     <div class="hidden lg:flex items-center space-x-6">
                         <a href="#" class="text-gray-300 hover:text-white transition-colors font-medium text-sm">
+                            Home
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors font-medium text-sm">
                             Pricing
                         </a>
                         <a href="#" class="text-gray-300 hover:text-white transition-colors font-medium text-sm">
-                            Language Packs
+                            Language
                         </a>
                         <div class="h-4 w-px bg-gray-600"></div>
                         <a href="#" class="text-gray-300 hover:text-white transition-colors font-medium text-sm">
@@ -194,9 +197,10 @@
 
                     <!-- Get Free API Key Button - Desktop -->
                     <div class="hidden lg:block">
-                        <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-md transition-colors flex items-center whitespace-nowrap text-sm">
+                        <button type="button" class="text-white bg-[#3b5998] hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 box-border border border-transparent font-medium leading-5 rounded-base text-sm px-4 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55"><i class="fa-solid fa-key mr-2"></i>
+
                             Get Free API Key
-                        </a>
+                        </button>
                     </div>
 
                     <!-- Mobile Menu Buttons -->
@@ -259,31 +263,6 @@
         </div>
     </header>
 
-    <script>
-        // Toggle mobile search
-        document.getElementById('mobileSearchBtn')?.addEventListener('click', function() {
-            const mobileSearchBar = document.getElementById('mobileSearchBar');
-            const mobileMenu = document.getElementById('mobileMenu');
-
-            mobileSearchBar.classList.toggle('hidden');
-            // Close mobile menu if open
-            if (!mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.add('hidden');
-            }
-        });
-
-        // Toggle mobile menu
-        document.getElementById('mobileMenuBtn')?.addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobileMenu');
-            const mobileSearchBar = document.getElementById('mobileSearchBar');
-
-            mobileMenu.classList.toggle('hidden');
-            // Close mobile search if open
-            if (!mobileSearchBar.classList.contains('hidden')) {
-                mobileSearchBar.classList.add('hidden');
-            }
-        });
-    </script>
     <div class="flex min-h-screen">
         <!-- Left Sidebar - Hidden on Mobile -->
         <nav class="w-64 lg:w-[260px] bg-gray-800 text-white h-screen fixed left-0 overflow-y-auto z-30 border-r border-gray-700 sidebar-transition lg:translate-x-0 -translate-x-full"
@@ -1127,6 +1106,111 @@
                         </div>
                     </div>
 
+                    <!-- Release Notes Section -->
+                    <div class="mb-2">
+                        <div class="relative">
+                            <!-- 1. Text + Icon (Click = Page Open) -->
+                            <a
+                                class="flex items-center justify-between w-full px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'release-notes' ? 'bg-gray-700 text-blue-400' : ''; ?> pr-12"
+                                onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
+                                <div class="flex items-center flex-1">
+                                    <i class="fas fa-clipboard-list mr-3 w-4 text-center"></i>
+                                    <span class="font-medium">Release Notes</span>
+                                </div>
+                            </a>
+
+                            <!-- 2. Arrow Button (Click = Only Dropdown Toggle) -->
+                            <button type="button"
+                                class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
+                                onclick="event.stopPropagation(); toggleDropdown('release-notes-dropdown');">
+                                <i class="fas fa-chevron-down text-xs transition-transform duration-300 <?php echo $active_page == 'release-notes' ? 'rotate-180' : ''; ?>"
+                                    id="release-notes-arrow"></i>
+                            </button>
+                        </div>
+
+                        <div class="mt-1 <?php echo $active_page == 'release-notes' ? 'block' : 'hidden'; ?>"
+                            id="release-notes-dropdown">
+                            <!-- Release notes for Editflo -->
+                            <div class="mt-1">
+                                <div class="relative">
+                                    <!-- 1. Text Part - Click = Open Page -->
+                                    <a href="<?php echo base_url('documentation/release-notes/editflo'); ?>"
+                                        class="flex items-center w-full pl-12 pr-16 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_section == 'editflo' && !$active_subsection ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
+                                        <span>Release notes for Editflo</span>
+                                    </a>
+
+                                    <!-- 2. Arrow Button - Click = Only Toggle Dropdown -->
+                                    <button type="button"
+                                        class="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
+                                        onclick="event.stopPropagation(); toggleDropdown('editflo-dropdown');">
+                                        <i class="fas fa-chevron-down text-xs transition-transform duration-300 <?php echo $active_section == 'editflo' ? 'rotate-180' : ''; ?>"
+                                            id="editflo-arrow"></i>
+                                    </button>
+                                </div>
+
+                                <!-- Editflo Dropdown Content -->
+                                <div class="mt-1 <?php echo $active_section == 'editflo' ? 'block' : 'hidden'; ?>"
+                                    id="editflo-dropdown">
+                                    <div class="relative">
+                                        <!-- 1. Text Part - Click = Open Page -->
+                                        <a href="<?php echo base_url('documentation/release-notes/editflo/0-1'); ?>"
+                                            class="flex items-center w-full pl-16 pr-20 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == '0-1' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                            onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
+                                            <span>Editflo 0.1</span>
+                                        </a>
+
+                                        <!-- 2. Arrow Button - Click = Only Toggle Dropdown -->
+                                        <button type="button"
+                                            class="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
+                                            onclick="event.stopPropagation(); toggleDropdown('editflo-0-1-dropdown');">
+                                            <i class="fas fa-chevron-down text-xs transition-transform duration-300 <?php echo strpos($active_subsection, '0-1-') === 0 || $active_subsection == '0-1' ? 'rotate-180' : ''; ?>"
+                                                id="editflo-0-1-arrow"></i>
+                                        </button>
+                                    </div>
+
+                                    <!-- Editflo 0.1 Sub-dropdown -->
+                                    <div class="mt-1 <?php echo strpos($active_subsection, '0-1-') === 0 || $active_subsection == '0-1' ? 'block' : 'hidden'; ?>"
+                                        id="editflo-0-1-dropdown">
+                                        <!-- Editflo 0.1 Overview -->
+                                        <a href="<?php echo base_url('documentation/release-notes/editflo/0-1/overview'); ?>"
+                                            class="block pl-20 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == '0-1-overview' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                            onclick="closeMobileSidebar()">
+                                            Overview
+                                        </a>
+
+                                        <!-- Editflo 0.1 New Premium plugins -->
+                                        <a href="<?php echo base_url('documentation/release-notes/editflo/0-1/overview#new-premium-plugins'); ?>"
+                                            class="block pl-20 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == '0-1-new-premium-plugins' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                            onclick="closeMobileSidebar()">
+                                            New Premium plugins
+                                        </a>
+
+                                        <!-- Editflo 0.1 Accompanying Premium plugin changes -->
+                                        <a href="<?php echo base_url('documentation/release-notes/editflo/0-1/overview#premium-plugin-changes'); ?>"
+                                            class="block pl-20 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == '0-1-premium-plugin-changes' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                            onclick="closeMobileSidebar()">
+                                            Plugin changes
+                                        </a>
+
+                                        <!-- Editflo 0.1 Improvements -->
+                                        <a href="<?php echo base_url('documentation/release-notes/editflo/0-1/overview#improvements'); ?>"
+                                            class="block pl-20 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == '0-1-improvements' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                            onclick="closeMobileSidebar()">
+                                            Improvements
+                                        </a>
+
+                                        <!-- Editflo 0.1 Additions -->
+                                        <a href="<?php echo base_url('documentation/release-notes/editflo/0-1/overview#additions'); ?>"
+                                            class="block pl-20 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == '0-1-additions' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                            onclick="closeMobileSidebar()">
+                                            Additions
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Other Main Navigation Items -->
                     <a href="<?php echo base_url('documentation/integration'); ?>"
                         class="flex items-center px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'integration' ? 'bg-gray-700 text-blue-400' : ''; ?>"
@@ -1420,7 +1504,26 @@
                         } else {
                             $view_file .= 'security';
                         }
+                    } elseif ($active_page == 'release-notes') {
+                        if ($active_section == 'editflo') {
+                            if ($active_subsection == '') {
+                                $view_file .= 'release_notes_editflo';
+                            } elseif ($active_subsection == '0-1') {
+                                $view_file .= 'editflo_0_1';
+                            } elseif ($active_subsection == '0-1-overview') {
+                                $view_file .= 'editflo_0_1_overview';
+                            } elseif ($active_subsection == '0-1-new-premium-plugins') {
+                                $view_file .= 'editflo_0_1_new_premium_plugins';
+                            } elseif ($active_subsection == '0-1-premium-plugin-changes') {
+                                $view_file .= 'editflo_0_1_premium_plugin_changes';
+                            } elseif ($active_subsection == '0-1-improvements') {
+                                $view_file .= 'editflo_0_1_improvements';
+                            } elseif ($active_subsection == '0-1-additions') {
+                                $view_file .= 'editflo_0_1_additions';
+                            }
+                        }
                     }
+
                     // Check if view file exists, otherwise show a default message
                     if (file_exists(APPPATH . 'views/' . $view_file . '.php')) {
                         $this->load->view($view_file);
@@ -1812,6 +1915,19 @@
             <?php if ($active_section == 'security-guide'): ?>
                 openDropdown('security-guide-dropdown', 'security-guide-arrow');
             <?php endif; ?>
+
+            <?php if ($active_page == 'release-notes'): ?>
+                openDropdown('release-notes-dropdown', 'release-notes-arrow');
+            <?php endif; ?>
+
+            <?php if ($active_section == 'editflo'): ?>
+                openDropdown('editflo-dropdown', 'editflo-arrow');
+            <?php endif; ?>
+
+            <?php if ($active_subsection == '0-1' || strpos($active_subsection, '0-1-') === 0): ?>
+                // Editflo 0.1 dropdown open kare (both 0-1 and 0-1-* pages ke liye)
+                openDropdown('editflo-0-1-dropdown', 'editflo-0-1-arrow');
+            <?php endif; ?>
         });
 
         // Enhanced click handler for all dropdown buttons
@@ -1868,6 +1984,33 @@
                     e.stopPropagation();
                 });
             });
+        });
+    </script>
+
+    <!-- navbar script -->
+    <script>
+        // Toggle mobile search
+        document.getElementById('mobileSearchBtn')?.addEventListener('click', function() {
+            const mobileSearchBar = document.getElementById('mobileSearchBar');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            mobileSearchBar.classList.toggle('hidden');
+            // Close mobile menu if open
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Toggle mobile menu
+        document.getElementById('mobileMenuBtn')?.addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileSearchBar = document.getElementById('mobileSearchBar');
+
+            mobileMenu.classList.toggle('hidden');
+            // Close mobile search if open
+            if (!mobileSearchBar.classList.contains('hidden')) {
+                mobileSearchBar.classList.add('hidden');
+            }
         });
     </script>
 </body>

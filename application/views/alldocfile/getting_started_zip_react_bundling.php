@@ -40,7 +40,7 @@
         <div class="flex items-center mb-3 sm:mb-4">
             <h2 class="text-lg sm:text-xl font-semibold text-gray-800">Procedure</h2>
         </div>
-        
+
         <div class="space-y-3 sm:space-y-4">
             <!-- Step 1: Create React Project -->
             <div class="flex items-start">
@@ -59,7 +59,7 @@
                             <span class="text-gray-400 text-xs">Terminal</span>
                         </div>
                         <code><span class="text-green-400"># NPM 7+, extra double-dash is needed</span><br>
-<span class="text-yellow-300">npm create vite@5 editflo-react-demo -- --template react-swc</span></code>
+                            <span class="text-yellow-300">npm create vite@5 editflo-react-demo -- --template react-swc</span></code>
                     </div>
                 </div>
             </div>
@@ -103,15 +103,15 @@
                     <p class="text-gray-600 text-xs sm:text-sm mt-1">Afterwards the directory listing should be similar to:</p>
                     <div class="bg-gray-100 p-3 sm:p-4 rounded-lg font-mono text-xs overflow-x-auto mt-2">
                         <code><span class="text-gray-700">src/</span><br>
-<span class="text-gray-500 ml-4">├── App.css</span><br>
-<span class="text-gray-500 ml-4">├── App.jsx</span><br>
-<span class="text-gray-500 ml-4">├── index.css</span><br>
-<span class="text-gray-500 ml-4">└── editflo/</span><br>
-<span class="text-gray-400 ml-8">├── icons/</span><br>
-<span class="text-gray-400 ml-8">├── plugins/</span><br>
-<span class="text-gray-400 ml-8">├── skins/</span><br>
-<span class="text-gray-400 ml-8">├── themes/</span><br>
-<span class="text-gray-400 ml-8">└── editflo.min.js</span></code>
+                            <span class="text-gray-500 ml-4">├── App.css</span><br>
+                            <span class="text-gray-500 ml-4">├── App.jsx</span><br>
+                            <span class="text-gray-500 ml-4">├── index.css</span><br>
+                            <span class="text-gray-500 ml-4">└── editflo/</span><br>
+                            <span class="text-gray-400 ml-8">├── icons/</span><br>
+                            <span class="text-gray-400 ml-8">├── plugins/</span><br>
+                            <span class="text-gray-400 ml-8">├── skins/</span><br>
+                            <span class="text-gray-400 ml-8">├── themes/</span><br>
+                            <span class="text-gray-400 ml-8">└── editflo.min.js</span></code>
                     </div>
                 </div>
             </div>
@@ -134,11 +134,11 @@
                             <span class="text-gray-400 text-xs">eslint.config.js</span>
                         </div>
                         <code><span class="text-blue-400">export default tseslint.config(</span><br>
-<span class="ml-4 text-gray-300">-  { ignores: ['dist'] },</span><br>
-<span class="ml-4 text-green-400">+  { ignores: ['dist', 'src/editflo'] },</span><br>
-<span class="ml-4">{ extends: [js.configs.recommended, ...tseslint.configs.recommended],</span><br>
-<span class="ml-4">  files: ['**/*.{ts,tsx}'],</span><br>
-<span class="text-blue-400">})</span></code>
+                            <span class="ml-4 text-gray-300">- { ignores: ['dist'] },</span><br>
+                            <span class="ml-4 text-green-400">+ { ignores: ['dist', 'src/editflo'] },</span><br>
+                            <span class="ml-4">{ extends: [js.configs.recommended, ...tseslint.configs.recommended],</span><br>
+                            <span class="ml-4"> files: ['**/*.{ts,tsx}'],</span><br>
+                            <span class="text-blue-400">})</span></code>
                     </div>
                 </div>
             </div>
@@ -162,46 +162,46 @@
                         </div>
                         <code><span class="text-purple-400">import</span> <span class="text-orange-400">{ Editor }</span> <span class="text-purple-400">from</span> <span class="text-green-400">'@editflo/editflo-react'</span>;<br><br>
 
-<span class="text-green-400">// Editflo core</span><br>
-<span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/editflo.min.js'</span>;<br>
-<span class="text-green-400">// DOM model</span><br>
-<span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/models/dom/model.min.js'</span>;<br>
-<span class="text-green-400">// Theme</span><br>
-<span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/themes/silver/theme.min.js'</span>;<br>
-<span class="text-green-400">// Toolbar icons</span><br>
-<span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/icons/default/icons.min.js'</span>;<br>
-<span class="text-green-400">// Editor styles</span><br>
-<span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/skins/ui/oxide/skin.min.js'</span>;<br><br>
+                            <span class="text-green-400">// Editflo core</span><br>
+                            <span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/editflo.min.js'</span>;<br>
+                            <span class="text-green-400">// DOM model</span><br>
+                            <span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/models/dom/model.min.js'</span>;<br>
+                            <span class="text-green-400">// Theme</span><br>
+                            <span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/themes/silver/theme.min.js'</span>;<br>
+                            <span class="text-green-400">// Toolbar icons</span><br>
+                            <span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/icons/default/icons.min.js'</span>;<br>
+                            <span class="text-green-400">// Editor styles</span><br>
+                            <span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/skins/ui/oxide/skin.min.js'</span>;<br><br>
 
-<span class="text-green-400">// Essential plugins</span><br>
-<span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/advlist'</span>;<br>
-<span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/anchor'</span>;<br>
-<span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/autolink'</span>;<br>
-<span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/autoresize'</span>;<br>
-<span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/autosave'</span>;<br>
-<span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/charmap'</span>;<br>
-<span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/code'</span>;<br>
-<span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/help'</span>;<br>
-<span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/image'</span>;<br>
-<span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/link'</span>;<br>
-<span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/lists'</span>;<br>
-<span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/media'</span>;<br>
-<span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/searchreplace'</span>;<br>
-<span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/table'</span>;<br>
-<span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/wordcount'</span>;<br><br>
+                            <span class="text-green-400">// Essential plugins</span><br>
+                            <span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/advlist'</span>;<br>
+                            <span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/anchor'</span>;<br>
+                            <span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/autolink'</span>;<br>
+                            <span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/autoresize'</span>;<br>
+                            <span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/autosave'</span>;<br>
+                            <span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/charmap'</span>;<br>
+                            <span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/code'</span>;<br>
+                            <span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/help'</span>;<br>
+                            <span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/image'</span>;<br>
+                            <span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/link'</span>;<br>
+                            <span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/lists'</span>;<br>
+                            <span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/media'</span>;<br>
+                            <span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/searchreplace'</span>;<br>
+                            <span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/table'</span>;<br>
+                            <span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/plugins/wordcount'</span>;<br><br>
 
-<span class="text-green-400">// Content styles</span><br>
-<span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/skins/content/default/content.js'</span>;<br>
-<span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/skins/ui/oxide/content.js'</span>;<br><br>
+                            <span class="text-green-400">// Content styles</span><br>
+                            <span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/skins/content/default/content.js'</span>;<br>
+                            <span class="text-purple-400">import</span> <span class="text-green-400">'./editflo/skins/ui/oxide/content.js'</span>;<br><br>
 
-<span class="text-purple-400">export default function</span> <span class="text-yellow-300">BundledEditor</span>(<span class="text-orange-400">props</span>) {<br>
-  <span class="text-purple-400">return</span> (<br>
-    &lt;<span class="text-orange-400">Editor</span><br>
-      <span class="text-blue-400">licenseKey</span>=<span class="text-green-400">'gpl'</span><br>
-      <span class="text-blue-400">{...props}</span><br>
-    /&gt;<br>
-  );<br>
-}</code>
+                            <span class="text-purple-400">export default function</span> <span class="text-yellow-300">BundledEditor</span>(<span class="text-orange-400">props</span>) {<br>
+                            <span class="text-purple-400">return</span> (<br>
+                            &lt;<span class="text-orange-400">Editor</span><br>
+                            <span class="text-blue-400">licenseKey</span>=<span class="text-green-400">'gpl'</span><br>
+                            <span class="text-blue-400">{...props}</span><br>
+                            /&gt;<br>
+                            );<br>
+                            }</code>
                     </div>
                     <p class="text-gray-600 text-xs sm:text-sm mt-2 sm:mt-3 flex items-start">
                         <i class="fas fa-lightbulb text-yellow-500 mr-2 mt-0.5"></i>
@@ -239,23 +239,23 @@
                             <span class="text-gray-400 text-xs">App.jsx</span>
                         </div>
                         <code><span class="text-purple-400">import</span> <span class="text-orange-400">{ useRef }</span> <span class="text-purple-400">from</span> <span class="text-green-400">'react'</span>;<br>
-<span class="text-purple-400">import</span> <span class="text-orange-400">BundledEditor</span> <span class="text-purple-400">from</span> <span class="text-green-400">'./BundledEditor'</span>;<br>
-<span class="text-purple-400">import</span> <span class="text-green-400">'./App.css'</span>;<br><br>
+                            <span class="text-purple-400">import</span> <span class="text-orange-400">BundledEditor</span> <span class="text-purple-400">from</span> <span class="text-green-400">'./BundledEditor'</span>;<br>
+                            <span class="text-purple-400">import</span> <span class="text-green-400">'./App.css'</span>;<br><br>
 
-<span class="text-purple-400">export default function</span> <span class="text-yellow-300">App</span>() {<br>
-  <span class="text-purple-400">const</span> <span class="text-blue-400">editorRef</span> = <span class="text-orange-400">useRef</span>(<span class="text-blue-400">null</span>);<br>
-  <span class="text-purple-400">const</span> <span class="text-blue-400">log</span> = () => {<br>
-    <span class="text-purple-400">if</span> (editorRef.<span class="text-blue-400">current</span>) {<br>
-      <span class="text-yellow-300">console</span>.<span class="text-yellow-300">log</span>(editorRef.<span class="text-blue-400">current</span>.<span class="text-yellow-300">getContent</span>());<br>
-    }<br>
-  };<br><br>
+                            <span class="text-purple-400">export default function</span> <span class="text-yellow-300">App</span>() {<br>
+                            <span class="text-purple-400">const</span> <span class="text-blue-400">editorRef</span> = <span class="text-orange-400">useRef</span>(<span class="text-blue-400">null</span>);<br>
+                            <span class="text-purple-400">const</span> <span class="text-blue-400">log</span> = () => {<br>
+                            <span class="text-purple-400">if</span> (editorRef.<span class="text-blue-400">current</span>) {<br>
+                            <span class="text-yellow-300">console</span>.<span class="text-yellow-300">log</span>(editorRef.<span class="text-blue-400">current</span>.<span class="text-yellow-300">getContent</span>());<br>
+                            }<br>
+                            };<br><br>
 
-  <span class="text-purple-400">return</span> (<br>
-    &lt;&gt;<br>
-      &lt;<span class="text-orange-400">BundledEditor</span><br>
-        <span class="text-blue-400">onInit</span>={<span class="text-gray-300">(_evt, editor) => editorRef.current = editor</span>}<br>
-        <span class="text-blue-400">initialValue</span>=<span class="text-green-400">'&lt;p&gt;This is the initial content of the editor.&lt;/p&gt;'</span><br>
-        <span class="text-blue-400">init</span>={{<br>
+                            <span class="text-purple-400">return</span> (<br>
+                            &lt;&gt;<br>
+                            &lt;<span class="text-orange-400">BundledEditor</span><br>
+                            <span class="text-blue-400">onInit</span>={<span class="text-gray-300">(_evt, editor) => editorRef.current = editor</span>}<br>
+                            <span class="text-blue-400">initialValue</span>=<span class="text-green-400">'&lt;p&gt;This is the initial content of the editor.&lt;/p&gt;'</span><br>
+                            <span class="text-blue-400">init</span>={{<br>
           <span class="text-blue-400">height</span>: <span class="text-orange-400">500</span>,<br>
           <span class="text-blue-400">menubar</span>: <span class="text-blue-400">false</span>,<br>
           <span class="text-blue-400">plugins</span>: [<br>
@@ -268,11 +268,11 @@
             <span class="text-green-400">'removeformat | help'</span>,<br>
           <span class="text-blue-400">content_style</span>: <span class="text-green-400">'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'</span><br>
         }}<br>
-      /&gt;<br>
-      &lt;<span class="text-yellow-300">button</span> <span class="text-blue-400">onClick</span>={<span class="text-gray-300">log</span>}&gt;Log editor content&lt;/<span class="text-yellow-300">button</span>&gt;<br>
-    &lt;/&gt;<br>
-  );<br>
-}</code>
+                            /&gt;<br>
+                            &lt;<span class="text-yellow-300">button</span> <span class="text-blue-400">onClick</span>={<span class="text-gray-300">log</span>}&gt;Log editor content&lt;/<span class="text-yellow-300">button</span>&gt;<br>
+                            &lt;/&gt;<br>
+                            );<br>
+                            }</code>
                     </div>
                 </div>
             </div>
@@ -419,7 +419,7 @@
                         </div>
                         <div class="ml-2 flex-1 min-w-0">
                             <p class="text-gray-600 text-xs sm:text-sm">
-                                <span class="font-medium">Editflo integration:</span> 
+                                <span class="font-medium">Editflo integration:</span>
                                 <a href="#" class="text-blue-600 hover:underline ml-1">Editflo React integration technical reference</a>
                             </p>
                         </div>
@@ -430,7 +430,7 @@
                         </div>
                         <div class="ml-2 flex-1 min-w-0">
                             <p class="text-gray-600 text-xs sm:text-sm">
-                                <span class="font-medium">Editflo customization:</span> 
+                                <span class="font-medium">Editflo customization:</span>
                                 <a href="#" class="text-blue-600 hover:underline ml-1">Basic setup</a>
                             </p>
                         </div>
@@ -441,8 +441,8 @@
                         </div>
                         <div class="ml-2 flex-1 min-w-0">
                             <p class="text-gray-600 text-xs sm:text-sm">
-                                <span class="font-medium">React application:</span> 
-                                <a href="#" class="text-blue-600 hover:underline ml-1">Getting Started with Vite</a> or 
+                                <span class="font-medium">React application:</span>
+                                <a href="#" class="text-blue-600 hover:underline ml-1">Getting Started with Vite</a> or
                                 <a href="#" class="text-blue-600 hover:underline ml-1">React documentation</a>
                             </p>
                         </div>
@@ -460,7 +460,7 @@
     .max-h-96 {
         max-height: 24rem;
     }
-    
+
     pre code {
         white-space: pre-wrap;
         word-break: break-word;

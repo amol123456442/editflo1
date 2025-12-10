@@ -29,43 +29,43 @@
                 <!-- React -->
                 <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
                     <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">React</h4>
-                    <p class="text-gray-600 text-xs sm:text-sm">Integrate Editflo into your React application using the EditfloCloud.</p>
+                    <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">Integrate Editflo into your React application using the EditfloCloud.</p>
                 </div>
 
                 <!-- Angular -->
                 <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
                     <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Angular</h4>
-                    <p class="text-gray-600 text-xs sm:text-sm">Integrate Editflo into your Angular application using the EditfloCloud.</p>
+                    <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">Integrate Editflo into your Angular application using the EditfloCloud.</p>
                 </div>
 
                 <!-- Vue.js -->
                 <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
                     <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Vue.js</h4>
-                    <p class="text-gray-600 text-xs sm:text-sm">Integrate Editflo into your Vue.js application using the EditfloCloud.</p>
+                    <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">Integrate Editflo into your Vue.js application using the EditfloCloud.</p>
                 </div>
 
                 <!-- Blazor -->
                 <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
                     <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Blazor</h4>
-                    <p class="text-gray-600 text-xs sm:text-sm">Integrate Editflo into your Blazor application using the EditfloCloud.</p>
+                    <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">Integrate Editflo into your Blazor application using the EditfloCloud.</p>
                 </div>
 
                 <!-- Svelte -->
                 <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
                     <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Svelte</h4>
-                    <p class="text-gray-600 text-xs sm:text-sm">Integrate Editflo into your Svelte application using the EditfloCloud.</p>
+                    <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">Integrate Editflo into your Svelte application using the EditfloCloud.</p>
                 </div>
 
                 <!-- Web Component -->
                 <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
                     <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Web Component</h4>
-                    <p class="text-gray-600 text-xs sm:text-sm">Integrate Editflo as a web component using the EditfloCloud.</p>
+                    <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">Integrate Editflo as a web component using the EditfloCloud.</p>
                 </div>
 
                 <!-- jQuery -->
                 <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow sm:col-span-2">
                     <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">jQuery</h4>
-                    <p class="text-gray-600 text-xs sm:text-sm">Integrate Editflo with the jQuery JavaScript library using the EditfloCloud.</p>
+                    <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">Integrate Editflo with the jQuery JavaScript library using the EditfloCloud.</p>
                 </div>
             </div>
         </div>
@@ -82,19 +82,19 @@
             <!-- Django -->
             <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
                 <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Django</h4>
-                <p class="text-gray-600 text-xs sm:text-sm">Integrate Editflo into your Django application using the EditfloCloud.</p>
+                <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">Integrate Editflo into your Django application using the EditfloCloud.</p>
             </div>
 
             <!-- Laravel -->
             <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
                 <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Laravel</h4>
-                <p class="text-gray-600 text-xs sm:text-sm">Integrate Editflo into your Laravel application using the EditfloCloud.</p>
+                <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">Integrate Editflo into your Laravel application using the EditfloCloud.</p>
             </div>
 
             <!-- Ruby on Rails -->
             <div class="border border-gray-200  rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow sm:col-span-2">
                 <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Ruby on Rails</h4>
-                <p class="text-gray-600 text-xs sm:text-sm">Integrate Editflo into your Ruby on Rails application using the EditfloCloud.</p>
+                <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">Integrate Editflo into your Ruby on Rails application using the EditfloCloud.</p>
             </div>
         </div>
     </div>
@@ -107,7 +107,7 @@
         <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Other Integrations</h3>
         <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
             <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Bootstrap</h4>
-            <p class="text-gray-600 text-xs sm:text-sm">Integrate Editflo into your Django application using the EditfloCloud.</p>
+            <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">Integrate Editflo into your Django application using the EditfloCloud.</p>
         </div>
     </div>
 

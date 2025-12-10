@@ -6,7 +6,7 @@
         </h1>
     </div>
 
-    <p class="p-2 text-gray-700 mb-2">This demo uses the smaller version of the default icons together with a small skin to make the buttons smaller. This is useful to save space if you are using many toolbar buttons.
+    <p class="p-2 text-gray-700 text-sm sm:text-base mb-2">This demo uses the smaller version of the default icons together with a small skin to make the buttons smaller. This is useful to save space if you are using many toolbar buttons.
     </p>
     <!-- Editor Preview Section -->
     <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden mb-8">

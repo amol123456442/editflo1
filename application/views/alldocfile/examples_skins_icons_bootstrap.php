@@ -4,7 +4,7 @@
         <h1 class="text-3xl font-bold text-gray-800 mb-2">Bootstrap skin demo</h1>
     </div>
 
-    <p class="p-2 text-gray-700">This demo shows an example form using Bootstrap together with TinyMCE and the Tiny Bootstrap skin and Bootstrap icon pack. It’s designed to closely match the colors, forms, and buttons of the default Bootstrap framework UI.
+    <p class="p-2 text-gray-700 text-sm sm:text-base">This demo shows an example form using Bootstrap together with TinyMCE and the Tiny Bootstrap skin and Bootstrap icon pack. It’s designed to closely match the colors, forms, and buttons of the default Bootstrap framework UI.
 
     </p>
     <div class="bg-blue-50 border border-blue-200 rounded-lg p-5 md:p-6 my-8">

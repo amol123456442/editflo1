@@ -7,11 +7,11 @@
         </h1>
     </div>
 
-    <p class="p-2 text-gray-700 mb-2">This demo uses the Outside skin. The Outside skin completely removes outside borders and only has a border around the editable area. It is designed to be a clean and simple text input experience for chat or comment applications.
+    <p class="p-2 text-gray-700 text-sm sm:text-base mb-2">This demo uses the Outside skin. The Outside skin completely removes outside borders and only has a border around the editable area. It is designed to be a clean and simple text input experience for chat or comment applications.
 
 
     </p>
-    <p class="p-2 text-gray-700 mb-2">The example below uses the small icon pack and a custom editor frame.
+    <p class="p-2 text-gray-700 text-sm sm:text-base mb-2">The example below uses the small icon pack and a custom editor frame.
 
 
     </p>

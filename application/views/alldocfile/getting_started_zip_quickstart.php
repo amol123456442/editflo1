@@ -8,7 +8,7 @@
 
     <!-- Introduction Section -->
     <div class="bg-white rounded-lg border border-gray-200 p-6 mb-8">
-        <p class="text-gray-700 mb-6">
+        <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-6">
             Editflo 8 is a powerful and flexible rich text editor that can be embedded in web applications. This quick
             start covers how to add a Editflo editor to a web page using a Editflo .zip package.
         </p>
@@ -17,7 +17,7 @@
     <!-- Deploy from ZIP Section -->
     <div class="bg-white rounded-lg border border-gray-200 p-6 mb-8">
         <h2 class="text-xl font-semibold text-gray-800 mb-4">Deploy Editflo from a .zip archive</h2>
-        <ol class="list-decimal list-inside space-y-3 text-gray-700">
+        <ol class="list-decimal list-inside space-y-3 text-gray-700 sm:mb-4 text-sm sm:text-base">
             <li>
                 <strong>Download Editflo:</strong>
                 <ul class="list-disc list-inside ml-6 mt-2 space-y-1">
@@ -46,7 +46,7 @@
     <!-- Include Script Section -->
     <div class="bg-white rounded-lg border border-gray-200 p-6 mb-8">
         <h2 class="text-xl font-semibold text-gray-800 mb-4">Include the Editflo script</h2>
-        <p class="text-gray-700 mb-4">
+        <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
             Include the following line of code in the <code
                 class="bg-gray-100 px-1 py-0.5 rounded text-sm">&lt;head&gt;</code> of an HTML page:
         </p>
@@ -66,13 +66,13 @@
     <!-- Initialize Section -->
     <div class="bg-white rounded-lg border border-gray-200 p-6 mb-8">
         <h2 class="text-xl font-semibold text-gray-800 mb-4">Initialize Editflo as part of a web form</h2>
-        <p class="text-gray-700 mb-4">
+        <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
             Initialize Editflo 8 on any element (or elements) on the web page by passing an object containing a <code
                 class="bg-gray-100 px-1 py-0.5 rounded text-sm">selector</code> value to <code
                 class="bg-gray-100 px-1 py-0.5 rounded text-sm">editflo.init()</code>. The <code
                 class="bg-gray-100 px-1 py-0.5 rounded text-sm">selector</code> value can be any valid CSS selector.
         </p>
-        <p class="text-gray-700 mb-4">
+        <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
             For example, to replace <code
                 class="bg-gray-100 px-1 py-0.5 rounded text-sm">&lt;textarea id="mytextarea"&gt;</code> with a Editflo 8
             editor instance, pass the selector <code
@@ -120,7 +120,7 @@
         </div>
     </div>
 
-    <p class="p-4 text-gray-700">Adding this content to an HTML file and opening it in a web browser will load a Editflo
+    <p class="p-4 text-gray-700 sm:mb-4 text-sm sm:text-base">Adding this content to an HTML file and opening it in a web browser will load a Editflo
         editor.</p>
 
     <!-- Editor Preview Section -->
@@ -133,12 +133,12 @@
                     Editflo
                 </button>
                 <button
-                    class="tab-button py-3 px-6 border-b-2 border-transparent text-gray-500 hover:text-gray-700 font-medium"
+                    class="tab-button py-3 px-6 border-b-2 border-transparent text-gray-500 hover:text-gray-700 sm:mb-4 text-sm sm:text-base font-medium"
                     data-tab="html">
                     HTML
                 </button>
                 <button
-                    class="tab-button py-3 px-6 border-b-2 border-transparent text-gray-500 hover:text-gray-700 font-medium"
+                    class="tab-button py-3 px-6 border-b-2 border-transparent text-gray-500 hover:text-gray-700 sm:mb-4 text-sm sm:text-base font-medium"
                     data-tab="js">
                     JS
                 </button>
@@ -189,11 +189,11 @@
     <!-- Save Content Section -->
     <div class="bg-white rounded-lg border border-gray-200 p-6 mb-8">
         <h2 class="text-xl font-semibold text-gray-800 mb-4">Save the content from the editor</h2>
-        <p class="text-gray-700 mb-4">
+        <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
             To retrieve content from the editor, either process the content with a form handler or use the <code
                 class="bg-gray-100 px-1 py-0.5 rounded text-sm">getContent</code> API.
         </p>
-        <p class="text-gray-700">
+        <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">
             If you use a form handler, once the <code
                 class="bg-gray-100 px-1 py-0.5 rounded text-sm">&lt;form&gt;</code> is submitted, Editflo 8 will <code
                 class="bg-gray-100 px-1 py-0.5 rounded text-sm">POST</code> the content in the same way as a normal HTML
@@ -206,8 +206,8 @@
     <!-- Next Steps Section -->
     <div class="bg-white rounded-lg border border-gray-200 p-6">
         <h2 class="text-xl font-semibold text-gray-800 mb-4">Next Steps</h2>
-        <p class="text-gray-700 mb-4">For information on:</p>
-        <ul class="list-disc list-inside text-gray-700 space-y-3 mb-6">
+        <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">For information on:</p>
+        <ul class="list-disc list-inside text-gray-700 sm:mb-4 text-sm sm:text-base space-y-3 mb-6">
             <li><a href="#" class="text-blue-600 hover:text-blue-800 underline">Setting the license</a></li>
             <li><a href="#" class="text-blue-600 hover:text-blue-800 underline">Customizing Editflo</a>, see: <a
                     href="#" class="text-blue-600 hover:text-blue-800 underline">Basic Setup</a></li>
@@ -246,12 +246,12 @@
                 // Remove active class from all buttons
                 tabButtons.forEach(btn => {
                     btn.classList.remove('border-blue-600', 'text-blue-600');
-                    btn.classList.add('border-transparent', 'text-gray-500', 'hover:text-gray-700');
+                    btn.classList.add('border-transparent', 'text-gray-500', 'hover:text-gray-700 sm:mb-4 text-sm sm:text-base');
                 });
 
                 // Add active class to clicked button
                 button.classList.add('border-blue-600', 'text-blue-600');
-                button.classList.remove('border-transparent', 'text-gray-500', 'hover:text-gray-700');
+                button.classList.remove('border-transparent', 'text-gray-500', 'hover:text-gray-700 sm:mb-4 text-sm sm:text-base');
 
                 // Hide all tab contents
                 tabContents.forEach(content => {

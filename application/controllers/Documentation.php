@@ -298,6 +298,42 @@ class Documentation extends CI_Controller
         $data['active_subsection'] = '';
         $this->load->view('alldocfile/layout', $data);
     }
+// Add these methods to your Documentation controller
+public function invalid_api_key()
+{
+    $data['page_title'] = 'Invalid API Key - Editflo Documentation';
+    $data['active_page'] = 'invalid-api-key';
+    $data['active_section'] = '';
+    $data['active_subsection'] = '';
+    $this->load->view('alldocfile/layout', $data);
+}
+
+public function license_key()
+{
+    $data['page_title'] = 'License Key - Editflo Documentation';
+    $data['active_page'] = 'license-key';
+    $data['active_section'] = '';
+    $data['active_subsection'] = '';
+    $this->load->view('alldocfile/layout', $data);
+}
+
+public function support()
+{
+    $data['page_title'] = 'Support - Editflo Documentation';
+    $data['active_page'] = 'support';
+    $data['active_section'] = '';
+    $data['active_subsection'] = '';
+    $this->load->view('alldocfile/layout', $data);
+}
+
+public function usage_based_billing()
+{
+    $data['page_title'] = 'Usage-Based Billing - Editflo Documentation';
+    $data['active_page'] = 'usage-based-billing';
+    $data['active_section'] = '';
+    $data['active_subsection'] = '';
+    $this->load->view('alldocfile/layout', $data);
+}
 
     public function api()
     {

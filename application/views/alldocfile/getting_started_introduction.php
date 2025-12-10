@@ -8,14 +8,14 @@
     <!-- What is Editflo Section -->
     <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-8 mb-8 transition-all duration-300 hover:shadow-xl">
         <h2 class="text-2xl font-semibold text-gray-800 mb-4 pb-3 border-b-2 border-blue-500">What is Editflo?</h2>
-        <p class="text-gray-700 mb-6">Editflo is a modern, intuitive WYSIWYG (What You See Is What You Get) editor that enables users to create and edit beautifully formatted content directly in web applications with ease.</p>
+        <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-6">Editflo is a modern, intuitive WYSIWYG (What You See Is What You Get) editor that enables users to create and edit beautifully formatted content directly in web applications with ease.</p>
 
         <div class="grid md:grid-cols-2 gap-6 mb-6">
             <div class="bg-blue-50 border border-blue-200 rounded-lg p-5 transition-all duration-300 hover:bg-blue-100">
                 <h3 class="text-lg font-semibold text-gray-800 mb-3 flex items-center">
                     <i class="fas fa-star text-blue-500 mr-2"></i> Key Features
                 </h3>
-                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <ul class="list-disc list-inside text-gray-700 sm:mb-4 text-sm sm:text-base space-y-2">
                     <li>Advanced rich text formatting</li>
                     <li>Seamless image and media integration</li>
                     <li>Intuitive table creation and editing</li>
@@ -26,7 +26,7 @@
                 <h3 class="text-lg font-semibold text-gray-800 mb-3 flex items-center">
                     <i class="fas fa-check-circle text-green-500 mr-2"></i> Benefits
                 </h3>
-                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <ul class="list-disc list-inside text-gray-700 sm:mb-4 text-sm sm:text-base space-y-2">
                     <li>Simple integration process</li>
                     <li>Highly customizable interface</li>
                     <li>Universal browser compatibility</li>
@@ -40,12 +40,12 @@
     <!-- Installation Section -->
     <div class="bg-white rounded-lg shadow-sm border border-border-light p-6">
         <h2 class="text-2xl font-semibold text-text-dark mb-4 pb-2 border-b-2 border-primary">Getting Started with Editflo</h2>
-        <p class="mb-4 text-gray-700">
+        <p class="mb-4 text-gray-700 sm:mb-4 text-sm sm:text-base">
             Editflo is a rich text editor designed for web applications. To install Editflo, include the required script and initialize the editor with a minimal configuration. Upon registration, an API key is provided along with a corresponding code snippet for integration.
         </p>
 
         <div class="bg-blue-50 border-l-4 border-blue-500 p-4">
-            <p class="text-blue-800 mb-2">
+            <p class="text-blue-800 sm:mb-4 text-sm sm:text-base mb-2">
                 It only takes 2 minutes to create your free Tiny account and get the API key:
             </p>
             <div class="flex items-center gap-2 flex-wrap">

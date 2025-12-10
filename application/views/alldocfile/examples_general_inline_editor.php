@@ -5,7 +5,7 @@
         </h1>
     </div>
 
-    <p class="p-2 text-gray-700">Adding this content to an HTML file and opening it in a web browser will load a Editflo
+    <p class="p-2 text-gray-700 text-sm sm:text-base">Adding this content to an HTML file and opening it in a web browser will load a Editflo
         editor.</p>
 
     <!-- Editor Preview Section -->

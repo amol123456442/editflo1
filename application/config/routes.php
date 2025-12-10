@@ -168,6 +168,11 @@ $route['documentation/release-notes/editflo/0-1/additions'] = 'documentation/edi
 // Other main sections
 $route['documentation/integration'] = 'documentation/integration';
 $route['documentation/configuration'] = 'documentation/configuration';
+// Add these 4 routes with correct controller and method names
+$route['documentation/invalid-api-key'] = 'documentation/invalid_api_key';
+$route['documentation/license-key'] = 'documentation/license_key';
+$route['documentation/support'] = 'documentation/support';
+$route['documentation/usage-based-billing'] = 'documentation/usage_based_billing';
 $route['documentation/api'] = 'documentation/api';
 $route['404_override'] = 'errors/show_404';
 $route['translate_uri_dashes'] = FALSE;

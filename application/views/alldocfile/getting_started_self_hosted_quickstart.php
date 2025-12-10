@@ -7,7 +7,7 @@
 
     <!-- Introduction Section -->
     <div class="bg-white rounded-lg border border-gray-200 p-6 mb-8">
-        <p class="text-gray-700 mb-6">
+        <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-6">
             Editflo 8 is a powerful and flexible rich text editor that can be embedded in web applications. This quick
             start covers how to add a Editflo editor to a web page using NPM or Yarn.
         </p>
@@ -26,7 +26,7 @@
 
         <!-- Install Editflo Section -->
         <h2 class="text-xl font-semibold text-gray-800 mb-4">Install Editflo</h2>
-        <p class="text-gray-700 mb-4">
+        <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
             To add Editflo to your project, navigate to your project directory and run one of the following commands:
         </p>
 
@@ -54,14 +54,14 @@
             </div>
         </div>
 
-        <p class="text-gray-700 mb-6">
+        <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-6">
             The location of the main Editflo script will be: <code
                 class="bg-gray-100 px-1 py-0.5 rounded text-sm">node_modules/editflo/editflo.min.js</code>.
             Ensure the editflo directory containing the editflo.min.js file is accessible for the target page or
             application by either:
         </p>
 
-        <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6 ml-4">
+        <ul class="list-disc list-inside text-gray-700 sm:mb-4 text-sm sm:text-base space-y-2 mb-6 ml-4">
             <li>Using a webserver route, or</li>
             <li>Copying the editflo directory to a public folder using a build tool such as Gulp or Webpack.</li>
         </ul>
@@ -70,7 +70,7 @@
     <!-- Include Script Section -->
     <div class="bg-white rounded-lg border border-gray-200 p-6 mb-8">
         <h2 class="text-xl font-semibold text-gray-800 mb-4">Include the Editflo script</h2>
-        <p class="text-gray-700 mb-4">
+        <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
             Include the following line of code in the <code
                 class="bg-gray-100 px-1 py-0.5 rounded text-sm">&lt;head&gt;</code> of an HTML page:
         </p>
@@ -91,14 +91,14 @@
     <!-- Initialize Section -->
     <div class="bg-white rounded-lg border border-gray-200 p-6 mb-8">
         <h2 class="text-xl font-semibold text-gray-800 mb-4">Initialize Editflo as part of a web form</h2>
-        <p class="text-gray-700 mb-4">
+        <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
             Initialize Editflo 8 on any element (or elements) on the web page by passing an object containing a <code
                 class="bg-gray-100 px-1 py-0.5 rounded text-sm">selector</code> value to <code
                 class="bg-gray-100 px-1 py-0.5 rounded text-sm">editflo.init()</code>. The <code
                 class="bg-gray-100 px-1 py-0.5 rounded text-sm">selector</code> value can be any valid CSS selector.
         </p>
 
-        <p class="text-gray-700 mb-4">
+        <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
             For example, to replace <code
                 class="bg-gray-100 px-1 py-0.5 rounded text-sm">&lt;textarea id="mytextarea"&gt;</code> with a Editflo 8
             editor instance, pass the selector <code
@@ -152,11 +152,11 @@
     <!-- Save Content Section -->
     <div class="bg-white rounded-lg border border-gray-200 p-6 mb-8">
         <h2 class="text-xl font-semibold text-gray-800 mb-4">Save the content from the editor</h2>
-        <p class="text-gray-700 mb-4">
+        <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
             To retrieve content from the editor, either process the content with a form handler or use the <code
                 class="bg-gray-100 px-1 py-0.5 rounded text-sm">getContent</code> API.
         </p>
-        <p class="text-gray-700">
+        <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">
             If you use a form handler, once the <code
                 class="bg-gray-100 px-1 py-0.5 rounded text-sm">&lt;form&gt;</code> is submitted, Editflo 8 will
             <code class="bg-gray-100 px-1 py-0.5 rounded text-sm">POST</code> the content in the same way as a
@@ -232,7 +232,7 @@
         <div class="bg-white rounded-lg border border-gray-200 p-6 mb-8">
             <h2 class="text-xl font-semibold text-gray-800 mb-4">Update the "no-api-key" placeholder with your API key
             </h2>
-            <p class="text-gray-700 mb-6">
+            <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-6">
                 To remove the notice:
             </p>
 
@@ -250,13 +250,13 @@
                 </div>
             </div>
 
-            <p class="text-gray-700 mb-4">
+            <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
                 Update the <code class="bg-gray-100 px-1 py-0.5 rounded text-sm">[no-api-key]</code> placeholder in the
                 source script (<code class="bg-gray-100 px-1 py-0.5 rounded text-sm">&lt;script src...&gt;</code>) with
                 your Editflo Cloud API key, which is created when signing up to the Editflo Cloud.
             </p>
 
-            <p class="text-gray-700 mb-6">
+            <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-6">
                 Signing up for a Editflo Cloud API key will also provide a trial of the Premium Plugins.
             </p>
         </div>
@@ -264,11 +264,11 @@
         <!-- Save Content Section -->
         <div class="bg-white rounded-lg  p-6 mb-8">
             <h2 class="text-xl font-semibold text-gray-800 mb-4">Save the content from the editor</h2>
-            <p class="text-gray-700 mb-4">
+            <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
                 To retrieve content from the editor, either process the content with a form handler or use the <code
                     class="bg-gray-100 px-1 py-0.5 rounded text-sm">getContent</code> API.
             </p>
-            <p class="text-gray-700">
+            <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">
                 If you use a form handler, once the <code
                     class="bg-gray-100 px-1 py-0.5 rounded text-sm">&lt;form&gt;</code> is submitted, Editflo 8 will
                 <code class="bg-gray-100 px-1 py-0.5 rounded text-sm">POST</code> the content in the same way as a
@@ -281,9 +281,9 @@
         <!-- Next Steps Section -->
         <div class="bg-white border border-gray-200 p-6">
             <h2 class="text-xl font-semibold text-gray-800 mb-4">Next Steps</h2>
-            <p class="text-gray-700 mb-4">For information on:</p>
+            <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">For information on:</p>
 
-            <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+            <ul class="list-disc list-inside text-gray-700 sm:mb-4 text-sm sm:text-base space-y-2 mb-6">
                 <li>Customizing Editflo, see: <a href="#" class="text-blue-600 hover:text-blue-800 underline">Basic
                         Setup</a>.</li>
                 <li>The three editor modes, see:

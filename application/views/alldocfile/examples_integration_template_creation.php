@@ -5,19 +5,19 @@
         </h1>
     </div>
 
-    <p class="p-2 text-gray-700">Adding this content to an HTML file and opening it in a web browser will load a Editflo
+    <p class="p-2 text-gray-700 text-sm sm:text-base">Adding this content to an HTML file and opening it in a web browser will load a Editflo
         editor.</p>
 
     <!-- Interactive Integration Example Section -->
     <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8">
         <h2 class="text-2xl font-bold text-gray-800 mb-4">Interactive integration example</h2>
-        <h3 class="text-xl font-semibold text-gray-700 mb-4">Multi-root editing and document template creation</h3>
+        <h3 class="text-xl font-semibold text-gray-700 text-sm sm:text-base mb-4">Multi-root editing and document template creation</h3>
 
-        <p class="text-gray-600 mb-6">
+        <p class="text-gray-700 text-sm sm:text-base mb-6">
             This interactive example demonstrates a basic working example of Editflo being used as a reusable template creator and editor.
         </p>
 
-        <p class="text-gray-600 mb-6">
+        <p class="text-gray-700 text-sm sm:text-base mb-6">
             It includes numerous plugins and configuration settings but highlights the following Editflo plugins and configuration options in particular:
         </p>
 
@@ -25,13 +25,13 @@
             <!-- Merge Tags Section -->
             <div class="border-l-4 border-blue-500 pl-4">
                 <h4 class="text-lg font-semibold text-gray-800 mb-2">Merge Tags</h4>
-                <p class="text-gray-600 mb-3">
+                <p class="text-gray-700 text-sm sm:text-base mb-3">
                     Allows the insertion of merge tags (also known as personalization tokens, or mail merge fields).
                 </p>
-                <p class="text-gray-600 mb-3">
+                <p class="text-gray-700 text-sm sm:text-base mb-3">
                     This demo includes merge tag placeholder examples in the demonstration document and equivalent merge tag placeholder strings available for adding to the editable portions of the document.
                 </p>
-                <p class="text-gray-600">
+                <p class="text-gray-700 text-sm sm:text-base">
                     These placeholders are not, in this demonstration, connected to any logic that merges them with a specific data set.
                 </p>
             </div>
@@ -39,10 +39,10 @@
             <!-- Editable Root Section -->
             <div class="border-l-4 border-green-500 pl-4">
                 <h4 class="text-lg font-semibold text-gray-800 mb-2">editable_root</h4>
-                <p class="text-gray-600 mb-3">
+                <p class="text-gray-700 text-sm sm:text-base mb-3">
                     Sets the initial editable state of a Editflo instance's root.
                 </p>
-                <p class="text-gray-600">
+                <p class="text-gray-700 text-sm sm:text-base">
                     Used here to show a Editflo being used to present an almost-ready-to-send-out standard document that cannot, in the main, be changed by an end-user.
                 </p>
             </div>
@@ -50,10 +50,10 @@
             <!-- New Document Content Section -->
             <div class="border-l-4 border-purple-500 pl-4">
                 <h4 class="text-lg font-semibold text-gray-800 mb-2">newdocument_content</h4>
-                <p class="text-gray-600 mb-3">
+                <p class="text-gray-700 text-sm sm:text-base mb-3">
                     Sets the content a new editor contains when the File -> New document menu item is invoked.
                 </p>
-                <p class="text-gray-600">
+                <p class="text-gray-700 text-sm sm:text-base">
                     Used here to show a Editflo instance loading an entire almost-ready-to-send-out standard document.
                 </p>
             </div>
@@ -61,10 +61,10 @@
             <!-- Editable Class Section -->
             <div class="border-l-4 border-orange-500 pl-4">
                 <h4 class="text-lg font-semibold text-gray-800 mb-2">editable_class</h4>
-                <p class="text-gray-600 mb-3">
+                <p class="text-gray-700 text-sm sm:text-base mb-3">
                     Specifies the class name that Editflo will use to determine which areas of content are editable.
                 </p>
-                <p class="text-gray-600">
+                <p class="text-gray-700 text-sm sm:text-base">
                     Used here to setup the portions of an almost-ready-to-send-out standard document that end-users can (and should) edit.
                 </p>
             </div>

@@ -6,7 +6,7 @@
                 with Django Framework
             </h2>
         </div>
-        <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-start">
+        <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mt-1 sm:mt-2 flex items-start">
             This guide shows how to integrate Editflo into your Django projects using the django-editflo package. This
             procedure configures Editflo to work with Django forms and templates.
         </p>
@@ -20,7 +20,7 @@
             </div>
             <div class="ml-3">
                 <h3 class="text-sm font-medium text-yellow-800">Important Notice</h3>
-                <div class="mt-2 text-sm text-yellow-700">
+                <div class="mt-2 text-gray-700 text-sm sm:text-base text-yellow-700">
                     <p>This integration is maintained by a third-party developer. Editflo Technologies, Inc. bears no
                         responsibility for this integration, which is not covered by the Editflo Self-Hosted Software
                         License Agreement. For issues related to the integration, contact the third-party project
@@ -316,11 +316,11 @@
     <div class="bg-blue-50 rounded-lg p-4 sm:p-6 mb-6">
         <h3 class="text-lg font-semibold text-gray-800 mb-3">Additional Resources</h3>
         <div class="space-y-2">
-            <p class="text-gray-600 text-sm">
+            <p class="text-gray-600 text-xs sm:text-sm">
                 For more information on setting up django-editflo, see:
                 <a href="#" class="text-blue-600 hover:underline font-medium">the django-editflo Documentation</a>
             </p>
-            <p class="text-gray-600 text-sm">
+            <p class="text-gray-600 text-xs sm:text-sm">
                 For Django framework documentation, visit:
                 <a href="#" class="text-blue-600 hover:underline font-medium">Django Official Documentation</a>
             </p>

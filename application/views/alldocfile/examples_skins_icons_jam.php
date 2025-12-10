@@ -5,7 +5,7 @@
 </h1>
     </div>
 
-    <p class="p-2 text-gray-700 mb-2">This demo uses the Fluent skin which follows the Microsoft design language. By default it has no border around the editor to make it easier to implement as a fullscreen editor. You can easily create your own border around the editor, look at the demo below for an example.
+    <p class="p-2 text-gray-700 text-sm sm:text-base mb-2">This demo uses the Fluent skin which follows the Microsoft design language. By default it has no border around the editor to make it easier to implement as a fullscreen editor. You can easily create your own border around the editor, look at the demo below for an example.
     </p>
 
 

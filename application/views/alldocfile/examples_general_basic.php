@@ -6,13 +6,13 @@
     </div>
     <!-- Introduction Section -->
     <div class="bg-white rounded-lg border border-gray-200 p-6 mb-8">
-        <p class="text-gray-700 mb-6">
+        <p class="text-gray-700 text-sm sm:text-base mb-6">
             This example contains the plugins needed for the most common use cases.
         </p>
 
         <!-- Sign Up Section -->
         <div class="bg-blue-50 border-l-4 border-blue-500 p-4">
-            <p class="text-blue-800 mb-2">
+            <p class="text-blue-800 text-sm sm:text-base mb-2">
                 It only takes 2 minutes to create your free Editflo account and get the API key:
             </p>
             <div class="flex items-center gap-2 flex-wrap">
@@ -32,7 +32,7 @@
     </div>
 
 
-    <p class="p-4 text-gray-700">Adding this content to an HTML file and opening it in a web browser will load a Editflo
+    <p class="p-4 text-gray-700 text-sm sm:text-base">Adding this content to an HTML file and opening it in a web browser will load a Editflo
         editor.</p>
 
     <!-- Editor Preview Section -->
@@ -101,11 +101,11 @@
     <!-- Save Content Section -->
     <div class="bg-white rounded-lg border border-gray-200 p-6 mb-8">
         <h2 class="text-xl font-semibold text-gray-800 mb-4">Save the content from the editor</h2>
-        <p class="text-gray-700 mb-4">
+        <p class="text-gray-700 text-sm sm:text-base mb-4">
             To retrieve content from the editor, either process the content with a form handler or use the <code
                 class="bg-gray-100 px-1 py-0.5 rounded text-sm">getContent</code> API.
         </p>
-        <p class="text-gray-700">
+        <p class="text-gray-700 text-sm sm:text-base">
             If you use a form handler, once the <code
                 class="bg-gray-100 px-1 py-0.5 rounded text-sm">&lt;form&gt;</code> is submitted, Editflo 8 will <code
                 class="bg-gray-100 px-1 py-0.5 rounded text-sm">POST</code> the content in the same way as a normal HTML

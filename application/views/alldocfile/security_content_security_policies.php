@@ -15,12 +15,12 @@
                     Editflo
                 </button>
                 <button
-                    class="tab-button py-2 sm:py-3 px-4 sm:px-6 border-b-2 border-transparent text-gray-500 hover:text-gray-700 font-medium text-sm sm:text-base whitespace-nowrap"
+                    class="tab-button py-2 sm:py-3 px-4 sm:px-6 border-b-2 border-transparent text-gray-500 hover:text-gray-700 text-sm sm:text-base font-medium text-sm sm:text-base whitespace-nowrap"
                     data-tab="html">
                     HTML
                 </button>
                 <button
-                    class="tab-button py-2 sm:py-3 px-4 sm:px-6 border-b-2 border-transparent text-gray-500 hover:text-gray-700 font-medium text-sm sm:text-base whitespace-nowrap"
+                    class="tab-button py-2 sm:py-3 px-4 sm:px-6 border-b-2 border-transparent text-gray-500 hover:text-gray-700 text-sm sm:text-base font-medium text-sm sm:text-base whitespace-nowrap"
                     data-tab="js">
                     JS
                 </button>
@@ -70,13 +70,13 @@
             <table class="w-full border border-gray-200">
                 <thead>
                     <tr class="bg-gray-50">
-                        <th class="p-3 text-left text-sm font-medium text-gray-700 border-b border-gray-200">
+                        <th class="p-3 text-left text-sm font-medium text-gray-700 text-sm sm:text-base border-b border-gray-200">
                             Method
                         </th>
-                        <th class="p-3 text-left text-sm font-medium text-gray-700 border-b border-gray-200">
+                        <th class="p-3 text-left text-sm font-medium text-gray-700 text-sm sm:text-base border-b border-gray-200">
                             Description
                         </th>
-                        <th class="p-3 text-left text-sm font-medium text-gray-700 border-b border-gray-200">
+                        <th class="p-3 text-left text-sm font-medium text-gray-700 text-sm sm:text-base border-b border-gray-200">
                             Features
                         </th>
                     </tr>
@@ -143,76 +143,76 @@
         <div class="space-y-4">
             <!-- Setup Speed -->
             <div>
-                <h4 class="text-sm font-medium text-gray-700 mb-2">Setup Speed</h4>
+                <h4 class="text-sm font-medium text-gray-700 text-sm sm:text-base mb-2">Setup Speed</h4>
                 <div class="grid grid-cols-3 gap-3">
                     <div class=" border-l-4 border-gray-200 rounded p-4">
-                        <div class="font-medium text-green-700">Fastest</div>
-                        <div class="text-xs text-gray-600 mt-1">Editflo Cloud</div>
+                        <div class="font-medium text-green-700 sm:text-base">Fastest</div>
+                        <div class="text-gray-700 text-sm sm:text-base mt-1">Editflo Cloud</div>
                     </div>
                     <div class=" border-l-4 border-gray-200 rounded p-3">
-                        <div class="font-medium text-yellow-700">Medium</div>
-                        <div class="text-xs text-gray-600 mt-1">Package Manager</div>
+                        <div class="font-medium text-yellow-700 sm:text-base">Medium</div>
+                        <div class="text-gray-700 text-sm sm:text-base mt-1">Package Manager</div>
                     </div>
                     <div class=" border-l-4 border-gray-200 rounded p-3">
-                        <div class="font-medium text-blue-700">Fast</div>
-                        <div class="text-xs text-gray-600 mt-1">Direct Download</div>
+                        <div class="font-medium text-blue-700 sm:text-base">Fast</div>
+                        <div class="text-gray-700 text-sm sm:text-base mt-1">Direct Download</div>
                     </div>
                 </div>
             </div>
 
             <!-- Updates -->
             <div>
-                <h4 class="text-sm font-medium text-gray-700 mb-2">Updates</h4>
+                <h4 class="text-sm font-medium text-gray-700 text-sm sm:text-base mb-2">Updates</h4>
                 <div class="grid grid-cols-3 gap-3">
                     <div class="border-l-4 border-gray-200 rounded p-3">
-                        <div class="font-medium text-green-600">Automatic</div>
-                        <div class="text-xs text-gray-600 mt-1">Editflo Cloud</div>
+                        <div class="font-medium text-green-600 sm:text-base">Automatic</div>
+                        <div class="text-gray-700 text-sm sm:text-base mt-1">Editflo Cloud</div>
                     </div>
                     <div class="border-l-4  border-gray-200 rounded p-3">
-                        <div class="font-medium text-gray-700">Manual</div>
-                        <div class="text-xs text-gray-600 mt-1">Package Manager</div>
+                        <div class="font-medium text-gray-700 sm:text-base">Manual</div>
+                        <div class="text-gray-700 text-sm sm:text-base mt-1">Package Manager</div>
                     </div>
                     <div class="border-l-4  border-gray-200 rounded p-3">
-                        <div class="font-medium text-gray-700">Manual</div>
-                        <div class="text-xs text-gray-600 mt-1">Direct Download</div>
+                        <div class="font-medium text-gray-700 sm:text-base">Manual</div>
+                        <div class="text-gray-700 text-sm sm:text-base mt-1">Direct Download</div>
                     </div>
                 </div>
             </div>
 
             <!-- Network -->
             <div>
-                <h4 class="text-sm font-medium text-gray-700 mb-2">Network Required</h4>
+                <h4 class="text-sm font-medium text-gray-700 text-sm sm:text-base mb-2">Network Required</h4>
                 <div class="grid grid-cols-3 gap-3">
                     <div class="border-l-4  border-gray-200 rounded p-3">
-                        <div class="font-medium text-red-600">Yes</div>
-                        <div class="text-xs text-gray-600 mt-1">Editflo Cloud</div>
+                        <div class="font-medium text-red-600 sm:text-base">Yes</div>
+                        <div class="text-gray-700 text-sm sm:text-base mt-1">Editflo Cloud</div>
                     </div>
                     <div class="border-l-4  border-gray-200 rounded p-3">
-                        <div class="font-medium text-gray-700">Initial Only</div>
-                        <div class="text-xs text-gray-600 mt-1">Package Manager</div>
+                        <div class="font-medium text-gray-700 sm:text-base">Initial Only</div>
+                        <div class="text-gray-700 text-sm sm:text-base mt-1">Package Manager</div>
                     </div>
                     <div class="border-l-4  border-gray-200 rounded p-3">
-                        <div class="font-medium text-green-600">No</div>
-                        <div class="text-xs text-gray-600 mt-1">Direct Download</div>
+                        <div class="font-medium text-green-600 sm:text-base">No</div>
+                        <div class="text-gray-700 text-sm sm:text-base mt-1">Direct Download</div>
                     </div>
                 </div>
             </div>
 
             <!-- Best For -->
             <div>
-                <h4 class="text-sm font-medium text-gray-700 mb-2">Best For</h4>
+                <h4 class="text-sm font-medium text-gray-700 text-sm sm:text-base mb-2">Best For</h4>
                 <div class="grid grid-cols-3 gap-3">
                     <div class="border-l-4  border-gray-200 rounded p-3">
-                        <div class="text-sm">Quick prototypes</div>
-                        <div class="text-xs text-gray-600 mt-1">Startups, MVPs</div>
+                        <div class="text-sm sm:text-base">Quick prototypes</div>
+                        <div class="text-gray-700 text-sm sm:text-base mt-1">Startups, MVPs</div>
                     </div>
                     <div class="border-l-4  border-gray-200 rounded p-3">
-                        <div class="text-sm">Development teams</div>
-                        <div class="text-xs text-gray-600 mt-1">Version control users</div>
+                        <div class="text-sm sm:text-base">Development teams</div>
+                        <div class="text-gray-700 text-sm sm:text-base mt-1">Version control users</div>
                     </div>
                     <div class="border-l-4  border-gray-200 rounded p-3">
-                        <div class="text-sm">Traditional sites</div>
-                        <div class="text-xs text-gray-600 mt-1">Static websites</div>
+                        <div class="text-sm sm:text-base">Traditional sites</div>
+                        <div class="text-gray-700 text-sm sm:text-base mt-1">Static websites</div>
                     </div>
                 </div>
             </div>
@@ -221,7 +221,7 @@
 
     <div class="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
         <h2 class="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Next Steps</h2>
-        <p class="text-gray-700 mb-3 sm:mb-4 text-sm sm:text-base">
+        <p class="text-gray-700 text-sm sm:text-base mb-3 sm:mb-4 text-sm sm:text-base">
             Now that you have an overview of Editflo integration options, you can explore more specific documentation:
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
@@ -230,7 +230,7 @@
                     <i class="fas fa-book text-blue-600 text-lg sm:text-xl mr-3"></i>
                     <div>
                         <h3 class="font-medium text-gray-800 text-sm sm:text-base">API Documentation</h3>
-                        <p class="text-xs sm:text-sm text-gray-600">Complete reference for all Editflo APIs</p>
+                        <p class=" text-gray-600 sm:text-base">Complete reference for all Editflo APIs</p>
                     </div>
                 </div>
             </a>
@@ -239,7 +239,7 @@
                     <i class="fas fa-plug text-purple-600 text-lg sm:text-xl mr-3"></i>
                     <div>
                         <h3 class="font-medium text-gray-800 text-sm sm:text-base">Plugin Guide</h3>
-                        <p class="text-xs sm:text-sm text-gray-600">Extend functionality with plugins</p>
+                        <p class=" text-gray-600 sm:text-base">Extend functionality with plugins</p>
                     </div>
                 </div>
             </a>

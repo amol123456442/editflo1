@@ -14,7 +14,7 @@
             <!-- Basic Example -->
             <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
                 <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Basic example</h4>
-                <p class="text-gray-600 text-xs sm:text-sm mb-2">Basic working editor example.</p>
+                <p class="text-gray-700 text-sm sm:text-base mb-2">Basic working editor example.</p>
                 <a href="<?php echo base_url('documentation/examples/general/basic'); ?>" class="text-blue-600 hover:text-blue-800 text-xs sm:text-sm font-medium inline-flex items-center">
                     View Example <i class="fas fa-arrow-right ml-2"></i>
                 </a>
@@ -23,7 +23,7 @@
             <!-- Full-featured Open Source -->
             <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
                 <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Full-featured demo including Open Source features</h4>
-                <p class="text-gray-600 text-xs sm:text-sm mb-2">Fully-featured editor example including all Open Source plugins.</p>
+                <p class="text-gray-700 text-sm sm:text-base mb-2">Fully-featured editor example including all Open Source plugins.</p>
                 <a href="<?php echo base_url('documentation/examples/general/full-featured-open-source'); ?>" class="text-blue-600 hover:text-blue-800 text-xs sm:text-sm font-medium inline-flex items-center">
                     View Example <i class="fas fa-arrow-right ml-2"></i>
                 </a>
@@ -32,7 +32,7 @@
             <!-- Full-featured Premium -->
             <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
                 <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Full-featured demo including Open Source and Premium features</h4>
-                <p class="text-gray-600 text-xs sm:text-sm mb-2">Fully-featured editor example, including all Open Source plugins and almost all Premium plugins.</p>
+                <p class="text-gray-700 text-sm sm:text-base mb-2">Fully-featured editor example, including all Open Source plugins and almost all Premium plugins.</p>
                 <a href="<?php echo base_url('documentation/examples/general/full-featured-premium'); ?>" class="text-blue-600 hover:text-blue-800 text-xs sm:text-sm font-medium inline-flex items-center">
                     View Example <i class="fas fa-arrow-right ml=2"></i>
                 </a>
@@ -41,7 +41,7 @@
             <!-- Classic editor mode -->
             <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
                 <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Classic editor mode</h4>
-                <p class="text-gray-600 text-xs sm:text-sm mb-2">Working Editflo editor in Classic editor mode.</p>
+                <p class="text-gray-700 text-sm sm:text-base mb-2">Working Editflo editor in Classic editor mode.</p>
                 <a href="<?php echo base_url('documentation/examples/general/classic-editor'); ?>" class="text-blue-600 hover:text-blue-800 text-xs sm:text-sm font-medium inline-flex items-center">
                     View Example <i class="fas fa-arrow-right ml-2"></i>
                 </a>
@@ -50,7 +50,7 @@
             <!-- Inline editor -->
             <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
                 <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Inline editor</h4>
-                <p class="text-gray-600 text-xs sm:text-sm mb-2">Working Editflo editor in Inline mode.</p>
+                <p class="text-gray-700 text-sm sm:text-base mb-2">Working Editflo editor in Inline mode.</p>
                 <a href="<?php echo base_url('documentation/examples/general/inline-editor'); ?>" class="text-blue-600 hover:text-blue-800 text-xs sm:text-sm font-medium inline-flex items-center">
                     View Example <i class="fas fa-arrow-right ml-2"></i>
                 </a>
@@ -59,7 +59,7 @@
             <!-- Distraction-free editor -->
             <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
                 <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Distraction-free editor</h4>
-                <p class="text-gray-600 text-xs sm:text-sm mb-2">Working Editflo editor in Distraction-free mode.</p>
+                <p class="text-gray-700 text-sm sm:text-base mb-2">Working Editflo editor in Distraction-free mode.</p>
                 <a href="<?php echo base_url('documentation/examples/general/distraction-free-editor'); ?>" class="text-blue-600 hover:text-blue-800 text-xs sm:text-sm font-medium inline-flex items-center">
                     View Example <i class="fas fa-arrow-right ml-2"></i>
                 </a>
@@ -80,7 +80,7 @@
             <!-- Template creation -->
             <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
                 <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Template creation</h4>
-                <p class="text-gray-600 text-xs sm:text-sm mb-2">Using Editflo to create re-usable and partially-editable templates.</p>
+                <p class="text-gray-700 text-sm sm:text-base mb-2">Using Editflo to create re-usable and partially-editable templates.</p>
                 <a href="<?php echo base_url('documentation/examples/integration/template-creation'); ?>" class="text-blue-600 hover:text-blue-800 text-xs sm:text-sm font-medium inline-flex items-center">
                     View Example <i class="fas fa-arrow-right ml-2"></i>
                 </a>
@@ -101,7 +101,7 @@
             <!-- Bootstrap Demo -->
             <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
                 <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Bootstrap Demo</h4>
-                <p class="text-gray-600 text-xs sm:text-sm mb-2">Example form with colors, forms, and buttons to closely match the default Bootstrap framework UI.</p>
+                <p class="text-gray-700 text-sm sm:text-base mb-2">Example form with colors, forms, and buttons to closely match the default Bootstrap framework UI.</p>
                 <a href="<?php echo base_url('documentation/examples/skins-icons/bootstrap'); ?>" class="text-blue-600 hover:text-blue-800 text-xs sm:text-sm font-medium inline-flex items-center">
                     View Example <i class="fas fa-arrow-right ml-2"></i>
                 </a>
@@ -110,7 +110,7 @@
             <!-- Borderless Demo -->
             <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
                 <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Borderless Demo</h4>
-                <p class="text-gray-600 text-xs sm:text-sm mb-2">Default Editflo skin without an outer border, ideal for "fullscreen" editing.</p>
+                <p class="text-gray-700 text-sm sm:text-base mb-2">Default Editflo skin without an outer border, ideal for "fullscreen" editing.</p>
                 <a href="<?php echo base_url('documentation/examples/skins-icons/borderless'); ?>" class="text-blue-600 hover:text-blue-800 text-xs sm:text-sm font-medium inline-flex items-center">
                     View Example <i class="fas fa-arrow-right ml-2"></i>
                 </a>
@@ -119,7 +119,7 @@
             <!-- Fabric Demo -->
             <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
                 <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Fabric Demo</h4>
-                <p class="text-gray-600 text-xs sm:text-sm mb-2">Microsoft design language-inspired Fabric skin with optional custom borders.</p>
+                <p class="text-gray-700 text-sm sm:text-base mb-2">Microsoft design language-inspired Fabric skin with optional custom borders.</p>
                 <a href="<?php echo base_url('documentation/examples/skins-icons/fabric'); ?>" class="text-blue-600 hover:text-blue-800 text-xs sm:text-sm font-medium inline-flex items-center">
                     View Example <i class="fas fa-arrow-right ml-2"></i>
                 </a>
@@ -128,7 +128,7 @@
             <!-- Fluent Demo -->
             <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
                 <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Fluent Demo</h4>
-                <p class="text-gray-600 text-xs sm:text-sm mb-2">Microsoft design language-inspired Fluent skin with optional custom borders.</p>
+                <p class="text-gray-700 text-sm sm:text-base mb-2">Microsoft design language-inspired Fluent skin with optional custom borders.</p>
                 <a href="<?php echo base_url('documentation/examples/skins-icons/fluent'); ?>" class="text-blue-600 hover:text-blue-800 text-xs sm:text-sm font-medium inline-flex items-center">
                     View Example <i class="fas fa-arrow-right ml-2"></i>
                 </a>
@@ -137,7 +137,7 @@
             <!-- Jam Icons Demo -->
             <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
                 <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Jam Icons Demo</h4>
-                <p class="text-gray-600 text-xs sm:text-sm mb-2">Icons from JAM icon library used with the Small skin.</p>
+                <p class="text-gray-700 text-sm sm:text-base mb-2">Icons from JAM icon library used with the Small skin.</p>
                 <a href="<?php echo base_url('documentation/examples/skins-icons/jam-icons'); ?>" class="text-blue-600 hover:text-blue-800 text-xs sm:text-sm font-medium inline-flex items-center">
                     View Example <i class="fas fa-arrow-right ml-2"></i>
                 </a>
@@ -146,7 +146,7 @@
             <!-- Material Classic Demo -->
             <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
                 <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Material Classic Demo</h4>
-                <p class="text-gray-600 text-xs sm:text-sm mb-2">Example form with classical Material Design components and Material Classic skin.</p>
+                <p class="text-gray-700 text-sm sm:text-base mb-2">Example form with classical Material Design components and Material Classic skin.</p>
                 <a href="<?php echo base_url('documentation/examples/skins-icons/material-classic'); ?>" class="text-blue-600 hover:text-blue-800 text-xs sm:text-sm font-medium inline-flex items-center">
                     View Example <i class="fas fa-arrow-right ml-2"></i>
                 </a>
@@ -155,7 +155,7 @@
             <!-- Material Outline Demo -->
             <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
                 <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Material Outline Demo</h4>
-                <p class="text-gray-600 text-xs sm:text-sm mb-2">Example form with outlined Material Design components and Material Outline skin.</p>
+                <p class="text-gray-700 text-sm sm:text-base mb-2">Example form with outlined Material Design components and Material Outline skin.</p>
                 <a href="<?php echo base_url('documentation/examples/skins-icons/material-outline'); ?>" class="text-blue-600 hover:text-blue-800 text-xs sm:text-sm font-medium inline-flex items-center">
                     View Example <i class="fas fa-arrow-right ml-2"></i>
                 </a>
@@ -164,7 +164,7 @@
             <!-- Naked Demo -->
             <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
                 <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Naked Demo</h4>
-                <p class="text-gray-600 text-xs sm:text-sm mb-2">Clean and simple text input experience with Naked skin, no outer or toolbar borders.</p>
+                <p class="text-gray-700 text-sm sm:text-base mb-2">Clean and simple text input experience with Naked skin, no outer or toolbar borders.</p>
                 <a href="<?php echo base_url('documentation/examples/skins-icons/naked'); ?>" class="text-blue-600 hover:text-blue-800 text-xs sm:text-sm font-medium inline-flex items-center">
                     View Example <i class="fas fa-arrow-right ml-2"></i>
                 </a>
@@ -173,7 +173,7 @@
             <!-- Outside Demo -->
             <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
                 <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Outside Demo</h4>
-                <p class="text-gray-600 text-xs sm:text-sm mb-2">Clean text input with Outside skin, border around editable area, small icon pack.</p>
+                <p class="text-gray-700 text-sm sm:text-base mb-2">Clean text input with Outside skin, border around editable area, small icon pack.</p>
                 <a href="<?php echo base_url('documentation/examples/skins-icons/outside'); ?>" class="text-blue-600 hover:text-blue-800 text-xs sm:text-sm font-medium inline-flex items-center">
                     View Example <i class="fas fa-arrow-right ml-2"></i>
                 </a>
@@ -182,7 +182,7 @@
             <!-- Small Icons Demo -->
             <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
                 <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Small Icons Demo</h4>
-                <p class="text-gray-600 text-xs sm:text-sm mb-2">Smaller buttons using Small skin with smaller default icons.</p>
+                <p class="text-gray-700 text-sm sm:text-base mb-2">Smaller buttons using Small skin with smaller default icons.</p>
                 <a href="<?php echo base_url('documentation/examples/skins-icons/small-icons'); ?>" class="text-blue-600 hover:text-blue-800 text-xs sm:text-sm font-medium inline-flex items-center">
                     View Example <i class="fas fa-arrow-right ml-2"></i>
                 </a>
@@ -191,7 +191,7 @@
             <!-- Snow Demo -->
             <div class="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
                 <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Snow Demo</h4>
-                <p class="text-gray-600 text-xs sm:text-sm mb-2">Modern, lightweight editor with Snow skin, looks great with Thin icon pack.</p>
+                <p class="text-gray-700 text-sm sm:text-base mb-2">Modern, lightweight editor with Snow skin, looks great with Thin icon pack.</p>
                 <a href="<?php echo base_url('documentation/examples/skins-icons/snow'); ?>" class="text-blue-600 hover:text-blue-800 text-xs sm:text-sm font-medium inline-flex items-center">
                     View Example <i class="fas fa-arrow-right ml-2"></i>
                 </a>

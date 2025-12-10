@@ -1213,18 +1213,50 @@
                         </div>
                     </div>
                     <!-- Other Main Navigation Items -->
-                    <a href="<?php echo base_url('documentation/integration'); ?>"
+                    <!-- <a href="<?php echo base_url('documentation/integration'); ?>"
                         class="flex items-center px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'integration' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                         onclick="closeMobileSidebar()">
                         <i class="fas fa-plug mr-3 w-4 text-center"></i>
                         <span class="font-medium">Integration</span>
-                    </a>
+                    </a> -->
 
-                    <a href="<?php echo base_url('documentation/configuration'); ?>"
+                    <!-- <a href="<?php echo base_url('documentation/configuration'); ?>"
                         class="flex items-center px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'configuration' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                         onclick="closeMobileSidebar()">
                         <i class="fas fa-cog mr-3 w-4 text-center"></i>
                         <span class="font-medium">Configuration</span>
+                    </a> -->
+
+                    <!-- New Items: Invalid API Key -->
+                    <a href="<?php echo base_url('documentation/invalid-api-key'); ?>"
+                        class="flex items-center px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'invalid-api-key' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                        onclick="closeMobileSidebar()">
+                        <i class="fas fa-key mr-3 w-4 text-center"></i>
+                        <span class="font-medium">Invalid API Key</span>
+                    </a>
+
+                    <!-- New Items: License Key -->
+                    <a href="<?php echo base_url('documentation/license-key'); ?>"
+                        class="flex items-center px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'license-key' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                        onclick="closeMobileSidebar()">
+                        <i class="fas fa-id-card mr-3 w-4 text-center"></i>
+                        <span class="font-medium">License Key</span>
+                    </a>
+
+                    <!-- New Items: Support -->
+                    <a href="<?php echo base_url('documentation/support'); ?>"
+                        class="flex items-center px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'support' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                        onclick="closeMobileSidebar()">
+                        <i class="fas fa-headset mr-3 w-4 text-center"></i>
+                        <span class="font-medium">Support</span>
+                    </a>
+
+                    <!-- New Items: Usage-Based Billing -->
+                    <a href="<?php echo base_url('documentation/usage-based-billing'); ?>"
+                        class="flex items-center px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'usage-based-billing' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                        onclick="closeMobileSidebar()">
+                        <i class="fas fa-credit-card mr-3 w-4 text-center"></i>
+                        <span class="font-medium">Usage-Based Billing</span>
                     </a>
 
                 </div>
@@ -1250,7 +1282,8 @@
         </nav>
 
         <!-- Main Content -->
-        <main class="flex-1 lg:pl-[250px] lg:pr-[245px] min-h-screen bg-gray-50 pt-16 lg:pt-0">
+        <main class="flex-1 lg:pl-[250px] lg:pr-[245px] min-h-screen bg-gray-50">
+
             <!-- Top Bar - Hidden on Mobile -->
             <div
                 class="bg-white border-b border-gray-200 px-8 py-4 justify-between items-center sticky top-0 z-20 lg:flex hidden">
@@ -1477,6 +1510,14 @@
                         $view_file .= 'integration';
                     } elseif ($active_page == 'configuration') {
                         $view_file .= 'configuration';
+                    } elseif ($active_page == 'invalid-api-key') {
+                        $view_file .= 'invalid_api_key';
+                    } elseif ($active_page == 'license-key') {
+                        $view_file .= 'license_key';
+                    } elseif ($active_page == 'support') {
+                        $view_file .= 'support';
+                    } elseif ($active_page == 'usage-based-billing') {
+                        $view_file .= 'usage_based_billing';
                     } elseif ($active_page == 'api') {
                         $view_file .= 'api';
                     } elseif ($active_page == 'security') {
@@ -1550,7 +1591,7 @@
                 </div>
 
                 <!-- Table of Contents Navigation -->
-                <nav class="space-y-1" id="pageToc">
+                <nav class="space-y-1 text-gray-600 text-xs sm:text-sm" id="pageToc">
                     <!-- TOC items will be generated by JavaScript -->
                 </nav>
 

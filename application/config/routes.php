@@ -163,6 +163,50 @@ $route['documentation/release-notes/editflo/0-1/premium-plugin-changes'] = 'docu
 $route['documentation/release-notes/editflo/0-1/improvements'] = 'documentation/editflo_0_1_improvements';
 $route['documentation/release-notes/editflo/0-1/additions'] = 'documentation/editflo_0_1_additions';
 
+// Editflo API Reference
+$route['documentation/api-reference/editflo'] = 'documentation/editflo_api_reference';
+$route['documentation/api-reference/editflo/add-on-manager'] = 'documentation/editflo_add_on_manager';
+$route['documentation/api-reference/editflo/annotator'] = 'documentation/editflo_annotator';
+$route['documentation/api-reference/editflo/editor'] = 'documentation/editflo_editor';
+$route['documentation/api-reference/editflo/editor-manager'] = 'documentation/editflo_editor_manager';
+$route['documentation/api-reference/editflo/editor-mode'] = 'documentation/editflo_editor_mode';
+$route['documentation/api-reference/editflo/editor-options'] = 'documentation/editflo_editor_options';
+$route['documentation/api-reference/editflo/editor-upload'] = 'documentation/editflo_editor_upload';
+$route['documentation/api-reference/editflo/env'] = 'documentation/editflo_env';
+$route['documentation/api-reference/editflo/event'] = 'documentation/editflo_event';
+$route['documentation/api-reference/editflo/fake-clipboard'] = 'documentation/editflo_fake_clipboard';
+$route['documentation/api-reference/editflo/formatter'] = 'documentation/editflo_formatter';
+$route['documentation/api-reference/editflo/notification-manager'] = 'documentation/editflo_notification_manager';
+$route['documentation/api-reference/editflo/plugin'] = 'documentation/editflo_plugin';
+$route['documentation/api-reference/editflo/shortcuts'] = 'documentation/editflo_shortcuts';
+$route['documentation/api-reference/editflo/theme'] = 'documentation/editflo_theme';
+$route['documentation/api-reference/editflo/undo-manager'] = 'documentation/editflo_undo_manager';
+$route['documentation/api-reference/editflo/user-lookup'] = 'documentation/editflo_user_lookup';
+$route['documentation/api-reference/editflo/window-manager'] = 'documentation/editflo_window_manager';
+// Editflo Editor UI API Reference
+$route['documentation/api-reference/editflo-editor-ui'] = 'documentation/editflo_editor_ui';
+$route['documentation/api-reference/editflo-editor-ui/registry'] = 'documentation/editflo_editor_ui_registry';
+$route['documentation/api-reference/editflo-editor-ui/ui'] = 'documentation/editflo_editor_ui_ui';
+
+// Editflo HTML API Reference
+$route['documentation/api-reference/editflo-html/domparser'] = 'documentation/editflo_html_domparser';
+$route['documentation/api-reference/editflo-html/entities'] = 'documentation/editflo_html_entities';
+$route['documentation/api-reference/editflo-html/node'] = 'documentation/editflo_html_node';
+$route['documentation/api-reference/editflo-html/schema'] = 'documentation/editflo_html_schema';
+$route['documentation/api-reference/editflo-html/serializer'] = 'documentation/editflo_html_serializer';
+$route['documentation/api-reference/editflo-html/styles'] = 'documentation/editflo_html_styles';
+$route['documentation/api-reference/editflo-html/writer'] = 'documentation/editflo_html_writer';
+$route['documentation/api-reference/editflo-html'] = 'documentation/editflo_html';
+
+// Editflo Util API Reference
+$route['documentation/api-reference/editflo-util/delay'] = 'documentation/editflo_util_delay';
+$route['documentation/api-reference/editflo-util/event-dispatcher'] = 'documentation/editflo_util_event_dispatcher';
+$route['documentation/api-reference/editflo-util/i18n'] = 'documentation/editflo_util_i18n';
+$route['documentation/api-reference/editflo-util/image-uploader'] = 'documentation/editflo_util_image_uploader';
+$route['documentation/api-reference/editflo-util/observable'] = 'documentation/editflo_util_observable';
+$route['documentation/api-reference/editflo-util/tools'] = 'documentation/editflo_util_tools';
+$route['documentation/api-reference/editflo-util/uri'] = 'documentation/editflo_util_uri';
+$route['documentation/api-reference/editflo-util'] = 'documentation/editflo_util';
 
 
 // Other main sections

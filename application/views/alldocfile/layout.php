@@ -12,8 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
-
-    <script>
+    <!-- <script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -34,7 +33,7 @@
                 }
             }
         }
-    </script>
+    </script> -->
 
     <style>
         /* Custom Scrollbar */
@@ -156,13 +155,11 @@
 
 <body class="bg-gray-50 ">
     <header class="bg-gray-800 text-white sticky top-0 z-50 shadow-lg">
-        <div class="px-4 sm:px-2 lg:px-2 ">
+        <div class="px-2 sm:px-2 lg:px-4 ">
             <div class="flex items-center justify-between h-16">
-
                 <div class="flex-shrink-0">
-                    <h1 class="text-xl font-bold">Editflo</h1>
+                    <img src="<?= base_url('assets/logo2.png'); ?>" width="160" height="auto" alt="">
                 </div>
-
                 <div class="flex items-center justify-end space-x-4 lg:space-x-6 flex-1">
                     <!-- Search Bar - Desktop -->
                     <div class="hidden md:block max-w-md lg:max-w-lg mx-4">
@@ -173,8 +170,8 @@
                                 <i class="fas fa-search text-gray-400 text-sm"></i>
                             </div>
                             <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
-                                <kbd class="text-xs bg-gray-700 text-gray-200 px-2 py-1 rounded border border-gray-700 mr-1">Ctrl</kbd>
-                                <kbd class="text-xs bg-gray-700 text-gray-200 px-2 py-1 rounded border border-gray-700">K</kbd>
+                                <kbd class="text-xs bg-gray-900 text-gray-200 px-2 py-1 rounded border border-gray-700 mr-1">Ctrl</kbd>
+                                <kbd class="text-xs bg-gray-900 text-gray-200 px-2 py-1 rounded border border-gray-700">K</kbd>
                             </div>
                         </div>
                     </div>
@@ -266,7 +263,7 @@
 
     <div class="flex min-h-screen">
         <!-- Left Sidebar - Hidden on Mobile -->
-        <nav class="w-64 lg:w-[260px] bg-gray-800 text-white h-screen fixed left-0 overflow-y-auto z-30 border-r border-gray-700 sidebar-transition lg:translate-x-0 -translate-x-full"
+        <nav class="w-64 lg:w-[250px] bg-gray-800 text-white h-screen fixed left-0 overflow-y-auto z-30 border-r border-gray-700 sidebar-transition lg:translate-x-0 -translate-x-full"
             id="leftSidebar">
 
             <!-- Close Button for Mobile -->
@@ -277,20 +274,24 @@
                 </button>
             </div>
 
-            <div class="py-4 flex flex-col h-[calc(100vh-120px)]">
-                <div class="flex-1 overflow-y-auto">
+            <!-- <div class="py-4 flex flex-col h-[calc(100vh-120px)]"> -->
+            <div class="py-4 flex flex-col ">
+                <div class="flex-1 ">
                     <!-- Getting Started Dropdown -->
                     <div class="mb-2">
-                        <button
-                            class="flex items-center justify-between w-full px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'getting-started' ? 'bg-gray-700 text-blue-400' : ''; ?>"
-                            onclick="toggleDropdown('getting-started-dropdown')">
-                            <div class="flex items-center">
-                                <i class="fas fa-rocket mr-3 w-4 text-center"></i>
-                                <span class="font-medium">Getting started</span>
-                            </div>
-                            <i class="fas fa-chevron-down text-xs transition-transform duration-300 <?php echo $active_page == 'getting-started' ? 'rotate-180' : ''; ?>"
-                                id="getting-started-arrow"></i>
-                        </button>
+                        <div class="relative">
+                            <!-- 1. Text + Icon (Click = Page Open) -->
+                            <button type="button"
+                                class="flex items-center justify-between w-full px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'getting-started' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                onclick="toggleDropdown('getting-started-dropdown'); if(window.innerWidth < 1024) closeMobileSidebar();">
+                                <div class="flex items-center flex-1 ml-2">
+                                    <i class="fas fa-rocket mr-4 w-4 text-center"></i> <!-- mr-3 से mr-4 कर दिया -->
+                                    <span class="font-medium text-sm">Getting started</span>
+                                </div>
+                                <i class="fas fa-chevron-down text-xs transition-transform duration-300 ml-5 <?php echo $active_page == 'getting-started' ? 'rotate-180' : ''; ?>"
+                                    id="getting-started-arrow"></i> <!-- mr-1 add किया arrow के लिए -->
+                            </button>
+                        </div>
 
                         <div class="mt-1 <?php echo $active_page == 'getting-started' ? 'block' : 'hidden'; ?>"
                             id="getting-started-dropdown">
@@ -329,83 +330,83 @@
                                             <a href="<?php echo base_url('documentation/getting_started_cloud'); ?>"
                                                 class="block pl-20 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'cloud-quickstart' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                 onclick="closeMobileSidebar()">
-                                                • Cloud Start
+                                                Cloud Start
                                             </a>
 
                                             <a href="<?php echo base_url('documentation/getting-started/installation/cloud/quick-start'); ?>"
                                                 class="block pl-20 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'cloud-quickstart' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                 onclick="closeMobileSidebar()">
-                                                • Quick start guide
+                                                Quick start guide
                                             </a>
 
                                             <!-- Supported Integrations -->
-                                            <div class="pl-20 pr-6 py-2 text-sm text-gray-400 font-medium">
+                                            <div class="pl-10 pr-6 py-2 text-sm text-gray-400 font-medium">
                                                 Supported Integrations
                                             </div>
                                             <a href="<?php echo base_url('documentation/getting-started/installation/cloud/react'); ?>"
                                                 class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'cloud-react' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                 onclick="closeMobileSidebar()">
-                                                ◦ React
+                                                React
                                             </a>
                                             <a href="<?php echo base_url('documentation/getting-started/installation/cloud/angular'); ?>"
                                                 class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'cloud-angular' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                 onclick="closeMobileSidebar()">
-                                                ◦ Angular
+                                                Angular
                                             </a>
                                             <a href="<?php echo base_url('documentation/getting-started/installation/cloud/vue'); ?>"
                                                 class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'cloud-vue' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                 onclick="closeMobileSidebar()">
-                                                ◦ Vue.js
+                                                Vue.js
                                             </a>
                                             <a href="<?php echo base_url('documentation/getting-started/installation/cloud/blazor'); ?>"
                                                 class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'cloud-blazor' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                 onclick="closeMobileSidebar()">
-                                                ◦ Blazor
+                                                Blazor
                                             </a>
                                             <a href="<?php echo base_url('documentation/getting-started/installation/cloud/svelte'); ?>"
                                                 class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'cloud-svelte' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                 onclick="closeMobileSidebar()">
-                                                ◦ Svelte
+                                                Svelte
                                             </a>
                                             <a href="<?php echo base_url('documentation/getting-started/installation/cloud/web-component'); ?>"
                                                 class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'cloud-webcomponent' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                 onclick="closeMobileSidebar()">
-                                                ◦ Web Component
+                                                Web Component
                                             </a>
                                             <a href="<?php echo base_url('documentation/getting-started/installation/cloud/jquery'); ?>"
                                                 class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'cloud-jquery' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                 onclick="closeMobileSidebar()">
-                                                ◦ jQuery
+                                                jQuery
                                             </a>
 
                                             <!-- Backend Integrations -->
-                                            <div class="pl-20 pr-6 py-2 text-sm text-gray-400 font-medium">
+                                            <div class="pl-10 pr-6 py-2 text-sm text-gray-400 font-medium">
                                                 Backend Integrations
                                             </div>
                                             <a href="<?php echo base_url('documentation/getting-started/installation/cloud/django'); ?>"
                                                 class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'cloud-django' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                 onclick="closeMobileSidebar()">
-                                                ◦ Django
+                                                Django
                                             </a>
                                             <a href="<?php echo base_url('documentation/getting-started/installation/cloud/laravel'); ?>"
                                                 class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'cloud-laravel' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                 onclick="closeMobileSidebar()">
-                                                ◦ Laravel
+                                                Laravel
                                             </a>
                                             <a href="<?php echo base_url('documentation/getting-started/installation/cloud/ruby-on-rails'); ?>"
                                                 class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'cloud-rails' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                 onclick="closeMobileSidebar()">
-                                                ◦ Ruby on Rails
+                                                Ruby on Rails
                                             </a>
 
                                             <!-- Other Integrations -->
-                                            <div class="pl-20 pr-6 py-2 text-sm text-gray-400 font-medium">
+                                            <div class="pl-10 pr-6 py-2 text-sm text-gray-400 font-medium">
                                                 Other Integrations
                                             </div>
                                             <a href="<?php echo base_url('documentation/getting-started/installation/cloud/bootstrap'); ?>"
                                                 class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'cloud-bootstrap' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                 onclick="closeMobileSidebar()">
-                                                ◦ Bootstrap
+                                                Bootstrap
                                             </a>
                                         </div>
                                     </div>
@@ -425,14 +426,14 @@
                                             <a href="<?php echo base_url('documentation/getting-started/installation/self-hosted/quick-start'); ?>"
                                                 class="block pl-20 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'self-hosted-quickstart' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                 onclick="closeMobileSidebar()">
-                                                • Quick start guide
+                                                Quick start guide
                                             </a>
 
                                             <!-- Supported Integrations -->
                                             <a href="<?php echo base_url('documentation/getting-started/installation/self-hosted/supported-integrations'); ?>"
-                                                class="block pl-20 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'self-hosted-supported-integrations' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                                class="block pl-10 pr-6 py-2 text-sm text-gray-400 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'self-hosted-supported-integrations' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                 onclick="closeMobileSidebar()">
-                                                • Supported Integrations
+                                                Supported Integrations
                                             </a>
 
                                             <!-- React Dropdown -->
@@ -448,14 +449,15 @@
                                                 <div class="mt-1 <?php echo strpos($active_subsection, 'self-hosted-react') === 0 ? 'block' : 'hidden'; ?>"
                                                     id="self-hosted-react-dropdown">
                                                     <a href="<?php echo base_url('documentation/getting-started/installation/self-hosted/react/package-manager-hosting'); ?>"
-                                                        class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'self-hosted-react-package-hosting' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                                        class="block pl-20 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'self-hosted-react-package-hosting' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                         onclick="closeMobileSidebar()">
-                                                        ◦ Using a package manager with hosting
+                                                        Package Manager on Hosting
                                                     </a>
                                                     <a href="<?php echo base_url('documentation/getting-started/installation/self-hosted/react/package-manager-bundling'); ?>"
-                                                        class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'self-hosted-react-package-bundling' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                                        class="block pl-20 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'self-hosted-react-package-bundling' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                         onclick="closeMobileSidebar()">
-                                                        ◦ Using a package manager with bundling
+                                                        <!-- Using a package manager with bundling -->
+                                                        Package Manager + Bundling
                                                     </a>
                                                 </div>
                                             </div>
@@ -475,7 +477,7 @@
                                                     <a href="<?php echo base_url('documentation/getting-started/installation/self-hosted/angular/package-manager'); ?>"
                                                         class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'self-hosted-angular-package' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                         onclick="closeMobileSidebar()">
-                                                        ◦ Using a package manager
+                                                        Using package manager
                                                     </a>
                                                 </div>
                                             </div>
@@ -495,7 +497,7 @@
                                                     <a href="<?php echo base_url('documentation/getting-started/installation/self-hosted/vue/package-manager'); ?>"
                                                         class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'self-hosted-vue-package' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                         onclick="closeMobileSidebar()">
-                                                        ◦ Using a package manager
+                                                        Using package manager
                                                     </a>
                                                 </div>
                                             </div>
@@ -515,7 +517,7 @@
                                                     <a href="<?php echo base_url('documentation/getting-started/installation/self-hosted/blazor/package-manager'); ?>"
                                                         class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'self-hosted-blazor-package' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                         onclick="closeMobileSidebar()">
-                                                        ◦ Using a package manager
+                                                        Using package manager
                                                     </a>
                                                 </div>
                                             </div>
@@ -535,7 +537,7 @@
                                                     <a href="<?php echo base_url('documentation/getting-started/installation/self-hosted/svelte/package-manager'); ?>"
                                                         class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'self-hosted-svelte-package' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                         onclick="closeMobileSidebar()">
-                                                        ◦ Using a package manager
+                                                        Using package manager
                                                     </a>
                                                 </div>
                                             </div>
@@ -555,7 +557,7 @@
                                                     <a href="<?php echo base_url('documentation/getting-started/installation/self-hosted/web-component/package-manager'); ?>"
                                                         class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'self-hosted-webcomponent-package' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                         onclick="closeMobileSidebar()">
-                                                        ◦ Using a package manager
+                                                        Using package manager
                                                     </a>
                                                 </div>
                                             </div>
@@ -575,7 +577,7 @@
                                                     <a href="<?php echo base_url('documentation/getting-started/installation/self-hosted/jquery/package-manager'); ?>"
                                                         class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'self-hosted-jquery-package' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                         onclick="closeMobileSidebar()">
-                                                        ◦ Using a package manager
+                                                        Using package manager
                                                     </a>
                                                 </div>
                                             </div>
@@ -584,7 +586,7 @@
                                             <a href="<?php echo base_url('documentation/getting-started/installation/self-hosted/java-swing'); ?>"
                                                 class="block pl-20 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'self-hosted-java-swing' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                 onclick="closeMobileSidebar()">
-                                                • Java Swing
+                                                Java Swing
                                             </a>
                                         </div>
                                     </div>
@@ -604,14 +606,14 @@
                                             <a href="<?php echo base_url('documentation/getting-started/installation/zip/quick-start'); ?>"
                                                 class="block pl-20 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'zip-quickstart' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                 onclick="closeMobileSidebar()">
-                                                • Quick start guide
+                                                Quick start guide
                                             </a>
 
                                             <!-- Supported Integrations -->
                                             <a href="<?php echo base_url('documentation/getting-started/installation/zip/supported-integrations'); ?>"
                                                 class="block pl-20 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'zip-supported-integrations' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                 onclick="closeMobileSidebar()">
-                                                • Supported Integrations
+                                                Supported Integrations
                                             </a>
 
                                             <!-- React Dropdown -->
@@ -629,12 +631,12 @@
                                                     <a href="<?php echo base_url('documentation/getting-started/installation/zip/react/hosting'); ?>"
                                                         class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'zip-react-hosting' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                         onclick="closeMobileSidebar()">
-                                                        ◦ Using a .zip package with hosting
+                                                        Using a .zip package with hosting
                                                     </a>
                                                     <a href="<?php echo base_url('documentation/getting-started/installation/zip/react/bundling'); ?>"
                                                         class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'zip-react-bundling' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                         onclick="closeMobileSidebar()">
-                                                        ◦ Using a .zip package with bundling
+                                                        Using a .zip package with bundling
                                                     </a>
                                                 </div>
                                             </div>
@@ -654,7 +656,7 @@
                                                     <a href="<?php echo base_url('documentation/getting-started/installation/zip/angular/package'); ?>"
                                                         class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'zip-angular-package' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                         onclick="closeMobileSidebar()">
-                                                        ◦ Using a .zip package
+                                                        Using a .zip package
                                                     </a>
                                                 </div>
                                             </div>
@@ -674,7 +676,7 @@
                                                     <a href="<?php echo base_url('documentation/getting-started/installation/zip/vue/package'); ?>"
                                                         class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'zip-vue-package' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                         onclick="closeMobileSidebar()">
-                                                        ◦ Using a .zip package
+                                                        Using a .zip package
                                                     </a>
                                                 </div>
                                             </div>
@@ -694,7 +696,7 @@
                                                     <a href="<?php echo base_url('documentation/getting-started/installation/zip/blazor/package'); ?>"
                                                         class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'zip-blazor-package' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                         onclick="closeMobileSidebar()">
-                                                        ◦ Using a .zip package
+                                                        Using a .zip package
                                                     </a>
                                                 </div>
                                             </div>
@@ -714,7 +716,7 @@
                                                     <a href="<?php echo base_url('documentation/getting-started/installation/zip/svelte/package'); ?>"
                                                         class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'zip-svelte-package' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                         onclick="closeMobileSidebar()">
-                                                        ◦ Using a .zip package
+                                                        Using a .zip package
                                                     </a>
                                                 </div>
                                             </div>
@@ -734,7 +736,7 @@
                                                     <a href="<?php echo base_url('documentation/getting-started/installation/zip/web-component/package'); ?>"
                                                         class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'zip-webcomponent-package' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                         onclick="closeMobileSidebar()">
-                                                        ◦ Using a .zip package
+                                                        Using a .zip package
                                                     </a>
                                                 </div>
                                             </div>
@@ -743,37 +745,37 @@
                                             <a href="<?php echo base_url('documentation/getting-started/installation/zip/java-swing'); ?>"
                                                 class="block pl-20 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'zip-java' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                 onclick="closeMobileSidebar()">
-                                                • Java Swing
+                                                Java Swing
                                             </a>
 
                                             <!-- Backend Integrations -->
-                                            <div class="pl-20 pr-6 py-2 text-sm text-gray-400 font-medium">
+                                            <div class="pl-10 pr-6 py-2 text-sm text-gray-400 font-medium">
                                                 Backend Integrations
                                             </div>
                                             <a href="<?php echo base_url('documentation/getting-started/installation/zip/django'); ?>"
                                                 class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'zip-django' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                 onclick="closeMobileSidebar()">
-                                                ◦ Django
+                                                Django
                                             </a>
                                             <a href="<?php echo base_url('documentation/getting-started/installation/zip/laravel'); ?>"
                                                 class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'zip-laravel' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                 onclick="closeMobileSidebar()">
-                                                ◦ Laravel
+                                                Laravel
                                             </a>
                                             <a href="<?php echo base_url('documentation/getting-started/installation/zip/ruby-on-rails'); ?>"
                                                 class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'zip-rails' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                 onclick="closeMobileSidebar()">
-                                                ◦ Ruby on Rails
+                                                Ruby on Rails
                                             </a>
 
                                             <!-- Other Integrations -->
-                                            <div class="pl-20 pr-6 py-2 text-sm text-gray-400 font-medium">
+                                            <div class="pl-10 pr-6 py-2 text-sm text-gray-400 font-medium">
                                                 Other Integrations
                                             </div>
                                             <a href="<?php echo base_url('documentation/getting-started/installation/zip/bootstrap'); ?>"
                                                 class="block pl-24 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'zip-bootstrap' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                 onclick="closeMobileSidebar()">
-                                                ◦ Bootstrap
+                                                Bootstrap
                                             </a>
                                         </div>
                                     </div>
@@ -836,32 +838,32 @@
                                     <a href="<?php echo base_url('documentation/examples/general/basic'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'basic-example' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
-                                        • Basic example
+                                        Basic example
                                     </a>
                                     <a href="<?php echo base_url('documentation/examples/general/full-featured-open-source'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'full-featured-opensource' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
-                                        • Full-featured demo / Open Source features
+                                        Full-featured demo / Open Source features
                                     </a>
                                     <a href="<?php echo base_url('documentation/examples/general/full-featured-premium'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'full-featured-premium' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
-                                        • Full-featured demo / Open Source and Premium features
+                                        Full-featured demo / Open Source and Premium features
                                     </a>
                                     <a href="<?php echo base_url('documentation/examples/general/classic-editor'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'classic-editor' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
-                                        • Classic editor mode
+                                        Classic editor mode
                                     </a>
                                     <a href="<?php echo base_url('documentation/examples/general/inline-editor'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'inline-editor' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
-                                        • Inline editor
+                                        Inline editor
                                     </a>
                                     <a href="<?php echo base_url('documentation/examples/general/distraction-free-editor'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'distraction-free-editor' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
-                                        • Distraction-free editor
+                                        Distraction-free editor
                                     </a>
                                 </div>
                             </div>
@@ -881,7 +883,7 @@
                                     <a href="<?php echo base_url('documentation/examples/integration/template-creation'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'template-creation' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
-                                        • Template creation example
+                                        Template creation example
                                     </a>
                                 </div>
                             </div>
@@ -912,57 +914,57 @@
                                     <a href="<?php echo base_url('documentation/examples/skins-icons/bootstrap'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'bootstrap-demo' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
-                                        • Bootstrap Demo
+                                        Bootstrap Demo
                                     </a>
                                     <a href="<?php echo base_url('documentation/examples/skins-icons/borderless'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'borderless-demo' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
-                                        • Borderless Demo
+                                        Borderless Demo
                                     </a>
                                     <a href="<?php echo base_url('documentation/examples/skins-icons/fabric'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'fabric-demo' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
-                                        • Fabric Demo
+                                        Fabric Demo
                                     </a>
                                     <a href="<?php echo base_url('documentation/examples/skins-icons/fluent'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'fluent-demo' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
-                                        • Fluent Demo
+                                        Fluent Demo
                                     </a>
                                     <a href="<?php echo base_url('documentation/examples/skins-icons/jam-icons'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'jam-icons-demo' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
-                                        • Jam Icons Demo
+                                        Jam Icons Demo
                                     </a>
                                     <a href="<?php echo base_url('documentation/examples/skins-icons/material-classic'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'material-classic-demo' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
-                                        • Material Classic Demo
+                                        Material Classic Demo
                                     </a>
                                     <a href="<?php echo base_url('documentation/examples/skins-icons/material-outline'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'material-outline-demo' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
-                                        • Material Outline Demo
+                                        Material Outline Demo
                                     </a>
                                     <a href="<?php echo base_url('documentation/examples/skins-icons/naked'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'naked-demo' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
-                                        • Naked Demo
+                                        Naked Demo
                                     </a>
                                     <a href="<?php echo base_url('documentation/examples/skins-icons/outside'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'outside-demo' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
-                                        • Outside Demo
+                                        Outside Demo
                                     </a>
                                     <a href="<?php echo base_url('documentation/examples/skins-icons/small-icons'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'small-icons-demo' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
-                                        • Small Icons Demo
+                                        Small Icons Demo
                                     </a>
                                     <a href="<?php echo base_url('documentation/examples/skins-icons/snow'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'snow-demo' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
-                                        • Snow Demo
+                                        Snow Demo
                                     </a>
                                 </div>
                             </div>
@@ -1073,22 +1075,22 @@
                                     <a href="<?php echo base_url('documentation/security/guide/reporting-issues#reporting-editflo-security-issues'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'reporting-issues' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
-                                        • Reporting Editflo security issues
+                                        Reporting Editflo security issues
                                     </a>
                                     <a href="<?php echo base_url('documentation/security/guide/reporting-issues#what-we-do-to-maintain-security-for-editflo'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'maintenance' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
-                                        • What we do to maintain security for Editflo
+                                        What we do to maintain security for Editflo
                                     </a>
                                     <a href="<?php echo base_url('documentation/security/guide/reporting-issues#configuring-content-security-policy-for-editflo'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'configuring-csp' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
-                                        • Configuring Content Security Policy (CSP) for Editflo
+                                        Configuring Content Security Policy for Editflo
                                     </a>
                                     <a href="<?php echo base_url('documentation/security/guide/reporting-issues#general-security-risks-for-user-input-elements'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'general-risks' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
-                                        • General security risks for user input elements
+                                        General security risks for user input elements
                                     </a>
                                 </div>
 
@@ -1096,13 +1098,12 @@
                                 <a href="<?php echo base_url('documentation/security/guide/content-security-policies'); ?>"
                                     class="block pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'content-security-policies' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                     onclick="closeMobileSidebar()">
-                                    Content Security Policies (CSP)
-                                </a>
-                                <a href="<?php echo base_url('documentation/security/guide/cors'); ?>"
-                                    class="block pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'cors' ? 'bg-gray-700 text-blue-400' : ''; ?>"
-                                    onclick="closeMobileSidebar()">
-                                    Cross-Origin Resource Sharing (CORS)
-                                </a>
+                                    Content Security Policies
+                                    <a href="<?php echo base_url('documentation/security/guide/cors'); ?>"
+                                        class="block pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'cors' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        CORS
+                                    </a>
                             </div>
                         </div>
                     </div>
@@ -1259,6 +1260,372 @@
                         <span class="font-medium">Usage-Based Billing</span>
                     </a>
 
+                    <!-- API Reference Section (NEW) -->
+                    <div class="mb-2">
+                        <div class="relative">
+                            <!-- 1. Text + Icon (Click = Page Open) -->
+                            <a href="<?php echo base_url('documentation/api-reference/editflo'); ?>"
+                                class="flex items-center justify-between w-full px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'api-reference' ? 'bg-gray-700 text-blue-400' : ''; ?> pr-12"
+                                onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
+                                <div class="flex items-center flex-1">
+                                    <i class="fas fa-code mr-3 w-4 text-center"></i>
+                                    <span class="font-medium">API Reference</span>
+                                </div>
+                            </a>
+
+                            <!-- 2. Arrow Button (Click = Only Dropdown Toggle) -->
+                            <button type="button"
+                                class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
+                                onclick="event.stopPropagation(); toggleDropdown('api-reference-dropdown');">
+                                <i class="fas fa-chevron-down text-xs transition-transform duration-300 <?php echo $active_page == 'api-reference' ? 'rotate-180' : ''; ?>"
+                                    id="api-reference-arrow"></i>
+                            </button>
+                        </div>
+
+                        <div class="mt-1 <?php echo $active_page == 'api-reference' ? 'block' : 'hidden'; ?>"
+                            id="api-reference-dropdown">
+                            <!-- Editflo API Reference -->
+                            <div class="mt-1">
+                                <div class="relative">
+                                    <!-- 1. Text Part - Click = Open Page -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo'); ?>"
+                                        class="flex items-center w-full pl-12 pr-16 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_section == 'editflo' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
+                                        <!-- <span>Editflo API Reference</span> -->
+                                        <span>EAR</span>
+                                    </a>
+
+                                    <!-- 2. Arrow Button - Click = Only Toggle Dropdown -->
+                                    <button type="button"
+                                        class="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
+                                        onclick="event.stopPropagation(); toggleDropdown('editflo-api-dropdown');">
+                                        <i class="fas fa-chevron-down text-xs transition-transform duration-300 <?php echo $active_section == 'editflo' ? 'rotate-180' : ''; ?>"
+                                            id="editflo-api-arrow"></i>
+                                    </button>
+                                </div>
+
+                                <!-- Editflo API Dropdown Content -->
+                                <div class="mt-1 <?php echo $active_section == 'editflo' ? 'block' : 'hidden'; ?>"
+                                    id="editflo-api-dropdown">
+                                    <!-- Editflo -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == '' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo
+                                    </a>
+
+                                    <!-- editflo.AddOnManager -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo/add-on-manager'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'add-on-manager' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.AddOnManager
+                                    </a>
+
+                                    <!-- editflo.Annotator -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo/annotator'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'annotator' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.Annotator
+                                    </a>
+
+                                    <!-- editflo.Editor -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo/editor'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'editor' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.Editor
+                                    </a>
+
+                                    <!-- editflo.EditorManager -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo/editor-manager'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'editor-manager' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.EditorManager
+                                    </a>
+
+                                    <!-- editflo.EditorMode -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo/editor-mode'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'editor-mode' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.EditorMode
+                                    </a>
+
+                                    <!-- editflo.EditorOptions -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo/editor-options'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'editor-options' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.EditorOptions
+                                    </a>
+
+                                    <!-- editflo.EditorUpload -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo/editor-upload'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'editor-upload' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.EditorUpload
+                                    </a>
+
+                                    <!-- editflo.Env -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo/env'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'env' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.Env
+                                    </a>
+
+                                    <!-- editflo.Event -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo/event'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'event' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.Event
+                                    </a>
+
+                                    <!-- editflo.FakeClipboard -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo/fake-clipboard'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'fake-clipboard' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.FakeClipboard
+                                    </a>
+
+                                    <!-- editflo.Formatter -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo/formatter'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'formatter' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.Formatter
+                                    </a>
+
+                                    <!-- editflo.NotificationManager -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo/notification-manager'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'notification-manager' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.Notify
+                                    </a>
+
+                                    <!-- editflo.Plugin -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo/plugin'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'plugin' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.Plugin
+                                    </a>
+
+                                    <!-- editflo.Shortcuts -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo/shortcuts'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'shortcuts' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.Shortcuts
+                                    </a>
+
+                                    <!-- editflo.Theme -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo/theme'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'theme' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.Theme
+                                    </a>
+
+                                    <!-- editflo.UndoManager -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo/undo-manager'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'undo-manager' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.UndoManager
+                                    </a>
+
+                                    <!-- editflo.UserLookup -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo/user-lookup'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'user-lookup' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.UserLookup
+                                    </a>
+
+                                    <!-- editflo.WindowManager -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo/window-manager'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'window-manager' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.Win
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- editflo.editor.ui Section -->
+                            <div class="mt-1">
+                                <div class="relative">
+                                    <!-- 1. Text Part - Click = Open Page -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo-editor-ui'); ?>"
+                                        class="flex items-center w-full pl-12 pr-16 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_section == 'editflo-editor-ui' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
+                                        <span>editflo.editor.ui</span>
+                                    </a>
+
+                                    <!-- 2. Arrow Button - Click = Only Toggle Dropdown -->
+                                    <button type="button"
+                                        class="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
+                                        onclick="event.stopPropagation(); toggleDropdown('editflo-editor-ui-dropdown');">
+                                        <i class="fas fa-chevron-down text-xs transition-transform duration-300 <?php echo $active_section == 'editflo-editor-ui' ? 'rotate-180' : ''; ?>"
+                                            id="editflo-editor-ui-arrow"></i>
+                                    </button>
+                                </div>
+
+                                <!-- editflo.editor.ui Dropdown Content -->
+                                <div class="mt-1 <?php echo $active_section == 'editflo-editor-ui' ? 'block' : 'hidden'; ?>"
+                                    id="editflo-editor-ui-dropdown">
+                                    <!-- editflo.editor.ui.Registry -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo-editor-ui/registry'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'registry' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.editor.ui.Registry
+                                    </a>
+
+                                    <!-- editflo.editor.ui.Ui -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo-editor-ui/ui'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'ui' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.editor.ui.Ui
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- editflo.html Section -->
+                            <div class="mt-1">
+                                <div class="relative">
+                                    <!-- 1. Text Part - Click = Open Page -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo-html'); ?>"
+                                        class="flex items-center w-full pl-12 pr-16 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_section == 'editflo-html' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
+                                        <span>editflo.html</span>
+                                    </a>
+
+                                    <!-- 2. Arrow Button - Click = Only Toggle Dropdown -->
+                                    <button type="button"
+                                        class="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
+                                        onclick="event.stopPropagation(); toggleDropdown('editflo-html-dropdown');">
+                                        <i class="fas fa-chevron-down text-xs transition-transform duration-300 <?php echo $active_section == 'editflo-html' ? 'rotate-180' : ''; ?>"
+                                            id="editflo-html-arrow"></i>
+                                    </button>
+                                </div>
+
+                                <!-- Editflo HTML Dropdown Content -->
+                                <div class="mt-1 <?php echo $active_section == 'editflo-html' ? 'block' : 'hidden'; ?>"
+                                    id="editflo-html-dropdown">
+                                    <!-- editflo.html.DomParser -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo-html/domparser'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'domparser' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.html.DomParser
+                                    </a>
+
+                                    <!-- editflo.html.Entities -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo-html/entities'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'entities' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.html.Entities
+                                    </a>
+
+                                    <!-- editflo.html.Node -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo-html/node'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'node' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.html.Node
+                                    </a>
+
+                                    <!-- editflo.html.Schema -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo-html/schema'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'schema' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.html.Schema
+                                    </a>
+
+                                    <!-- editflo.html.Serializer -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo-html/serializer'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'serializer' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.html.Serializer
+                                    </a>
+
+                                    <!-- editflo.html.Styles -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo-html/styles'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'styles' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.html.Styles
+                                    </a>
+
+                                    <!-- editflo.html.Writer -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo-html/writer'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'writer' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.html.Writer
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Editflo Util Section -->
+                            <div class="mt-1">
+                                <div class="relative">
+                                    <!-- 1. Text Part - Click = Open Page -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo-util'); ?>"
+                                        class="flex items-center w-full pl-12 pr-16 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_section == 'editflo-util' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
+                                        <span>editflo.util</span>
+                                    </a>
+
+                                    <!-- 2. Arrow Button - Click = Only Toggle Dropdown -->
+                                    <button type="button"
+                                        class="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
+                                        onclick="event.stopPropagation(); toggleDropdown('editflo-util-dropdown');">
+                                        <i class="fas fa-chevron-down text-xs transition-transform duration-300 <?php echo $active_section == 'editflo-util' ? 'rotate-180' : ''; ?>"
+                                            id="editflo-util-arrow"></i>
+                                    </button>
+                                </div>
+
+                                <!-- Editflo Util Dropdown Content -->
+                                <div class="mt-1 <?php echo $active_section == 'editflo-util' ? 'block' : 'hidden'; ?>"
+                                    id="editflo-util-dropdown">
+                                    <!-- editflo.util.Delay -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo-util/delay'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'delay' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.util.Delay
+                                    </a>
+
+                                    <!-- editflo.util.EventDispatcher -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo-util/event-dispatcher'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'event-dispatcher' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.util.EventDispatcher
+                                    </a>
+
+                                    <!-- editflo.util.11Sn -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo-util/i18n'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'i18n' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.util.I18n
+                                    </a>
+
+                                    <!-- editflo.util.ImageUploader -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo-util/image-uploader'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'image-uploader' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.util.ImageUploader
+                                    </a>
+
+                                    <!-- editflo.util.Observable -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo-util/observable'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'observable' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.util.Observable
+                                    </a>
+
+                                    <!-- editflo.util.Tools -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo-util/tools'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'tools' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.util.Tools
+                                    </a>
+
+                                    <!-- editflo.util.URI -->
+                                    <a href="<?php echo base_url('documentation/api-reference/editflo-util/uri'); ?>"
+                                        class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'uri' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                        onclick="closeMobileSidebar()">
+                                        editflo.util.URI
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
                 <!-- Promotional Card in Sidebar Bottom -->
@@ -1282,7 +1649,7 @@
         </nav>
 
         <!-- Main Content -->
-        <main class="flex-1 lg:pl-[250px] lg:pr-[245px] min-h-screen bg-gray-50">
+        <main class="flex-1 lg:pl-[235px] lg:pr-[210px] min-h-screen bg-gray-50">
 
             <!-- Top Bar - Hidden on Mobile -->
             <div
@@ -1558,6 +1925,95 @@
                                 $view_file .= 'editflo_0_1_additions';
                             }
                         }
+                    } // API Reference (NEW - अलग सेट करें)
+                    elseif ($active_page == 'api-reference') {
+                        if ($active_section == 'editflo') {
+                            if ($active_subsection == '') {
+                                $view_file .= 'editflo_api_reference';
+                            } elseif ($active_subsection == 'add-on-manager') {
+                                $view_file .= 'editflo_add_on_manager';
+                            } elseif ($active_subsection == 'annotator') {
+                                $view_file .= 'editflo_annotator';
+                            } elseif ($active_subsection == 'editor') {
+                                $view_file .= 'editflo_editor';
+                            } elseif ($active_subsection == 'editor-manager') {
+                                $view_file .= 'editflo_editor_manager';
+                            } elseif ($active_subsection == 'editor-mode') {
+                                $view_file .= 'editflo_editor_mode';
+                            } elseif ($active_subsection == 'editor-options') {
+                                $view_file .= 'editflo_editor_options';
+                            } elseif ($active_subsection == 'editor-upload') {
+                                $view_file .= 'editflo_editor_upload';
+                            } elseif ($active_subsection == 'env') {
+                                $view_file .= 'editflo_env';
+                            } elseif ($active_subsection == 'event') {
+                                $view_file .= 'editflo_event';
+                            } elseif ($active_subsection == 'fake-clipboard') {
+                                $view_file .= 'editflo_fake_clipboard';
+                            } elseif ($active_subsection == 'formatter') {
+                                $view_file .= 'editflo_formatter';
+                            } elseif ($active_subsection == 'notification-manager') {
+                                $view_file .= 'editflo_notification_manager';
+                            } elseif ($active_subsection == 'plugin') {
+                                $view_file .= 'editflo_plugin';
+                            } elseif ($active_subsection == 'shortcuts') {
+                                $view_file .= 'editflo_shortcuts';
+                            } elseif ($active_subsection == 'theme') {
+                                $view_file .= 'editflo_theme';
+                            } elseif ($active_subsection == 'undo-manager') {
+                                $view_file .= 'editflo_undo_manager';
+                            } elseif ($active_subsection == 'user-lookup') {
+                                $view_file .= 'editflo_user_lookup';
+                            } elseif ($active_subsection == 'window-manager') {
+                                $view_file .= 'editflo_window_manager';
+                            }
+                        } elseif ($active_section == 'editflo-editor-ui') {
+                            if ($active_subsection == '') {
+                                $view_file .= 'editflo_editor_ui';
+                            } elseif ($active_subsection == 'registry') {
+                                $view_file .= 'editflo_editor_ui_registry';
+                            } elseif ($active_subsection == 'ui') {
+                                $view_file .= 'editflo_editor_ui_ui';
+                            }
+                        } elseif ($active_section == 'editflo-html') {
+                            if ($active_subsection == '') {
+                                $view_file .= 'editflo_html';
+                            } elseif ($active_subsection == 'domparser') {
+                                $view_file .= 'editflo_html_domparser';
+                            } elseif ($active_subsection == 'entities') {
+                                $view_file .= 'editflo_html_entities';
+                            } elseif ($active_subsection == 'node') {
+                                $view_file .= 'editflo_html_node';
+                            } elseif ($active_subsection == 'schema') {
+                                $view_file .= 'editflo_html_schema';
+                            } elseif ($active_subsection == 'serializer') {
+                                $view_file .= 'editflo_html_serializer';
+                            } elseif ($active_subsection == 'styles') {
+                                $view_file .= 'editflo_html_styles';
+                            } elseif ($active_subsection == 'writer') {
+                                $view_file .= 'editflo_html_writer';
+                            }
+                        } elseif ($active_section == 'editflo-util') {
+                            if ($active_subsection == '') {
+                                $view_file .= 'editflo_util';
+                            } elseif ($active_subsection == 'delay') {
+                                $view_file .= 'editflo_util_delay';
+                            } elseif ($active_subsection == 'event-dispatcher') {
+                                $view_file .= 'editflo_util_event_dispatcher';
+                            } elseif ($active_subsection == 'i18n') {
+                                $view_file .= 'editflo_util_i18n';
+                            } elseif ($active_subsection == 'image-uploader') {
+                                $view_file .= 'editflo_util_image_uploader';
+                            } elseif ($active_subsection == 'observable') {
+                                $view_file .= 'editflo_util_observable';
+                            } elseif ($active_subsection == 'tools') {
+                                $view_file .= 'editflo_util_tools';
+                            } elseif ($active_subsection == 'uri') {
+                                $view_file .= 'editflo_util_uri';
+                            }
+                        } else {
+                            $view_file .= 'api_reference';
+                        }
                     }
 
                     // Check if view file exists, otherwise show a default message
@@ -1579,7 +2035,7 @@
         </main>
 
         <!-- Right Sidebar - Table of Contents -->
-        <aside class="w-64 lg:w-[240px] bg-white border-l border-gray-200 h-screen fixed right-0 top-0 overflow-y-auto z-20 hidden lg:block">
+        <aside class="w-64 lg:w-[230px] bg-white border-l border-gray-200 h-screen fixed right-0 top-0 overflow-y-auto z-20 hidden lg:block">
             <div class="p-6 mt-12">
                 <!-- Table of Contents Header -->
                 <div class="mb-6">
@@ -1599,35 +2055,42 @@
                 <div class="my-6 border-t border-gray-200"></div>
 
                 <!-- Help Card -->
-                <div class="bg-gradient-to-br from-orange-50 to-red-50 border border-orange-200 rounded-xl p-4 shadow-sm">
-                    <div class="flex items-start mb-3">
-                        <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
-                            <i class="fas fa-life-ring text-orange-600"></i>
+                <div class="bg-gradient-to-br from-orange-50 to-red-50 border border-orange-200 rounded-lg p-3 shadow-sm max-w-xs">
+                    <div class="flex items-start mb-2">
+                        <div class="w-8 h-8 bg-orange-100 rounded-md flex items-center justify-center mr-2 flex-shrink-0">
+                            <i class="fas fa-life-ring text-orange-600 text-sm"></i>
                         </div>
                         <div>
-                            <h4 class="text-sm font-semibold text-gray-800 mb-1">Need Help?</h4>
-                            <p class="text-xs text-gray-600">Stuck somewhere? Get support from our team.</p>
+                            <h4 class="text-xs font-semibold text-gray-800 mb-0.5">Need Help?</h4>
+                            <p class="text-[10px] text-gray-600 leading-tight">Stuck somewhere? Get support from our team.</p>
                         </div>
                     </div>
-                    <button class="w-full bg-white hover:bg-orange-50 text-orange-600 border border-orange-300 text-sm font-medium py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center">
-                        <i class="fas fa-headset mr-2"></i>
+
+                    <button class="w-full bg-white hover:bg-orange-50 text-orange-600 border border-orange-300 text-xs font-medium py-1.5 px-3 rounded-md transition-colors duration-200 flex items-center justify-center">
+                        <i class="fas fa-headset text-xs mr-1.5"></i>
                         Contact Support
                     </button>
                 </div>
 
+
                 <!-- Promotional Section -->
-                <div class="mt-6 promo-card p-4 text-white">
+                <div class="mt-4 promo-card p-3 text-white rounded-lg">
                     <div class="relative z-10">
-                        <div class="flex items-center mb-2">
-                            <i class="fas fa-gem text-yellow-300 mr-2"></i>
-                            <h4 class="font-semibold text-sm">Free 14-Day Trial</h4>
+                        <div class="flex items-center mb-1.5">
+                            <i class="fas fa-gem text-yellow-300 text-sm mr-1.5"></i>
+                            <h4 class="font-semibold text-xs">Free 14-Day Trial</h4>
                         </div>
-                        <p class="text-xs mb-3 opacity-90">Try every feature in our Professional Plan for 14 days with no commitment.</p>
-                        <button class="w-full bg-white text-purple-600 hover:bg-gray-100 text-xs font-semibold py-2 px-3 rounded-lg transition-colors">
+
+                        <p class="text-[10px] leading-tight mb-2 opacity-90">
+                            Try every feature in our Professional Plan for 14 days with no commitment.
+                        </p>
+
+                        <button class="w-full bg-white text-purple-600 hover:bg-gray-100 text-[10px] font-semibold py-1.5 px-2.5 rounded-md transition-colors">
                             Start Trial
                         </button>
                     </div>
                 </div>
+
             </div>
         </aside>
     </div>
@@ -1954,6 +2417,20 @@
 
             <?php if ($active_page == 'release-notes'): ?>
                 openDropdown('release-notes-dropdown', 'release-notes-arrow');
+            <?php endif; ?>
+
+            <?php if ($active_page == 'api-reference'): ?>
+                openDropdown('api-reference-dropdown', 'api-reference-arrow');
+            <?php endif; ?>
+
+            <?php if ($active_section == 'editflo' && $active_page == 'api-reference'): ?>
+                openDropdown('editflo-api-dropdown', 'editflo-api-arrow');
+            <?php endif; ?>
+            <?php if ($active_section == 'editflo-editor-ui' && $active_page == 'api-reference'): ?>
+                openDropdown('editflo-editor-ui-dropdown', 'editflo-editor-ui-arrow');
+            <?php endif; ?>
+            <?php if ($active_section == 'editflo-html' && $active_page == 'api-reference'): ?>
+                openDropdown('editflo-html-dropdown', 'editflo-html-arrow');
             <?php endif; ?>
 
             <?php if ($active_section == 'editflo'): ?>

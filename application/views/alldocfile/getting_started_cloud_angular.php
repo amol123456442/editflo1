@@ -1,6 +1,6 @@
-<main class="mx-auto min-h-screen px-3 sm:px-4 md:px-6 lg:px-8 py-4 ">
+<main class="mx-auto min-h-screen px-3 sm:px-4 md:px-6 lg:px-4 py-4 ">
     <!-- Header Section -->
-    <header class="py-4 sm:py-6 md:py-8 text-start">
+    <header class=" text-start">
         <div class="flex items-center mb-3 sm:mb-4 md:mb-5">
             <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">Using Editflo from the Tiny Cloud CDN
                 with the Angular framework</h2>

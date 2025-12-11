@@ -1,6 +1,6 @@
-<main class="mx-auto min-h-screen px-3 sm:px-4 md:px-6 lg:px-8 py-4 ">
+<main class="mx-auto min-h-screen px-3 sm:px-4 md:px-6 lg:px-4 py-4 ">
     <!-- Header Section -->
-    <header class="py-4 sm:py-6 md:py-8 text-start">
+    <header class="text-start">
         <div class="flex items-center mb-3 sm:mb-4 md:mb-5">
             <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">Using Editflo from the Editflo Cloud CDN
                 with Laravel Framework</h2>
@@ -16,7 +16,7 @@
     </header>
 
     <!-- Prerequisites Section -->
-    <div class="py-4 sm:py-6 md:py-8 text-start">
+    <div class=" text-start">
         <div class="flex items-center mb-3 sm:mb-4">
             <h2 class="text-lg sm:text-xl font-semibold text-gray-800">Prerequisites</h2>
         </div>
@@ -24,7 +24,7 @@
             <i class="fab fa-php text-purple-500 mr-2"></i>
             This procedure requires <a href="" class="text-blue-500 hover:underline ml-1">PHP 8.0+ and Composer</a>.
         </p>
-        <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-center">
+        <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-center mb-4">
             <i class="fab fa-laravel text-red-500 mr-2"></i>
             <a href="" class="text-blue-500 hover:underline ml-1">Laravel Framework</a> installed on your system.
         </p>

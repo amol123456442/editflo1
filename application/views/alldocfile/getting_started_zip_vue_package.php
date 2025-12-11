@@ -1,6 +1,6 @@
-<main class="mx-auto min-h-screen px-3 sm:px-4 md:px-6 lg:px-8">
+<main class="mx-auto min-h-screen px-3 sm:px-4 md:px-6 lg:px-4">
     <!-- Header Section -->
-    <header class="py-4 sm:py-6 md:py-8 text-start">
+    <header class=" text-start">
         <div class="flex items-center mb-3 sm:mb-4 md:mb-5">
             <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">Using the Editflo .zip package with the
                 Vue.js framework</h2>
@@ -94,7 +94,7 @@
     </section>
 
     <!-- Prerequisites Section -->
-    <div class="py-4 sm:py-6 md:py-8 text-start">
+    <div class=" text-start mb-4">
         <div class="flex items-center mb-3 sm:mb-4">
             <h2 class="text-lg sm:text-xl font-semibold text-gray-800">Prerequisites</h2>
         </div>

@@ -1,8 +1,7 @@
-<main class="mx-auto min-h-screen px-3 sm:px-4 md:px-6 lg:px-8 ">
+<main class="mx-auto min-h-screen px-3 sm:px-4 md:px-6 lg:px-4 ">
     <!-- Header Section -->
-    <header class="py-4 sm:py-6 md:py-8 text-start">
+    <header class="text-start">
         <div class="flex items-center mb-3 sm:mb-4 md:mb-5">
-
             <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">Using Editflo from the Editflo Cloud CDN with the React framework</h2>
         </div>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-start">
@@ -67,106 +66,106 @@
             </div>
 
             <!-- Step 4 -->
-         <div class="flex items-start">
-    <div class="bg-blue-100 text-blue-800 rounded-full w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 flex items-center justify-center mr-2 sm:mr-3 mt-0.5 sm:mt-1 flex-shrink-0">
-        <i class="fas fa-file-code text-xs sm:text-sm"></i>
-    </div>
-    <div class="flex-1 min-w-0">
-        <p class="text-gray-600 text-xs sm:text-sm mt-1 mb-3 sm:mb-5">Using a text editor, open and replace the contents with:</p>
-        <code class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs sm:text-sm mt-1 sm:mt-2 inline-block font-mono mb-2">npm install @editflo/editflo-react</code>
+            <div class="flex items-start">
+                <div class="bg-blue-100 text-blue-800 rounded-full w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 flex items-center justify-center mr-2 sm:mr-3 mt-0.5 sm:mt-1 flex-shrink-0">
+                    <i class="fas fa-file-code text-xs sm:text-sm"></i>
+                </div>
+                <div class="flex-1 min-w-0">
+                    <p class="text-gray-600 text-xs sm:text-sm mt-1 mb-3 sm:mb-5">Using a text editor, open and replace the contents with:</p>
+                    <code class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs sm:text-sm mt-1 sm:mt-2 inline-block font-mono mb-2">npm install @editflo/editflo-react</code>
 
-        <!-- Responsive Code Block -->
-        <div class="bg-gray-900 text-gray-100 p-3 sm:p-4 md:p-6 rounded-lg font-mono text-xs sm:text-sm overflow-x-auto border border-gray-700">
-            <div class="flex items-center justify-between mb-3 sm:mb-4">
-                <div class="flex items-center space-x-2">
-                    <div class="w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full"></div>
-                    <div class="w-2 h-2 sm:w-3 sm:h-3 bg-yellow-500 rounded-full"></div>
-                    <div class="w-2 h-2 sm:w-3 sm:h-3 bg-green-500 rounded-full"></div>
-                </div>
-                <span class="text-gray-400 text-xs">App.jsx</span>
-            </div>
+                    <!-- Responsive Code Block -->
+                    <div class="bg-gray-900 text-gray-100 p-3 sm:p-4 md:p-6 rounded-lg font-mono text-xs sm:text-sm overflow-x-auto border border-gray-700">
+                        <div class="flex items-center justify-between mb-3 sm:mb-4">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full"></div>
+                                <div class="w-2 h-2 sm:w-3 sm:h-3 bg-yellow-500 rounded-full"></div>
+                                <div class="w-2 h-2 sm:w-3 sm:h-3 bg-green-500 rounded-full"></div>
+                            </div>
+                            <span class="text-gray-400 text-xs">App.jsx</span>
+                        </div>
 
-            <div class="space-y-1">
-                <!-- Lines 1-10 -->
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">1</span>
-                    <span class="text-purple-400">import</span> <span class="text-gray-300">{ useRef }</span> <span class="text-purple-400">from</span> <span class="text-green-400">'react'</span><span class="text-gray-300">;</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">2</span>
-                    <span class="text-purple-400">import</span> <span class="text-gray-300">{ Editor }</span> <span class="text-purple-400">from</span> <span class="text-green-400">'@editflo/editflo-react'</span><span class="text-gray-300">;</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">3</span>
-                    <span class="text-purple-400">import</span> <span class="text-green-400">'./App.css'</span><span class="text-gray-300">;</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">4</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">5</span>
-                    <span class="text-purple-400">export default function</span> <span class="text-yellow-300">App</span><span class="text-gray-300">() {</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">6</span>
-                    <span class="text-gray-300 ml-2 sm:ml-4"></span><span class="text-purple-400">const</span> <span class="text-gray-300">editorRef = </span><span class="text-yellow-300">useRef</span><span class="text-gray-300">(</span><span class="text-blue-400">null</span><span class="text-gray-300">);</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">7</span>
-                    <span class="text-purple-400">const</span> <span class="text-gray-300">log = </span><span class="text-purple-400">()</span> <span class="text-gray-300">=&gt; {</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">8</span>
-                    <span class="text-gray-300 ml-4 sm:ml-8"></span><span class="text-purple-400">if</span> <span class="text-gray-300">(editorRef.</span><span class="text-blue-400">current</span><span class="text-gray-300">) {</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">9</span>
-                    <span class="text-gray-300 ml-8 sm:ml-12"></span><span class="text-yellow-300">console</span><span class="text-gray-300">.</span><span class="text-yellow-300">log</span><span class="text-gray-300">(editorRef.</span><span class="text-blue-400">current</span><span class="text-gray-300">.</span><span class="text-yellow-300">getContent</span><span class="text-gray-300">());</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">10</span>
-                    <span class="text-gray-300 ml-4 sm:ml-8"></span><span class="text-gray-300">}</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">11</span>
-                    <span class="text-gray-300 ml-2 sm:ml-4"></span><span class="text-gray-300">};</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">12</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">13</span>
-                    <span class="text-gray-300 ml-2 sm:ml-4"></span><span class="text-purple-400">return</span> <span class="text-gray-300">(</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">14</span>
-                    <span class="text-gray-300 ml-4 sm:ml-8"></span><span class="text-gray-300">&lt;&gt;</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">15</span>
-                    <span class="text-gray-300 ml-6 sm:ml-12"></span><span class="text-gray-300">&lt;</span><span class="text-yellow-300">Editor</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">16</span>
-                    <span class="text-gray-300 ml-8 sm:ml-16"></span><span class="text-blue-400">apiKey</span><span class="text-gray-300">=</span><span class="text-green-400">'no-api-key'</span>
-                </div>
-                <div class="flex flex-wrap">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">17</span>
-                    <span class="text-gray-300 ml-8 sm:ml-16"></span>
-                    <span class="text-blue-400">onInit</span><span class="text-gray-300">=</span><span class="text-purple-400">{</span> 
-                    <span class="text-gray-300">(</span><span class="text-blue-400">_evt</span><span class="text-gray-300">, </span><span class="text-blue-400">editor</span><span class="text-gray-300">) =&gt; editorRef.</span><span class="text-blue-400">current</span> 
-                    <span class="text-gray-300">= editor }</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">18</span>
-                    <span class="text-gray-300 ml-8 sm:ml-16"></span>
-                    <span class="text-blue-400">initialValue</span><span class="text-gray-300">=</span>
-                    <span class="text-green-400">"&lt;p&gt;This is the initial content of the editor.&lt;/p&gt;"</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">19</span>
-                    <span class="text-gray-300 ml-8 sm:ml-16"></span>
-                    <span class="text-blue-400">init</span><span class="text-gray-300">=</span><span class="text-purple-400">{{</span>
+                        <div class="space-y-1">
+                            <!-- Lines 1-10 -->
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">1</span>
+                                <span class="text-purple-400">import</span> <span class="text-gray-300">{ useRef }</span> <span class="text-purple-400">from</span> <span class="text-green-400">'react'</span><span class="text-gray-300">;</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">2</span>
+                                <span class="text-purple-400">import</span> <span class="text-gray-300">{ Editor }</span> <span class="text-purple-400">from</span> <span class="text-green-400">'@editflo/editflo-react'</span><span class="text-gray-300">;</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">3</span>
+                                <span class="text-purple-400">import</span> <span class="text-green-400">'./App.css'</span><span class="text-gray-300">;</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">4</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">5</span>
+                                <span class="text-purple-400">export default function</span> <span class="text-yellow-300">App</span><span class="text-gray-300">() {</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">6</span>
+                                <span class="text-gray-300 ml-2 sm:ml-4"></span><span class="text-purple-400">const</span> <span class="text-gray-300">editorRef = </span><span class="text-yellow-300">useRef</span><span class="text-gray-300">(</span><span class="text-blue-400">null</span><span class="text-gray-300">);</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">7</span>
+                                <span class="text-purple-400">const</span> <span class="text-gray-300">log = </span><span class="text-purple-400">()</span> <span class="text-gray-300">=&gt; {</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">8</span>
+                                <span class="text-gray-300 ml-4 sm:ml-8"></span><span class="text-purple-400">if</span> <span class="text-gray-300">(editorRef.</span><span class="text-blue-400">current</span><span class="text-gray-300">) {</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">9</span>
+                                <span class="text-gray-300 ml-8 sm:ml-12"></span><span class="text-yellow-300">console</span><span class="text-gray-300">.</span><span class="text-yellow-300">log</span><span class="text-gray-300">(editorRef.</span><span class="text-blue-400">current</span><span class="text-gray-300">.</span><span class="text-yellow-300">getContent</span><span class="text-gray-300">());</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">10</span>
+                                <span class="text-gray-300 ml-4 sm:ml-8"></span><span class="text-gray-300">}</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">11</span>
+                                <span class="text-gray-300 ml-2 sm:ml-4"></span><span class="text-gray-300">};</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">12</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">13</span>
+                                <span class="text-gray-300 ml-2 sm:ml-4"></span><span class="text-purple-400">return</span> <span class="text-gray-300">(</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">14</span>
+                                <span class="text-gray-300 ml-4 sm:ml-8"></span><span class="text-gray-300">&lt;&gt;</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">15</span>
+                                <span class="text-gray-300 ml-6 sm:ml-12"></span><span class="text-gray-300">&lt;</span><span class="text-yellow-300">Editor</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">16</span>
+                                <span class="text-gray-300 ml-8 sm:ml-16"></span><span class="text-blue-400">apiKey</span><span class="text-gray-300">=</span><span class="text-green-400">'no-api-key'</span>
+                            </div>
+                            <div class="flex flex-wrap">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">17</span>
+                                <span class="text-gray-300 ml-8 sm:ml-16"></span>
+                                <span class="text-blue-400">onInit</span><span class="text-gray-300">=</span><span class="text-purple-400">{</span>
+                                <span class="text-gray-300">(</span><span class="text-blue-400">_evt</span><span class="text-gray-300">, </span><span class="text-blue-400">editor</span><span class="text-gray-300">) =&gt; editorRef.</span><span class="text-blue-400">current</span>
+                                <span class="text-gray-300">= editor }</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">18</span>
+                                <span class="text-gray-300 ml-8 sm:ml-16"></span>
+                                <span class="text-blue-400">initialValue</span><span class="text-gray-300">=</span>
+                                <span class="text-green-400">"&lt;p&gt;This is the initial content of the editor.&lt;/p&gt;"</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">19</span>
+                                <span class="text-gray-300 ml-8 sm:ml-16"></span>
+                                <span class="text-blue-400">init</span><span class="text-gray-300">=</span><span class="text-purple-400">{{</span>
                 </div>
                 <div class="flex">
                     <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">20</span>
@@ -249,42 +248,42 @@
                     <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">32</span>
                     <span class="text-gray-300 ml-8 sm:ml-16"></span>
                     <span class="text-purple-400">}}</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">33</span>
-                    <span class="text-gray-300 ml-6 sm:ml-12"></span>
-                    <span class="text-gray-300">/&gt;</span>
-                </div>
-                <div class="flex flex-wrap">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">34</span>
-                    <span class="text-gray-300 ml-6 sm:ml-12"></span>
-                    <span class="text-gray-300">&lt;</span><span class="text-yellow-300">button</span> 
-                    <span class="text-blue-400">onClick</span><span class="text-gray-300">=</span><span class="text-purple-400">{</span><span class="text-gray-300">log</span><span class="text-purple-400">}</span>
-                    <span class="text-gray-300">&gt;Log editor content&lt;/</span><span class="text-yellow-300">button</span><span class="text-gray-300">&gt;</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">35</span>
-                    <span class="text-gray-300 ml-4 sm:ml-8"></span>
-                    <span class="text-gray-300">&lt;/&gt;</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">36</span>
-                    <span class="text-gray-300 ml-2 sm:ml-4"></span>
-                    <span class="text-gray-300">);</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">37</span>
-                    <span class="text-gray-300">}</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">33</span>
+                                <span class="text-gray-300 ml-6 sm:ml-12"></span>
+                                <span class="text-gray-300">/&gt;</span>
+                            </div>
+                            <div class="flex flex-wrap">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">34</span>
+                                <span class="text-gray-300 ml-6 sm:ml-12"></span>
+                                <span class="text-gray-300">&lt;</span><span class="text-yellow-300">button</span>
+                                <span class="text-blue-400">onClick</span><span class="text-gray-300">=</span><span class="text-purple-400">{</span><span class="text-gray-300">log</span><span class="text-purple-400">}</span>
+                                <span class="text-gray-300">&gt;Log editor content&lt;/</span><span class="text-yellow-300">button</span><span class="text-gray-300">&gt;</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">35</span>
+                                <span class="text-gray-300 ml-4 sm:ml-8"></span>
+                                <span class="text-gray-300">&lt;/&gt;</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">36</span>
+                                <span class="text-gray-300 ml-2 sm:ml-4"></span>
+                                <span class="text-gray-300">);</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">37</span>
+                                <span class="text-gray-300">}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-600 text-xs sm:text-sm mt-2 sm:mt-3 flex items-start">
+                        <i class="fas fa-lightbulb text-yellow-500 mr-2 mt-0.5"></i>
+                        This JavaScript file will create a component "App" containing a editflo editor configured with basic features.
+                    </p>
                 </div>
             </div>
-        </div>
-
-        <p class="text-gray-600 text-xs sm:text-sm mt-2 sm:mt-3 flex items-start">
-            <i class="fas fa-lightbulb text-yellow-500 mr-2 mt-0.5"></i>
-            This JavaScript file will create a component "App" containing a editflo editor configured with basic features.
-        </p>
-    </div>
-</div>
 
             <!-- Step 5 -->
             <div class="flex items-start">

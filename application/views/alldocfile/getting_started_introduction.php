@@ -1,7 +1,7 @@
 <div class="mx-auto min-h-screen">
     <!-- Header Section -->
-    <div class="mb-10 text-start">
-        <h1 class="text-4xl font-bold text-gray-800 mb-4">Getting Started</h1>
+    <div class="mb-5 text-start">
+        <h1 class="text-3xl font-bold text-gray-800 mb-2">Getting Started</h1>
         <p class="text-lg text-gray-600">Discover Editflo's powerful rich text editing capabilities for modern web applications.</p>
     </div>
 

@@ -1,11 +1,11 @@
-<main class="mx-auto min-h-screen px-3 sm:px-4 md:px-6 lg:px-8">
+<main class="mx-auto min-h-screen px-3 sm:px-4 md:px-6 lg:px-4">
     <!-- Header Section -->
     <header class=" text-start">
         <div class="flex items-center mb-3 sm:mb-4 md:mb-5">
             <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">Bundling the Editflo package with the
                 React framework</h2>
         </div>
-        <div class="flex items-center mb-3 sm:mb-4 md:mb-5">
+        <div class="flex items-center mb-3 sm:mb-4 md:mb-5 bg-yellow-50 p-2  ">
             <div
                 class="bg-yellow-100 text-yellow-800 rounded-full w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center mr-3 flex-shrink-0">
                 <i class="fas fa-exclamation-triangle text-xs sm:text-sm"></i>

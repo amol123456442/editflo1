@@ -1,6 +1,6 @@
-<main class="mx-auto min-h-screen px-3 sm:px-4 md:px-6 lg:px-8 py-4">
+<main class="mx-auto min-h-screen px-3 sm:px-4 md:px-6 lg:px-4 py-4">
     <!-- Header Section -->
-    <header class="py-4 sm:py-6 md:py-8 text-start">
+    <header class="text-start">
         <div class="flex items-center mb-3 sm:mb-4 md:mb-5">
             <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">Using Editflo from the Tiny Cloud CDN
                 with Ruby on Rails</h2>
@@ -12,7 +12,7 @@
     </header>
 
     <!-- Prerequisites Section -->
-    <div class="py-4 sm:py-6 md:py-8 text-start">
+    <div class="text-start mb-4">
         <div class="flex items-center mb-3 sm:mb-4">
             <h2 class="text-lg sm:text-xl font-semibold text-gray-800">Prerequisites</h2>
         </div>
@@ -41,7 +41,7 @@
     </div>
 
     <!-- Instructions Section -->
-    <section class="bg-white rounded-lg sm:rounded-xl shadow-md p-4 sm:p-6 mb-6 sm:mb-8">
+    <section class=" mb-6 sm:mb-8">
         <div class="flex items-center mb-3 sm:mb-4">
             <h2 class="text-lg sm:text-xl font-semibold text-gray-800">Getting Started</h2>
         </div>
@@ -338,8 +338,8 @@
                     <p class="text-gray-600 text-xs sm:text-base mt-1 mb-3 sm:mb-5">
                         Using a text editor, open
                         <code class="bg-gray-100 px-1 rounded text-xs break-all whitespace-normal">
-        /path/to/myTinySite/app/views/welcome/index.html.erb
-    </code>
+                            /path/to/myTinySite/app/views/welcome/index.html.erb
+                        </code>
                         and replace the contents with:
                     </p>
 
@@ -541,8 +541,8 @@
                             the project directory and run:</p>
                         <code
                             class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs sm:text-sm inline-block font-mono flex items-center">
-                                <i class="fas fa-terminal text-gray-500 mr-2"></i>rails server
-                            </code>
+                            <i class="fas fa-terminal text-gray-500 mr-2"></i>rails server
+                        </code>
                         <p class="text-gray-600 text-xs sm:text-sm">Visit <code
                                 class="bg-gray-100 px-1 rounded text-xs">http://localhost:3000</code> in your browser to
                             see the application.</p>

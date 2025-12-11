@@ -1,4 +1,4 @@
-<div class="mx-auto min-h-screen px-4 sm:px-6 lg:px-8">
+<div class="mx-auto min-h-screen px-4 sm:px-6 lg:px-4">
     <!-- Header Section -->
     <div class="mb-6 sm:mb-8">
         <h1 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">Editflo 8 Examples</h1>

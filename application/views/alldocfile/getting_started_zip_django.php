@@ -1,12 +1,12 @@
-<main class="mx-auto min-h-screen px-3 sm:px-4 md:px-6 lg:px-8">
+<main class="mx-auto min-h-screen px-3 sm:px-4 md:px-6 lg:px-4">
     <!-- Header Section -->
     <header class="text-start">
         <div class="flex items-center mb-3 sm:mb-4 md:mb-5">
-            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">Using EditfloMCE with Laravel Framework</h2>
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">Using EditfloMCE with Django Framework</h2>
         </div>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2">
-            Laravel is a scalable web application framework built on PHP. This guide assists with adding EditfloMCE 
-            (Editflo's rich text editor) to pages or views in Laravel applications.
+            Django is a scalable web application framework built on PHP. This guide assists with adding EditfloMCE 
+            (Editflo's rich text editor) to pages or views in Django applications.
         </p>
     </header>
 
@@ -38,8 +38,8 @@
                 <span class="text-gray-700 font-medium">Composer</span>
             </div>
             <div class="flex items-center p-3 bg-white rounded-lg shadow-sm border">
-                <i class="fab fa-laravel text-red-500 text-xl mr-3 flex-shrink-0"></i>
-                <span class="text-gray-700 font-medium">Laravel ≥ 10.x</span>
+                <i class="fab fa-Django text-red-500 text-xl mr-3 flex-shrink-0"></i>
+                <span class="text-gray-700 font-medium">Django ≥ 10.x</span>
             </div>
         </div>
     </div>
@@ -51,7 +51,7 @@
         <!-- Step 1 -->
         <div class="flex flex-col sm:flex-row items-start mb-8 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border-l-4 border-blue-400">
             <div class="flex-1 min-w-0">
-                <h3 class="font-semibold text-gray-800 mb-3 text-sm sm:text-base">1. Create Laravel Project</h3>
+                <h3 class="font-semibold text-gray-800 mb-3 text-sm sm:text-base">1. Create Django Project</h3>
                 <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-xs sm:text-sm leading-6">
                     <div class="flex items-center justify-between mb-3">
                         <div class="flex items-center space-x-2">
@@ -62,7 +62,7 @@
                         <span class="text-gray-400">Terminal</span>
                     </div>
                     <div class="space-y-2">
-                        <code class="block text-green-400">composer create-project laravel/laravel editflo-app</code>
+                        <code class="block text-green-400">composer create-project Django/Django editflo-app</code>
                         <code class="block text-blue-400">cd editflo-app</code>
                     </div>
                 </div>
@@ -172,7 +172,7 @@
                         <code class="block text-gray-300">&lt;!DOCTYPE html&gt;</code>
                         <code class="block text-gray-300">&lt;html&gt;</code>
                         <code class="block text-gray-300">&lt;head&gt;</code>
-                        <code class="block text-gray-300 ml-4">    &lt;title&gt;EditfloMCE Laravel&lt;/title&gt;</code>
+                        <code class="block text-gray-300 ml-4">    &lt;title&gt;EditfloMCE Django&lt;/title&gt;</code>
                         <code class="block text-gray-300 ml-4">    &lt;x-head.editflo-config /&gt;</code>
                         <code class="block text-gray-300">&lt;/head&gt;</code>
                         <code class="block text-gray-300">&lt;body&gt;</code>

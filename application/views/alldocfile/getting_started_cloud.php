@@ -1,7 +1,7 @@
 <div class="mx-auto min-h-screen px-4 sm:px-6 lg:px-8">
     <!-- Header Section -->
     <div class="mb-6 sm:mb-8">
-        <h1 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">Installing Editflo using the EditfloCloud</h1>
+        <h1 class="text-3xl sm:text-3xl font-bold text-gray-800 mb-2">Installing Editflo using the EditfloCloud</h1>
     </div>
 
     <!-- Cloud Quick Start Guide -->
@@ -87,26 +87,26 @@
         <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Backend Integrations</h3>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-       <!-- Django -->
-<a href="<?= site_url('documentation/getting-started/installation/cloud/django') ?>" 
-   class="block border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
-    <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Django</h4>
-    <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">Integrate Editflo into your Django application using the EditfloCloud.</p>
-</a>
+            <!-- Django -->
+            <a href="<?= site_url('documentation/getting-started/installation/cloud/django') ?>"
+                class="block border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
+                <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Django</h4>
+                <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">Integrate Editflo into your Django application using the EditfloCloud.</p>
+            </a>
 
-<!-- Laravel -->
-<a href="<?= site_url('documentation/getting-started/installation/cloud/laravel') ?>" 
-   class="block border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
-    <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Laravel</h4>
-    <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">Integrate Editflo into your Laravel application using the EditfloCloud.</p>
-</a>
+            <!-- Laravel -->
+            <a href="<?= site_url('documentation/getting-started/installation/cloud/laravel') ?>"
+                class="block border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
+                <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Laravel</h4>
+                <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">Integrate Editflo into your Laravel application using the EditfloCloud.</p>
+            </a>
 
-<!-- Ruby on Rails -->
-<a href="<?= site_url('documentation/getting-started/installation/cloud/ruby-on-rails') ?>" 
-   class="block border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow sm:col-span-2">
-    <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Ruby on Rails</h4>
-    <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">Integrate Editflo into your Ruby on Rails application using the EditfloCloud.</p>
-</a>
+            <!-- Ruby on Rails -->
+            <a href="<?= site_url('documentation/getting-started/installation/cloud/ruby-on-rails') ?>"
+                class="block border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow sm:col-span-2">
+                <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Ruby on Rails</h4>
+                <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">Integrate Editflo into your Ruby on Rails application using the EditfloCloud.</p>
+            </a>
         </div>
     </div>
 
@@ -116,11 +116,11 @@
     <!-- Other Integrations -->
     <div class="bg-white rounded-lg border border-gray-200 p-4 sm:p-6 mb-6 sm:mb-8">
         <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Other Integrations</h3>
-   <a href="<?= site_url('documentation/getting-started/installation/cloud/bootstrap') ?>" 
-   class="block border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
-    <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Bootstrap</h4>
-    <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">Integrate Editflo with Bootstrap using the EditfloCloud.</p>
-</a>
+        <a href="<?= site_url('documentation/getting-started/installation/cloud/bootstrap') ?>"
+            class="block border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow">
+            <h4 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Bootstrap</h4>
+            <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">Integrate Editflo with Bootstrap using the EditfloCloud.</p>
+        </a>
     </div>
 
     <!-- Sign Up Section -->

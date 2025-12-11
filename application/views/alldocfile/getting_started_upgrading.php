@@ -1,4 +1,4 @@
-<main class="mx-auto min-h-screen px-4 sm:px-6 lg:px-8">
+<main class="mx-auto min-h-screen px-4 sm:px-6 lg:px-4">
     <!-- Header Section -->
     <header class="text-start mb-8">
         <div class="flex items-center mb-4">

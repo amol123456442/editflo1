@@ -1,4 +1,4 @@
-<main class="mx-auto min-h-screen px-3 sm:px-4 md:px-6 lg:px-8">
+<main class="mx-auto min-h-screen px-3 sm:px-4 md:px-6 lg:px-4">
     <!-- Header Section -->
     <header class="text-start">
         <div class="flex items-center mb-3 sm:mb-4 md:mb-5">
@@ -16,7 +16,7 @@
     </header>
 
     <!-- Prerequisites Section -->
-    <div class="py-4 sm:py-6 md:py-8 text-start">
+    <div class=" text- mt-4">
         <div class="flex items-center mb-3 sm:mb-4">
             <h2 class="text-lg sm:text-xl font-semibold text-gray-800">Prerequisites</h2>
         </div>
@@ -135,32 +135,32 @@
                             <span class="text-gray-400 text-xs">App.svelte</span>
                         </div>
                         <code><span class="text-blue-400">&lt;script&gt;</span><br>
-  <span class="text-purple-400">import</span> <span class="text-orange-400">Editor</span> <span class="text-purple-400">from</span> <span class="text-green-400">'@editflo/editflo-svelte'</span>;<br><br>
-  <span class="text-purple-400">let</span> <span class="text-yellow-300">conf</span> = {<br>
-    <span class="text-blue-400">height</span>: <span class="text-orange-400">500</span>,<br>
-    <span class="text-blue-400">menubar</span>: <span class="text-blue-400">false</span>,<br>
-    <span class="text-blue-400">plugins</span>: [<br>
-      <span class="text-green-400">'advlist'</span>, <span class="text-green-400">'autolink'</span>, <span class="text-green-400">'lists'</span>, <span class="text-green-400">'link'</span>, <span class="text-green-400">'image'</span>, <span class="text-green-400">'charmap'</span>,<br>
-      <span class="text-green-400">'anchor'</span>, <span class="text-green-400">'searchreplace'</span>, <span class="text-green-400">'visualblocks'</span>, <span class="text-green-400">'code'</span>, <span class="text-green-400">'fullscreen'</span>,<br>
-      <span class="text-green-400">'insertdatetime'</span>, <span class="text-green-400">'media'</span>, <span class="text-green-400">'table'</span>, <span class="text-green-400">'preview'</span>, <span class="text-green-400">'help'</span>, <span class="text-green-400">'wordcount'</span><br>
-    ],<br>
-    <span class="text-blue-400">toolbar</span>: <span class="text-green-400">'undo redo | blocks | '</span> +<br>
-      <span class="text-green-400">'bold italic forecolor | alignleft aligncenter '</span> +<br>
-      <span class="text-green-400">'alignright alignjustify | bullist numlist outdent indent | '</span> +<br>
-      <span class="text-green-400">'removeformat | help'</span>,<br>
-    <span class="text-blue-400">content_style</span>: <span class="text-green-400">'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'</span><br>
-  }<br>
-<span class="text-blue-400">&lt;/script&gt;</span><br><br>
+                            <span class="text-purple-400">import</span> <span class="text-orange-400">Editor</span> <span class="text-purple-400">from</span> <span class="text-green-400">'@editflo/editflo-svelte'</span>;<br><br>
+                            <span class="text-purple-400">let</span> <span class="text-yellow-300">conf</span> = {<br>
+                            <span class="text-blue-400">height</span>: <span class="text-orange-400">500</span>,<br>
+                            <span class="text-blue-400">menubar</span>: <span class="text-blue-400">false</span>,<br>
+                            <span class="text-blue-400">plugins</span>: [<br>
+                            <span class="text-green-400">'advlist'</span>, <span class="text-green-400">'autolink'</span>, <span class="text-green-400">'lists'</span>, <span class="text-green-400">'link'</span>, <span class="text-green-400">'image'</span>, <span class="text-green-400">'charmap'</span>,<br>
+                            <span class="text-green-400">'anchor'</span>, <span class="text-green-400">'searchreplace'</span>, <span class="text-green-400">'visualblocks'</span>, <span class="text-green-400">'code'</span>, <span class="text-green-400">'fullscreen'</span>,<br>
+                            <span class="text-green-400">'insertdatetime'</span>, <span class="text-green-400">'media'</span>, <span class="text-green-400">'table'</span>, <span class="text-green-400">'preview'</span>, <span class="text-green-400">'help'</span>, <span class="text-green-400">'wordcount'</span><br>
+                            ],<br>
+                            <span class="text-blue-400">toolbar</span>: <span class="text-green-400">'undo redo | blocks | '</span> +<br>
+                            <span class="text-green-400">'bold italic forecolor | alignleft aligncenter '</span> +<br>
+                            <span class="text-green-400">'alignright alignjustify | bullist numlist outdent indent | '</span> +<br>
+                            <span class="text-green-400">'removeformat | help'</span>,<br>
+                            <span class="text-blue-400">content_style</span>: <span class="text-green-400">'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'</span><br>
+                            }<br>
+                            <span class="text-blue-400">&lt;/script&gt;</span><br><br>
 
-<span class="text-blue-400">&lt;main&gt;</span><br>
-  <span class="text-gray-300 ml-4">&lt;h1&gt;</span>Hello Editflo<span class="text-gray-300 ml-4">&lt;/h1&gt;</span><br>
-  <span class="text-gray-300 ml-4">&lt;Editor</span><br>
-    <span class="text-gray-300 ml-8">license_key={</span><span class="text-green-400">'gpl'</span>}<br>
-    <span class="text-gray-300 ml-8">scriptSrc={</span><span class="text-green-400">'/path/or/url/to/editflo.min.js'</span>}<br>
-    <span class="text-gray-300 ml-8">value={</span><span class="text-green-400">'&lt;p&gt;This is the initial content of the editor.&lt;/p&gt;'</span>}<br>
-    <span class="text-gray-300 ml-8">{conf}</span><br>
-  <span class="text-gray-300 ml-4">/&gt;</span><br>
-<span class="text-blue-400">&lt;/main&gt;</span></code>
+                            <span class="text-blue-400">&lt;main&gt;</span><br>
+                            <span class="text-gray-300 ml-4">&lt;h1&gt;</span>Hello Editflo<span class="text-gray-300 ml-4">&lt;/h1&gt;</span><br>
+                            <span class="text-gray-300 ml-4">&lt;Editor</span><br>
+                            <span class="text-gray-300 ml-8">license_key={</span><span class="text-green-400">'gpl'</span>}<br>
+                            <span class="text-gray-300 ml-8">scriptSrc={</span><span class="text-green-400">'/path/or/url/to/editflo.min.js'</span>}<br>
+                            <span class="text-gray-300 ml-8">value={</span><span class="text-green-400">'&lt;p&gt;This is the initial content of the editor.&lt;/p&gt;'</span>}<br>
+                            <span class="text-gray-300 ml-8">{conf}</span><br>
+                            <span class="text-gray-300 ml-4">/&gt;</span><br>
+                            <span class="text-blue-400">&lt;/main&gt;</span></code>
                     </div>
                 </div>
             </div>
@@ -210,7 +210,8 @@
                     <li>Download the Editflo .zip package</li>
                     <li>Extract the contents</li>
                     <li>Copy <code class="bg-gray-100 px-2 py-1 rounded text-xs font-mono">Editflo .min.js</code> to
-                        <code class="bg-gray-100 px-2 py-1 rounded text-xs font-mono">public/</code> folder</li>
+                        <code class="bg-gray-100 px-2 py-1 rounded text-xs font-mono">public/</code> folder
+                    </li>
                 </ol>
             </div>
             <div class="bg-blue-50 rounded-lg p-4 sm:p-6 border border-blue-200">

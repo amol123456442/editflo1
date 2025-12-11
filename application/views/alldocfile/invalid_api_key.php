@@ -1,4 +1,4 @@
-<div class="mb-6 sm:mb-8 max-w-4xl mx-auto">
+<div class="mb-6 sm:mb-8 max-w-4xl mx-auto px-4">
     <!-- <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">Invalid API key</h2> -->
     <h1 class="text-3xl font-bold text-gray-800 mb-4">Invalid API key</h1>
     <div class="bg-white rounded-lg overflow-hidden">
@@ -29,7 +29,7 @@
 
 <div class="bg-blue-50 border-l-4 border-blue-500 p-4">
     <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-2">
-        It only takes 2 minutes to create your free Tiny account and get the API key:
+        It only takes 2 minutes to create your free Editflo account and get the API key:
     </p>
     <div class="flex items-center gap-2 flex-wrap">
         <button type="button" class="text-white bg-[#3b5998] hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 box-border border border-transparent font-medium leading-5 rounded-base text-sm px-4 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55">
@@ -54,7 +54,7 @@
 <section class="mt-5 pt-3 mb-4">
     <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">How can I get an API key?</h2>
     <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">
-        The Admin who owns your Editflo implementation will need to log in <a href="https://www.tiny.cloud/auth/login?redirect_to=%2Fmy-account%2Fintegrate%2F" class="text-primary-blue">here</a> to get your account’s API key. If you do not have an account yet, you can <a href="https://www.tiny.cloud/pricing/" class="text-primary-blue">sign up for a free API key</a>. Paid users can <a href="https://www.tiny.cloud/contact/" class="text-primary-blue">contact our Technical Support</a> team for help.
+        The Admin who owns your Editflo implementation will need to log in <a href="https://www.Editflo.cloud/auth/login?redirect_to=%2Fmy-account%2Fintegrate%2F" class="text-primary-blue">here</a> to get your account’s API key. If you do not have an account yet, you can <a href="https://www.Editflo.cloud/pricing/" class="text-primary-blue">sign up for a free API key</a>. Paid users can <a href="https://www.Editflo.cloud/contact/" class="text-primary-blue">contact our Technical Support</a> team for help.
     </p>
 </section>
 
@@ -74,7 +74,7 @@
         The free, open source option for Editflo is available under the GNU General Public License Version 2 or later. Users must self-host Editflo to take advantage of the open source license. This type of license does not require an API key.
     </p>
     <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
-        The cloud hosted option for Editflo is available under commercial license, as described <a href="https://www.tiny.cloud/legal/cloud-use-subscription-agreement/" class="text-primary-blue">here</a>. This type of license requires an active API key.
+        The cloud hosted option for Editflo is available under commercial license, as described <a href="https://www.Editflo.cloud/legal/cloud-use-subscription-agreement/" class="text-primary-blue">here</a>. This type of license requires an active API key.
     </p>
     <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
         If you are receiving an error notification, you are using the cloud-hosted option of Editflo under a commercial license. If you want to continue using Editflo without an API key, you will need to either migrate to the free, open source, self-hosted option or use a 3rd party-hosted CDN option under an MIT license.
@@ -87,7 +87,7 @@
         Our integrations default to using the Editflo Cloud service. If you’re receiving the notification that an API key is required, it means that you’re using the cloud-hosted option for Editflo under commercial license which requires a valid API key and allows for 1,000 editor loads per month for free.
     </p>
     <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
-        Please <a href="https://www.tiny.cloud/docs/Editflo /latest/installation/" class="text-primary-blue">read our docs</a> to learn how to self-host Editflo or <a href="https://www.tiny.cloud/pricing/" class="text-primary-blue">sign up here</a> to continue using Editflo Cloud.
+        Please <a href="https://www.Editflo.cloud/docs/Editflo /latest/installation/" class="text-primary-blue">read our docs</a> to learn how to self-host Editflo or <a href="https://www.Editflo.cloud/pricing/" class="text-primary-blue">sign up here</a> to continue using Editflo Cloud.
     </p>
 </section>
 
@@ -99,23 +99,23 @@
 </section>
 
 <section class="mt-5 pt-3 mb-4">
-    <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">What does the message "This domain is not registered with Tiny Cloud" mean?</h2>
+    <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">What does the message "This domain is not registered with Editflo Cloud" mean?</h2>
     <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
-        This message means that the domain attempting to use Editflo is not registered with Tiny Cloud. Starting in 2024, a registered domain will be required to continue using Editflo .
+        This message means that the domain attempting to use Editflo is not registered with Editflo Cloud. Starting in 2024, a registered domain will be required to continue using Editflo .
     </p>
 </section>
 
 <section class="mt-5 pt-3 mb-4">
     <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">How can I resolve the issue of an unregistered domain?</h2>
     <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
-        To resolve this issue, please inform your administrator and request that they review the list of approved domains on your Tiny Account. If necessary, they will need to add the unregistered domain to the approved list. <a href="https://www.tiny.cloud/docs/Editflo /latest/cloud-troubleshooting/#This-domain-is-not-registered-with-Tiny-Cloud.-To-continue-using-Editflo -a-registered-domain-is-required-starting-2024.-Please-alert-your-admin-to-review-the-approved-domains-and-add-this-one-if-required." class="text-primary-blue">Learn more here</a>.
+        To resolve this issue, please inform your administrator and request that they review the list of approved domains on your Editflo Account. If necessary, they will need to add the unregistered domain to the approved list. <a href="https://www.Editflo.cloud/docs/Editflo /latest/cloud-troubleshooting/#This-domain-is-not-registered-with-Editflo-Cloud.-To-continue-using-Editflo -a-registered-domain-is-required-starting-2024.-Please-alert-your-admin-to-review-the-approved-domains-and-add-this-one-if-required." class="text-primary-blue">Learn more here</a>.
     </p>
 </section>
 
 <section class="mt-5 pt-3 mb-4">
-    <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">Where can I view the list of approved domains for my Tiny Cloud account?</h2>
+    <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">Where can I view the list of approved domains for my Editflo Cloud account?</h2>
     <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
-        You can view the list of approved domains by logging into your Tiny Account. The approved domains are stored against your API Key.
+        You can view the list of approved domains by logging into your Editflo Account. The approved domains are stored against your API Key.
     </p>
 </section>
 
@@ -142,7 +142,7 @@
             </p>
 
             <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">
-                For additional information on Troubleshooting Tiny Cloud visit: Cloud Troubleshooting.
+                For additional information on Troubleshooting Editflo Cloud visit: Cloud Troubleshooting.
             </p>
         </div>
     </div>
@@ -159,7 +159,7 @@
     <!-- Sign Up Section -->
     <div class="bg-blue-50 border-l-4 border-blue-500 p-4">
         <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-2">
-            It only takes 2 minutes to create your free Tiny account and get the API key:
+            It only takes 2 minutes to create your free Editflo account and get the API key:
         </p>
         <div class="flex items-center gap-2 flex-wrap">
             <button type="button" class="text-white bg-[#3b5998] hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 box-border border border-transparent font-medium leading-5 rounded-base text-sm px-4 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55">

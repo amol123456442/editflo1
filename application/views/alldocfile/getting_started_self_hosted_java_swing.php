@@ -1,8 +1,8 @@
-<main class="mx-auto min-h-screen px-3 sm:px-4 md:px-6 lg:px-8 py-6">
+<main class="mx-auto min-h-screen px-3 sm:px-4 md:px-6 lg:px-4 ">
     <!-- Header Section -->
     <header class="text-start mb-8">
         <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
-            <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 leading-tight">
+            <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold text-gray-800 leading-tight">
                 Editflo  for Java Swing Integration
             </h2>
         </div>

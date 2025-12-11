@@ -275,8 +275,8 @@
             </div>
 
             <!-- <div class="py-4 flex flex-col h-[calc(100vh-120px)]"> -->
-            <div class="py-4 flex flex-col ">
-                <div class="flex-1 ">
+            <div class="py-4 flex flex-col">
+                <div class="flex-1 mb-10 ">
                     <!-- Getting Started Dropdown -->
                     <div class="mb-2">
                         <div class="relative">
@@ -610,11 +610,12 @@
                                             </a>
 
                                             <!-- Supported Integrations -->
-                                            <a href="<?php echo base_url('documentation/getting-started/installation/zip/supported-integrations'); ?>"
-                                                class="block pl-20 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'zip-supported-integrations' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                            <div class="block pl-10 pr-6 py-2 text-sm text-gray-400 hover:bg-gray-400 hover:text-white transition-colors <?php echo $active_subsection == 'zip-supported-integrations' ? 'bg-gray-700 text-blue-400' : ''; ?>">Supported Integrations</div>
+                                            <!-- <a href=""
+                                                class="block pl-10 pr-6 py-2 text-sm text-gray-400 hover:bg-gray-400 hover:text-white transition-colors <?php echo $active_subsection == 'zip-supported-integrations' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                 onclick="closeMobileSidebar()">
                                                 Supported Integrations
-                                            </a>
+                                            </a> -->
 
                                             <!-- React Dropdown -->
                                             <div class="mt-1">
@@ -1261,7 +1262,7 @@
                     </a>
 
                     <!-- API Reference Section (NEW) -->
-                    <div class="mb-2">
+                    <div class="mb-10">
                         <div class="relative">
                             <!-- 1. Text + Icon (Click = Page Open) -->
                             <a href="<?php echo base_url('documentation/api-reference/editflo'); ?>"
@@ -1696,7 +1697,7 @@
             </div>
 
             <!-- Content Area -->
-            <div class="p-4 lg:p-8 max-w-full">
+            <div class="px-4 lg:px-8 py-4 max-w-full">
                 <div class="max-w-4xl mx-auto content-area">
                     <?php
                     // Build the view file path correctly

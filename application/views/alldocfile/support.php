@@ -19,7 +19,7 @@
 
     <!-- Supported Versions -->
     <section class="mb-5">
-        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">Supported Versions and Platforms</h2>
+        <!-- <h2 class="text-3xl sm:text-3xl font-bold text-gray-900 mb-8">Supported Versions and Platforms</h2> -->
 
         <h3 class="text-2xl font-semibold text-gray-900 mb-6">Supported Editflo versions</h3>
         <p class="text-lg text-gray-700 mb-8">Supported versions of Editflo:</p>

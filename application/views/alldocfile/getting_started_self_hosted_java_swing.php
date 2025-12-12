@@ -268,7 +268,7 @@
                                 </div>
                             </div>
                             <p class="text-blue-700 text-xs mt-2">
-                                <i class="fas fa-globe mr-1"></i>Tiny Cloud - requires API key
+                                <i class="fas fa-globe mr-1"></i>Editflo Cloud - requires API key
                             </p>
                         </div>
 

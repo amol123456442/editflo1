@@ -51,8 +51,8 @@
                         <span class="text-gray-400">Terminal</span>
                     </div>
                     <div class="space-y-2">
-                        <code class="block text-green-400">rails new myTinySite</code>
-                        <code class="block text-blue-400">cd myTinySite/</code>
+                        <code class="block text-green-400">rails new myeditfloSite</code>
+                        <code class="block text-blue-400">cd myeditfloSite/</code>
                     </div>
                 </div>
             </div>
@@ -128,12 +128,12 @@
                         <code class="block text-gray-400">&lt;!-- Add within the &lt;head&gt; section --&gt;</code>
                         <code class="block text-blue-400">&lt;script</code>
                         <code
-                            class="block text-purple-400 ml-8">src=<span class="text-yellow-400">"/path/to/tinymce.min.js"</span></code>
+                            class="block text-purple-400 ml-8">src=<span class="text-yellow-400">"/path/to/editflo.min.js"</span></code>
                         <code class="block text-blue-400">&gt;&lt;/script&gt;</code>
                         <code class="block text-blue-400">&lt;script&gt;</code>
-                        <code class="block text-green-400 ml-4">tinymce.init({</code>
+                        <code class="block text-green-400 ml-4">editflo.init({</code>
                         <code class="block text-purple-400 ml-8">selector:</code>
-                        <code class="block text-yellow-400 ml-12">'.tinymce',</code>
+                        <code class="block text-yellow-400 ml-12">'.editflo',</code>
                         <code class="block text-purple-400 ml-8">plugins:</code>
                         <code class="block text-yellow-400 ml-12">'lists link image table code help wordcount'</code>
                         <code class="block text-green-400 ml-4">});</code>
@@ -168,13 +168,13 @@
                         <code class="block text-yellow-400 ml-12">"Hello, World!",</code>
                         <code class="block text-purple-400 ml-8">:class</code>
                         <code class="block text-blue-400 ml-12">=></code>
-                        <code class="block text-yellow-400 ml-16">"tinymce"</code>
+                        <code class="block text-yellow-400 ml-16">"editflo"</code>
                         <code class="block text-red-400">%&gt;</code>
                     </div>
                 </div>
                 <p class="text-gray-600 text-sm mt-3">Create a <code
                         class="bg-gray-200 px-2 py-1 rounded text-xs">&lt;textarea&gt;</code> with the initial content
-                    "Hello, World!" for TinyMCE.</p>
+                    "Hello, World!" for editflo.</p>
             </div>
         </div>
 
@@ -202,7 +202,7 @@
     <!-- Alternative Method: Using CDN -->
     <div class="bg-blue-50 rounded-lg p-6 mb-8">
         <h3 class="text-lg font-semibold text-gray-800 mb-4">Alternative: Using Editflo CDN</h3>
-        <p class="text-gray-600 text-sm mb-4">Instead of self-hosting TinyMCE, you can use the CDN version:</p>
+        <p class="text-gray-600 text-sm mb-4">Instead of self-hosting editflo, you can use the CDN version:</p>
         <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-xs sm:text-sm leading-6">
             <div class="flex items-center justify-between mb-3">
                 <div class="flex items-center space-x-2">
@@ -215,7 +215,7 @@
             <div class="space-y-1">
                 <code class="block text-blue-400">&lt;script</code>
                 <code
-                    class="block text-purple-400 ml-8">src=<span class="text-yellow-400">"https://cdn.tiny.cloud/1/your-api-key/tinymce/6/tinymce.min.js"</span></code>
+                    class="block text-purple-400 ml-8">src=<span class="text-yellow-400">"https://cdn.editflo.cloud/1/your-api-key/editflo/6/editflo.min.js"</span></code>
                 <code
                     class="block text-purple-400 ml-8">referrerpolicy=<span class="text-yellow-400">"origin"</span></code>
                 <code class="block text-blue-400">&gt;&lt;/script&gt;</code>

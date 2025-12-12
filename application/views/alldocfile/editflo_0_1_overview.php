@@ -265,7 +265,7 @@
                 <div class="bg-gray-50 border-l-4 border-gray-500 p-3 md:p-4">
                     <h4 class="text-sm font-medium text-gray-800 mb-1">Removed unused Comments stylesheet</h4>
                     <p class="text-gray-700 text-sm sm:text-base text-sm sm:text-base">
-                        In 0.1, the unused tinycomments.css file was removed from the Comments plugin. In earlier versions (such as 0.0), this empty CSS file was still being loaded, despite its contents having been moved to the Oxide theme in a prior update. This change ensures cleaner resource loading and avoids unnecessary network requests.
+                        In 0.1, the unused editflocomments.css file was removed from the Comments plugin. In earlier versions (such as 0.0), this empty CSS file was still being loaded, despite its contents having been moved to the Oxide theme in a prior update. This change ensures cleaner resource loading and avoids unnecessary network requests.
                     </p>
                 </div>
                 <p class="text-gray-700 text-sm sm:text-base text-sm sm:text-base mt-3">

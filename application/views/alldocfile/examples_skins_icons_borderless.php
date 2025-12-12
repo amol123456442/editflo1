@@ -5,7 +5,7 @@
 </h1>
     </div>
 
-    <p class="p-2 mb-2 text-gray-700 text-sm sm:text-base">This demo uses the borderless skin. It’s the default TinyMCE skin but without the outer border. This is useful if you want to use the editor "fullscreen" like a word processor or if you want to provide your own outer borders.
+    <p class="p-2 mb-2 text-gray-700 text-sm sm:text-base">This demo uses the borderless skin. It’s the default editflo skin but without the outer border. This is useful if you want to use the editor "fullscreen" like a word processor or if you want to provide your own outer borders.
 
     </p>
     <!-- <div class="bg-blue-50 border border-blue-200 rounded-lg p-5 md:p-6 my-8">

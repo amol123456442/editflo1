@@ -92,7 +92,7 @@
                 <div class="mb-6">
                     <h4 class="text-lg font-medium text-gray-800 mb-2">hidden_input</h4>
                     <p class="text-gray-700 text-sm sm:text-base mb-3">
-                        The hidden_input option allows the auto-generation of hidden input fields to be disabled for inline editing elements. By default all inline editors have a hidden input element in which content gets saved when an editor.save() or tinymce.triggerSave() is executed.
+                        The hidden_input option allows the auto-generation of hidden input fields to be disabled for inline editing elements. By default all inline editors have a hidden input element in which content gets saved when an editor.save() or editflo.triggerSave() is executed.
                     </p>
                     <p class="text-gray-700 text-sm sm:text-base mb-3">
                         The hidden_input option can be disabled if you don't need these controls.
@@ -118,7 +118,7 @@
             <div class="mb-6">
                 <h4 class="text-lg font-medium text-gray-800 mb-2">Adding save functionality to the editor</h4>
                 <p class="text-gray-700 text-sm sm:text-base mb-3">
-                    TinyMCE can be configured to allow users to save the editor content. For information on configuring the user saving, see: <a href="#" class="text-blue-600 hover:text-blue-800 underline">The Save plugin</a>.
+                    editflo can be configured to allow users to save the editor content. For information on configuring the user saving, see: <a href="#" class="text-blue-600 hover:text-blue-800 underline">The Save plugin</a>.
                 </p>
             </div>
 
@@ -126,7 +126,7 @@
             <div class="mb-6">
                 <h4 class="text-lg font-medium text-gray-800 mb-2">Autosaving the editor content</h4>
                 <p class="text-gray-700 text-sm sm:text-base mb-3">
-                    TinyMCE can be configured to automatically save the editor content. For information on configuring the automatic saving, see: <a href="#" class="text-blue-600 hover:text-blue-800 underline">The Autosave plugin</a>.
+                    editflo can be configured to automatically save the editor content. For information on configuring the automatic saving, see: <a href="#" class="text-blue-600 hover:text-blue-800 underline">The Autosave plugin</a>.
                 </p>
             </div>
         </div>

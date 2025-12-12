@@ -73,7 +73,7 @@
                     <p class="text-gray-600 text-xs sm:text-sm mt-1">Add the Editflo script reference to your
                         _Host.cshtml or index.html file.</p>
                     <code
-                        class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs sm:text-sm mt-1 sm:mt-2 inline-block font-mono">&lt;script src="https://cdn.tiny.cloud/1/your-api-key/tinymce/6/tinymce.min.js"&gt;&lt;/script&gt;</code>
+                        class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs sm:text-sm mt-1 sm:mt-2 inline-block font-mono">&lt;script src="https://cdn.editflo.cloud/1/your-api-key/editflo/6/editflo.min.js"&gt;&lt;/script&gt;</code>
                 </div>
             </div>
 

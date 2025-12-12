@@ -2,7 +2,7 @@
     <!-- Header Section -->
     <header class="text-start">
         <div class="flex items-center mb-3 sm:mb-4 md:mb-5">
-            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">Using the TinyMCE package with the
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">Using the editflo package with the
                 Vue.js framework</h2>
         </div>
 
@@ -13,7 +13,7 @@
                 <i class="fas fa-exclamation-triangle text-xs sm:text-sm"></i>
             </div>
             <p class="text-yellow-800 text-sm sm:text-base">
-                <strong>Tiny does not recommend bundling tinymce and tinymce-vue with a module loader.</strong>
+                <strong>editflo does not recommend bundling editflo and editflo-vue with a module loader.</strong>
                 Bundling these packages can be complex and error prone.
             </p>
         </div>
@@ -25,9 +25,9 @@
                     <i class="fas fa-info-circle text-blue-500 mt-0.5"></i>
                 </span>
                 <span class="flex-1 min-w-0">
-                    The Official TinyMCE Vue.js component integrates TinyMCE into Vue.js projects, providing a powerful
+                    The Official editflo Vue.js component integrates editflo into Vue.js projects, providing a powerful
                     WYSIWYG editor within the Vue ecosystem. This procedure creates a basic Vue.js application
-                    containing a TinyMCE editor.
+                    containing a editflo editor.
                 </span>
             </p>
         </div>
@@ -41,11 +41,11 @@
                 <span class="flex-1 min-w-0">
                     <strong>Version 4 and later</strong> of the
                     <code
-                        class="bg-gray-100 px-2 py-1 rounded text-xs font-mono inline-block ml-1 mr-1">tinymce-vue</code>
+                        class="bg-gray-100 px-2 py-1 rounded text-xs font-mono inline-block ml-1 mr-1">editflo-vue</code>
                     package supports <strong>Vue.js 3.x</strong>, but does not support Vue.js 2.x.
                     For Vue.js 2.x applications, use
                     <code
-                        class="bg-gray-100 px-2 py-1 rounded text-xs font-mono inline-block ml-1">tinymce-vue version 3</code>.
+                        class="bg-gray-100 px-2 py-1 rounded text-xs font-mono inline-block ml-1">editflo-vue version 3</code>.
                 </span>
             </p>
         </div>
@@ -57,9 +57,9 @@
                     <i class="fas fa-external-link-alt text-purple-500 mt-0.5"></i>
                 </span>
                 <span class="flex-1 min-w-0">
-                    For examples of the TinyMCE Vue.js integration, visit the
+                    For examples of the editflo Vue.js integration, visit the
                     <a href="#" class="text-blue-600 hover:underline font-medium inline-flex items-center">
-                        <span>tinymce-vue storybook</span>
+                        <span>editflo-vue storybook</span>
                         <i class="fas fa-arrow-up-right-from-square ml-1 text-xs"></i>
                     </a>.
                 </span>
@@ -77,20 +77,20 @@
                     </div>
                 </div>
                 <div class="flex-1 min-w-0">
-                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-2">TinyMCE Vue.js integration live
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-2">editflo Vue.js integration live
                         examples</h3>
                     <p class="text-gray-600 text-sm sm:text-base mb-4">
-                        For examples of the TinyMCE Vue.js 3.x integration:
+                        For examples of the editflo Vue.js 3.x integration:
                     </p>
                     <div class="space-y-3 sm:space-y-4 pl-6 border-l-4 border-blue-300">
                         <div class="flex items-start">
                             <span class="flex-shrink-0 w-6 text-blue-500 font-bold">1.</span>
                             <div class="ml-3 flex-1 min-w-0">
                                 <p class="text-gray-700 text-sm sm:text-base">Clone the <code
-                                        class="bg-gray-100 px-2 py-1 rounded text-xs font-mono">tinymce/tinymce-vue</code>
+                                        class="bg-gray-100 px-2 py-1 rounded text-xs font-mono">editflo/editflo-vue</code>
                                     GitHub repository:</p>
                                 <code
-                                    class="bg-gray-900 text-gray-100 px-3 py-2 rounded-lg text-xs sm:text-sm mt-2 block font-mono overflow-x-auto">git clone https://github.com/tinymce/tinymce-vue.git</code>
+                                    class="bg-gray-900 text-gray-100 px-3 py-2 rounded-lg text-xs sm:text-sm mt-2 block font-mono overflow-x-auto">git clone https://github.com/editflo/editflo-vue.git</code>
                             </div>
                         </div>
                         <div class="flex items-start">
@@ -110,7 +110,7 @@
                                     class="bg-gray-900 text-gray-100 px-3 py-2 rounded-lg text-xs sm:text-sm mt-2 block font-mono overflow-x-auto">yarn demo</code>
                                 <p class="text-blue-600 text-sm sm:text-base mt-2 font-medium flex items-center">
                                     <i class="fas fa-globe text-blue-500 mr-2"></i>
-                                    The tinymce-vue demo is now running. Visit: <code
+                                    The editflo-vue demo is now running. Visit: <code
                                         class="bg-gray-100 px-2 py-1 rounded text-xs ml-1">http://localhost:3001</code>
                                 </p>
                             </div>
@@ -162,7 +162,7 @@
                 <div class="flex-1 min-w-0">
                     <h3 class="font-medium text-gray-800 text-sm sm:text-base">Create Vue Project</h3>
                     <p class="text-gray-600 text-xs sm:text-sm mt-1">Create a new Vue project named <code
-                            class="bg-gray-100 px-1 rounded text-xs">tinymce-vue-demo</code> using the Create Vue Tool.
+                            class="bg-gray-100 px-1 rounded text-xs">editflo-vue-demo</code> using the Create Vue Tool.
                     </p>
                     <code
                         class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs sm:text-sm mt-1 sm:mt-2 inline-block font-mono">npm create vue@3</code>
@@ -173,7 +173,7 @@
                         <span class="ml-2">As per the Vue FAQ, Vue 2 will reach End of Life by the end of 2023.</span>
                     </p>
                     <p class="text-gray-600 text-xs sm:text-sm mt-1">Follow the prompts and type <code
-                            class="bg-gray-100 px-1 rounded text-xs">tinymce-vue-demo</code> as the project name.</p>
+                            class="bg-gray-100 px-1 rounded text-xs">editflo-vue-demo</code> as the project name.</p>
                 </div>
             </div>
 
@@ -187,18 +187,18 @@
                     <h3 class="font-medium text-gray-800 text-sm sm:text-base">Change Directory</h3>
                     <p class="text-gray-600 text-xs sm:text-sm mt-1">Navigate to the newly created directory.</p>
                     <code
-                        class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs sm:text-sm mt-1 sm:mt-2 inline-block font-mono">cd tinymce-vue-demo</code>
+                        class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs sm:text-sm mt-1 sm:mt-2 inline-block font-mono">cd editflo-vue-demo</code>
                 </div>
             </div>
 
-            <!-- Step 3: Install TinyMCE packages -->
+            <!-- Step 3: Install editflo packages -->
             <div class="flex items-start">
                 <div
                     class="bg-blue-100 text-blue-800 rounded-full w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 flex items-center justify-center mr-2 sm:mr-3 mt-0.5 sm:mt-1 flex-shrink-0">
                     <i class="fas fa-download text-xs sm:text-sm"></i>
                 </div>
                 <div class="flex-1 min-w-0">
-                    <h3 class="font-medium text-gray-800 text-sm sm:text-base">Install TinyMCE Packages</h3>
+                    <h3 class="font-medium text-gray-800 text-sm sm:text-base">Install editflo Packages</h3>
                     <div class="mt-2 space-y-3">
                         <div class="flex items-start bg-gray-50 p-3 rounded-lg">
                             <div class="flex-shrink-0">
@@ -207,7 +207,7 @@
                             <div class="ml-3">
                                 <p class="text-gray-600 text-xs sm:text-sm font-medium">For Vue.js 3.x users:</p>
                                 <code
-                                    class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs sm:text-sm mt-1 block font-mono">npm install tinymce "@tinymce/tinymce-vue"</code>
+                                    class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs sm:text-sm mt-1 block font-mono">npm install editflo "@editflo/editflo-vue"</code>
                             </div>
                         </div>
                         <div class="flex items-start bg-gray-50 p-3 rounded-lg">
@@ -217,7 +217,7 @@
                             <div class="ml-3">
                                 <p class="text-gray-600 text-xs sm:text-sm font-medium">For Vue.js 2.x users:</p>
                                 <code
-                                    class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs sm:text-sm mt-1 block font-mono">npm install tinymce "@tinymce/tinymce-vue@^3"</code>
+                                    class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs sm:text-sm mt-1 block font-mono">npm install editflo "@editflo/editflo-vue@^3"</code>
                             </div>
                         </div>
                     </div>
@@ -233,7 +233,7 @@
                 <div class="flex-1 min-w-0">
                     <h3 class="font-medium text-gray-800 text-sm sm:text-base">Update App.vue</h3>
                     <p class="text-gray-600 text-xs sm:text-sm mt-1 mb-3 sm:mb-5">Open <code
-                            class="bg-gray-100 px-1 rounded text-xs">src/App.vue</code> and add TinyMCE configuration:
+                            class="bg-gray-100 px-1 rounded text-xs">src/App.vue</code> and add editflo configuration:
                     </p>
 
                     <!-- Responsive Code Block for App.vue -->
@@ -252,7 +252,7 @@
                                     class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">1</span><span
                                     class="text-purple-400">import</span> <span class="text-gray-300">Editor</span>
                                 <span class="text-purple-400">from</span> <span
-                                    class="text-green-400">'@tinymce/tinymce-vue'</span></div>
+                                    class="text-green-400">'@editflo/editflo-vue'</span></div>
                             <div class="flex"><span
                                     class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">2</span></div>
                             <div class="flex"><span
@@ -262,7 +262,7 @@
                                     class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">4</span> <span
                                     class="text-purple-400">import</span> <span class="text-gray-300">Editor</span>
                                 <span class="text-purple-400">from</span> <span
-                                    class="text-green-400">'@tinymce/tinymce-vue'</span></div>
+                                    class="text-green-400">'@editflo/editflo-vue'</span></div>
                             <div class="flex"><span
                                     class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">5</span><span
                                     class="text-purple-400">&lt;/script&gt;</span></div>
@@ -388,9 +388,9 @@
                         <i class="fas fa-exclamation-triangle text-yellow-400 text-lg"></i>
                     </div>
                     <div class="ml-3 flex-1 min-w-0">
-                        <h3 class="text-sm font-medium text-yellow-800 mb-2">Bundling TinyMCE</h3>
+                        <h3 class="text-sm font-medium text-yellow-800 mb-2">Bundling editflo</h3>
                         <p class="text-yellow-700 text-xs sm:text-sm">
-                            To bundle TinyMCE with the Vue.js application using a module loader, import the required
+                            To bundle editflo with the Vue.js application using a module loader, import the required
                             packages:
                         </p>
                         <div
@@ -398,20 +398,20 @@
                             <div class="space-y-1">
                                 <div class="flex"><span
                                         class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">1</span><span
-                                        class="text-green-400">/* Add the tinymce-vue wrapper to the bundle */</span>
+                                        class="text-green-400">/* Add the editflo-vue wrapper to the bundle */</span>
                                 </div>
                                 <div class="flex flex-wrap"><span
                                         class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">2</span><span
                                         class="text-purple-400">import</span> <span class="text-gray-300">{ </span><span
                                         class="text-yellow-300">Editor</span> <span class="text-gray-300">}</span> <span
                                         class="text-purple-400">from</span> <span
-                                        class="text-green-400">'@tinymce/tinymce-vue'</span><span
+                                        class="text-green-400">'@editflo/editflo-vue'</span><span
                                         class="text-gray-300">;</span></div>
                             </div>
                         </div>
                         <p class="text-yellow-700 text-xs sm:text-sm mt-2">
                             For complete bundling instructions, see: <a href="#"
-                                class="text-blue-600 hover:underline font-medium">Bundling TinyMCE</a>.
+                                class="text-blue-600 hover:underline font-medium">Bundling editflo</a>.
                         </p>
                     </div>
                 </div>
@@ -441,10 +441,10 @@
                     <i class="fas fa-book-open text-blue-500 text-sm sm:text-base"></i>
                 </div>
                 <div class="ml-3 flex-1 min-w-0">
-                    <p class="text-gray-700 text-sm sm:text-base font-medium mb-1">TinyMCE Vue.js Examples</p>
+                    <p class="text-gray-700 text-sm sm:text-base font-medium mb-1">editflo Vue.js Examples</p>
                     <p class="text-gray-600 text-xs sm:text-sm">
-                        For examples of the TinyMCE integration, see: <a href="#"
-                            class="text-blue-600 hover:underline font-medium">the tinymce-vue storybook</a>
+                        For examples of the editflo integration, see: <a href="#"
+                            class="text-blue-600 hover:underline font-medium">the editflo-vue storybook</a>
                     </p>
                 </div>
             </div>
@@ -464,7 +464,7 @@
                         </div>
                         <div class="ml-2 flex-1 min-w-0">
                             <p class="text-gray-600 text-xs sm:text-sm">
-                                <span class="font-medium">TinyMCE Vue.js integration:</span>
+                                <span class="font-medium">editflo Vue.js integration:</span>
                                 <a href="#" class="text-blue-600 hover:underline ml-1">Vue.js framework Technical
                                     Reference</a>
                             </p>
@@ -476,7 +476,7 @@
                         </div>
                         <div class="ml-2 flex-1 min-w-0">
                             <p class="text-gray-600 text-xs sm:text-sm">
-                                <span class="font-medium">TinyMCE:</span>
+                                <span class="font-medium">editflo:</span>
                                 <a href="#" class="text-blue-600 hover:underline ml-1">Basic setup</a>
                             </p>
                         </div>

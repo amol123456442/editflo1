@@ -12,7 +12,7 @@
 
             <div class="bg-blue-50 border-l-4 border-blue-500 p-4">
                 <p class="text-blue-800 mb-2">
-                    It only takes 2 minutes to create your free Tiny account and get the API key:
+                    It only takes 2 minutes to create your free editflo account and get the API key:
                 </p>
                 <div class="flex items-center gap-2 flex-wrap">
                     <button type="button"
@@ -209,7 +209,7 @@
                         <span class="text-green-400">src=</span>
                         <span class="text-yellow-300">"https://cdn.Editflo.cloud/1/</span>
                         <span class="text-red-400">YOUR-API-KEY-HERE</span>
-                        <span class="text-yellow-300">/Editflomce/8/Editflomce.min.js"</span>
+                        <span class="text-yellow-300">/Editflo/8/Editflo.min.js"</span>
                         <span class="text-green-400"> referrerpolicy=</span>
                         <span class="text-yellow-300">"origin"</span>
                         <span class="text-green-400"> crossorigin=</span>
@@ -242,9 +242,9 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
                     <div class=" border-r rounded-lg p-4 border-gray-500">
-                        <h3 class="font-semibold text-lg mb-2">Using the Tiny Cloud</h3>
+                        <h3 class="font-semibold text-lg mb-2">Using the editflo Cloud</h3>
                         <p class="text-gray-600 text-sm">
-                            The fastest way to get started with Editflo. Load from the Tiny Cloud CDN for automatic
+                            The fastest way to get started with Editflo. Load from the editflo Cloud CDN for automatic
                             updates to the latest version.
                         </p>
                     </div>

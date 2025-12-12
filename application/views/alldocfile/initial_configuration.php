@@ -15,7 +15,7 @@
                 </div>
                 <div>
                     <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-1">Integration Options</h3>
-                    <p class="text-gray-600 text-sm">Key editor options for integrating TinyMCE to an application.</p>
+                    <p class="text-gray-600 text-sm">Key editor options for integrating editflo to an application.</p>
                 </div>
             </div>
             <a href="<?php echo base_url('documentation/initial-configuration/integration-options'); ?>"

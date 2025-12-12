@@ -149,7 +149,7 @@
   <span class="text-purple-400">return</span> (<br>
     &lt;&gt;<br>
       &lt;<span class="text-yellow-300">Editor</span><br>
-        <span class="text-blue-400">tinymceScriptSrc</span>=<span class="text-green-400">'/editflo/editflo.min.js'</span><br>
+        <span class="text-blue-400">editfloScriptSrc</span>=<span class="text-green-400">'/editflo/editflo.min.js'</span><br>
         <span class="text-blue-400">licenseKey</span>=<span class="text-green-400">'gpl'</span><br>
         <span class="text-blue-400">onInit</span>={<span class="text-gray-300">(_evt, editor) => editorRef.current = editor</span>}<br>
         <span class="text-blue-400">initialValue</span>=<span class="text-green-400">'&lt;p&gt;This is the initial content of the editor.&lt;/p&gt;'</span><br>

@@ -143,9 +143,9 @@
             <!-- Row 4 -->
             <div class="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-6 pb-4 border-b border-gray-200 last:border-0">
                 <div class="sm:w-1/3">
-                    <a href="<?php echo base_url('documentation/plugins/tiny-drive'); ?>"
+                    <a href="<?php echo base_url('documentation/plugins/editflo-drive'); ?>"
                         class="text-blue-600 hover:text-blue-800 font-medium underline-offset-2 hover:underline transition-colors">
-                        Tiny Drive
+                        editflo Drive
                     </a>
                 </div>
                 <div class="sm:w-2/3 text-gray-600 text-sm sm:text-base">

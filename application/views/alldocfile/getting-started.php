@@ -13,7 +13,7 @@
         <!-- Code Block -->
         <div class="bg-gray-900 text-gray-100 p-6 rounded-lg mb-6 font-mono text-sm overflow-x-auto">
             <div class="code-comment">// Include Editflo from CDN</div>
-            <div><span class="code-tag">&lt;script</span> <span class="code-function">src</span>=<span class="code-string">"https://cdn.tiny.cloud/1/your-api-key/Editflo/6/Editflo.min.js"</span></div>
+            <div><span class="code-tag">&lt;script</span> <span class="code-function">src</span>=<span class="code-string">"https://cdn.editflo.cloud/1/your-api-key/Editflo/6/Editflo.min.js"</span></div>
             <div>  <span class="code-function">referrerpolicy</span>=<span class="code-string">"origin"</span><span class="code-tag">&gt;&lt;/script&gt;</span></div>
             <br>
             <div class="code-comment">// Initialize Editflo</div>

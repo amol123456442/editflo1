@@ -32,7 +32,7 @@
                         Starting in early 2024, all editors on our cloud platform will be required to have a valid API key. Without a valid API key, your editor will transition to read-only mode, limiting your ability to make changes.
                     </p>
                     <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mt-3">
-                        Affected users will receive a notification in their editor. If you receive this notification, please contact the Administrator for your application/site. Admins will need to get a valid API key and paste it into the code to continue using TinyMCE.
+                        Affected users will receive a notification in their editor. If you receive this notification, please contact the Administrator for your application/site. Admins will need to get a valid API key and paste it into the code to continue using editflo.
                     </p>
                 </div>
             </div>
@@ -42,7 +42,7 @@
 
 <div class="bg-blue-50 border-l-4 border-blue-500 p-4">
     <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-2">
-        It only takes 2 minutes to create your free Tiny account and get the API key:
+        It only takes 2 minutes to create your free editflo account and get the API key:
     </p>
     <div class="flex items-center gap-2 flex-wrap">
         <button type="button" class="text-white bg-[#3b5998] hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 box-border border border-transparent font-medium leading-5 rounded-base text-sm px-4 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55">
@@ -60,83 +60,83 @@
 <section class="mt-5 pt-3 mb-4">
     <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">How will I know if this change affects me?</h2>
     <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-3 ">
-        If TinyMCE detects an invalid API key, it will display a notification. If you know or suspect you have been actively hiding or suppressing this notification, please remove these overrides. If you then see a notification, please follow the instructions to resolve the issue. If no notification appears, you are not affected.
+        If editflo detects an invalid API key, it will display a notification. If you know or suspect you have been actively hiding or suppressing this notification, please remove these overrides. If you then see a notification, please follow the instructions to resolve the issue. If no notification appears, you are not affected.
     </p>
 </section>
 
 <section class="mt-5 pt-3 mb-4">
     <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">How can I get an API key?</h2>
     <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">
-        The Admin who owns your TinyMCE implementation will need to log in <a href="https://www.tiny.cloud/auth/login?redirect_to=%2Fmy-account%2Fintegrate%2F" class="text-primary-blue">here</a> to get your account’s API key. If you do not have an account yet, you can <a href="https://www.tiny.cloud/pricing/" class="text-primary-blue">sign up for a free API key</a>. Paid users can <a href="https://www.tiny.cloud/contact/" class="text-primary-blue">contact our Technical Support</a> team for help.
+        The Admin who owns your editflo implementation will need to log in <a href="https://www.editflo.cloud/auth/login?redirect_to=%2Fmy-account%2Fintegrate%2F" class="text-primary-blue">here</a> to get your account’s API key. If you do not have an account yet, you can <a href="https://www.editflo.cloud/pricing/" class="text-primary-blue">sign up for a free API key</a>. Paid users can <a href="https://www.editflo.cloud/contact/" class="text-primary-blue">contact our Technical Support</a> team for help.
     </p>
 </section>
 
 <section class="mt-5 pt-3 mb-4">
     <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">What will happen if I don’t provide a valid API key?</h2>
     <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">
-        All editors on our cloud platform without a valid API key will be set to read-only mode in the beginning of 2024. If you self-host TinyMCE, you will not be impacted.
+        All editors on our cloud platform without a valid API key will be set to read-only mode in the beginning of 2024. If you self-host editflo, you will not be impacted.
     </p>
 </section>
 
 <section class="mt-5 pt-3 mb-4">
-    <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">If TinyMCE is free and open source, why is an API key required?</h2>
+    <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">If editflo is free and open source, why is an API key required?</h2>
     <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
-        TinyMCE can be accessed through a variety of licensing and hosting methods, including both free and paid options.
+        editflo can be accessed through a variety of licensing and hosting methods, including both free and paid options.
     </p>
     <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
-        The free, open source option for TinyMCE is available under the GNU General Public License Version 2 or later. Users must self-host TinyMCE to take advantage of the open source license. This type of license does not require an API key.
+        The free, open source option for editflo is available under the GNU General Public License Version 2 or later. Users must self-host editflo to take advantage of the open source license. This type of license does not require an API key.
     </p>
     <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
-        The cloud hosted option for TinyMCE is available under commercial license, as described <a href="https://www.tiny.cloud/legal/cloud-use-subscription-agreement/" class="text-primary-blue">here</a>. This type of license requires an active API key.
+        The cloud hosted option for editflo is available under commercial license, as described <a href="https://www.editflo.cloud/legal/cloud-use-subscription-agreement/" class="text-primary-blue">here</a>. This type of license requires an active API key.
     </p>
     <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
-        If you are receiving an error notification, you are using the cloud-hosted option of TinyMCE under a commercial license. If you want to continue using TinyMCE without an API key, you will need to either migrate to the free, open source, self-hosted option or use a 3rd party-hosted CDN option under an MIT license.
+        If you are receiving an error notification, you are using the cloud-hosted option of editflo under a commercial license. If you want to continue using editflo without an API key, you will need to either migrate to the free, open source, self-hosted option or use a 3rd party-hosted CDN option under an MIT license.
     </p>
 </section>
 
 <section class="mt-5 pt-3 mb-4">
     <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">I installed the NPM package, which I assumed would be self-hosted. Why am I getting a notification that an API key is required?</h2>
     <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
-        Our integrations default to using the TinyMCE Cloud service. If you’re receiving the notification that an API key is required, it means that you’re using the cloud-hosted option for TinyMCE under commercial license which requires a valid API key and allows for 1,000 editor loads per month for free.
+        Our integrations default to using the editflo Cloud service. If you’re receiving the notification that an API key is required, it means that you’re using the cloud-hosted option for editflo under commercial license which requires a valid API key and allows for 1,000 editor loads per month for free.
     </p>
     <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
-        Please <a href="https://www.tiny.cloud/docs/tinymce/latest/installation/" class="text-primary-blue">read our docs</a> to learn how to self-host TinyMCE or <a href="https://www.tiny.cloud/pricing/" class="text-primary-blue">sign up here</a> to continue using TinyMCE Cloud.
-    </p>
-</section>
-
-<section class="mt-5 pt-3 mb-4">
-    <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">I’ve used TinyMCE for years. Why am I now receiving notification that an API key is required?</h2>
-    <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
-        Thank you for your long-term use of TinyMCE and for selecting it for your projects. If you’re suddenly receiving this notification, it means that previous versions of the notification were hidden within your TinyMCE editor. We are working to ensure that all active users of TinyMCE are aware of the API key requirement, including those that may have hidden these notifications in the past.
+        Please <a href="https://www.editflo.cloud/docs/editflo/latest/installation/" class="text-primary-blue">read our docs</a> to learn how to self-host editflo or <a href="https://www.editflo.cloud/pricing/" class="text-primary-blue">sign up here</a> to continue using editflo Cloud.
     </p>
 </section>
 
 <section class="mt-5 pt-3 mb-4">
-    <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">What does the message "This domain is not registered with Tiny Cloud" mean?</h2>
+    <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">I’ve used editflo for years. Why am I now receiving notification that an API key is required?</h2>
     <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
-        This message means that the domain attempting to use TinyMCE is not registered with Tiny Cloud. Starting in 2024, a registered domain will be required to continue using TinyMCE.
+        Thank you for your long-term use of editflo and for selecting it for your projects. If you’re suddenly receiving this notification, it means that previous versions of the notification were hidden within your editflo editor. We are working to ensure that all active users of editflo are aware of the API key requirement, including those that may have hidden these notifications in the past.
+    </p>
+</section>
+
+<section class="mt-5 pt-3 mb-4">
+    <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">What does the message "This domain is not registered with editflo Cloud" mean?</h2>
+    <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
+        This message means that the domain attempting to use editflo is not registered with editflo Cloud. Starting in 2024, a registered domain will be required to continue using editflo.
     </p>
 </section>
 
 <section class="mt-5 pt-3 mb-4">
     <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">How can I resolve the issue of an unregistered domain?</h2>
     <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
-        To resolve this issue, please inform your administrator and request that they review the list of approved domains on your Tiny Account. If necessary, they will need to add the unregistered domain to the approved list. <a href="https://www.tiny.cloud/docs/tinymce/latest/cloud-troubleshooting/#This-domain-is-not-registered-with-Tiny-Cloud.-To-continue-using-TinyMCE-a-registered-domain-is-required-starting-2024.-Please-alert-your-admin-to-review-the-approved-domains-and-add-this-one-if-required." class="text-primary-blue">Learn more here</a>.
+        To resolve this issue, please inform your administrator and request that they review the list of approved domains on your editflo Account. If necessary, they will need to add the unregistered domain to the approved list. <a href="https://www.editflo.cloud/docs/editflo/latest/cloud-troubleshooting/#This-domain-is-not-registered-with-editflo-Cloud.-To-continue-using-editflo-a-registered-domain-is-required-starting-2024.-Please-alert-your-admin-to-review-the-approved-domains-and-add-this-one-if-required." class="text-primary-blue">Learn more here</a>.
     </p>
 </section>
 
 <section class="mt-5 pt-3 mb-4">
-    <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">Where can I view the list of approved domains for my Tiny Cloud account?</h2>
+    <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">Where can I view the list of approved domains for my editflo Cloud account?</h2>
     <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
-        You can view the list of approved domains by logging into your Tiny Account. The approved domains are stored against your API Key.
+        You can view the list of approved domains by logging into your editflo Account. The approved domains are stored against your API Key.
     </p>
 </section>
 
 <section class="mt-5 pt-3 mb-4">
-    <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">I would prefer to self-host TinyMCE. What are my options?</h2>
+    <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">I would prefer to self-host editflo. What are my options?</h2>
     <ul class="text-gray-700 text-base mb-4 list-disc pl-5 space-y-2">
-        <li>If you plan to use only open-source TinyMCE features, the open-source version is available under the GNU General Public License Version 2 or later license.</li>
-        <li>If you want to self-host TinyMCE and use our Premium features, get in touch with our Sales team for a custom quote.</li>
+        <li>If you plan to use only open-source editflo features, the open-source version is available under the GNU General Public License Version 2 or later license.</li>
+        <li>If you want to self-host editflo and use our Premium features, get in touch with our Sales team for a custom quote.</li>
     </ul>
 </section>
 
@@ -156,14 +156,14 @@
             </p>
 
             <p class="text-gray-700 sm:mb-4 text-sm sm:text-base">
-                For additional information on Troubleshooting Tiny Cloud visit: Cloud Troubleshooting.
+                For additional information on Troubleshooting editflo Cloud visit: Cloud Troubleshooting.
             </p>
         </div>
     </div>
 </div>
 
-<h1 class="text-xl font-bold text-gray-800 mb-2">Getting Started with TinyMCE</h1>
-<p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-2">TinyMCE is a rich text editor designed for web applications. To install TinyMCE, include the required script and initialize the editor with a minimal configuration. Upon registration, an API key is provided along with a corresponding code snippet for integration.</p>
+<h1 class="text-xl font-bold text-gray-800 mb-2">Getting Started with editflo</h1>
+<p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-2">editflo is a rich text editor designed for web applications. To install editflo, include the required script and initialize the editor with a minimal configuration. Upon registration, an API key is provided along with a corresponding code snippet for integration.</p>
 <div class="bg-white rounded-lg border border-gray-200 p-6 mb-8">
     <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-6">
         Editflo 8 is a powerful and flexible rich text editor that can be embedded in web applications. This quick
@@ -173,7 +173,7 @@
     <!-- Sign Up Section -->
     <div class="bg-blue-50 border-l-4 border-blue-500 p-4">
         <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-2">
-            It only takes 2 minutes to create your free Tiny account and get the API key:
+            It only takes 2 minutes to create your free editflo account and get the API key:
         </p>
         <div class="flex items-center gap-2 flex-wrap">
             <button type="button" class="text-white bg-[#3b5998] hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 box-border border border-transparent font-medium leading-5 rounded-base text-sm px-4 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55">

@@ -125,7 +125,7 @@
                             <div class="flex"><span
                                     class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">4</span><span
                                     class="text-purple-400">import</span> <span
-                                    class="text-green-400">'@editflo/editflo/tinymce'</span><span
+                                    class="text-green-400">'@editflo/editflo/editflo'</span><span
                                     class="text-gray-300">;</span></div>
                             <div class="flex"><span
                                     class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">5</span></div>

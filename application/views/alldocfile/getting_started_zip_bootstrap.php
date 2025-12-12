@@ -290,7 +290,7 @@
                     </div>
                     <pre class="text-xs sm:text-sm font-mono leading-6 text-gray-100"><span class="text-green-400">// Prevent Bootstrap modal from blocking EditfloMCE focus</span>
 <span class="text-blue-400">document.addEventListener('focusin', (e) => {</span>
-    <span class="text-gray-300 ml-4">if (e.target.closest(".tox-tinymce, .tox-tinymce-aux") !== null) {</span>
+    <span class="text-gray-300 ml-4">if (e.target.closest(".tox-editflo, .tox-editflo-aux") !== null) {</span>
         <span class="text-gray-300 ml-8">e.stopImmediatePropagation();</span>
     <span class="text-gray-300 ml-4">}</span>
 <span class="text-blue-400">});</span></pre>

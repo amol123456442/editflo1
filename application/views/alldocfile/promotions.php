@@ -17,7 +17,7 @@
             <div class="mb-6">
                 <h4 class="text-lg font-medium text-gray-800 mb-2">Open source promotion</h4>
                 <p class="text-gray-700 text-sm sm:text-base mb-3">
-                    The open source version of TinyMCE contains a promotion for paid features. This promotion can be toggled on or off with the promotion option.
+                    The open source version of editflo contains a promotion for paid features. This promotion can be toggled on or off with the promotion option.
                 </p>
                 <p class="text-gray-700 text-sm sm:text-base mb-3 font-medium">Type: Boolean</p>
                 <p class="text-gray-700 text-sm sm:text-base mb-3 font-medium">Default value: true in Community self-hosted instances; otherwise false.</p>
@@ -38,7 +38,7 @@
             <div class="mb-6">
                 <h4 class="text-lg font-medium text-gray-800 mb-2">Cloud promotion</h4>
                 <p class="text-gray-700 text-sm sm:text-base mb-3">
-                    The cloud version of TinyMCE contains a promotion for paid features included in the 14-day trial. This promotion can be toggled on or off with the onboarding option.
+                    The cloud version of editflo contains a promotion for paid features included in the 14-day trial. This promotion can be toggled on or off with the onboarding option.
                 </p>
                 <p class="text-gray-700 text-sm sm:text-base mb-3">
                     The promotion will automatically disappear when the trial ends.

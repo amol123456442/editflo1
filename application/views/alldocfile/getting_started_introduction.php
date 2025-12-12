@@ -46,7 +46,7 @@
 
         <div class="bg-blue-50 border-l-4 border-blue-500 p-4">
             <p class="text-blue-800 sm:mb-4 text-sm sm:text-base mb-2">
-                It only takes 2 minutes to create your free Tiny account and get the API key:
+                It only takes 2 minutes to create your free editflo account and get the API key:
             </p>
             <div class="flex items-center gap-2 flex-wrap">
                 <button type="button" class="text-white bg-[#3b5998] hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 box-border border border-transparent font-medium leading-5 rounded-base text-sm px-4 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55">

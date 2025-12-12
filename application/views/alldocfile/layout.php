@@ -2037,7 +2037,7 @@
 
         <!-- Right Sidebar - Table of Contents -->
         <aside class="w-64 lg:w-[230px] bg-white border-l border-gray-200 h-screen fixed right-0 top-0 overflow-y-auto z-20 hidden lg:block">
-            <div class="p-6 mt-12">
+            <div class="p-6 mt-20">
                 <!-- Table of Contents Header -->
                 <div class="mb-6">
                     <h3 class="text-lg font-semibold text-gray-800 mb-2 flex items-center">

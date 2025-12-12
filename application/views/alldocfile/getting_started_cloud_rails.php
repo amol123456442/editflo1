@@ -2,7 +2,7 @@
     <!-- Header Section -->
     <header class="text-start">
         <div class="flex items-center mb-3 sm:mb-4 md:mb-5">
-            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">Using Editflo from the Tiny Cloud CDN
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">Using Editflo from the Editflo Cloud CDN
                 with Ruby on Rails</h2>
         </div>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-start">
@@ -57,7 +57,7 @@
                     <p class="text-gray-600 text-xs sm:text-sm mt-1">On a command line or command prompt, create a new
                         Rails project.</p>
                     <code
-                        class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs sm:text-sm mt-1 sm:mt-2 inline-block font-mono">rails new myTinySite</code>
+                        class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs sm:text-sm mt-1 sm:mt-2 inline-block font-mono">rails new myEditfloSite</code>
                 </div>
             </div>
 
@@ -72,7 +72,7 @@
                     <p class="text-gray-600 text-xs sm:text-sm mt-1">Change into the newly created project directory.
                     </p>
                     <code
-                        class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs sm:text-sm mt-1 sm:mt-2 inline-block font-mono">cd myTinySite/</code>
+                        class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs sm:text-sm mt-1 sm:mt-2 inline-block font-mono">cd myEditfloSite/</code>
                 </div>
             </div>
 
@@ -338,7 +338,7 @@
                     <p class="text-gray-600 text-xs sm:text-base mt-1 mb-3 sm:mb-5">
                         Using a text editor, open
                         <code class="bg-gray-100 px-1 rounded text-xs break-all whitespace-normal">
-                            /path/to/myTinySite/app/views/welcome/index.html.erb
+                            /path/to/myEditfloSite/app/views/welcome/index.html.erb
                         </code>
                         and replace the contents with:
                     </p>
@@ -450,7 +450,7 @@
                                 <span class="text-gray-300 ml-4 sm:ml-8"></span>
                                 <span class="text-purple-400">&lt;textarea</span>
                                 <span class="text-blue-400">class=</span>
-                                <span class="text-green-400">"tinymce"</span>
+                                <span class="text-green-400">"Editflomce"</span>
                                 <span class="text-purple-400">&gt;</span>
                                 <span class="text-gray-300">Hello, Rails World!</span>
                                 <span class="text-purple-400">&lt;/textarea&gt;</span>
@@ -488,7 +488,7 @@
                                 <span class="text-gray-300 ml-6 sm:ml-12"></span>
                                 <span class="text-blue-400">selector</span>
                                 <span class="text-gray-300">: </span>
-                                <span class="text-green-400">'.tinymce'</span>
+                                <span class="text-green-400">'.Editflomce'</span>
                                 <span class="text-gray-300">,</span>
                             </div>
                             <div class="flex">
@@ -696,7 +696,7 @@
 <script>
     // Initialize Editflo for any demo textareas on this page
     editflo.init({
-        selector: '.tinymce-demo',
+        selector: '.Editflomce-demo',
         plugins: 'lists link image table code help wordcount',
         menubar: false,
         toolbar: 'undo redo | bold italic | bullist numlist | link image',

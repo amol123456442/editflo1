@@ -2,7 +2,7 @@
     <!-- Header Section -->
     <header class="text-start">
         <div class="flex items-center mb-3 sm:mb-4 md:mb-5">
-            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">Using Editflo from the Tiny Cloud CDN with the Vue.js framework</h2>
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">Using Editflo from the Editflo Cloud CDN with the Vue.js framework</h2>
         </div>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-start">
             The Official Editflo Vue.js component integrates Editflo into Vue.js projects. This procedure creates a basic Vue.js application containing a Editflo editor.

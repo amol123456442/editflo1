@@ -1,7 +1,7 @@
 <div class="px-4">
     <!-- Support Section -->
     <section class="mb-7">
-        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Support</h2>
+        <h2 class="text-3xl sm:text-3xl font-bold text-gray-900 mb-4">Support</h2>
         <p class="text-lg text-gray-700 mb-6">
             Paid premium support is available as part of
             <a href="https://www.Editflo.cloud/pricing/" class="text-blue-600 hover:underline font-medium">Editflo Enterprise and Editflo Cloud subscriptions</a>.

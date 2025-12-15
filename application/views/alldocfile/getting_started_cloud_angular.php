@@ -1,4 +1,4 @@
-<main class="mx-auto min-h-screen px-3 sm:px-4 md:px-6 lg:px-4 py-4 ">
+<main class="mx-auto min-h-screen px-2 sm:px-3 md:px-6 lg:px-4 py-4 ">
     <!-- Header Section -->
     <header class=" text-start">
         <div class="flex items-center mb-3 sm:mb-4 md:mb-5">
@@ -29,7 +29,7 @@
     </div>
 
     <!-- Instructions Section -->
-    <section class="bg-white rounded-lg sm:rounded-xl shadow-md p-4 sm:p-6 mb-6 sm:mb-8">
+    <section class="  mb-6 sm:mb-8">
         <div class="flex items-center mb-3 sm:mb-4">
             <h2 class="text-lg sm:text-xl font-semibold text-gray-800">Getting Started</h2>
         </div>
@@ -82,11 +82,8 @@
             </div>
 
             <div class="flex items-start">
-                <div
-                    class="bg-blue-100 text-blue-800 rounded-full w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 flex items-center justify-center mr-2 sm:mr-3 mt-0.5 sm:mt-1 flex-shrink-0">
-                    <i class="fas fa-file-code text-xs sm:text-sm"></i>
-                </div>
-                <div class="flex-1 min-w-0">
+
+                <div class="flex-1 ">
                     <p class="text-gray-600 text-xs sm:text-base mt-1 mb-3 sm:mb-5">Using a text editor, open
                         /path/to/Editflo-angular-demo/src/app/app.component.ts and replace the contents with:</p>
 

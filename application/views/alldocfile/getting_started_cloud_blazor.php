@@ -79,10 +79,7 @@
 
             <!-- Step 4 -->
             <div class="flex items-start">
-                <div
-                    class="bg-blue-100 text-blue-800 rounded-full w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 flex items-center justify-center mr-2 sm:mr-3 mt-0.5 sm:mt-1 flex-shrink-0">
-                    <i class="fas fa-file-code text-xs sm:text-sm"></i>
-                </div>
+
                 <div class="flex-1 min-w-0">
                     <p class="text-gray-600 text-xs sm:text-sm mt-1 mb-3 sm:mb-5">Using a text editor, open
                         Pages/Index.razor and replace the contents with:</p>

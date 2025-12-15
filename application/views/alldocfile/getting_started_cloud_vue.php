@@ -22,11 +22,11 @@
         </div>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-center">
             <i class="fab fa-node-js text-green-500 mr-2"></i>
-       <a href="" class="text-blue-500 hover:underline ml-1">Node.js LTS </a> 
+            <a href="" class="text-blue-500 hover:underline ml-1">Node.js LTS </a>
         </p>
-         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-center">
+        <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-center">
             <i class="fab fa-vuejs text-green-500 mr-2"></i>
-             <a href="" class="text-blue-500 hover:underline ml-1">Vue CLI </a>
+            <a href="" class="text-blue-500 hover:underline ml-1">Vue CLI </a>
         </p>
     </div>
 
@@ -74,184 +74,182 @@
             </div>
 
             <!-- Step 4 -->
-          <div class="flex items-start">
-    <div class="bg-blue-100 text-blue-800 rounded-full w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 flex items-center justify-center mr-2 sm:mr-3 mt-0.5 sm:mt-1 flex-shrink-0">
-        <i class="fas fa-file-code text-xs sm:text-sm"></i>
-    </div>
-    <div class="flex-1 min-w-0">
-        <p class="text-gray-600 text-xs sm:text-sm mt-1 mb-3 sm:mb-5">Using a text editor, open /path/to/Editflo-vue-demo/src/App.vue and replace the contents with:</p>
+            <div class="flex items-start">
+          
+                <div class="flex-1 min-w-0">
+                    <p class="text-gray-600 text-xs sm:text-sm mt-1 mb-3 sm:mb-5">Using a text editor, open /path/to/Editflo-vue-demo/src/App.vue and replace the contents with:</p>
 
-        <!-- Responsive Code Block -->
-        <div class="bg-gray-900 text-gray-100 p-3 sm:p-4 md:p-6 rounded-lg font-mono text-xs sm:text-sm overflow-x-auto border border-gray-700">
-            <div class="flex items-center justify-between mb-3 sm:mb-4">
-                <div class="flex items-center space-x-2">
-                    <div class="w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full"></div>
-                    <div class="w-2 h-2 sm:w-3 sm:h-3 bg-yellow-500 rounded-full"></div>
-                    <div class="w-2 h-2 sm:w-3 sm:h-3 bg-green-500 rounded-full"></div>
+                    <!-- Responsive Code Block -->
+                    <div class="bg-gray-900 text-gray-100 p-3 sm:p-4 md:p-6 rounded-lg font-mono text-xs sm:text-sm overflow-x-auto border border-gray-700">
+                        <div class="flex items-center justify-between mb-3 sm:mb-4">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full"></div>
+                                <div class="w-2 h-2 sm:w-3 sm:h-3 bg-yellow-500 rounded-full"></div>
+                                <div class="w-2 h-2 sm:w-3 sm:h-3 bg-green-500 rounded-full"></div>
+                            </div>
+                            <span class="text-gray-400 text-xs">App.vue</span>
+                        </div>
+
+                        <div class="space-y-1">
+                            <!-- Template Section -->
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">1</span>
+                                <span class="text-gray-300">&lt;</span><span class="text-yellow-300">template</span><span class="text-gray-300">&gt;</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">2</span>
+                                <span class="text-gray-300 ml-2 sm:ml-4"></span><span class="text-gray-300">&lt;</span><span class="text-yellow-300">div</span> <span class="text-blue-400">id</span><span class="text-gray-300">=</span><span class="text-green-400">"app"</span><span class="text-gray-300">&gt;</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">3</span>
+                                <span class="text-gray-300 ml-4 sm:ml-8"></span><span class="text-gray-300">&lt;</span><span class="text-yellow-300">Editor</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">4</span>
+                                <span class="text-gray-300 ml-6 sm:ml-12"></span><span class="text-blue-400">api-key</span><span class="text-gray-300">=</span><span class="text-green-400">"no-api-key"</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">5</span>
+                                <span class="text-gray-300 ml-6 sm:ml-12"></span><span class="text-blue-400">:init</span><span class="text-gray-300">=</span><span class="text-green-400">"init"</span>
+                            </div>
+                            <div class="flex flex-wrap">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">6</span>
+                                <span class="text-gray-300 ml-6 sm:ml-12"></span>
+                                <span class="text-blue-400">initial-value</span><span class="text-gray-300">=</span>
+                                <span class="text-green-400">"&lt;p&gt;This is the initial content of the editor.&lt;/p&gt;"</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">7</span>
+                                <span class="text-gray-300 ml-4 sm:ml-8"></span><span class="text-gray-300">/&gt;</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">8</span>
+                                <span class="text-gray-300 ml-2 sm:ml-4"></span><span class="text-gray-300">&lt;/</span><span class="text-yellow-300">div</span><span class="text-gray-300">&gt;</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">9</span>
+                                <span class="text-gray-300">&lt;/</span><span class="text-yellow-300">template</span><span class="text-gray-300">&gt;</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">10</span>
+                            </div>
+
+                            <!-- Script Section -->
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">11</span>
+                                <span class="text-gray-300">&lt;</span><span class="text-yellow-300">script</span> <span class="text-blue-400">setup</span><span class="text-gray-300">&gt;</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">12</span>
+                                <span class="text-gray-300 ml-2 sm:ml-4"></span>
+                                <span class="text-purple-400">import</span> <span class="text-gray-300">{ Editor } </span>
+                                <span class="text-purple-400">from</span> <span class="text-green-400">'@editflo/editflo-vue'</span><span class="text-gray-300">;</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">13</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">14</span>
+                                <span class="text-gray-300 ml-2 sm:ml-4"></span>
+                                <span class="text-purple-400">const</span> <span class="text-gray-300">init = {</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">15</span>
+                                <span class="text-gray-300 ml-4 sm:ml-8"></span>
+                                <span class="text-blue-400">height</span><span class="text-gray-300">: </span>
+                                <span class="text-orange-400">500</span><span class="text-gray-300">,</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">16</span>
+                                <span class="text-gray-300 ml-4 sm:ml-8"></span>
+                                <span class="text-blue-400">menubar</span><span class="text-gray-300">: </span>
+                                <span class="text-blue-400">false</span><span class="text-gray-300">,</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">17</span>
+                                <span class="text-gray-300 ml-4 sm:ml-8"></span>
+                                <span class="text-blue-400">plugins</span><span class="text-gray-300">: [</span>
+                            </div>
+                            <div class="flex flex-wrap">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">18</span>
+                                <span class="text-gray-300 ml-6 sm:ml-12"></span>
+                                <span class="text-green-400">'advlist'</span><span class="text-gray-300">, </span>
+                                <span class="text-green-400">'autolink'</span><span class="text-gray-300">, </span>
+                                <span class="text-green-400">'lists'</span><span class="text-gray-300">, </span>
+                                <span class="text-green-400">'link'</span><span class="text-gray-300">, </span>
+                                <span class="text-green-400">'image'</span><span class="text-gray-300">, </span>
+                                <span class="text-green-400">'charmap'</span><span class="text-gray-300">, </span>
+                                <span class="text-green-400">'preview'</span><span class="text-gray-300">,</span>
+                            </div>
+                            <div class="flex flex-wrap">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">19</span>
+                                <span class="text-gray-300 ml-6 sm:ml-12"></span>
+                                <span class="text-green-400">'anchor'</span><span class="text-gray-300">, </span>
+                                <span class="text-green-400">'searchreplace'</span><span class="text-gray-300">, </span>
+                                <span class="text-green-400">'visualblocks'</span><span class="text-gray-300">, </span>
+                                <span class="text-green-400">'code'</span><span class="text-gray-300">, </span>
+                                <span class="text-green-400">'fullscreen'</span><span class="text-gray-300">,</span>
+                            </div>
+                            <div class="flex flex-wrap">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">20</span>
+                                <span class="text-gray-300 ml-6 sm:ml-12"></span>
+                                <span class="text-green-400">'insertdatetime'</span><span class="text-gray-300">, </span>
+                                <span class="text-green-400">'media'</span><span class="text-gray-300">, </span>
+                                <span class="text-green-400">'table'</span><span class="text-gray-300">, </span>
+                                <span class="text-green-400">'code'</span><span class="text-gray-300">, </span>
+                                <span class="text-green-400">'help'</span><span class="text-gray-300">, </span>
+                                <span class="text-green-400">'wordcount'</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">21</span>
+                                <span class="text-gray-300 ml-4 sm:ml-8"></span>
+                                <span class="text-gray-300">],</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">22</span>
+                                <span class="text-gray-300 ml-4 sm:ml-8"></span>
+                                <span class="text-blue-400">toolbar</span><span class="text-gray-300">: </span>
+                                <span class="text-green-400">'undo redo | blocks | '</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">23</span>
+                                <span class="text-gray-300 ml-6 sm:ml-12"></span>
+                                <span class="text-green-400">'bold italic forecolor | alignleft aligncenter '</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">24</span>
+                                <span class="text-gray-300 ml-6 sm:ml-12"></span>
+                                <span class="text-green-400">'alignright alignjustify | bullist numlist outdent indent | '</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">25</span>
+                                <span class="text-gray-300 ml-6 sm:ml-12"></span>
+                                <span class="text-green-400">'removeformat | help'</span><span class="text-gray-300">,</span>
+                            </div>
+                            <div class="flex flex-wrap">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">26</span>
+                                <span class="text-gray-300 ml-4 sm:ml-8"></span>
+                                <span class="text-blue-400">content_style</span><span class="text-gray-300">: </span>
+                                <span class="text-green-400">'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">27</span>
+                                <span class="text-gray-300 ml-2 sm:ml-4"></span>
+                                <span class="text-gray-300">};</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">28</span>
+                                <span class="text-gray-300">&lt;/</span><span class="text-yellow-300">script</span><span class="text-gray-300">&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-600 text-xs sm:text-sm mt-2 sm:mt-3 flex items-start">
+                        <i class="fas fa-lightbulb text-yellow-500 mr-2 mt-0.5"></i>
+                        This Vue component will create an application containing a Editflo editor configured with basic features.
+                    </p>
                 </div>
-                <span class="text-gray-400 text-xs">App.vue</span>
             </div>
-
-            <div class="space-y-1">
-                <!-- Template Section -->
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">1</span>
-                    <span class="text-gray-300">&lt;</span><span class="text-yellow-300">template</span><span class="text-gray-300">&gt;</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">2</span>
-                    <span class="text-gray-300 ml-2 sm:ml-4"></span><span class="text-gray-300">&lt;</span><span class="text-yellow-300">div</span> <span class="text-blue-400">id</span><span class="text-gray-300">=</span><span class="text-green-400">"app"</span><span class="text-gray-300">&gt;</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">3</span>
-                    <span class="text-gray-300 ml-4 sm:ml-8"></span><span class="text-gray-300">&lt;</span><span class="text-yellow-300">Editor</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">4</span>
-                    <span class="text-gray-300 ml-6 sm:ml-12"></span><span class="text-blue-400">api-key</span><span class="text-gray-300">=</span><span class="text-green-400">"no-api-key"</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">5</span>
-                    <span class="text-gray-300 ml-6 sm:ml-12"></span><span class="text-blue-400">:init</span><span class="text-gray-300">=</span><span class="text-green-400">"init"</span>
-                </div>
-                <div class="flex flex-wrap">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">6</span>
-                    <span class="text-gray-300 ml-6 sm:ml-12"></span>
-                    <span class="text-blue-400">initial-value</span><span class="text-gray-300">=</span>
-                    <span class="text-green-400">"&lt;p&gt;This is the initial content of the editor.&lt;/p&gt;"</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">7</span>
-                    <span class="text-gray-300 ml-4 sm:ml-8"></span><span class="text-gray-300">/&gt;</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">8</span>
-                    <span class="text-gray-300 ml-2 sm:ml-4"></span><span class="text-gray-300">&lt;/</span><span class="text-yellow-300">div</span><span class="text-gray-300">&gt;</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">9</span>
-                    <span class="text-gray-300">&lt;/</span><span class="text-yellow-300">template</span><span class="text-gray-300">&gt;</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">10</span>
-                </div>
-                
-                <!-- Script Section -->
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">11</span>
-                    <span class="text-gray-300">&lt;</span><span class="text-yellow-300">script</span> <span class="text-blue-400">setup</span><span class="text-gray-300">&gt;</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">12</span>
-                    <span class="text-gray-300 ml-2 sm:ml-4"></span>
-                    <span class="text-purple-400">import</span> <span class="text-gray-300">{ Editor } </span>
-                    <span class="text-purple-400">from</span> <span class="text-green-400">'@editflo/editflo-vue'</span><span class="text-gray-300">;</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">13</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">14</span>
-                    <span class="text-gray-300 ml-2 sm:ml-4"></span>
-                    <span class="text-purple-400">const</span> <span class="text-gray-300">init = {</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">15</span>
-                    <span class="text-gray-300 ml-4 sm:ml-8"></span>
-                    <span class="text-blue-400">height</span><span class="text-gray-300">: </span>
-                    <span class="text-orange-400">500</span><span class="text-gray-300">,</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">16</span>
-                    <span class="text-gray-300 ml-4 sm:ml-8"></span>
-                    <span class="text-blue-400">menubar</span><span class="text-gray-300">: </span>
-                    <span class="text-blue-400">false</span><span class="text-gray-300">,</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">17</span>
-                    <span class="text-gray-300 ml-4 sm:ml-8"></span>
-                    <span class="text-blue-400">plugins</span><span class="text-gray-300">: [</span>
-                </div>
-                <div class="flex flex-wrap">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">18</span>
-                    <span class="text-gray-300 ml-6 sm:ml-12"></span>
-                    <span class="text-green-400">'advlist'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'autolink'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'lists'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'link'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'image'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'charmap'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'preview'</span><span class="text-gray-300">,</span>
-                </div>
-                <div class="flex flex-wrap">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">19</span>
-                    <span class="text-gray-300 ml-6 sm:ml-12"></span>
-                    <span class="text-green-400">'anchor'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'searchreplace'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'visualblocks'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'code'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'fullscreen'</span><span class="text-gray-300">,</span>
-                </div>
-                <div class="flex flex-wrap">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">20</span>
-                    <span class="text-gray-300 ml-6 sm:ml-12"></span>
-                    <span class="text-green-400">'insertdatetime'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'media'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'table'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'code'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'help'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'wordcount'</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">21</span>
-                    <span class="text-gray-300 ml-4 sm:ml-8"></span>
-                    <span class="text-gray-300">],</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">22</span>
-                    <span class="text-gray-300 ml-4 sm:ml-8"></span>
-                    <span class="text-blue-400">toolbar</span><span class="text-gray-300">: </span>
-                    <span class="text-green-400">'undo redo | blocks | '</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">23</span>
-                    <span class="text-gray-300 ml-6 sm:ml-12"></span>
-                    <span class="text-green-400">'bold italic forecolor | alignleft aligncenter '</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">24</span>
-                    <span class="text-gray-300 ml-6 sm:ml-12"></span>
-                    <span class="text-green-400">'alignright alignjustify | bullist numlist outdent indent | '</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">25</span>
-                    <span class="text-gray-300 ml-6 sm:ml-12"></span>
-                    <span class="text-green-400">'removeformat | help'</span><span class="text-gray-300">,</span>
-                </div>
-                <div class="flex flex-wrap">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">26</span>
-                    <span class="text-gray-300 ml-4 sm:ml-8"></span>
-                    <span class="text-blue-400">content_style</span><span class="text-gray-300">: </span>
-                    <span class="text-green-400">'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">27</span>
-                    <span class="text-gray-300 ml-2 sm:ml-4"></span>
-                    <span class="text-gray-300">};</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">28</span>
-                    <span class="text-gray-300">&lt;/</span><span class="text-yellow-300">script</span><span class="text-gray-300">&gt;</span>
-                </div>
-            </div>
-        </div>
-
-        <p class="text-gray-600 text-xs sm:text-sm mt-2 sm:mt-3 flex items-start">
-            <i class="fas fa-lightbulb text-yellow-500 mr-2 mt-0.5"></i>
-            This Vue component will create an application containing a Editflo editor configured with basic features.
-        </p>
-    </div>
-</div>
             <!-- Step 5 -->
             <div class="flex items-start">
                 <div class="bg-blue-100 text-blue-800 rounded-full w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 flex items-center justify-center mr-2 sm:mr-3 mt-0.5 sm:mt-1 flex-shrink-0">

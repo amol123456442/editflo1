@@ -66,215 +66,204 @@
             </div>
 
             <!-- Step 4 -->
+            <!-- Step 4 -->
             <div class="flex items-start">
-                <div class="bg-blue-100 text-blue-800 rounded-full w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 flex items-center justify-center mr-2 sm:mr-3 mt-0.5 sm:mt-1 flex-shrink-0">
-                    <i class="fas fa-file-code text-xs sm:text-sm"></i>
-                </div>
-                <div class="flex-1 min-w-0">
-                    <p class="text-gray-600 text-xs sm:text-sm mt-1 mb-3 sm:mb-5">Using a text editor, open and replace the contents with:</p>
-                    <code class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs sm:text-sm mt-1 sm:mt-2 inline-block font-mono mb-2">npm install @editflo/editflo-react</code>
 
-                    <!-- Responsive Code Block -->
-                    <div class="bg-gray-900 text-gray-100 p-3 sm:p-4 md:p-6 rounded-lg font-mono text-xs sm:text-sm overflow-x-auto border border-gray-700">
-                        <div class="flex items-center justify-between mb-3 sm:mb-4">
-                            <div class="flex items-center space-x-2">
-                                <div class="w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full"></div>
-                                <div class="w-2 h-2 sm:w-3 sm:h-3 bg-yellow-500 rounded-full"></div>
-                                <div class="w-2 h-2 sm:w-3 sm:h-3 bg-green-500 rounded-full"></div>
+                <div class="flex-1 min-w-0 w-full">
+                    <p class="text-gray-600 text-xs sm:text-sm mt-1 mb-2 sm:mb-4">Using a text editor, open and replace the contents with:</p>
+                    <div class="mb-2 overflow-x-auto">
+                        <code class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs sm:text-sm inline-block font-mono whitespace-nowrap">npm install @editflo/editflo-react</code>
+                    </div>
+
+                    <!-- COMPACT CODE BLOCK FOR MOBILE -->
+                    <div class="relative w-full">
+                        <div class="bg-gray-900 text-gray-100 rounded-lg font-mono overflow-x-auto border border-gray-700">
+                            <!-- Code Header -->
+                            <div class="sticky left-0 top-0 bg-gray-800 border-b border-gray-700 px-3 py-2 flex items-center justify-between z-10">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+                                    <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                                    <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                                </div>
+                                <span class="text-gray-400 text-xs">App.jsx</span>
                             </div>
-                            <span class="text-gray-400 text-xs">App.jsx</span>
+
+                            <!-- Code Content - Very compact for mobile -->
+                            <div class="p-2 sm:p-3 text-[10px] sm:text-xs md:text-sm leading-tight">
+                                <!-- Line 1 -->
+                                <div class="flex">
+                                    <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">1</span>
+                                    <span class="text-purple-400">import</span><span class="text-gray-300"> { useRef } from 'react';</span>
+                                </div>
+                                <!-- Line 2 -->
+                                <div class="flex">
+                                    <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">2</span>
+                                    <span class="text-purple-400">import</span><span class="text-gray-300"> { Editor } from '@editflo/editflo-react';</span>
+                                </div>
+                                <!-- Line 3 -->
+                                <div class="flex">
+                                    <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">3</span>
+                                    <span class="text-purple-400">import</span><span class="text-gray-300"> './App.css';</span>
+                                </div>
+                                <!-- Line 4 -->
+                                <div class="flex">
+                                    <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">4</span>
+                                </div>
+                                <!-- Line 5 -->
+                                <div class="flex">
+                                    <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">5</span>
+                                    <span class="text-purple-400">export default function</span><span class="text-yellow-300"> App</span><span class="text-gray-300">() {</span>
+                                </div>
+                                <!-- Line 6 -->
+                                <div class="flex">
+                                    <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">6</span>
+                                    <span class="text-gray-300 ml-2"><span class="text-purple-400">const</span> editorRef = <span class="text-yellow-300">useRef</span>(<span class="text-blue-400">null</span>);</span>
+                                </div>
+                                <!-- Line 7 -->
+                                <div class="flex">
+                                    <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">7</span>
+                                    <span class="text-gray-300 ml-2"><span class="text-purple-400">const</span> log = <span class="text-purple-400">()</span> =&gt; {</span>
+                                </div>
+                                <!-- Line 8 -->
+                                <div class="flex">
+                                    <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">8</span>
+                                    <span class="text-gray-300 ml-4"><span class="text-purple-400">if</span> (editorRef.<span class="text-blue-400">current</span>) {</span>
+                                </div>
+                                <!-- Line 9 -->
+                                <div class="flex">
+                                    <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">9</span>
+                                    <span class="text-gray-300 ml-6"><span class="text-yellow-300">console</span>.<span class="text-yellow-300">log</span>(editorRef.<span class="text-blue-400">current</span>.<span class="text-yellow-300">getContent</span>());</span>
+                                </div>
+                                <!-- Line 10 -->
+                                <div class="flex">
+                                    <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">10</span>
+                                    <span class="text-gray-300 ml-4">}</span>
+                                </div>
+                                <!-- Line 11 -->
+                                <div class="flex">
+                                    <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">11</span>
+                                    <span class="text-gray-300 ml-2">};</span>
+                                </div>
+                                <!-- Line 12 -->
+                                <div class="flex">
+                                    <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">12</span>
+                                </div>
+                                <!-- Line 13 -->
+                                <div class="flex">
+                                    <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">13</span>
+                                    <span class="text-gray-300 ml-2"><span class="text-purple-400">return</span> (</span>
+                                </div>
+                                <!-- Line 14 -->
+                                <div class="flex">
+                                    <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">14</span>
+                                    <span class="text-gray-300 ml-4">&lt;&gt;</span>
+                                </div>
+                                <!-- Line 15 -->
+                                <div class="flex">
+                                    <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">15</span>
+                                    <span class="text-gray-300 ml-6">&lt;<span class="text-yellow-300">Editor</span></span>
+                                </div>
+                                <!-- Line 16 -->
+                                <div class="flex">
+                                    <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">16</span>
+                                    <span class="text-gray-300 ml-8"><span class="text-blue-400">apiKey</span>='no-api-key'</span>
+                                </div>
+                                <!-- Line 17 -->
+                                <div class="flex flex-wrap">
+                                    <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">17</span>
+                                    <span class="text-gray-300 ml-8"><span class="text-blue-400">onInit</span>={<span class="text-gray-300">(<span class="text-blue-400">_evt</span>, <span class="text-blue-400">editor</span>) =&gt; editorRef.<span class="text-blue-400">current</span> = editor }</span>
+                                </div>
+                                <!-- Line 18 -->
+                                <div class="flex flex-wrap">
+                                    <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">18</span>
+                                    <span class="text-gray-300 ml-8"><span class="text-blue-400">initialValue</span>="&lt;p&gt;This is the initial content of the editor.&lt;/p&gt;"</span>
+                                </div>
+                                <!-- Line 19 -->
+                                <div class="flex">
+                                    <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">19</span>
+                                    <span class="text-gray-300 ml-8"><span class="text-blue-400">init</span>={{</span>
+                    </div>
+                    <!-- Line 20 -->
+                    <div class="flex">
+                        <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">20</span>
+                        <span class="text-gray-300 ml-10"><span class="text-blue-400">height</span>: <span class="text-orange-400">500</span>,</span>
+                    </div>
+                    <!-- Line 21 -->
+                    <div class="flex">
+                        <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">21</span>
+                        <span class="text-gray-300 ml-10"><span class="text-blue-400">menubar</span>: <span class="text-blue-400">false</span>,</span>
+                    </div>
+                    <!-- Line 22 -->
+                    <div class="flex">
+                        <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">22</span>
+                        <span class="text-gray-300 ml-10"><span class="text-blue-400">plugins</span>: [</span>
+                    </div>
+                    <!-- Line 23 -->
+                    <div class="flex flex-wrap">
+                        <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">23</span>
+                        <span class="text-gray-300 ml-12">'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',</span>
+                    </div>
+                    <!-- Line 24 -->
+                    <div class="flex flex-wrap">
+                        <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">24</span>
+                        <span class="text-gray-300 ml-12">'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',</span>
+                    </div>
+                    <!-- Line 25 -->
+                    <div class="flex flex-wrap">
+                        <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">25</span>
+                        <span class="text-gray-300 ml-12">'insertdatetime', 'media', 'table', 'code', 'help', 'wordcount'</span>
+                    </div>
+                    <!-- Line 26 -->
+                    <div class="flex">
+                        <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">26</span>
+                        <span class="text-gray-300 ml-10">],</span>
+                    </div>
+                    <!-- Line 27 - Simplified toolbar -->
+                    <div class="flex flex-wrap">
+                        <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">27</span>
+                        <span class="text-gray-300 ml-10"><span class="text-blue-400">toolbar</span>: 'undo redo | blocks | bold italic forecolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',</span>
+                    </div>
+                    <!-- Line 31 -->
+                    <div class="flex flex-wrap">
+                        <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">31</span>
+                        <span class="text-gray-300 ml-10"><span class="text-blue-400">content_style</span>: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'</span>
+                    </div>
+                    <!-- Line 32 -->
+                    <div class="flex">
+                        <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">32</span>
+                        <span class="text-gray-300 ml-8">}}</span>
+                                </div>
+                                <!-- Line 33 -->
+                                <div class="flex">
+                                    <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">33</span>
+                                    <span class="text-gray-300 ml-6">/&gt;</span>
+                                </div>
+                                <!-- Line 34 -->
+                                <div class="flex flex-wrap">
+                                    <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">34</span>
+                                    <span class="text-gray-300 ml-6">&lt;<span class="text-yellow-300">button</span> <span class="text-blue-400">onClick</span>={<span class="text-gray-300">log</span>}&gt;Log editor content&lt;/<span class="text-yellow-300">button</span>&gt;</span>
+                                </div>
+                                <!-- Line 35 -->
+                                <div class="flex">
+                                    <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">35</span>
+                                    <span class="text-gray-300 ml-4">&lt;/&gt;</span>
+                                </div>
+                                <!-- Line 36 -->
+                                <div class="flex">
+                                    <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">36</span>
+                                    <span class="text-gray-300 ml-2">);</span>
+                                </div>
+                                <!-- Line 37 -->
+                                <div class="flex">
+                                    <span class="text-gray-500 w-5 text-right pr-2 select-none shrink-0">37</span>
+                                    <span class="text-gray-300">}</span>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="space-y-1">
-                            <!-- Lines 1-10 -->
-                            <div class="flex">
-                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">1</span>
-                                <span class="text-purple-400">import</span> <span class="text-gray-300">{ useRef }</span> <span class="text-purple-400">from</span> <span class="text-green-400">'react'</span><span class="text-gray-300">;</span>
-                            </div>
-                            <div class="flex">
-                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">2</span>
-                                <span class="text-purple-400">import</span> <span class="text-gray-300">{ Editor }</span> <span class="text-purple-400">from</span> <span class="text-green-400">'@editflo/editflo-react'</span><span class="text-gray-300">;</span>
-                            </div>
-                            <div class="flex">
-                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">3</span>
-                                <span class="text-purple-400">import</span> <span class="text-green-400">'./App.css'</span><span class="text-gray-300">;</span>
-                            </div>
-                            <div class="flex">
-                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">4</span>
-                            </div>
-                            <div class="flex">
-                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">5</span>
-                                <span class="text-purple-400">export default function</span> <span class="text-yellow-300">App</span><span class="text-gray-300">() {</span>
-                            </div>
-                            <div class="flex">
-                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">6</span>
-                                <span class="text-gray-300 ml-2 sm:ml-4"></span><span class="text-purple-400">const</span> <span class="text-gray-300">editorRef = </span><span class="text-yellow-300">useRef</span><span class="text-gray-300">(</span><span class="text-blue-400">null</span><span class="text-gray-300">);</span>
-                            </div>
-                            <div class="flex">
-                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">7</span>
-                                <span class="text-purple-400">const</span> <span class="text-gray-300">log = </span><span class="text-purple-400">()</span> <span class="text-gray-300">=&gt; {</span>
-                            </div>
-                            <div class="flex">
-                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">8</span>
-                                <span class="text-gray-300 ml-4 sm:ml-8"></span><span class="text-purple-400">if</span> <span class="text-gray-300">(editorRef.</span><span class="text-blue-400">current</span><span class="text-gray-300">) {</span>
-                            </div>
-                            <div class="flex">
-                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">9</span>
-                                <span class="text-gray-300 ml-8 sm:ml-12"></span><span class="text-yellow-300">console</span><span class="text-gray-300">.</span><span class="text-yellow-300">log</span><span class="text-gray-300">(editorRef.</span><span class="text-blue-400">current</span><span class="text-gray-300">.</span><span class="text-yellow-300">getContent</span><span class="text-gray-300">());</span>
-                            </div>
-                            <div class="flex">
-                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">10</span>
-                                <span class="text-gray-300 ml-4 sm:ml-8"></span><span class="text-gray-300">}</span>
-                            </div>
-                            <div class="flex">
-                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">11</span>
-                                <span class="text-gray-300 ml-2 sm:ml-4"></span><span class="text-gray-300">};</span>
-                            </div>
-                            <div class="flex">
-                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">12</span>
-                            </div>
-                            <div class="flex">
-                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">13</span>
-                                <span class="text-gray-300 ml-2 sm:ml-4"></span><span class="text-purple-400">return</span> <span class="text-gray-300">(</span>
-                            </div>
-                            <div class="flex">
-                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">14</span>
-                                <span class="text-gray-300 ml-4 sm:ml-8"></span><span class="text-gray-300">&lt;&gt;</span>
-                            </div>
-                            <div class="flex">
-                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">15</span>
-                                <span class="text-gray-300 ml-6 sm:ml-12"></span><span class="text-gray-300">&lt;</span><span class="text-yellow-300">Editor</span>
-                            </div>
-                            <div class="flex">
-                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">16</span>
-                                <span class="text-gray-300 ml-8 sm:ml-16"></span><span class="text-blue-400">apiKey</span><span class="text-gray-300">=</span><span class="text-green-400">'no-api-key'</span>
-                            </div>
-                            <div class="flex flex-wrap">
-                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">17</span>
-                                <span class="text-gray-300 ml-8 sm:ml-16"></span>
-                                <span class="text-blue-400">onInit</span><span class="text-gray-300">=</span><span class="text-purple-400">{</span>
-                                <span class="text-gray-300">(</span><span class="text-blue-400">_evt</span><span class="text-gray-300">, </span><span class="text-blue-400">editor</span><span class="text-gray-300">) =&gt; editorRef.</span><span class="text-blue-400">current</span>
-                                <span class="text-gray-300">= editor }</span>
-                            </div>
-                            <div class="flex">
-                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">18</span>
-                                <span class="text-gray-300 ml-8 sm:ml-16"></span>
-                                <span class="text-blue-400">initialValue</span><span class="text-gray-300">=</span>
-                                <span class="text-green-400">"&lt;p&gt;This is the initial content of the editor.&lt;/p&gt;"</span>
-                            </div>
-                            <div class="flex">
-                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">19</span>
-                                <span class="text-gray-300 ml-8 sm:ml-16"></span>
-                                <span class="text-blue-400">init</span><span class="text-gray-300">=</span><span class="text-purple-400">{{</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">20</span>
-                    <span class="text-gray-300 ml-10 sm:ml-20"></span>
-                    <span class="text-blue-400">height</span><span class="text-gray-300">: </span><span class="text-orange-400">500</span><span class="text-gray-300">,</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">21</span>
-                    <span class="text-gray-300 ml-10 sm:ml-20"></span>
-                    <span class="text-blue-400">menubar</span><span class="text-gray-300">: </span><span class="text-blue-400">false</span><span class="text-gray-300">,</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">22</span>
-                    <span class="text-gray-300 ml-10 sm:ml-20"></span>
-                    <span class="text-blue-400">plugins</span><span class="text-gray-300">: [</span>
-                </div>
-                <div class="flex flex-wrap">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">23</span>
-                    <span class="text-gray-300 ml-12 sm:ml-24"></span>
-                    <span class="text-green-400">'advlist'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'autolink'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'lists'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'link'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'image'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'charmap'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'preview'</span><span class="text-gray-300">,</span>
-                </div>
-                <div class="flex flex-wrap">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">24</span>
-                    <span class="text-gray-300 ml-12 sm:ml-24"></span>
-                    <span class="text-green-400">'anchor'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'searchreplace'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'visualblocks'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'code'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'fullscreen'</span><span class="text-gray-300">,</span>
-                </div>
-                <div class="flex flex-wrap">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">25</span>
-                    <span class="text-gray-300 ml-12 sm:ml-24"></span>
-                    <span class="text-green-400">'insertdatetime'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'media'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'table'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'code'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'help'</span><span class="text-gray-300">, </span>
-                    <span class="text-green-400">'wordcount'</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">26</span>
-                    <span class="text-gray-300 ml-10 sm:ml-20"></span>
-                    <span class="text-gray-300">],</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">27</span>
-                    <span class="text-gray-300 ml-10 sm:ml-20"></span>
-                    <span class="text-blue-400">toolbar</span><span class="text-gray-300">: </span>
-                    <span class="text-green-400">'undo redo | blocks | '</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">28</span>
-                    <span class="text-gray-300 ml-12 sm:ml-24"></span>
-                    <span class="text-green-400">'bold italic forecolor | alignleft aligncenter '</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">29</span>
-                    <span class="text-gray-300 ml-12 sm:ml-24"></span>
-                    <span class="text-green-400">'alignright alignjustify | bullist numlist outdent indent | '</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">30</span>
-                    <span class="text-gray-300 ml-12 sm:ml-24"></span>
-                    <span class="text-green-400">'removeformat | help'</span><span class="text-gray-300">,</span>
-                </div>
-                <div class="flex flex-wrap">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">31</span>
-                    <span class="text-gray-300 ml-10 sm:ml-20"></span>
-                    <span class="text-blue-400">content_style</span><span class="text-gray-300">: </span>
-                    <span class="text-green-400">'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'</span>
-                </div>
-                <div class="flex">
-                    <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">32</span>
-                    <span class="text-gray-300 ml-8 sm:ml-16"></span>
-                    <span class="text-purple-400">}}</span>
-                            </div>
-                            <div class="flex">
-                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">33</span>
-                                <span class="text-gray-300 ml-6 sm:ml-12"></span>
-                                <span class="text-gray-300">/&gt;</span>
-                            </div>
-                            <div class="flex flex-wrap">
-                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">34</span>
-                                <span class="text-gray-300 ml-6 sm:ml-12"></span>
-                                <span class="text-gray-300">&lt;</span><span class="text-yellow-300">button</span>
-                                <span class="text-blue-400">onClick</span><span class="text-gray-300">=</span><span class="text-purple-400">{</span><span class="text-gray-300">log</span><span class="text-purple-400">}</span>
-                                <span class="text-gray-300">&gt;Log editor content&lt;/</span><span class="text-yellow-300">button</span><span class="text-gray-300">&gt;</span>
-                            </div>
-                            <div class="flex">
-                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">35</span>
-                                <span class="text-gray-300 ml-4 sm:ml-8"></span>
-                                <span class="text-gray-300">&lt;/&gt;</span>
-                            </div>
-                            <div class="flex">
-                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">36</span>
-                                <span class="text-gray-300 ml-2 sm:ml-4"></span>
-                                <span class="text-gray-300">);</span>
-                            </div>
-                            <div class="flex">
-                                <span class="text-gray-500 w-6 sm:w-8 text-right pr-2 sm:pr-4 text-xs">37</span>
-                                <span class="text-gray-300">}</span>
-                            </div>
+                        <!-- Scroll indicator for mobile -->
+                        <div class="absolute right-2 bottom-2 bg-gray-800 text-gray-400 text-[8px] px-1 py-0.5 rounded sm:hidden">
+                            ← scroll →
                         </div>
                     </div>
 

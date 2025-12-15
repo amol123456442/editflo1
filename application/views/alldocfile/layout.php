@@ -261,7 +261,7 @@
         </div>
     </header>
 
-    <div class="flex min-h-screen">
+    <div class=" min-h-screen">
         <!-- Left Sidebar - Hidden on Mobile -->
         <nav class="w-64 lg:w-[250px] bg-gray-800 text-white h-screen fixed left-0 overflow-y-auto z-30 border-r border-gray-700 sidebar-transition lg:translate-x-0 -translate-x-full"
             id="leftSidebar">

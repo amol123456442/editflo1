@@ -1,18 +1,18 @@
-<div class="mx-auto min-h-screen">
+<div class="mx-auto min-h-screen px-4">
     <!-- Header Section -->
     <div class="mb-8">
         <h1 class="text-3xl font-bold text-gray-800 mb-2">Premium upgrade promotion</h1>
-   
+
     </div>
 
     <!-- Key Editor Options Section -->
     <div class="bg-white rounded-lg border border-gray-200 p-6 mb-8">
-       
-      
+
+
         <!-- Premium upgrade promotion -->
         <div class="mb-8">
             <h3 class="text-xl font-semibold text-gray-800 mb-4">Premium upgrade promotion</h3>
-            
+
             <!-- Open source promotion -->
             <div class="mb-6">
                 <h4 class="text-lg font-medium text-gray-800 mb-2">Open source promotion</h4>

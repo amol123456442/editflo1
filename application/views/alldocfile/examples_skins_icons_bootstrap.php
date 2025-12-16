@@ -1,4 +1,4 @@
-<div class="mx-auto min-h-screen">
+<div class="mx-auto min-h-screen px-4">
     <!-- Header Section -->
     <div class="mb-8">
         <h1 class="text-3xl font-bold text-gray-800 mb-2">Bootstrap skin demo</h1>
@@ -49,8 +49,9 @@
         <div class="p-6">
             <!-- Editflo Tab (Main Preview) -->
             <div id="editflo-tab" class="tab-content">
-                <img ssrc="<?php echo base_url('assets/editorimage2.png'); ?>" class="w-full max-w-4xl mx-auto rounded-lg shadow-sm"
+                <img src="<?php echo base_url('assets/editorimage2.png'); ?>" class="w-full max-w-4xl mx-auto rounded-lg shadow-sm"
                     alt="Editflo Editor Preview">
+
             </div>
             <!-- HTML Tab -->
             <div id="html-tab" class="tab-content hidden">

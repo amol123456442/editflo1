@@ -1,4 +1,4 @@
-<div class="min-h-screen w-full overflow-x-hidden px-3 sm:px-4 md:px-6">
+<div class="min-h-screen w-full overflow-x-hidden px-4 sm:px-4 md:px-6">
     <!-- Header Section -->
     <section class="mb-5 sm:mb-10 md:mb-12 px-3 sm:px-0 w-full">
         <h1 class="text-2xl font-bold text-gray-800 mb-1 pb-2">editflo.util.ImageUploader</h1>

@@ -113,36 +113,38 @@
 
     <p class="p-4">Adding this content to an HTML file and opening it in a web browser will load a EditfloMCE editor,
         such as:</p>
-    <!-- Editor Table with Tabs -->
-    <div class="bg-white rounded-lg shadow-sm border border-border-light overflow-hidden mb-8">
+    <!-- Editor Preview Section -->
+    <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden mb-8">
         <!-- Tabs -->
-        <div class="border-b border-border-light">
+        <div class="border-b border-gray-200">
             <div class="flex">
-                <button class="tab-button py-3 px-6 border-b-2 border-primary text-primary font-medium"
+                <button class="tab-button py-3 px-6 border-b-2 border-blue-600 text-blue-600 font-medium"
                     data-tab="editflo">
                     Editflo
                 </button>
                 <button
-                    class="tab-button py-3 px-6 border-b-2 border-transparent text-text-light hover:text-text-dark font-medium"
+                    class="tab-button py-3 px-6 border-b-2 border-transparent text-gray-500 hover:text-gray-700 font-medium text-sm sm:text-base"
                     data-tab="html">
                     HTML
                 </button>
                 <button
-                    class="tab-button py-3 px-6 border-b-2 border-transparent text-text-light hover:text-text-dark font-medium"
+                    class="tab-button py-3 px-6 border-b-2 border-transparent text-gray-500 hover:text-gray-700 font-medium text-sm sm:text-base"
                     data-tab="js">
                     JS
                 </button>
             </div>
         </div>
-
         <!-- Tab Content -->
         <div class="p-6">
-            <img src="<?= base_url('assets/image.png'); ?>" width="full" height="200" alt="">
-
-
+            <!-- Editflo Tab (Main Preview) -->
+            <div id="editflo-tab" class="tab-content">
+                <!-- Replace with your actual image path or dynamic content -->
+                <img src="<?= base_url('assets/image.png'); ?>" class="w-full max-w-4xl mx-auto rounded-lg shadow-sm"
+                    alt="Editflo Editor Preview">
+            </div>
             <!-- HTML Tab -->
             <div id="html-tab" class="tab-content hidden">
-                <div class="bg-code-bg text-gray-200 p-4 rounded-md font-mono text-sm">
+                <div class="bg-gray-900 text-gray-100 p-6 rounded-lg font-mono text-sm">
                     <span class="text-blue-400">&lt;!DOCTYPE html&gt;</span><br>
                     <span class="text-blue-400">&lt;html&gt;</span><br>
                     <span class="text-blue-400">&lt;head&gt;</span><br>
@@ -157,120 +159,28 @@
                     <span class="text-blue-400">&lt;/html&gt;</span>
                 </div>
             </div>
-
             <!-- JS Tab -->
             <div id="js-tab" class="tab-content hidden">
-                <div class="bg-code-bg text-gray-200 p-4 rounded-md font-mono text-sm">
+                <div class="bg-gray-900 text-gray-100 p-6 rounded-lg font-mono text-sm">
                     <span class="text-green-400">// Initialize Editflo</span><br>
-                    <span class="text-purple-400">Editflo</span>.<span class="text-yellow-400">init</span>({<br>
-                    &nbsp;&nbsp;<span class="text-blue-400">selector</span>: <span
-                        class="text-green-400">'#myTextarea'</span>,<br>
-                    &nbsp;&nbsp;<span class="text-blue-400">plugins</span>: <span class="text-green-400">'advlist
-                        autolink lists link image charmap print preview anchor'</span>,<br>
-                    &nbsp;&nbsp;<span class="text-blue-400">toolbar</span>: <span class="text-green-400">'undo redo |
-                        styleselect | bold italic | alignleft aligncenter alignright alignjustify'</span>,<br>
-                    &nbsp;&nbsp;<span class="text-blue-400">height</span>: <span class="text-orange-400">300</span><br>
-                    });
+                    <span class="text-purple-400">editflo</span><span class="text-gray-300">.</span><span
+                        class="text-yellow-300">init</span><span class="text-gray-300">({</span><br>
+                    &nbsp;&nbsp;<span class="text-blue-400">selector</span><span class="text-gray-300">: </span><span
+                        class="text-green-400">'#mytextarea'</span><span class="text-gray-300">,</span><br>
+                    &nbsp;&nbsp;<span class="text-blue-400">license_key</span><span class="text-gray-300">: </span><span
+                        class="text-green-400">'gpl'</span><span class="text-gray-300">,</span><br>
+                    &nbsp;&nbsp;<span class="text-blue-400">height</span><span class="text-gray-300">: </span><span
+                        class="text-orange-400">300</span><br>
+                    <span class="text-gray-300">});</span>
                 </div>
             </div>
         </div>
-        <!-- Update API Key Section -->
-        <div class="bg-white rounded-lg border border-gray-200 p-6 mb-8">
-            <h2 class="text-xl font-semibold text-gray-800 mb-4">Update the "no-api-key" placeholder with your API key
-            </h2>
-            <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-6">
-                To remove the notice:
-            </p>
-
-            <!-- Warning Box -->
-            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
-                <div class="flex items-start">
-                    <div class="flex-shrink-0">
-                        <i class="fas fa-exclamation-triangle text-yellow-500 mt-1"></i>
-                    </div>
-                    <div class="ml-3">
-                        <p class="text-yellow-700 font-medium">Warning</p>
-                        <p class="text-yellow-600 mt-1">This domain is not registered with Editflo Cloud. Please see the
-                            quick start guide or create an account.</p>
-                    </div>
-                </div>
-            </div>
-
-            <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
-                Update the <code class="bg-gray-100 px-1 py-0.5 rounded text-sm">[no-api-key]</code> placeholder in the
-                source script (<code class="bg-gray-100 px-1 py-0.5 rounded text-sm">&lt;script src...&gt;</code>) with
-                your Editflo Cloud API key, which is created when signing up to the Editflo Cloud.
-            </p>
-
-            <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-6">
-                Signing up for a Editflo Cloud API key will also provide a trial of the Premium Plugins.
-            </p>
-        </div>
-
-        <!-- Save Content Section -->
-        <div class="bg-white rounded-lg  p-6 mb-8">
-            <h2 class="text-xl font-semibold text-gray-800 mb-4">Save the content from the editor</h2>
-            <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">
-                To retrieve content from the editor, either process the content with a form handler or use the <code
-                    class="bg-gray-100 px-1 py-0.5 rounded text-sm">getContent</code> API.
-            </p>
-            <p class="text-gray-700">
-                If you use a form handler, once the <code
-                    class="bg-gray-100 px-1 py-0.5 rounded text-sm">&lt;form&gt;</code> is submitted, Editflo 8 will
-                <code class="bg-gray-100 px-1 py-0.5 rounded text-sm">POST</code> the content in the same way as a
-                normal HTML <code class="bg-gray-100 px-1 py-0.5 rounded text-sm">&lt;textarea&gt;</code>, including the
-                HTML elements and inline CSS of the editor content. The hosts form handler can process the submitted
-                content in the same way as content from a regular <code
-                    class="bg-gray-100 px-1 py-0.5 rounded text-sm">&lt;textarea&gt;</code>.
-            </p>
-        </div>
-        <!-- Next Steps Section -->
-        <div class="bg-white border border-gray-200 p-6">
-            <h2 class="text-xl font-semibold text-gray-800 mb-4">Next Steps</h2>
-            <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">For information on:</p>
-
-            <ul class="list-disc list-inside text-gray-700 sm:mb-4 text-sm sm:text-base space-y-2 mb-6">
-                <li>Customizing Editflo, see: <a href="#" class="text-blue-600 hover:text-blue-800 underline">Basic
-                        Setup</a>.</li>
-                <li>The three editor modes, see:
-                    <ul class="list-circle list-inside ml-6 mt-2 space-y-1">
-                        <li><a href="#" class="text-blue-600 hover:text-blue-800 underline">Editflo classic editing
-                                mode</a>.</li>
-                        <li><a href="#" class="text-blue-600 hover:text-blue-800 underline">Editflo inline editing
-                                mode</a>.</li>
-                        <li><a href="#" class="text-blue-600 hover:text-blue-800 underline">Editflo distraction-free
-                                editing mode</a>.</li>
-                    </ul>
-                </li>
-                <li>Adding Editflo plugins, see: <a href="#" class="text-blue-600 hover:text-blue-800 underline">Work
-                        with plugins to extend Editflo</a>.</li>
-                <li>Localizing the Editflo editor, see: <a href="#"
-                        class="text-blue-600 hover:text-blue-800 underline">Localize Editflo</a>.</li>
-                <li>For information on the CSS required to render some Editflo elements outside of the editor, see: <a
-                        href="#" class="text-blue-600 hover:text-blue-800 underline">CSS for rendering Editflo content
-                        outside the editor</a>.</li>
-            </ul>
-            <!-- Code Block for API Key Update -->
-            <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
-                <span class="text-blue-400">&lt;script </span>
-                <span class="text-green-400">src=</span>
-                <span class="text-yellow-300">"https://cdn.Editflo.cloud/1/</span>
-                <span class="text-red-400">YOUR-API-KEY-HERE</span>
-                <span class="text-yellow-300">/Editflomce/8/Editflomce.min.js"</span>
-                <span class="text-green-400"> referrerpolicy=</span>
-                <span class="text-yellow-300">"origin"</span>
-                <span class="text-green-400"> crossorigin=</span>
-                <span class="text-yellow-300">"anonymous"</span>
-                <span class="text-blue-400">&gt;&lt;/script&gt;</span>
-            </div>
-        </div>
-
     </div>
 </div>
 
+<!-- SINGLE, CLEAN SCRIPT TAG -->
 <script>
-    // Tab functionality
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContents = document.querySelectorAll('.tab-content');
 
@@ -278,24 +188,33 @@
             button.addEventListener('click', () => {
                 const tabId = button.getAttribute('data-tab');
 
-                // Remove active class from all buttons
+                // Update button states
                 tabButtons.forEach(btn => {
-                    btn.classList.remove('border-primary', 'text-primary');
-                    btn.classList.add('border-transparent', 'text-text-light');
+                    btn.classList.remove('border-blue-600', 'text-blue-600');
+                    btn.classList.add('border-transparent', 'text-gray-500');
                 });
 
-                // Add active class to clicked button
-                button.classList.add('border-primary', 'text-primary');
-                button.classList.remove('border-transparent', 'text-text-light');
+                // Set active button
+                button.classList.remove('border-transparent', 'text-gray-500');
+                button.classList.add('border-blue-600', 'text-blue-600');
 
                 // Hide all tab contents
                 tabContents.forEach(content => {
                     content.classList.add('hidden');
                 });
 
-                // Show selected tab content
-                document.getElementById(`${tabId}-tab`).classList.remove('hidden');
+                // Show selected tab
+                const targetTab = document.getElementById(`${tabId}-tab`);
+                if (targetTab) {
+                    targetTab.classList.remove('hidden');
+                }
             });
         });
+
+        // Initialize first tab as active
+        const defaultTab = document.querySelector('[data-tab="editflo"]');
+        if (defaultTab) {
+            defaultTab.click();
+        }
     });
 </script>

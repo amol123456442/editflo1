@@ -1,4 +1,4 @@
-<div class="mx-auto min-h-screen">
+<div class="mx-auto min-h-screen px-4">
     <!-- Header Section -->
     <div class="mb-8">
         <h1 class="text-3xl font-bold text-gray-800 mb-2">Outside skin demo

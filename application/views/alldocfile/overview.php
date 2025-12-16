@@ -4,7 +4,7 @@
         <div class="bg-white rounded-lg shadow-sm border border-border-light p-6">
             <h2 class="text-2xl font-semibold text-text-dark mb-4 pb-2 border-b-2 border-primary">Getting Started
                 with Editflo</h2>
-            <p class="mb-4 text-gray-700">
+            <p class="mb-4 text-gray-700 text-sm sm:text-base">
                 Editflo is a rich text editor designed for web applications. To install Editflo, include the
                 required script and initialize the editor with a minimal configuration. Upon registration, an API
                 key is provided along with a corresponding code snippet for integration.
@@ -74,7 +74,7 @@
                     </div>
 
                     <!-- HTML Tab -->
-                    <div id="html-tab" class="tab-content hidden">
+                    <div id="html-tab" class="bg-gray-900 text-gray-100 p-6 rounded-lg font-mono text-sm tab-content hidden">
                         <div class="bg-code-bg text-gray-200 p-4 rounded-md font-mono text-sm">
                             <span class="text-blue-400">&lt;!DOCTYPE html&gt;</span><br>
                             <span class="text-blue-400">&lt;html&gt;</span><br>
@@ -93,7 +93,7 @@
                     </div>
 
                     <!-- JS Tab -->
-                    <div id="js-tab" class="tab-content hidden">
+                    <div id="js-tab" class="bg-gray-900 text-gray-100 p-6 rounded-lg font-mono text-sm tab-content hidden">
                         <div class="bg-code-bg text-gray-200 p-4 rounded-md font-mono text-sm">
                             <span class="text-green-400">// Initialize Editflo</span><br>
                             <span class="text-purple-400">Editflo</span>.<span
@@ -118,7 +118,7 @@
                     <h2 class="text-xl font-semibold text-gray-800 mb-4">Update the "no-api-key" placeholder with
                         your API key
                     </h2>
-                    <p class="text-gray-700 mb-6">
+                    <p class="text-gray-700 text-sm sm:text-base mb-6">
                         To remove the notice:
                     </p>
 
@@ -137,7 +137,7 @@
                         </div>
                     </div>
 
-                    <p class="text-gray-700 mb-4">
+                    <p class="text-gray-700 text-sm sm:text-base mb-4">
                         Update the <code class="bg-gray-100 px-1 py-0.5 rounded text-sm">[no-api-key]</code>
                         placeholder in the
                         source script (<code
@@ -145,7 +145,7 @@
                         your Editflo Cloud API key, which is created when signing up to the Editflo Cloud.
                     </p>
 
-                    <p class="text-gray-700 mb-6">
+                    <p class="text-gray-700 text-sm sm:text-base mb-6">
                         Signing up for a Editflo Cloud API key will also provide a trial of the Premium Plugins.
                     </p>
                 </div>
@@ -153,11 +153,11 @@
                 <!-- Save Content Section -->
                 <div class="bg-white rounded-lg  p-6 mb-8">
                     <h2 class="text-xl font-semibold text-gray-800 mb-4">Save the content from the editor</h2>
-                    <p class="text-gray-700 mb-4">
+                    <p class="text-gray-700 text-sm sm:text-base mb-4">
                         To retrieve content from the editor, either process the content with a form handler or use
                         the <code class="bg-gray-100 px-1 py-0.5 rounded text-sm">getContent</code> API.
                     </p>
-                    <p class="text-gray-700">
+                    <p class="text-gray-700 text-sm sm:text-base">
                         If you use a form handler, once the <code
                             class="bg-gray-100 px-1 py-0.5 rounded text-sm">&lt;form&gt;</code> is submitted,
                         Editflo 8 will
@@ -174,9 +174,9 @@
                 <!-- Next Steps Section -->
                 <div class="bg-white border border-gray-200 p-6">
                     <h2 class="text-xl font-semibold text-gray-800 mb-4">Next Steps</h2>
-                    <p class="text-gray-700 mb-4">For information on:</p>
+                    <p class="text-gray-700 text-sm sm:text-base mb-4">For information on:</p>
 
-                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                    <ul class="list-disc list-inside text-gray-700 text-sm sm:text-base space-y-2 mb-6">
                         <li>Customizing Editflo, see: <a href="#"
                                 class="text-blue-600 hover:text-blue-800 underline">Basic
                                 Setup</a>.</li>
@@ -222,7 +222,7 @@
             <!-- Overview Section -->
             <div class="bg-white rounded-lg shadow-sm border border-border-light p-6 mb-8">
                 <h2 class="text-2xl font-semibold text-text-dark mb-4 pb-2 border-b-2 border-primary">Overview</h2>
-                <p class="mb-4 text-gray-700">
+                <p class="mb-4 text-gray-700 text-sm sm:text-base">
                     Editflo generates HTML5 output and supports various content elements including lists, tables,
                     and other formatting options. The editor's functionality can be extended through plugins and
                     customizations, or restricted to meet specific requirements. The user interface can be
@@ -235,7 +235,7 @@
             <div class="bg-white rounded-lg shadow-sm border border-border-light p-6 mb-8">
                 <h2 class="text-2xl font-semibold text-text-dark mb-4 pb-2 border-b-2 border-primary">Integration
                     Options</h2>
-                <p class="mb-4 text-gray-700">
+                <p class="mb-4 text-gray-700 text-sm sm:text-base">
                     Editflo integrates with frameworks and Content Management Systems (CMS) through multiple
                     deployment methods:
                 </p>

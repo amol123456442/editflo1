@@ -285,11 +285,11 @@
                                 class="flex items-center justify-between w-full px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'getting-started' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                 onclick="toggleDropdown('getting-started-dropdown'); if(window.innerWidth < 1024) closeMobileSidebar();">
                                 <div class="flex items-center flex-1 ml-2">
-                                    <i class="fas fa-rocket mr-4 w-4 text-center"></i> <!-- mr-3 से mr-4 कर दिया -->
+                                    <i class="fas fa-rocket mr-4 w-4 text-center"></i>
                                     <span class="font-medium text-sm">Getting started</span>
                                 </div>
                                 <i class="fas fa-chevron-down text-xs transition-transform duration-300 ml-5 <?php echo $active_page == 'getting-started' ? 'rotate-180' : ''; ?>"
-                                    id="getting-started-arrow"></i> <!-- mr-1 add किया arrow के लिए -->
+                                    id="getting-started-arrow"></i>
                             </button>
                         </div>
 
@@ -1672,8 +1672,8 @@
                     <?php endif; ?>
                 </div>
             </div>
-            <!-- Mobile Breadcrumb - सिर्फ Mobile पर दिखेगा (Desktop पर 100% hidden) -->
-            <div class="lg:hidden px-4 max-w-4xl mx-auto">
+
+            <div class="lg:hidden px-4 max-w-4xl mx-auto mt-2">
                 <div class="text-sm text-gray-600 truncate">
                     <a href="<?php echo base_url('documentation'); ?>" class="text-blue-500 hover:text-blue-700">
                         Docs
@@ -1926,8 +1926,7 @@
                                 $view_file .= 'editflo_0_1_additions';
                             }
                         }
-                    } // API Reference (NEW - अलग सेट करें)
-                    elseif ($active_page == 'api-reference') {
+                    } elseif ($active_page == 'api-reference') {
                         if ($active_section == 'editflo') {
                             if ($active_subsection == '') {
                                 $view_file .= 'editflo_api_reference';

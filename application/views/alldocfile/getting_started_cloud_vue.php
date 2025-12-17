@@ -4,8 +4,8 @@
         <div class="flex items-center mb-3 sm:mb-4 md:mb-5">
             <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">Using Editflo from the Editflo Cloud CDN with the Vue.js framework</h2>
         </div>
-        <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-start">
-            The Official Editflo Vue.js component integrates Editflo into Vue.js projects. This procedure creates a basic Vue.js application containing a Editflo editor.
+        <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 ">
+            The Official Editflo Vue.js component integrates Editflo into Vue.js projects. This procedure creates a basic <a href="https://cli.vuejs.org/guide/creating-a-project.html#vue-create" target="_blank" class="text-blue-500 hover:underline">Vue.js application</a> containing a Editflo editor.
         </p>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-start">
             This procedure uses Vue 3 Composition API. If using Vue 2 or Options API, see Vue 2 documentation.
@@ -22,11 +22,11 @@
         </div>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-center">
             <i class="fab fa-node-js text-green-500 mr-2"></i>
-            <a href="" class="text-blue-500 hover:underline ml-1">Node.js LTS </a>
+            <a href="https://nodejs.org/en" target="_blank" class="text-blue-500 hover:underline">Node.js LTS </a>
         </p>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-center">
             <i class="fab fa-vuejs text-green-500 mr-2"></i>
-            <a href="" class="text-blue-500 hover:underline ml-1">Vue CLI </a>
+            <a href="https://cli.vuejs.org/guide/creating-a-project.html#vue-create" target="_blank" class="text-blue-500 hover:underline ml-1">Vue CLI </a>
         </p>
     </div>
 
@@ -75,7 +75,7 @@
 
             <!-- Step 4 -->
             <div class="flex items-start">
-          
+
                 <div class="flex-1 min-w-0">
                     <p class="text-gray-600 text-xs sm:text-sm mt-1 mb-3 sm:mb-5">Using a text editor, open /path/to/Editflo-vue-demo/src/App.vue and replace the contents with:</p>
 
@@ -286,7 +286,7 @@
             <div class="flex items-center mb-3 sm:mb-4">
                 <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Deploying the application</h3>
             </div>
-            <p class="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4">The application will require further configuration before deployment. For information see: <a href="#" class="text-blue-600 hover:underline">Building for Production</a> or <a href="#" class="text-blue-600 hover:underline">Deploying a Static Site</a>.</p>
+            <p class="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4">The application will require further configuration before deployment. For information see: Building for Production or <a href="https://vuejs.org/guide/best-practices/production-deployment.html" target="_blank" class="text-blue-600 hover:underline">Deploying a Static Site</a>.</p>
 
             <p class="text-gray-800 font-medium text-sm sm:text-base mb-2 sm:mb-3 flex items-center">
                 To deploy to a local HTTP Server:
@@ -413,8 +413,8 @@
                             <div class="ml-2 flex-1 min-w-0">
                                 <p class="text-gray-600 text-xs sm:text-sm">
                                     <span class="font-medium">Vue Application:</span>
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">Vue guide</a> or
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">Vue docs</a>
+                                 
+                                    <a href="https://vuejs.org/guide/introduction.html" target="_blank" class="text-blue-600 hover:underline ml-1">Vue docs</a>
                                 </p>
                             </div>
                         </div>

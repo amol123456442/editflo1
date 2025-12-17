@@ -20,11 +20,11 @@
         </div>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-center">
             <i class="fab fa-node-js text-green-500 mr-2"></i>
-            <a href="" class="text-blue-500 hover:underline ml-1">Node.js LTS </a>
+            <a href="https://nodejs.org/en" target="_blank" class="text-blue-500 hover:underline ml-1">Node.js LTS </a>
         </p>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-center">
             <i class="fab fa-js-square text-yellow-500 mr-2"></i>
-            <a href="" class="text-blue-500 hover:underline ml-1">Web Component CLI </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components" target="_blank" class="text-blue-500 hover:underline ml-1">Web Component CLI </a>
         </p>
     </div>
 
@@ -682,7 +682,7 @@
                 <p class="text-gray-700 mb-4">For information on:</p>
 
                 <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
-                    <li>Customizing Editflo, see: <a href="#" class="text-blue-600 hover:text-blue-800 underline">Basic
+                    <li>Customizing Editflo, see: <a href="<?php echo base_url('documentation/basic-setup'); ?>" class="text-blue-600 hover:text-blue-800 underline">Basic
                             Setup</a>.</li>
                     <li>The three editor modes, see:
                         <ul class="list-circle list-inside ml-6 mt-2 space-y-1">
@@ -737,8 +737,8 @@
                         <p class="text-gray-700 text-sm sm:text-base font-medium mb-1">Editflo Web Component Examples</p>
                         <p class="text-gray-600 text-xs sm:text-sm">
                             For examples of Editflo Web Component integration, see:
-                            <a href="#" class="text-blue-600 hover:underline font-medium">the Editflo-Web Component
-                                storybook</a>
+                            the Editflo-Web Component
+                            storyboo
                         </p>
                     </div>
                 </div>
@@ -763,7 +763,7 @@
                             <div class="ml-2 flex-1 min-w-0">
                                 <p class="text-gray-600 text-xs sm:text-sm">
                                     <span class="font-medium">Editflo Web Component:</span>
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">technical reference</a>
+                                    <a href="<?php echo base_url('documentation/getting-started/installation/cloud/web-componenent-ref'); ?>" class="text-blue-600 hover:underline ml-1">technical reference</a>
                                 </p>
                             </div>
                         </div>
@@ -776,7 +776,7 @@
                             <div class="ml-2 flex-1 min-w-0">
                                 <p class="text-gray-600 text-xs sm:text-sm">
                                     <span class="font-medium">Editflo Setup:</span>
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">Basic configuration</a>
+                                    <a href="<?php echo base_url('documentation/basic-setup'); ?>" class="text-blue-600 hover:underline ml-1">Basic configuration</a>
                                 </p>
                             </div>
                         </div>
@@ -789,8 +789,8 @@
                             <div class="ml-2 flex-1 min-w-0">
                                 <p class="text-gray-600 text-xs sm:text-sm">
                                     <span class="font-medium">Web Component Application:</span>
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">Web Component guide</a> or
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">Web Component docs</a>
+
+                                    <a href="<?php echo base_url('documentation/getting-started/installation/cloud/web-component'); ?>" class="text-blue-600 hover:underline ml-1">Web Component docs</a>
                                 </p>
                             </div>
                         </div>
@@ -803,7 +803,7 @@
 
 <script>
     // Tab functionality
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContents = document.querySelectorAll('.tab-content');
 

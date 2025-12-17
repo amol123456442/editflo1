@@ -21,8 +21,7 @@
         </div>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-center mb-3">
             <i class="fab fa-windows text-blue-500 mr-2"></i>
-            This procedure requires <a href="" class="text-blue-500 hover:underline ml-1">.NET SDK</a> and <a href=""
-                class="text-blue-500 hover:underline ml-1">Node.js</a>.
+            This procedure requires <a href="https://dotnet.microsoft.com/en-us/download" target="_blank" class="text-blue-500 hover:underline mx-1">.NET SDK</a> and <a href="https://nodejs.org/en" target="_blank" class="text-blue-500 hover:underline ml-1">Node.js</a>.
         </p>
     </div>
 
@@ -273,7 +272,7 @@
                 <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Deploying the application</h3>
             </div>
             <p class="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4">The application will require further configuration
-                before deployment. For information see: <a href="#" class="text-blue-600 hover:underline">Publishing
+                before deployment. For information see: <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/" target="_blank" class="text-blue-600 hover:underline">Publishing
                     Blazor Apps</a>.</p>
 
             <p class="text-gray-800 font-medium text-sm sm:text-base mb-2 sm:mb-3 flex items-center">
@@ -346,8 +345,8 @@
                         <p class="text-gray-700 text-sm sm:text-base font-medium mb-1">Editflo Blazor Examples</p>
                         <p class="text-gray-600 text-xs sm:text-sm">
                             For examples of Editflo Blazor integration, see:
-                            <a href="#" class="text-blue-600 hover:underline font-medium">the Editflo-blazor
-                                storybook</a>
+                            the Editflo-blazor
+                            storybook
                         </p>
                     </div>
                 </div>
@@ -372,7 +371,7 @@
                             <div class="ml-2 flex-1 min-w-0">
                                 <p class="text-gray-600 text-xs sm:text-sm">
                                     <span class="font-medium">Editflo Blazor:</span>
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">technical reference</a>
+                                    <a href="<?php echo base_url('documentation/getting-started/installation/cloud/blazor-ref'); ?>" class="text-blue-600 hover:underline ml-1">technical reference</a>
                                 </p>
                             </div>
                         </div>
@@ -385,21 +384,7 @@
                             <div class="ml-2 flex-1 min-w-0">
                                 <p class="text-gray-600 text-xs sm:text-sm">
                                     <span class="font-medium">Editflo Setup:</span>
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">Basic configuration</a>
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Blazor Guide -->
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 mt-0.5">
-                                <i class="fab fa-microsoft text-blue-400 text-xs"></i>
-                            </div>
-                            <div class="ml-2 flex-1 min-w-0">
-                                <p class="text-gray-600 text-xs sm:text-sm">
-                                    <span class="font-medium">Blazor Application:</span>
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">Blazor guide</a> or
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">Blazor docs</a>
+                                    <a href="<?php echo base_url('documentation/basic-setup'); ?>" class="text-blue-600 hover:underline ml-1">Basic configuration</a>
                                 </p>
                             </div>
                         </div>

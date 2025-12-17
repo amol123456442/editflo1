@@ -14,6 +14,7 @@ $route['documentation/getting-started/installation/cloud/react'] = 'documentatio
 $route['documentation/getting-started/installation/cloud/angular'] = 'documentation/getting_started_cloud_angular';
 $route['documentation/getting-started/installation/cloud/vue'] = 'documentation/getting_started_cloud_vue';
 $route['documentation/getting-started/installation/cloud/blazor'] = 'documentation/getting_started_cloud_blazor';
+$route['documentation/getting-started/installation/cloud/blazor-ref'] = 'documentation/getting_started_cloud_blazor_ref';
 $route['documentation/getting-started/installation/cloud/svelte'] = 'documentation/getting_started_cloud_svelte';
 $route['documentation/getting-started/installation/cloud/web-component'] = 'documentation/getting_started_cloud_webcomponent';
 $route['documentation/getting-started/installation/cloud/jquery'] = 'documentation/getting_started_cloud_jquery';
@@ -112,7 +113,7 @@ $route['documentation/getting-started/installation/zip/upgrading'] = 'documentat
 // Examples Routes
 $route['documentation/examples'] = 'documentation/examples';
 $route['documentation/examples/general'] = 'documentation/examples_general';
-$route['documentation/examples/general/basic'] = 'documentation/examples_general_basic';
+$route['documentation/examples/general/basicdocumentation/examples/general/basic'] = 'documentation/examples_general_basic';
 $route['documentation/examples/general/full-featured-open-source'] = 'documentation/examples_general_full_featured_opensource';
 $route['documentation/examples/general/full-featured-premium'] = 'documentation/examples_general_full_featured_premium';
 $route['documentation/examples/general/classic-editor'] = 'documentation/examples_general_classic_editor';
@@ -212,6 +213,7 @@ $route['documentation/api-reference/editflo-util'] = 'documentation/editflo_util
 // Other main sections
 $route['documentation/integration'] = 'documentation/integration';
 $route['documentation/configuration'] = 'documentation/configuration';
+$route['documentation/basic-setup'] = 'documentation/basic_setup';
 // Add these 4 routes with correct controller and method names
 $route['documentation/invalid-api-key'] = 'documentation/invalid_api_key';
 $route['documentation/license-key'] = 'documentation/license_key';

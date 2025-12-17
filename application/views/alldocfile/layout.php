@@ -1706,6 +1706,14 @@
                     // Handle different page structures
                     if ($active_page == 'overview') {
                         $view_file .= 'overview';
+                    } elseif ($active_page == 'documentation') {
+                        if ($active_section == 'editflo-blazor-integration') {
+                            $view_file .= 'editflo_blazor_integration';
+                        } elseif ($active_section == 'basic-setup') {
+                            $view_file .= 'basic_setup';
+                        } else {
+                            $view_file .= 'documentation';
+                        }
                     } elseif ($active_page == 'getting-started') {
                         if ($active_section == 'getting-started') {
                             $view_file .= 'getting_started';
@@ -1726,6 +1734,8 @@
                                 $view_file .= 'getting_started_cloud_vue';
                             } elseif ($active_subsection == 'cloud-blazor') {
                                 $view_file .= 'getting_started_cloud_blazor';
+                            } elseif ($active_subsection == 'cloud-blazor-ref') {
+                                $view_file .= 'getting_started_cloud_blazor_ref';
                             } elseif ($active_subsection == 'cloud-svelte') {
                                 $view_file .= 'getting_started_cloud_svelte';
                             } elseif ($active_subsection == 'cloud-webcomponent') {

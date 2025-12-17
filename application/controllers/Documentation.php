@@ -105,6 +105,15 @@ class Documentation extends CI_Controller
         $this->load->view('alldocfile/layout', $data);
     }
 
+    public function getting_started_cloud_blazor_ref()
+    {
+        $data['page_title'] = 'Blazor Integration  - Editflo Cloud Reference';
+        $data['active_page'] = 'getting-started';
+        $data['active_section'] = 'installation';
+        $data['active_subsection'] = 'cloud-blazor-ref';
+        $this->load->view('alldocfile/layout', $data);
+    }
+
     public function getting_started_cloud_svelte()
     {
         $data['page_title'] = 'Svelte Integration - Editflo Cloud';
@@ -664,6 +673,7 @@ class Documentation extends CI_Controller
         $this->load->view('alldocfile/layout', $data);
     }
 
+
     public function examples_general_basic()
     {
         $data['page_title'] = 'Basic Example - Editflo Documentation';
@@ -679,6 +689,15 @@ class Documentation extends CI_Controller
         $data['active_page'] = 'examples';
         $data['active_section'] = 'general-examples';
         $data['active_subsection'] = 'full-featured-opensource';
+        $this->load->view('alldocfile/layout', $data);
+    }
+    public function basic_setup()
+    {
+        $data['page_title'] = 'Basic Setup - Editflo Documentation';
+        $data['active_page'] = 'documentation';
+        $data['active_section'] = 'basic-setup';
+        $data['active_subsection'] = '';
+
         $this->load->view('alldocfile/layout', $data);
     }
 
@@ -1394,89 +1413,89 @@ class Documentation extends CI_Controller
     }
 
     // Editflo Util
-public function editflo_util()
-{
-    $data['page_title'] = 'Editflo Util - Editflo Documentation';
-    $data['active_page'] = 'api-reference';
-    $data['active_section'] = 'editflo-util';
-    $data['active_subsection'] = '';
-    $data['content_view'] = 'alldocfile/editflo_util';
-    $this->load->view('alldocfile/layout', $data);
-}
+    public function editflo_util()
+    {
+        $data['page_title'] = 'Editflo Util - Editflo Documentation';
+        $data['active_page'] = 'api-reference';
+        $data['active_section'] = 'editflo-util';
+        $data['active_subsection'] = '';
+        $data['content_view'] = 'alldocfile/editflo_util';
+        $this->load->view('alldocfile/layout', $data);
+    }
 
-// Editflo Util Delay
-public function editflo_util_delay()
-{
-    $data['page_title'] = 'Editflo Util Delay - Editflo Documentation';
-    $data['active_page'] = 'api-reference';
-    $data['active_section'] = 'editflo-util';
-    $data['active_subsection'] = 'delay';
-    $data['content_view'] = 'alldocfile/editflo_util_delay';
-    $this->load->view('alldocfile/layout', $data);
-}
+    // Editflo Util Delay
+    public function editflo_util_delay()
+    {
+        $data['page_title'] = 'Editflo Util Delay - Editflo Documentation';
+        $data['active_page'] = 'api-reference';
+        $data['active_section'] = 'editflo-util';
+        $data['active_subsection'] = 'delay';
+        $data['content_view'] = 'alldocfile/editflo_util_delay';
+        $this->load->view('alldocfile/layout', $data);
+    }
 
-// Editflo Util EventDispatcher
-public function editflo_util_event_dispatcher()
-{
-    $data['page_title'] = 'Editflo Util EventDispatcher - Editflo Documentation';
-    $data['active_page'] = 'api-reference';
-    $data['active_section'] = 'editflo-util';
-    $data['active_subsection'] = 'event-dispatcher';
-    $data['content_view'] = 'alldocfile/editflo_util_event_dispatcher';
-    $this->load->view('alldocfile/layout', $data);
-}
+    // Editflo Util EventDispatcher
+    public function editflo_util_event_dispatcher()
+    {
+        $data['page_title'] = 'Editflo Util EventDispatcher - Editflo Documentation';
+        $data['active_page'] = 'api-reference';
+        $data['active_section'] = 'editflo-util';
+        $data['active_subsection'] = 'event-dispatcher';
+        $data['content_view'] = 'alldocfile/editflo_util_event_dispatcher';
+        $this->load->view('alldocfile/layout', $data);
+    }
 
-// Editflo Util 11Sn
-public function editflo_util_i18n()
-{
-    $data['page_title'] = 'Editflo Util I18n - Editflo Documentation';
-    $data['active_page'] = 'api-reference';
-    $data['active_section'] = 'editflo-util';
-    $data['active_subsection'] = 'i18n'; // Changed from 11sn to i18n
-    $data['content_view'] = 'alldocfile/editflo_util_i18n';
-    $this->load->view('alldocfile/layout', $data);
-}
-// Editflo Util ImageUploader
-public function editflo_util_image_uploader()
-{
-    $data['page_title'] = 'Editflo Util ImageUploader - Editflo Documentation';
-    $data['active_page'] = 'api-reference';
-    $data['active_section'] = 'editflo-util';
-    $data['active_subsection'] = 'image-uploader';
-    $data['content_view'] = 'alldocfile/editflo_util_image_uploader';
-    $this->load->view('alldocfile/layout', $data);
-}
+    // Editflo Util 11Sn
+    public function editflo_util_i18n()
+    {
+        $data['page_title'] = 'Editflo Util I18n - Editflo Documentation';
+        $data['active_page'] = 'api-reference';
+        $data['active_section'] = 'editflo-util';
+        $data['active_subsection'] = 'i18n'; // Changed from 11sn to i18n
+        $data['content_view'] = 'alldocfile/editflo_util_i18n';
+        $this->load->view('alldocfile/layout', $data);
+    }
+    // Editflo Util ImageUploader
+    public function editflo_util_image_uploader()
+    {
+        $data['page_title'] = 'Editflo Util ImageUploader - Editflo Documentation';
+        $data['active_page'] = 'api-reference';
+        $data['active_section'] = 'editflo-util';
+        $data['active_subsection'] = 'image-uploader';
+        $data['content_view'] = 'alldocfile/editflo_util_image_uploader';
+        $this->load->view('alldocfile/layout', $data);
+    }
 
-// Editflo Util Observable
-public function editflo_util_observable()
-{
-    $data['page_title'] = 'Editflo Util Observable - Editflo Documentation';
-    $data['active_page'] = 'api-reference';
-    $data['active_section'] = 'editflo-util';
-    $data['active_subsection'] = 'observable';
-    $data['content_view'] = 'alldocfile/editflo_util_observable';
-    $this->load->view('alldocfile/layout', $data);
-}
+    // Editflo Util Observable
+    public function editflo_util_observable()
+    {
+        $data['page_title'] = 'Editflo Util Observable - Editflo Documentation';
+        $data['active_page'] = 'api-reference';
+        $data['active_section'] = 'editflo-util';
+        $data['active_subsection'] = 'observable';
+        $data['content_view'] = 'alldocfile/editflo_util_observable';
+        $this->load->view('alldocfile/layout', $data);
+    }
 
-// Editflo Util Tools
-public function editflo_util_tools()
-{
-    $data['page_title'] = 'Editflo Util Tools - Editflo Documentation';
-    $data['active_page'] = 'api-reference';
-    $data['active_section'] = 'editflo-util';
-    $data['active_subsection'] = 'tools';
-    $data['content_view'] = 'alldocfile/editflo_util_tools';
-    $this->load->view('alldocfile/layout', $data);
-}
+    // Editflo Util Tools
+    public function editflo_util_tools()
+    {
+        $data['page_title'] = 'Editflo Util Tools - Editflo Documentation';
+        $data['active_page'] = 'api-reference';
+        $data['active_section'] = 'editflo-util';
+        $data['active_subsection'] = 'tools';
+        $data['content_view'] = 'alldocfile/editflo_util_tools';
+        $this->load->view('alldocfile/layout', $data);
+    }
 
-// Editflo Util URI
-public function editflo_util_uri()
-{
-    $data['page_title'] = 'Editflo Util URI - Editflo Documentation';
-    $data['active_page'] = 'api-reference';
-    $data['active_section'] = 'editflo-util';
-    $data['active_subsection'] = 'uri';
-    $data['content_view'] = 'alldocfile/editflo_util_uri';
-    $this->load->view('alldocfile/layout', $data);
-}
+    // Editflo Util URI
+    public function editflo_util_uri()
+    {
+        $data['page_title'] = 'Editflo Util URI - Editflo Documentation';
+        $data['active_page'] = 'api-reference';
+        $data['active_section'] = 'editflo-util';
+        $data['active_subsection'] = 'uri';
+        $data['content_view'] = 'alldocfile/editflo_util_uri';
+        $this->load->view('alldocfile/layout', $data);
+    }
 }

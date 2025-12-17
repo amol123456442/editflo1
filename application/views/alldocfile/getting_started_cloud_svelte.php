@@ -4,8 +4,8 @@
         <div class="flex items-center mb-3 sm:mb-4 md:mb-5">
             <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">Using Editflo from the Editflo Cloud CDN with the Svelte framework</h2>
         </div>
-        <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-start">
-            The Official Editflo Svelte component integrates Editflo into Svelte projects. This procedure creates a basic Svelte application containing a Editflo editor.
+        <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 ">
+            The Official Editflo Svelte component integrates Editflo into Svelte projects. This procedure creates a basic <a href="https://svelte.dev/" target="_blank" class="text-blue-600 hover:underline">Svelte application</a> containing a Editflo editor.
         </p>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-start">
             This procedure uses Svelte with Vite. For SvelteKit integration, see SvelteKit documentation.
@@ -22,11 +22,11 @@
         </div>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-center">
             <i class="fab fa-node-js text-green-500 mr-2"></i>
-            <a href="" class="text-blue-500 hover:underline ml-1">Node.js LTS </a> 
+            <a href="https://nodejs.org/en" target="_blank" class="text-blue-500 hover:underline ml-1">Node.js LTS </a> 
         </p>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-center">
             <i class="fab fa-js-square text-yellow-500 mr-2"></i>
-            <a href="" class="text-blue-500 hover:underline ml-1">Svelte CLI </a>
+            <a href="https://svelte.dev/" target="_blank" class="text-blue-500 hover:underline ml-1">Svelte CLI </a>
         </p>
     </div>
 
@@ -425,7 +425,7 @@
                         <p class="text-gray-700 text-sm sm:text-base font-medium mb-1">Editflo Svelte Examples</p>
                         <p class="text-gray-600 text-xs sm:text-sm">
                             For examples of Editflo Svelte integration, see:
-                            <a href="#" class="text-blue-600 hover:underline font-medium">the Editflo-svelte storybook</a>
+                          the Editflo-svelte storybook
                         </p>
                     </div>
                 </div>
@@ -450,7 +450,7 @@
                             <div class="ml-2 flex-1 min-w-0">
                                 <p class="text-gray-600 text-xs sm:text-sm">
                                     <span class="font-medium">Editflo Svelte:</span>
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">technical reference</a>
+                                    <a href="<?php echo base_url('documentation/getting-started/installation/cloud/blazor-ref'); ?>" class="text-blue-600 hover:underline ml-1">technical reference</a>
                                 </p>
                             </div>
                         </div>
@@ -463,7 +463,7 @@
                             <div class="ml-2 flex-1 min-w-0">
                                 <p class="text-gray-600 text-xs sm:text-sm">
                                     <span class="font-medium">Editflo Setup:</span>
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">Basic configuration</a>
+                                    <a href="<?php echo base_url('documentation/basic-setup'); ?>" class="text-blue-600 hover:underline ml-1">Basic configuration</a>
                                 </p>
                             </div>
                         </div>
@@ -476,8 +476,7 @@
                             <div class="ml-2 flex-1 min-w-0">
                                 <p class="text-gray-600 text-xs sm:text-sm">
                                     <span class="font-medium">Svelte Application:</span>
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">Svelte guide</a> or
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">Svelte docs</a>
+                                    <a href="https://svelte.dev/" target="_blank" class="text-blue-600 hover:underline ml-1">Svelte docs</a>
                                 </p>
                             </div>
                         </div>

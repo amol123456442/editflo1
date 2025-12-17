@@ -4,8 +4,8 @@
         <div class="flex items-center mb-3 sm:mb-4 md:mb-5">
             <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">Using Editflo from the Editflo Cloud CDN with the React framework</h2>
         </div>
-        <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-start">
-            The Official Editflo React component integrates Editflo into React projects. This procedure creates a React SWC plugin containing a Editflo editor.
+        <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 ">
+            The Official Editflo React component integrates Editflo into React projects. This procedure creates a <a href="https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react-swc" class="text-blue-500 hover:underline" target="_blank">React SWC plugin</a> containing a Editflo editor.
         </p>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-start">
             For examples of the Editflo integration, visit the Editflo-react storybook.
@@ -20,7 +20,7 @@
         </div>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-center">
             <i class="fab fa-node-js text-green-500 mr-2"></i>
-            This procedure requires <a href="" class="text-blue-500 hover:underline ml-1">Node.js (and npm)</a>.
+            This procedure requires <a href="https://nodejs.org/en" target="_blank" class="text-blue-500 hover:underline ml-1">Node.js (and npm)</a>.
         </p>
     </div>
 
@@ -38,7 +38,7 @@
                 </div>
                 <div class="flex-1 min-w-0">
                     <h3 class="font-medium text-gray-800 text-sm sm:text-base">Create React Project</h3>
-                    <p class="text-gray-600 text-xs sm:text-sm mt-1">Use Vite and React SWC plugin to create a new project.</p>
+                    <p class="text-gray-600 text-xs sm:text-sm mt-1">Use <a href="https://github.com/vitejs/vite" class="text-blue-500 hover:underline" target="_blank">Vite</a> and <a href="https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react-swc" class="text-blue-500 hover:underline mr-1" target="_blank">React SWC plugin</a>to create a new project.</p>
                     <code class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs sm:text-sm mt-1 sm:mt-2 inline-block font-mono">npm create vite@latest editflo-react-demo -- --template react-swc</code>
                 </div>
             </div>
@@ -311,7 +311,7 @@
 
                 <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Deploying the application</h3>
             </div>
-            <p class="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4">The application will require further configuration before deployment. For information see: <a href="#" class="text-blue-600 hover:underline">Building for Production</a> or <a href="#" class="text-blue-600 hover:underline">Deploying a Static Site</a>.</p>
+            <p class="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4">The application will require further configuration before deployment. For information see: <a href="https://vite.dev/guide/build" class="text-blue-600 hover:underline" target="_blank">Building for Production</a> or <a href="https://vite.dev/guide/static-deploy.html" target="_blank" class="text-blue-600 hover:underline">Deploying a Static Site</a>.</p>
 
             <p class="text-gray-800 font-medium text-sm sm:text-base mb-2 sm:mb-3 flex items-center">
                 <!-- <i class="fas fa-upload text-gray-600 mr-2"></i> -->
@@ -439,8 +439,8 @@
                             <div class="ml-2 flex-1 min-w-0">
                                 <p class="text-gray-600 text-xs sm:text-sm">
                                     <span class="font-medium">React Application:</span>
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">React guide</a> or
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">React docs</a>
+                                    <a href="https://react.dev/learn" target="_blank" class="text-blue-600 hover:underline ml-1">React guide</a> or
+                                    <a href="https://react.dev/learn" target="_blank" class="text-blue-600 hover:underline ml-1">React docs</a>
                                 </p>
                             </div>
                         </div>

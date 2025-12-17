@@ -5,9 +5,9 @@
             <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">Using Editflo from the Editflo Cloud CDN
                 with the Angular framework</h2>
         </div>
-        <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-start">
+        <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 ">
             The Official Editflo Angular component integrates Editflo into Angular projects. This procedure creates a
-            basic Angular application containing a Editflo editor.
+            <a href="https://angular.dev/tools/cli/setup-local" target="_blank" class="text-blue-500 hover:underline ml-1">basic Angular application</a> containing a Editflo editor.
         </p>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-start">
             This procedure uses standalone components. If using Angular Modules, see Angular Modules.
@@ -24,7 +24,7 @@
         </div>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-center">
             <i class="fab fa-node-js text-green-500 mr-2"></i>
-            This procedure requires <a href="" class="text-blue-500 hover:underline ml-1">Node.js (and npm)</a>.
+            This procedure requires <a href="https://nodejs.org/en" target="_blank" class="text-blue-500 hover:underline ml-1">Node.js (and npm)</a>.
         </p>
     </div>
 
@@ -43,7 +43,8 @@
                 <div class="flex-1 min-w-0">
                     <h3 class="font-medium text-gray-800 text-sm sm:text-base">Install Angular CLI</h3>
                     <p class="text-gray-600 text-xs sm:text-sm mt-1">On a command line or command prompt, install the
-                        Angular CLI Tool package.</p>
+                        <a href="https://angular.dev/tools/cli" target="_blank" class="text-blue-500 hover:underline">Angular CLI Tool</a> package.
+                    </p>
                     <code
                         class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs sm:text-sm mt-1 sm:mt-2 inline-block font-mono">npm install -g @angular/cli</code>
                 </div>
@@ -443,8 +444,8 @@
                             <div class="ml-2 flex-1 min-w-0">
                                 <p class="text-gray-600 text-xs sm:text-sm">
                                     <span class="font-medium">Angular Application:</span>
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">Angular guide</a> or
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">Angular docs</a>
+                                    <a href="https://angular.dev/guide" target="_blank" class="text-blue-600 hover:underline ml-1">Angular guide</a> or
+                                    <a href="https://angular.dev/reference" target="_blank" class="text-blue-600 hover:underline ml-1">Angular docs</a>
                                 </p>
                             </div>
                         </div>

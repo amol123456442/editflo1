@@ -280,9 +280,9 @@
         </div>
         <!-- Next Steps Section -->
         <div class="bg-white border border-gray-200 p-6">
-            <h2 class="text-xl font-semibold text-gray-800 mb-4">Next Steps</h2>
+            <!-- <h2 class="text-xl font-semibold text-gray-800 mb-4">Next Steps</h2> -->
             <p class="text-gray-700 sm:mb-4 text-sm sm:text-base mb-4">For information on:</p>
-
+<!-- 
             <ul class="list-disc list-inside text-gray-700 sm:mb-4 text-sm sm:text-base space-y-2 mb-6">
                 <li>Customizing Editflo, see: <a href="#" class="text-blue-600 hover:text-blue-800 underline">Basic
                         Setup</a>.</li>
@@ -303,7 +303,7 @@
                 <li>For information on the CSS required to render some Editflo elements outside of the editor, see: <a
                         href="#" class="text-blue-600 hover:text-blue-800 underline">CSS for rendering Editflo content
                         outside the editor</a>.</li>
-            </ul>
+            </ul> -->
             <!-- Code Block for API Key Update -->
             <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
                 <span class="text-blue-400">&lt;script </span>

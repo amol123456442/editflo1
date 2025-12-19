@@ -20,11 +20,11 @@
         </div>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-center">
             <i class="fab fa-js-square text-yellow-500 mr-2"></i>
-            <a href="" class="text-blue-500 hover:underline ml-1">jQuery Library </a>
+            <a href="https://jquery.com/" target="_blank" class="text-blue-500 hover:underline ml-1">jQuery Library </a>
         </p>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-center">
             <i class="fas fa-code text-dark-500 mr-2"></i>
-            <a href="" class="text-blue-500 hover:underline ml-1">Basic HTML/CSS Knowledge </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="text-blue-500 hover:underline ml-1">Basic HTML/CSS Knowledge </a>
         </p>
     </div>
 
@@ -508,15 +508,14 @@
                     <div class="ml-3 flex-1 min-w-0">
                         <p class="text-gray-700 text-sm sm:text-base font-medium mb-1">Editflo jQuery Examples</p>
                         <p class="text-gray-600 text-xs sm:text-sm">
-                            For more jQuery integration examples, see:
-                            <a href="#" class="text-blue-600 hover:underline font-medium">Editflo jQuery
-                                Documentation</a>
+                            For more jQuery integration examples, see: Editflo jQuery
+                            Documentation
                         </p>
                     </div>
                 </div>
 
                 <!-- Second Item -->
-                <div class="bg-blue-50 rounded-lg p-3 sm:p-4">
+                <!-- <div class="bg-blue-50 rounded-lg p-3 sm:p-4">
                     <div class="flex items-start mb-2">
                         <div class="flex-shrink-0 mt-0.5">
                             <i class="fas fa-cogs text-blue-500 text-sm sm:text-base"></i>
@@ -527,7 +526,7 @@
                     </div>
 
                     <div class="space-y-2 sm:space-y-3 ml-8 sm:ml-9">
-                        <!-- API Reference -->
+                
                         <div class="flex items-start">
                             <div class="flex-shrink-0 mt-0.5">
                                 <i class="fas fa-code text-blue-400 text-xs"></i>
@@ -540,7 +539,7 @@
                             </div>
                         </div>
 
-                        <!-- jQuery Plugins -->
+                
                         <div class="flex items-start">
                             <div class="flex-shrink-0 mt-0.5">
                                 <i class="fab fa-js-square text-blue-400 text-xs"></i>
@@ -553,7 +552,7 @@
                             </div>
                         </div>
 
-                        <!-- Configuration -->
+              
                         <div class="flex items-start">
                             <div class="flex-shrink-0 mt-0.5">
                                 <i class="fas fa-tools text-blue-400 text-xs"></i>
@@ -567,7 +566,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>

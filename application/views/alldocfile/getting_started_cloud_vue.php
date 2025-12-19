@@ -362,7 +362,7 @@
                         <p class="text-gray-700 text-sm sm:text-base font-medium mb-1">Editflo Vue Examples</p>
                         <p class="text-gray-600 text-xs sm:text-sm">
                             For examples of Editflo Vue integration, see:
-                            <a href="#" class="text-blue-600 hover:underline font-medium">the Editflo-vue storybook</a>
+                            the Editflo-vue storybook
                         </p>
                     </div>
                 </div>
@@ -387,7 +387,7 @@
                             <div class="ml-2 flex-1 min-w-0">
                                 <p class="text-gray-600 text-xs sm:text-sm">
                                     <span class="font-medium">Editflo Vue:</span>
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">technical reference</a>
+                                    <a href="<?php echo base_url('documentation/getting-started/installation/cloud/blazor-ref'); ?>" class="text-blue-600 hover:underline ml-1">technical reference</a>
                                 </p>
                             </div>
                         </div>
@@ -400,7 +400,7 @@
                             <div class="ml-2 flex-1 min-w-0">
                                 <p class="text-gray-600 text-xs sm:text-sm">
                                     <span class="font-medium">Editflo Setup:</span>
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">Basic configuration</a>
+                                    <a href="<?php echo base_url('documentation/basic-setup'); ?>" class="text-blue-600 hover:underline ml-1">Basic configuration</a>
                                 </p>
                             </div>
                         </div>

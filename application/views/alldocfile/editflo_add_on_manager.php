@@ -156,7 +156,7 @@
                                 <div class="ulist">
                                     <ul class="list-disc pl-5 text-gray-700">
                                         <li class="text-gray-700 text-sm sm:text-base"><code>id (String)</code> - Short name/id for the add-on.</li>
-                                        <li class="text-gray-700 text-sm sm:text-base"><code>addOn (Theme | Plugin)</code> - Theme or plugin to add.</li>
+                                        <li class="text-gray-700 text-sm sm:text-base"><code>addOn (<a href="<?php echo base_url('documentation/api-reference/editflo/theme'); ?>" class="text-blue-500 hover:underline" >Theme</a> | <a href="<?php echo base_url('documentation/api-reference/editflo/plugin'); ?>" class="text-blue-500 hover:underline" >Plugin</a>)</code> - Theme or plugin to add.</li>
                                     </ul>
                                 </div>
                             
@@ -164,8 +164,8 @@
                                     <h4 class="text-lg font-semibold text-gray-800 mt-4">Return value</h4>
                                     <div class="ulist">
                                         <ul class="list-disc pl-5 text-gray-700">
-                                            <li class="text-gray-700 text-sm sm:text-base"><code>Theme</code> - The same theme or plugin instance that got passed in.</li>
-                                            <li class="text-gray-700 text-sm sm:text-base"><code>Plugin</code> - The same theme or plugin instance that got passed in.</li>
+                                            <li class="text-gray-700 text-sm sm:text-base"><code><a href="<?php echo base_url('documentation/api-reference/editflo/theme'); ?>" class="text-blue-500 hover:underline" >Theme</a></code> - The same theme or plugin instance that got passed in.</li>
+                                            <li class="text-gray-700 text-sm sm:text-base"><code><a href="<?php echo base_url('documentation/api-reference/editflo/plugin'); ?>" class="text-blue-500 hover:underline" >Plugin</a></code> - The same theme or plugin instance that got passed in.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -218,8 +218,8 @@
                                 <h4 class="text-lg font-semibold text-gray-800 mb-2">Return value</h4>
                                 <div class="ulist">
                                     <ul class="list-disc pl-5 text-gray-700 text-sm sm:text-base">
-                                        <li><code>Theme</code> - Theme or plugin add-on instance or undefined.</li>
-                                        <li><code>Plugin</code> - Theme or plugin add-on instance or undefined.</li>
+                                        <li><code><a href="<?php echo base_url('documentation/api-reference/editflo/theme'); ?>" class="text-blue-500" >Theme</a></code> - Theme or plugin add-on instance or undefined.</li>
+                                        <li><code><a href="<?php echo base_url('documentation/api-reference/editflo/plugin'); ?>" class="text-blue-500" >Plugin</a></code> - Theme or plugin add-on instance or undefined.</li>
                                     </ul>
                                 </div>
                             </div>

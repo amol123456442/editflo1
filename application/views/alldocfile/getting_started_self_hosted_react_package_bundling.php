@@ -20,8 +20,7 @@
             SWC plugin containing an Editflo editor.
         </p>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-start">
-            For examples of the Editflo integration, visit the <a href="#"
-                class="text-blue-600 hover:underline">editflo-react storybook</a>.
+            For examples of the Editflo integration, visit the editflo-react storybook.
         </p>
     </header>
 
@@ -32,7 +31,7 @@
         </div>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-center">
             <i class="fab fa-node-js text-green-500 mr-2"></i>
-            This procedure requires <a href="#" class="text-blue-500 hover:underline ml-1">Node.js (and npm)</a>.
+            This procedure requires <a href="https://nodejs.org/" target="_blank" class="text-blue-500 hover:underline ml-1">Node.js (and npm)</a>.
         </p>
     </div>
 
@@ -501,8 +500,7 @@
                 <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Deploying the Application</h3>
             </div>
             <p class="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4">The application will require further configuration
-                before deployment. For information see: <a href="#" class="text-blue-600 hover:underline">Building for
-                    Production</a> or <a href="#" class="text-blue-600 hover:underline">Deploying a Static Site</a>.</p>
+                before deployment. For information see: <a href="https://vite.dev/guide/build" class="text-blue-600 hover:underline" target="_blank">Building for Production</a> or <a href="https://vite.dev/guide/static-deploy.html" target="_blank" class="text-blue-600 hover:underline">Deploying a Static Site</a>.</p>
 
             <div class="space-y-2 sm:space-y-3">
                 <div class="flex items-start">
@@ -576,8 +574,7 @@
                     <div class="ml-3 flex-1 min-w-0">
                         <p class="text-gray-700 text-sm sm:text-base font-medium mb-1">Bundling Information</p>
                         <p class="text-gray-600 text-xs sm:text-sm">
-                            For more information on bundling, see: <a href="#"
-                                class="text-blue-600 hover:underline font-medium">Introduction to bundling Editflo</a>
+                            For more information on bundling, see: Introduction to bundling Editflo
                         </p>
                     </div>
                 </div>
@@ -589,8 +586,8 @@
                         <p class="text-gray-700 text-sm sm:text-base font-medium mb-1">Editflo React Examples</p>
                         <p class="text-gray-600 text-xs sm:text-sm">
                             For examples of Editflo React integration, see:
-                            <a href="#" class="text-blue-600 hover:underline font-medium">the editflo-react
-                                storybook</a>
+                        the editflo-react
+                                storybook
                         </p>
                     </div>
                 </div>
@@ -611,7 +608,7 @@
                             <div class="ml-2 flex-1 min-w-0">
                                 <p class="text-gray-600 text-xs sm:text-sm">
                                     <span class="font-medium">Editflo React:</span>
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">technical reference</a>
+                                    <a href="<?php echo base_url('documentation/getting-started/installation/cloud/blazor-ref'); ?>" class="text-blue-600 hover:underline ml-1">technical reference</a>
                                 </p>
                             </div>
                         </div>
@@ -622,7 +619,7 @@
                             <div class="ml-2 flex-1 min-w-0">
                                 <p class="text-gray-600 text-xs sm:text-sm">
                                     <span class="font-medium">Editflo Setup:</span>
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">Basic configuration</a>
+                                    <a href="<?php echo base_url('documentation/basic-setup'); ?>" class="text-blue-600 hover:underline ml-1">Basic configuration</a>
                                 </p>
                             </div>
                         </div>
@@ -633,9 +630,9 @@
                             <div class="ml-2 flex-1 min-w-0">
                                 <p class="text-gray-600 text-xs sm:text-sm">
                                     <span class="font-medium">React Application:</span>
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">Getting Started with Vite</a>
+                                    <a href="https://vite.dev/guide/" class="text-blue-600 hover:underline ml-1">Getting Started with Vite</a>
                                     or
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">React docs</a>
+                                    <a href="https://react.dev/" target="_blank" class="text-blue-600 hover:underline ml-1">React docs</a>
                                 </p>
                             </div>
                         </div>

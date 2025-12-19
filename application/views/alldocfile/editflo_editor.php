@@ -919,7 +919,7 @@
                                 <ul class="list-disc pl-5 text-gray-700 text-sm sm:text-base">
                                     <li><code>id (String)</code> - Unique id for the editor.</li>
                                     <li><code>options (Object)</code> - Options for the editor.</li>
-                                    <li><code>editorManager (EditorManager)</code> - EditorManager instance.</li>
+                                    <li><code><a href="<?php echo base_url('documentation/api-reference/editflo/editor-manager'); ?>" class="text-blue-500">editorManager</a> (EditorManager)</code> - EditorManager instance.</li>
                                 </ul>
                             </div>
                         </div>

@@ -420,8 +420,8 @@
                 <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Deploying the application</h3>
             </div>
             <p class="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4">The application will require further configuration
-                before deployment. For information see: <a href="#" class="text-blue-600 hover:underline">Building for
-                    Production</a> or <a href="#" class="text-blue-600 hover:underline">Deploying a Static Site</a>.</p>
+                before deployment. For information see: Building for
+                Production or Deploying a Static Site.</p>
 
             <p class="text-gray-800 font-medium text-sm sm:text-base mb-2 sm:mb-3 flex items-center">
                 To deploy to a local HTTP Server:
@@ -677,7 +677,7 @@
                 </p>
             </div>
             <!-- Next Steps Section -->
-            <div class="bg-white border border-gray-200 p-6">
+            <!-- <div class="bg-white border border-gray-200 p-6">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">Next Steps</h2>
                 <p class="text-gray-700 mb-4">For information on:</p>
 
@@ -705,7 +705,7 @@
                             outside the editor</a>.
                     </li>
                 </ul>
-                <!-- Code Block for API Key Update -->
+              
                 <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">
                     <span class="text-blue-400">&lt;script </span>
                     <span class="text-green-400">src=</span>
@@ -718,7 +718,7 @@
                     <span class="text-yellow-300">"anonymous"</span>
                     <span class="text-blue-400">&gt;&lt;/script&gt;</span>
                 </div>
-            </div>
+            </div> -->
 
         </div>
         <!-- Next Steps Section -->

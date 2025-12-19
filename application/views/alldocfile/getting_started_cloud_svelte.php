@@ -348,7 +348,7 @@
             <div class="flex items-center mb-3 sm:mb-4">
                 <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Deploying the application</h3>
             </div>
-            <p class="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4">The application will require further configuration before deployment. For information see: <a href="#" class="text-blue-600 hover:underline">Building for Production</a> or <a href="#" class="text-blue-600 hover:underline">Deploying a Static Site</a>.</p>
+            <p class="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4">The application will require further configuration before deployment. For information see: Building for Production or Deploying a Static Site.</p>
 
             <p class="text-gray-800 font-medium text-sm sm:text-base mb-2 sm:mb-3 flex items-center">
                 To deploy to a local HTTP Server:

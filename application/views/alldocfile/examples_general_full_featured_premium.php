@@ -2,7 +2,7 @@
     <!-- Header Section -->
     <div class="mb-8">
         <h1 class="text-3xl font-bold text-gray-800 mb-2">Full featured demo: Including Premium Plugins</h1>
-        <p class="text-lg text-gray-600">This example includes only non-premium plugins. These plugins are also used in the <a href="" class="text-blue-500">premium plugins.</a></p>
+        <p class="text-lg text-gray-600">This example includes only non-premium plugins. These plugins are also used in the premium plugins.</p>
     </div>
     <!-- Introduction Section -->
     <!-- <div class="bg-white rounded-lg border border-gray-200 p-6 mb-8">
@@ -103,11 +103,10 @@
         <div class="space-y-4">
             <!-- Row 1 -->
             <div class="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-6 pb-4 border-b border-gray-200 last:border-0">
-                <div class="sm:w-1/3">
-                    <a href="<?php echo base_url('documentation/plugins/autoresize'); ?>"
-                        class="text-blue-600 hover:text-blue-800 font-medium underline-offset-2 hover:underline transition-colors">
-                        Autoresize
-                    </a>
+                <div class="sm:w-1/3 text-gray-600 ">
+
+                    Autoresize
+
                 </div>
                 <div class="sm:w-2/3 text-gray-600 text-sm sm:text-base">
                     Resizes the editor to fit the content.
@@ -116,11 +115,10 @@
 
             <!-- Row 2 -->
             <div class="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-6 pb-4 border-b border-gray-200 last:border-0">
-                <div class="sm:w-1/3">
-                    <a href="<?php echo base_url('documentation/plugins/code'); ?>"
-                        class="text-blue-600 hover:text-blue-800 font-medium underline-offset-2 hover:underline transition-colors">
-                        Code
-                    </a>
+                <div class="sm:w-1/3 text-gray-600 ">
+
+                    Code
+
                 </div>
                 <div class="sm:w-2/3 text-gray-600 text-sm sm:text-base">
                     Enhanced Code Editor included instead.
@@ -129,11 +127,10 @@
 
             <!-- Row 3 -->
             <div class="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-6 pb-4 border-b border-gray-200 last:border-0">
-                <div class="sm:w-1/3">
-                    <a href="<?php echo base_url('documentation/plugins/image-edit'); ?>"
-                        class="text-blue-600 hover:text-blue-800 font-medium underline-offset-2 hover:underline transition-colors">
-                        Image & Edit Image
-                    </a>
+                <div class="sm:w-1/3 text-gray-600 ">
+
+                    Image & Edit Image
+
                 </div>
                 <div class="sm:w-2/3 text-gray-600 text-sm sm:text-base">
                     Media Optimizer included instead.
@@ -142,11 +139,10 @@
 
             <!-- Row 4 -->
             <div class="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-6 pb-4 border-b border-gray-200 last:border-0">
-                <div class="sm:w-1/3">
-                    <a href="<?php echo base_url('documentation/plugins/editflo-drive'); ?>"
-                        class="text-blue-600 hover:text-blue-800 font-medium underline-offset-2 hover:underline transition-colors">
-                        editflo Drive
-                    </a>
+                <div class="sm:w-1/3 text-gray-600 ">
+
+                    editflo Drive
+
                 </div>
                 <div class="sm:w-2/3 text-gray-600 text-sm sm:text-base">
                     Media Optimizer included instead.

@@ -22,11 +22,11 @@
         </div>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-center">
             <i class="fab fa-php text-purple-500 mr-2"></i>
-            This procedure requires <a href="" class="text-blue-500 hover:underline ml-1">PHP 8.0+ and Composer</a>.
+            This procedure requires <a href="https://www.php.net/" target="_blank" class="text-blue-500 hover:underline ml-1">PHP 8.0+ and Composer</a>.
         </p>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-center mb-4">
             <i class="fab fa-laravel text-red-500 mr-2"></i>
-            <a href="" class="text-blue-500 hover:underline ml-1">Laravel Framework</a> installed on your system.
+            <a href="https://laravel.com/" target="_blank" class="text-blue-500 hover:underline mr-1">Laravel Framework</a> installed on your system.
         </p>
     </div>
 
@@ -499,13 +499,13 @@
                         <p class="text-gray-700 text-sm sm:text-base font-medium mb-1">Laravel Documentation</p>
                         <p class="text-gray-600 text-xs sm:text-sm">
                             For more information on Laravel development, see:
-                            <a href="#" class="text-blue-600 hover:underline font-medium">Laravel Official
+                            <a href="https://laravel.com/docs/" target="_blank" class="text-blue-600 hover:underline font-medium">Laravel Official
                                 Documentation</a>
                         </p>
                     </div>
                 </div>
 
-                <!-- Second Item -->
+<!-- 
                 <div class="bg-blue-50 rounded-lg p-3 sm:p-4">
                     <div class="flex items-start mb-2">
                         <div class="flex-shrink-0 mt-0.5">
@@ -517,7 +517,7 @@
                     </div>
 
                     <div class="space-y-2 sm:space-y-3 ml-8 sm:ml-9">
-                        <!-- Blade Components -->
+
                         <div class="flex items-start">
                             <div class="flex-shrink-0 mt-0.5">
                                 <i class="fas fa-code text-blue-400 text-xs"></i>
@@ -531,7 +531,7 @@
                             </div>
                         </div>
 
-                        <!-- Form Validation -->
+
                         <div class="flex items-start">
                             <div class="flex-shrink-0 mt-0.5">
                                 <i class="fas fa-shield-alt text-blue-400 text-xs"></i>
@@ -544,7 +544,6 @@
                             </div>
                         </div>
 
-                        <!-- Database Integration -->
                         <div class="flex items-start">
                             <div class="flex-shrink-0 mt-0.5">
                                 <i class="fas fa-database text-blue-400 text-xs"></i>
@@ -557,7 +556,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>

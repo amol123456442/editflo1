@@ -19,23 +19,23 @@
         <div class="space-y-2">
             <p class="text-gray-600 text-sm sm:text-base flex items-center">
                 <i class="fab fa-node-js text-green-500 mr-2"></i>
-                Node.js
+              <a href="https://nodejs.org/" target="_blank" class="text-blue-500 hover:underline ml-1">Node.js</a>
             </p>
             <p class="text-gray-600 text-sm sm:text-base flex items-center">
                 <i class="fas fa-cube text-blue-500 mr-2"></i>
-                Yarn
+                <a href="https://yarnpkg.com/" target="_blank" class="text-blue-500 hover:underline ml-1">Yarn</a>
             </p>
             <p class="text-gray-600 text-sm sm:text-base flex items-center">
                 <i class="fas fa-gem text-red-500 mr-2"></i>
-                Ruby
+            <a href="https://ruby-lang.org/" target="_blank" class="text-blue-500 hover:underline ml-1">Ruby</a>
             </p>
             <p class="text-gray-600 text-sm sm:text-base flex items-center">
                 <i class="fas fa-database text-purple-500 mr-2"></i>
-                SQLite 3+
+                <a href="https://sqlite.org/" target="_blank" class="text-blue-500 hover:underline ml-1">SQLite 3+</a>
             </p>
             <p class="text-gray-600 text-sm sm:text-base flex items-center">
                 <i class="fas fa-server text-yellow-500 mr-2"></i>
-                Ruby on Rails
+                <a href="https://rubyonrails.org/" target="_blank" class="text-blue-500 hover:underline ml-1">Ruby on Rails</a>
             </p>
         </div>
     </div>
@@ -615,7 +615,7 @@
                     </div>
                     <div class="ml-3">
                         <h3 class="text-sm font-medium text-yellow-800 flex items-center">
-                            <i class="fas fa-sticky-note mr-1"></i>
+                            
                             Note
                         </h3>
                         <div class="mt-1 text-xs sm:text-sm text-yellow-700">
@@ -643,7 +643,7 @@
                         <p class="text-gray-700 text-sm sm:text-base font-medium mb-1">Rails Documentation</p>
                         <p class="text-gray-600 text-xs sm:text-sm">
                             For more information on Ruby on Rails, see:
-                            <a href="#" class="text-blue-600 hover:underline font-medium">Ruby on Rails Guides</a>
+                            <a href="https://guides.rubyonrails.org/" target="_blank" class="text-blue-600 hover:underline font-medium">Ruby on Rails Guides</a>
                         </p>
                     </div>
                 </div>
@@ -668,7 +668,7 @@
                             <div class="ml-2 flex-1 min-w-0">
                                 <p class="text-gray-600 text-xs sm:text-sm">
                                     <span class="font-medium">Editflo Setup:</span>
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">Basic configuration</a>
+                                    <a href="<?php echo base_url('documentation/basic-setup'); ?>" class="text-blue-600 hover:underline ml-1">Basic configuration</a>
                                 </p>
                             </div>
                         </div>
@@ -681,8 +681,8 @@
                             <div class="ml-2 flex-1 min-w-0">
                                 <p class="text-gray-600 text-xs sm:text-sm">
                                     <span class="font-medium">Rails Application:</span>
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">Rails guide</a> or
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">Rails API documentation</a>
+                                    <a href="https://api.rubyonrails.org/" target="_blank" class="text-blue-600 hover:underline ml-1">Rails API documentation</a>
+                                
                                 </p>
                             </div>
                         </div>

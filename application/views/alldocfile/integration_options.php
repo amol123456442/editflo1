@@ -226,7 +226,7 @@
                     This option adds placeholder content that will be shown when the editor is empty.
                 </p>
                 <p class="text-gray-700 text-sm sm:text-base mb-3">
-                    If the editor is initialized on a textarea element, the placeholder attribute can be used instead.
+                    If the editor is initialized on a textarea element, the placeholder <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex" target="_blank" class="text-blue-500">attribute</a> can be used instead.
                 </p>
                 <p class="text-gray-700 text-sm sm:text-base mb-3 font-medium">Type: String</p>
 
@@ -792,7 +792,7 @@
                 <p class="text-gray-700 text-sm sm:text-base mb-3 font-medium">Type: String</p>
                 <div class="mb-3 p-3 bg-gray-50 rounded">
                     <p class="text-gray-700 text-sm sm:text-base text-sm">
-                        For a list of valid referrer policies (directives), see: MDN Web Docs - Referrer-Policy.
+                        For a list of valid referrer policies (directives), see: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy" target="_blank" class="text-blue-500">MDN Web Docs - Referrer-Policy</a>.
                     </p>
                 </div>
 

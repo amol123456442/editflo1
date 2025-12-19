@@ -37,15 +37,15 @@
         </div>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-center">
             <i class="fab fa-python text-blue-500 mr-2"></i>
-            <a href="" class="text-blue-500 hover:underline ml-1">Django Framework </a>
+            <a href="https://www.djangoproject.com/" target="_blank" class="text-blue-500 hover:underline ml-1">Django Framework </a>
         </p>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-center">
             <i class="fas fa-box text-orange-500 mr-2"></i>
-            <a href="" class="text-blue-500 hover:underline ml-1">django-editflo Package </a>
+            <a href="https://pypi.org/project/django-editflo/" target="_blank" class="text-blue-500 hover:underline ml-1">django-editflo Package </a>
         </p>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-center">
             <i class="fas fa-code text-dark-500 mr-2"></i>
-            <a href="" class="text-blue-500 hover:underline ml-1">Basic Django Knowledge </a>
+            <a href="https://docs.djangoproject.com/en/stable/" target="_blank" class="text-blue-500 hover:underline ml-1">Basic Django Knowledge </a>
         </p>
     </div>
 
@@ -322,7 +322,7 @@
             </p>
             <p class="text-gray-600 text-xs sm:text-sm">
                 For Django framework documentation, visit:
-                <a href="#" class="text-blue-600 hover:underline font-medium">Django Official Documentation</a>
+                <a href="https://docs.djangoproject.com/en/stable/" target="_blank" class="text-blue-600 hover:underline font-medium">Django Official Documentation</a>
             </p>
         </div>
     </div>

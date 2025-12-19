@@ -41,7 +41,7 @@
                     When using this option in Editflo's regular editing mode, the element will be replaced with an iframe that Editflo will perform all operations within. When using this option in Editflo's inline editing mode, the selector can be used on any block element and will edit the content in place instead of replacing the element with an iframe.
                 </p>
                 <p class="text-gray-700 text-sm sm:text-base mb-3">
-                    For more information on the differences between regular and inline editing modes see <a href="#" class="text-blue-600 hover:text-blue-800 underline">Setup inline editing mode</a>.
+                    For more information on the differences between regular and inline editing modes see Setup inline editing mode.
                 </p>
                 <p class="text-gray-700 text-sm sm:text-base mb-3 font-medium">Type: String</p>
 
@@ -118,7 +118,7 @@
             <div class="mb-6">
                 <h4 class="text-lg font-medium text-gray-800 mb-2">Adding save functionality to the editor</h4>
                 <p class="text-gray-700 text-sm sm:text-base mb-3">
-                    editflo can be configured to allow users to save the editor content. For information on configuring the user saving, see: <a href="#" class="text-blue-600 hover:text-blue-800 underline">The Save plugin</a>.
+                    editflo can be configured to allow users to save the editor content. For information on configuring the user saving, see: The Save plugin.
                 </p>
             </div>
 
@@ -126,7 +126,7 @@
             <div class="mb-6">
                 <h4 class="text-lg font-medium text-gray-800 mb-2">Autosaving the editor content</h4>
                 <p class="text-gray-700 text-sm sm:text-base mb-3">
-                    editflo can be configured to automatically save the editor content. For information on configuring the automatic saving, see: <a href="#" class="text-blue-600 hover:text-blue-800 underline">The Autosave plugin</a>.
+                    editflo can be configured to automatically save the editor content. For information on configuring the automatic saving, see: The Autosave plugin.
                 </p>
             </div>
         </div>

@@ -13,10 +13,10 @@
             Bootstrap provides a robust grid system and UI components that work seamlessly with Editflo's rich text
             editing capabilities.
         </p>
-        <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-start">
+        <!-- <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-start">
             For examples of Editflo Bootstrap integration, visit our <a href="#"
                 class=" ms-1 text-blue-500 hover:underline"> demo page</a>.
-        </p>
+        </p> -->
     </header>
 
     <!-- Prerequisites Section -->
@@ -26,11 +26,11 @@
         </div>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-center">
             <i class="fab fa-bootstrap text-purple-500 mr-2"></i>
-            Basic knowledge of <a href="" class="text-blue-500 hover:underline ml-1">Bootstrap framework</a>.
+            Basic knowledge of <a href="https://getbootstrap.com/" target="_blank" class="text-blue-500 hover:underline ml-1">Bootstrap framework</a>.
         </p>
         <p class="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2 flex items-center">
             <i class="fas fa-code text-gray-500 mr-2"></i>
-            Understanding of <a href="" class="text-blue-500 hover:underline ml-1">HTML, CSS and JavaScript</a>.
+            Understanding of <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="text-blue-500 hover:underline ml-1">HTML, CSS and JavaScript</a>.
         </p>
     </div>
 
@@ -374,13 +374,13 @@
                         </p>
                         <p class="text-gray-600 text-xs sm:text-sm">
                             Learn how to integrate Editflo with various Bootstrap components:
-                            <a href="#" class="text-blue-600 hover:underline font-medium">Modals, Forms, and Cards</a>
+                            <a href="" class="text-blue-600 hover:underline font-medium">Modals, Forms, and Cards</a>
                         </p>
                     </div>
                 </div>
 
                 <!-- Second Item -->
-                <div class="bg-blue-50 rounded-lg p-3 sm:p-4">
+                <!-- <div class="bg-blue-50 rounded-lg p-3 sm:p-4">
                     <div class="flex items-start mb-2">
                         <div class="flex-shrink-0 mt-0.5">
                             <i class="fas fa-mobile-alt text-blue-500 text-sm sm:text-base"></i>
@@ -391,7 +391,7 @@
                     </div>
 
                     <div class="space-y-2 sm:space-y-3 ml-8 sm:ml-9">
-                        <!-- Grid System -->
+                     
                         <div class="flex items-start">
                             <div class="flex-shrink-0 mt-0.5">
                                 <i class="fas fa-th text-blue-400 text-xs"></i>
@@ -399,13 +399,13 @@
                             <div class="ml-2 flex-1 min-w-0">
                                 <p class="text-gray-600 text-xs sm:text-sm">
                                     <span class="font-medium">Bootstrap Grid:</span>
-                                    <a href="#" class="text-blue-600 hover:underline ml-1">Using Editflo with responsive
+                                    <a href=" " class="text-blue-600 hover:underline ml-1">Using Editflo with responsive
                                         layouts</a>
                                 </p>
                             </div>
                         </div>
 
-                        <!-- Mobile Optimization -->
+                   
                         <div class="flex items-start">
                             <div class="flex-shrink-0 mt-0.5">
                                 <i class="fas fa-tablet-alt text-blue-400 text-xs"></i>
@@ -419,7 +419,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Third Item -->
                 <div class="flex items-start bg-green-50 rounded-lg p-3 sm:p-4">
@@ -430,7 +430,7 @@
                         <p class="text-gray-700 text-sm sm:text-base font-medium mb-1">Custom Styling</p>
                         <p class="text-gray-600 text-xs sm:text-sm">
                             Match Editflo toolbar with your Bootstrap theme:
-                            <a href="#" class="text-blue-600 hover:underline font-medium">Custom CSS examples</a>
+                            Custom CSS examples
                         </p>
                     </div>
                 </div>

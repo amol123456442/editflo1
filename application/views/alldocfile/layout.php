@@ -6,34 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $page_title; ?></title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fuse.js for search -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
-    <!-- <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'sidebar': '#2d3748',
-                        'sidebar-dark': '#1a202c',
-                        'sidebar-border': '#4a5568',
-                        'sidebar-text': '#a0aec0',
-                        'primary': '#4299e1',
-                        'primary-dark': '#3182ce',
-                        'light-bg': '#f8f9fa',
-                        'content-bg': '#ffffff',
-                        'border-light': '#e2e8f0',
-                        'text-light': '#718096',
-                        'text-dark': '#2d3748',
-                        'code-bg': '#1a202c'
-                    }
-                }
-            }
-        }
-    </script> -->
 
     <style>
         /* Custom Scrollbar */
@@ -100,7 +80,6 @@
             font-size: small;
         }
 
-
         /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
@@ -150,28 +129,77 @@
             border-left-color: #4299e1;
             color: #2b6cb0;
         }
+
+        /* Search Results Styles */
+        .search-results {
+            max-height: 400px;
+            overflow-y: auto;
+            z-index: 9999;
+        }
+
+        .search-results mark {
+            background-color: #fef3c7;
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        .search-results::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .search-results::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .search-results::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+
+        .search-results::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        /* Animation for search results */
+        .search-results {
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 
-<body class="bg-gray-50 ">
+<body class="bg-gray-50">
     <header class="bg-gray-800 text-white sticky top-0 z-50 shadow-lg">
-        <div class="px-2 sm:px-2 lg:px-4 ">
+        <div class="px-2 sm:px-2 lg:px-4">
             <div class="flex items-center justify-between h-16">
                 <div class="flex-shrink-0">
                     <img src="<?= base_url('assets/logo2.png'); ?>" width="160" height="auto" alt="">
                 </div>
                 <div class="flex items-center justify-end space-x-4 lg:space-x-6 flex-1">
                     <!-- Search Bar - Desktop -->
-                    <div class="hidden md:block max-w-md lg:max-w-lg mx-4">
-                        <div class="relative">
+                    <div class="hidden md:block max-w-md lg:max-w-lg mx-4 relative">
+                        <div class="relative" id="desktopSearchContainer">
                             <input type="text" placeholder="Search"
-                                class="w-full bg-white text-gray-300 placeholder-gray-400 rounded-md py-2 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-gray-600 transition-all">
+                                class="w-full bg-white text-gray-800 placeholder-gray-500 rounded-md py-2 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all"
+                                id="desktopSearchInput">
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                <i class="fas fa-search text-gray-400 text-sm"></i>
+                                <i class="fas fa-search text-gray-500 text-sm"></i>
                             </div>
                             <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
-                                <kbd class="text-xs bg-gray-900 text-gray-200 px-2 py-1 rounded border border-gray-700 mr-1">Ctrl</kbd>
-                                <kbd class="text-xs bg-gray-900 text-gray-200 px-2 py-1 rounded border border-gray-700">K</kbd>
+                                <kbd class="text-xs bg-gray-800 text-gray-200 px-2 py-1 rounded border border-gray-300 mr-1">Ctrl</kbd>
+                                <kbd class="text-xs bg-gray-800 text-gray-200 px-2 py-1 rounded border border-gray-300">K</kbd>
                             </div>
                         </div>
                     </div>
@@ -195,8 +223,8 @@
 
                     <!-- Get Free API Key Button - Desktop -->
                     <div class="hidden lg:block">
-                        <button type="button" class="text-white bg-[#3b5998] hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 box-border border border-transparent font-medium leading-5 rounded-base text-sm px-4 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55"><i class="fa-solid fa-key mr-2"></i>
-
+                        <button type="button" class="text-white bg-[#3b5998] hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 box-border border border-transparent font-medium leading-5 rounded-base text-sm px-4 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55">
+                            <i class="fa-solid fa-key mr-2"></i>
                             Get Free API Key
                         </button>
                     </div>
@@ -218,23 +246,25 @@
 
             <!-- Mobile Search Bar -->
             <div class="md:hidden mt-3 hidden" id="mobileSearchBar">
-                <div class="relative">
+                <div class="relative" id="mobileSearchContainer">
                     <input type="text" placeholder="Search"
-                        class="w-full bg-gray-700 text-white placeholder-gray-400 rounded-md py-3 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        class="w-full bg-gray-700 text-white placeholder-gray-400 rounded-md py-3 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        id="mobileSearchInput">
                     <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                         <i class="fas fa-search text-gray-400"></i>
                     </div>
                 </div>
             </div>
 
-            <!-- Mobile Menu - RIGHT SIDE से start होगा -->
+            <!-- Mobile Menu -->
             <div class="lg:hidden hidden" id="mobileMenu">
                 <div class="bg-gray-800 border-t border-gray-700 py-4 px-4">
                     <!-- Search Bar in Mobile Menu -->
                     <div class="mb-4">
-                        <div class="relative">
+                        <div class="relative" id="mobileMenuSearchContainer">
                             <input type="text" placeholder="Search"
-                                class="w-full bg-gray-700 text-white placeholder-gray-400 rounded-md py-3 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                class="w-full bg-gray-700 text-white placeholder-gray-400 rounded-md py-3 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                id="mobileMenuSearchInput">
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <i class="fas fa-search text-gray-400"></i>
                             </div>
@@ -261,7 +291,7 @@
         </div>
     </header>
 
-    <div class=" min-h-screen">
+    <div class="min-h-screen">
         <!-- Left Sidebar - Hidden on Mobile -->
         <nav class="w-64 lg:w-[250px] bg-gray-800 text-white h-screen fixed left-0 overflow-y-auto z-30 border-r border-gray-700 sidebar-transition lg:translate-x-0 -translate-x-full"
             id="leftSidebar">
@@ -274,13 +304,11 @@
                 </button>
             </div>
 
-            <!-- <div class="py-4 flex flex-col h-[calc(100vh-120px)]"> -->
             <div class="py-4 flex flex-col">
-                <div class="flex-1 mb-10 ">
+                <div class="flex-1 mb-10">
                     <!-- Getting Started Dropdown -->
                     <div class="mb-2">
                         <div class="relative">
-                            <!-- 1. Text + Icon (Click = Page Open) -->
                             <button type="button"
                                 class="flex items-center justify-between w-full px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'getting-started' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                 onclick="toggleDropdown('getting-started-dropdown'); if(window.innerWidth < 1024) closeMobileSidebar();">
@@ -314,7 +342,6 @@
 
                                 <div class="mt-1 <?php echo $active_section == 'installation' ? 'block' : 'hidden'; ?>"
                                     id="installation-dropdown">
-
                                     <!-- Cloud Installation Dropdown -->
                                     <div class="mt-1">
                                         <button
@@ -456,7 +483,6 @@
                                                     <a href="<?php echo base_url('documentation/getting-started/installation/self-hosted/react/package-manager-bundling'); ?>"
                                                         class="block pl-20 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'self-hosted-react-package-bundling' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                                         onclick="closeMobileSidebar()">
-                                                        <!-- Using a package manager with bundling -->
                                                         Package Manager + Bundling
                                                     </a>
                                                 </div>
@@ -610,12 +636,9 @@
                                             </a>
 
                                             <!-- Supported Integrations -->
-                                            <div class="block pl-10 pr-6 py-2 text-sm text-gray-400 hover:bg-gray-400 hover:text-white transition-colors <?php echo $active_subsection == 'zip-supported-integrations' ? 'bg-gray-700 text-blue-400' : ''; ?>">Supported Integrations</div>
-                                            <!-- <a href=""
-                                                class="block pl-10 pr-6 py-2 text-sm text-gray-400 hover:bg-gray-400 hover:text-white transition-colors <?php echo $active_subsection == 'zip-supported-integrations' ? 'bg-gray-700 text-blue-400' : ''; ?>"
-                                                onclick="closeMobileSidebar()">
+                                            <div class="block pl-10 pr-6 py-2 text-sm text-gray-400 hover:bg-gray-400 hover:text-white transition-colors <?php echo $active_subsection == 'zip-supported-integrations' ? 'bg-gray-700 text-blue-400' : ''; ?>">
                                                 Supported Integrations
-                                            </a> -->
+                                            </div>
 
                                             <!-- React Dropdown -->
                                             <div class="mt-1">
@@ -795,7 +818,6 @@
                     <!-- Examples Section -->
                     <div class="mb-2">
                         <div class="relative">
-                            <!-- 1. Text + Icon (Click = Page Open) -->
                             <a href="<?php echo base_url('documentation/examples'); ?>"
                                 class="flex items-center justify-between w-full px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'examples' ? 'bg-gray-700 text-blue-400' : ''; ?> pr-12"
                                 onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
@@ -805,7 +827,6 @@
                                 </div>
                             </a>
 
-                            <!-- 2. Arrow Button (Click = Only Dropdown Toggle) -->
                             <button type="button"
                                 class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
                                 onclick="event.stopPropagation(); toggleDropdown('examples-dropdown');">
@@ -819,14 +840,12 @@
                             <!-- General Examples -->
                             <div class="mt-1">
                                 <div class="relative">
-                                    <!-- 1. Text Part - Click = Open Page -->
                                     <a href="<?php echo base_url('documentation/examples/general'); ?>"
                                         class="flex items-center w-full pl-12 pr-16 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_section == 'general-examples' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
                                         <span>General examples</span>
                                     </a>
 
-                                    <!-- 2. Arrow Button - Click = Only Toggle Dropdown -->
                                     <button type="button"
                                         class="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
                                         onclick="event.stopPropagation(); toggleDropdown('general-examples-dropdown');">
@@ -892,22 +911,18 @@
                             <!-- Skins and Icons Examples -->
                             <div class="mt-1">
                                 <div class="relative">
-
-                                    <!-- 1. Text Part - Click = Open Page (Skins & Icons main page) -->
                                     <a href="<?php echo base_url('documentation/examples/skins-and-icons'); ?>"
                                         class="flex items-center w-full pl-12 pr-16 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_section == 'skins-icons-examples' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
                                         <span>Skins and Icons examples</span>
                                     </a>
 
-                                    <!-- 2. Arrow Button - Click = Only Toggle Dropdown (No page navigation) -->
                                     <button type="button"
                                         class="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
                                         onclick="event.stopPropagation(); toggleDropdown('skins-icons-dropdown');">
                                         <i class="fas fa-chevron-down text-xs transition-transform duration-300 <?php echo $active_section == 'skins-icons-examples' ? 'rotate-180' : ''; ?>"
                                             id="skins-icons-arrow"></i>
                                     </button>
-
                                 </div>
 
                                 <div class="mt-1 <?php echo $active_section == 'skins-icons-examples' ? 'block' : 'hidden'; ?>"
@@ -975,7 +990,6 @@
                     <!-- Initial Configuration Section -->
                     <div class="mb-2">
                         <div class="relative">
-                            <!-- 1. Text + Icon (Click = Page Open) -->
                             <a href="<?php echo base_url('documentation/initial-configuration'); ?>"
                                 class="flex items-center justify-between w-full px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'initial-configuration' ? 'bg-gray-700 text-blue-400' : ''; ?> pr-12"
                                 onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
@@ -985,7 +999,6 @@
                                 </div>
                             </a>
 
-                            <!-- 2. Arrow Button (Click = Only Dropdown Toggle) -->
                             <button type="button"
                                 class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
                                 onclick="event.stopPropagation(); toggleDropdown('initial-configuration-dropdown');">
@@ -996,28 +1009,24 @@
 
                         <div class="mt-1 <?php echo $active_page == 'initial-configuration' ? 'block' : 'hidden'; ?>"
                             id="initial-configuration-dropdown">
-                            <!-- Integration options -->
                             <a href="<?php echo base_url('documentation/initial-configuration/integration-options'); ?>"
                                 class="block pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_section == 'integration-options' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                 onclick="closeMobileSidebar()">
                                 Integration options
                             </a>
 
-                            <!-- Size -->
                             <a href="<?php echo base_url('documentation/initial-configuration/size'); ?>"
                                 class="block pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_section == 'size' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                 onclick="closeMobileSidebar()">
                                 Size
                             </a>
 
-                            <!-- Save and submit -->
                             <a href="<?php echo base_url('documentation/initial-configuration/save-submit'); ?>"
                                 class="block pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_section == 'save-submit' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                 onclick="closeMobileSidebar()">
                                 Save and submit
                             </a>
 
-                            <!-- Promotions -->
                             <a href="<?php echo base_url('documentation/initial-configuration/promotions'); ?>"
                                 class="block pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_section == 'promotions' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                 onclick="closeMobileSidebar()">
@@ -1029,18 +1038,15 @@
                     <!-- Security Section -->
                     <div class="mb-2">
                         <div class="relative">
-                            <!-- 1. Clickable area (Text + Icon) - Sirf dropdown open karega -->
                             <div class="flex items-center justify-between w-full px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'security' ? 'bg-gray-700 text-blue-400' : ''; ?> pr-12 cursor-pointer"
                                 onclick="event.stopPropagation(); toggleDropdown('security-dropdown'); if(window.innerWidth < 1024) closeMobileSidebar();">
                                 <div class="flex items-center flex-1">
                                     <i class="fas fa-shield-alt mr-3 w-4 text-center"></i>
                                     <span class="font-medium">Security</span>
                                 </div>
-                                <!-- Arrow ke liye jagah -->
                                 <div class="w-10"></div>
                             </div>
 
-                            <!-- 2. Arrow button - Sirf dropdown toggle -->
                             <button type="button"
                                 class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
                                 onclick="event.stopPropagation(); toggleDropdown('security-dropdown');">
@@ -1051,17 +1057,14 @@
 
                         <div class="mt-1 <?php echo $active_page == 'security' ? 'block' : 'hidden'; ?>"
                             id="security-dropdown">
-                            <!-- Security Guide Link -->
                             <div class="mt-1">
                                 <div class="relative">
-                                    <!-- 1. Text Part - Click = Open Page -->
                                     <a href="<?php echo base_url('documentation/security/guide'); ?>"
                                         class="flex items-center w-full pl-12 pr-16 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_section == 'security-guide' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
                                         <span>Security guide</span>
                                     </a>
 
-                                    <!-- 2. Arrow Button - Click = Only Toggle Dropdown -->
                                     <button type="button"
                                         class="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
                                         onclick="event.stopPropagation(); toggleDropdown('security-guide-dropdown');">
@@ -1070,7 +1073,6 @@
                                     </button>
                                 </div>
 
-                                <!-- Security Guide Dropdown Content -->
                                 <div class="mt-1 <?php echo $active_section == 'security-guide' ? 'block' : 'hidden'; ?>"
                                     id="security-guide-dropdown">
                                     <a href="<?php echo base_url('documentation/security/guide/reporting-issues#reporting-editflo-security-issues'); ?>"
@@ -1095,16 +1097,16 @@
                                     </a>
                                 </div>
 
-                                <!-- Direct Links (outside dropdown) -->
                                 <a href="<?php echo base_url('documentation/security/guide/content-security-policies'); ?>"
                                     class="block pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'content-security-policies' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                     onclick="closeMobileSidebar()">
                                     Content Security Policies
-                                    <a href="<?php echo base_url('documentation/security/guide/cors'); ?>"
-                                        class="block pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'cors' ? 'bg-gray-700 text-blue-400' : ''; ?>"
-                                        onclick="closeMobileSidebar()">
-                                        CORS
-                                    </a>
+                                </a>
+                                <a href="<?php echo base_url('documentation/security/guide/cors'); ?>"
+                                    class="block pl-12 pr-6 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'cors' ? 'bg-gray-700 text-blue-400' : ''; ?>"
+                                    onclick="closeMobileSidebar()">
+                                    CORS
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1112,7 +1114,6 @@
                     <!-- Release Notes Section -->
                     <div class="mb-2">
                         <div class="relative">
-                            <!-- 1. Text + Icon (Click = Page Open) -->
                             <a
                                 class="flex items-center justify-between w-full px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'release-notes' ? 'bg-gray-700 text-blue-400' : ''; ?> pr-12"
                                 onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
@@ -1122,7 +1123,6 @@
                                 </div>
                             </a>
 
-                            <!-- 2. Arrow Button (Click = Only Dropdown Toggle) -->
                             <button type="button"
                                 class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
                                 onclick="event.stopPropagation(); toggleDropdown('release-notes-dropdown');">
@@ -1133,17 +1133,14 @@
 
                         <div class="mt-1 <?php echo $active_page == 'release-notes' ? 'block' : 'hidden'; ?>"
                             id="release-notes-dropdown">
-                            <!-- Release notes for Editflo -->
                             <div class="mt-1">
                                 <div class="relative">
-                                    <!-- 1. Text Part - Click = Open Page -->
                                     <a href="<?php echo base_url('documentation/release-notes/editflo'); ?>"
                                         class="flex items-center w-full pl-12 pr-16 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_section == 'editflo' && !$active_subsection ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
                                         <span>Release notes for Editflo</span>
                                     </a>
 
-                                    <!-- 2. Arrow Button - Click = Only Toggle Dropdown -->
                                     <button type="button"
                                         class="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
                                         onclick="event.stopPropagation(); toggleDropdown('editflo-dropdown');">
@@ -1152,18 +1149,15 @@
                                     </button>
                                 </div>
 
-                                <!-- Editflo Dropdown Content -->
                                 <div class="mt-1 <?php echo $active_section == 'editflo' ? 'block' : 'hidden'; ?>"
                                     id="editflo-dropdown">
                                     <div class="relative">
-                                        <!-- 1. Text Part - Click = Open Page -->
                                         <a href="<?php echo base_url('documentation/release-notes/editflo/0-1'); ?>"
                                             class="flex items-center w-full pl-16 pr-20 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == '0-1' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                             onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
                                             <span>Editflo 0.1</span>
                                         </a>
 
-                                        <!-- 2. Arrow Button - Click = Only Toggle Dropdown -->
                                         <button type="button"
                                             class="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
                                             onclick="event.stopPropagation(); toggleDropdown('editflo-0-1-dropdown');">
@@ -1172,38 +1166,32 @@
                                         </button>
                                     </div>
 
-                                    <!-- Editflo 0.1 Sub-dropdown -->
                                     <div class="mt-1 <?php echo strpos($active_subsection, '0-1-') === 0 || $active_subsection == '0-1' ? 'block' : 'hidden'; ?>"
                                         id="editflo-0-1-dropdown">
-                                        <!-- Editflo 0.1 Overview -->
                                         <a href="<?php echo base_url('documentation/release-notes/editflo/0-1/overview'); ?>"
                                             class="block pl-20 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == '0-1-overview' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                             onclick="closeMobileSidebar()">
                                             Overview
                                         </a>
 
-                                        <!-- Editflo 0.1 New Premium plugins -->
                                         <a href="<?php echo base_url('documentation/release-notes/editflo/0-1/overview#new-premium-plugins'); ?>"
                                             class="block pl-20 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == '0-1-new-premium-plugins' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                             onclick="closeMobileSidebar()">
                                             New Premium plugins
                                         </a>
 
-                                        <!-- Editflo 0.1 Accompanying Premium plugin changes -->
                                         <a href="<?php echo base_url('documentation/release-notes/editflo/0-1/overview#premium-plugin-changes'); ?>"
                                             class="block pl-20 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == '0-1-premium-plugin-changes' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                             onclick="closeMobileSidebar()">
                                             Plugin changes
                                         </a>
 
-                                        <!-- Editflo 0.1 Improvements -->
                                         <a href="<?php echo base_url('documentation/release-notes/editflo/0-1/overview#improvements'); ?>"
                                             class="block pl-20 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == '0-1-improvements' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                             onclick="closeMobileSidebar()">
                                             Improvements
                                         </a>
 
-                                        <!-- Editflo 0.1 Additions -->
                                         <a href="<?php echo base_url('documentation/release-notes/editflo/0-1/overview#additions'); ?>"
                                             class="block pl-20 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == '0-1-additions' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                             onclick="closeMobileSidebar()">
@@ -1214,22 +1202,8 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- Other Main Navigation Items -->
-                    <!-- <a href="<?php echo base_url('documentation/integration'); ?>"
-                        class="flex items-center px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'integration' ? 'bg-gray-700 text-blue-400' : ''; ?>"
-                        onclick="closeMobileSidebar()">
-                        <i class="fas fa-plug mr-3 w-4 text-center"></i>
-                        <span class="font-medium">Integration</span>
-                    </a> -->
-
-                    <!-- <a href="<?php echo base_url('documentation/configuration'); ?>"
-                        class="flex items-center px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'configuration' ? 'bg-gray-700 text-blue-400' : ''; ?>"
-                        onclick="closeMobileSidebar()">
-                        <i class="fas fa-cog mr-3 w-4 text-center"></i>
-                        <span class="font-medium">Configuration</span>
-                    </a> -->
-
-                    <!-- New Items: Invalid API Key -->
                     <a href="<?php echo base_url('documentation/invalid-api-key'); ?>"
                         class="flex items-center px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'invalid-api-key' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                         onclick="closeMobileSidebar()">
@@ -1237,7 +1211,6 @@
                         <span class="font-medium">Invalid API Key</span>
                     </a>
 
-                    <!-- New Items: License Key -->
                     <a href="<?php echo base_url('documentation/license-key'); ?>"
                         class="flex items-center px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'license-key' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                         onclick="closeMobileSidebar()">
@@ -1245,7 +1218,6 @@
                         <span class="font-medium">License Key</span>
                     </a>
 
-                    <!-- New Items: Support -->
                     <a href="<?php echo base_url('documentation/support'); ?>"
                         class="flex items-center px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'support' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                         onclick="closeMobileSidebar()">
@@ -1253,7 +1225,6 @@
                         <span class="font-medium">Support</span>
                     </a>
 
-                    <!-- New Items: Usage-Based Billing -->
                     <a href="<?php echo base_url('documentation/usage-based-billing'); ?>"
                         class="flex items-center px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'usage-based-billing' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                         onclick="closeMobileSidebar()">
@@ -1261,10 +1232,9 @@
                         <span class="font-medium">Usage-Based Billing</span>
                     </a>
 
-                    <!-- API Reference Section (NEW) -->
+                    <!-- API Reference Section -->
                     <div class="mb-10">
                         <div class="relative">
-                            <!-- 1. Text + Icon (Click = Page Open) -->
                             <a href="<?php echo base_url('documentation/api-reference/editflo'); ?>"
                                 class="flex items-center justify-between w-full px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_page == 'api-reference' ? 'bg-gray-700 text-blue-400' : ''; ?> pr-12"
                                 onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
@@ -1274,7 +1244,6 @@
                                 </div>
                             </a>
 
-                            <!-- 2. Arrow Button (Click = Only Dropdown Toggle) -->
                             <button type="button"
                                 class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
                                 onclick="event.stopPropagation(); toggleDropdown('api-reference-dropdown');">
@@ -1285,18 +1254,14 @@
 
                         <div class="mt-1 <?php echo $active_page == 'api-reference' ? 'block' : 'hidden'; ?>"
                             id="api-reference-dropdown">
-                            <!-- Editflo API Reference -->
                             <div class="mt-1">
                                 <div class="relative">
-                                    <!-- 1. Text Part - Click = Open Page -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo'); ?>"
                                         class="flex items-center w-full pl-12 pr-16 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_section == 'editflo' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
-                                        <!-- <span>Editflo API Reference</span> -->
                                         <span>EAR</span>
                                     </a>
 
-                                    <!-- 2. Arrow Button - Click = Only Toggle Dropdown -->
                                     <button type="button"
                                         class="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
                                         onclick="event.stopPropagation(); toggleDropdown('editflo-api-dropdown');">
@@ -1305,136 +1270,116 @@
                                     </button>
                                 </div>
 
-                                <!-- Editflo API Dropdown Content -->
                                 <div class="mt-1 <?php echo $active_section == 'editflo' ? 'block' : 'hidden'; ?>"
                                     id="editflo-api-dropdown">
-                                    <!-- Editflo -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == '' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo
                                     </a>
 
-                                    <!-- editflo.AddOnManager -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo/add-on-manager'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'add-on-manager' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.AddOnManager
                                     </a>
 
-                                    <!-- editflo.Annotator -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo/annotator'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'annotator' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.Annotator
                                     </a>
 
-                                    <!-- editflo.Editor -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo/editor'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'editor' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.Editor
                                     </a>
 
-                                    <!-- editflo.EditorManager -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo/editor-manager'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'editor-manager' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.EditorManager
                                     </a>
 
-                                    <!-- editflo.EditorMode -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo/editor-mode'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'editor-mode' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.EditorMode
                                     </a>
 
-                                    <!-- editflo.EditorOptions -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo/editor-options'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'editor-options' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.EditorOptions
                                     </a>
 
-                                    <!-- editflo.EditorUpload -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo/editor-upload'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'editor-upload' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.EditorUpload
                                     </a>
 
-                                    <!-- editflo.Env -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo/env'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'env' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.Env
                                     </a>
 
-                                    <!-- editflo.Event -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo/event'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'event' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.Event
                                     </a>
 
-                                    <!-- editflo.FakeClipboard -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo/fake-clipboard'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'fake-clipboard' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.FakeClipboard
                                     </a>
 
-                                    <!-- editflo.Formatter -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo/formatter'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'formatter' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.Formatter
                                     </a>
 
-                                    <!-- editflo.NotificationManager -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo/notification-manager'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'notification-manager' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.Notify
                                     </a>
 
-                                    <!-- editflo.Plugin -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo/plugin'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'plugin' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.Plugin
                                     </a>
 
-                                    <!-- editflo.Shortcuts -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo/shortcuts'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'shortcuts' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.Shortcuts
                                     </a>
 
-                                    <!-- editflo.Theme -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo/theme'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'theme' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.Theme
                                     </a>
 
-                                    <!-- editflo.UndoManager -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo/undo-manager'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'undo-manager' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.UndoManager
                                     </a>
 
-                                    <!-- editflo.UserLookup -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo/user-lookup'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'user-lookup' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.UserLookup
                                     </a>
 
-                                    <!-- editflo.WindowManager -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo/window-manager'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'window-manager' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
@@ -1442,17 +1387,14 @@
                                     </a>
                                 </div>
                             </div>
-                            <!-- editflo.editor.ui Section -->
                             <div class="mt-1">
                                 <div class="relative">
-                                    <!-- 1. Text Part - Click = Open Page -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo-editor-ui'); ?>"
                                         class="flex items-center w-full pl-12 pr-16 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_section == 'editflo-editor-ui' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
                                         <span>editflo.editor.ui</span>
                                     </a>
 
-                                    <!-- 2. Arrow Button - Click = Only Toggle Dropdown -->
                                     <button type="button"
                                         class="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
                                         onclick="event.stopPropagation(); toggleDropdown('editflo-editor-ui-dropdown');">
@@ -1461,17 +1403,14 @@
                                     </button>
                                 </div>
 
-                                <!-- editflo.editor.ui Dropdown Content -->
                                 <div class="mt-1 <?php echo $active_section == 'editflo-editor-ui' ? 'block' : 'hidden'; ?>"
                                     id="editflo-editor-ui-dropdown">
-                                    <!-- editflo.editor.ui.Registry -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo-editor-ui/registry'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'registry' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.editor.ui.Registry
                                     </a>
 
-                                    <!-- editflo.editor.ui.Ui -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo-editor-ui/ui'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'ui' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
@@ -1479,17 +1418,14 @@
                                     </a>
                                 </div>
                             </div>
-                            <!-- editflo.html Section -->
                             <div class="mt-1">
                                 <div class="relative">
-                                    <!-- 1. Text Part - Click = Open Page -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo-html'); ?>"
                                         class="flex items-center w-full pl-12 pr-16 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_section == 'editflo-html' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
                                         <span>editflo.html</span>
                                     </a>
 
-                                    <!-- 2. Arrow Button - Click = Only Toggle Dropdown -->
                                     <button type="button"
                                         class="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
                                         onclick="event.stopPropagation(); toggleDropdown('editflo-html-dropdown');">
@@ -1498,52 +1434,44 @@
                                     </button>
                                 </div>
 
-                                <!-- Editflo HTML Dropdown Content -->
                                 <div class="mt-1 <?php echo $active_section == 'editflo-html' ? 'block' : 'hidden'; ?>"
                                     id="editflo-html-dropdown">
-                                    <!-- editflo.html.DomParser -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo-html/domparser'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'domparser' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.html.DomParser
                                     </a>
 
-                                    <!-- editflo.html.Entities -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo-html/entities'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'entities' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.html.Entities
                                     </a>
 
-                                    <!-- editflo.html.Node -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo-html/node'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'node' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.html.Node
                                     </a>
 
-                                    <!-- editflo.html.Schema -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo-html/schema'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'schema' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.html.Schema
                                     </a>
 
-                                    <!-- editflo.html.Serializer -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo-html/serializer'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'serializer' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.html.Serializer
                                     </a>
 
-                                    <!-- editflo.html.Styles -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo-html/styles'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'styles' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.html.Styles
                                     </a>
 
-                                    <!-- editflo.html.Writer -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo-html/writer'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'writer' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
@@ -1552,17 +1480,14 @@
                                 </div>
                             </div>
 
-                            <!-- Editflo Util Section -->
                             <div class="mt-1">
                                 <div class="relative">
-                                    <!-- 1. Text Part - Click = Open Page -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo-util'); ?>"
                                         class="flex items-center w-full pl-12 pr-16 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_section == 'editflo-util' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="if(window.innerWidth < 1024) closeMobileSidebar();">
                                         <span>editflo.util</span>
                                     </a>
 
-                                    <!-- 2. Arrow Button - Click = Only Toggle Dropdown -->
                                     <button type="button"
                                         class="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white z-10"
                                         onclick="event.stopPropagation(); toggleDropdown('editflo-util-dropdown');">
@@ -1571,52 +1496,44 @@
                                     </button>
                                 </div>
 
-                                <!-- Editflo Util Dropdown Content -->
                                 <div class="mt-1 <?php echo $active_section == 'editflo-util' ? 'block' : 'hidden'; ?>"
                                     id="editflo-util-dropdown">
-                                    <!-- editflo.util.Delay -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo-util/delay'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'delay' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.util.Delay
                                     </a>
 
-                                    <!-- editflo.util.EventDispatcher -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo-util/event-dispatcher'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'event-dispatcher' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.util.EventDispatcher
                                     </a>
 
-                                    <!-- editflo.util.11Sn -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo-util/i18n'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'i18n' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.util.I18n
                                     </a>
 
-                                    <!-- editflo.util.ImageUploader -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo-util/image-uploader'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'image-uploader' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.util.ImageUploader
                                     </a>
 
-                                    <!-- editflo.util.Observable -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo-util/observable'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'observable' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.util.Observable
                                     </a>
 
-                                    <!-- editflo.util.Tools -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo-util/tools'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'tools' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
                                         editflo.util.Tools
                                     </a>
 
-                                    <!-- editflo.util.URI -->
                                     <a href="<?php echo base_url('documentation/api-reference/editflo-util/uri'); ?>"
                                         class="block pl-16 pr-6 py-1 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors <?php echo $active_subsection == 'uri' ? 'bg-gray-700 text-blue-400' : ''; ?>"
                                         onclick="closeMobileSidebar()">
@@ -1626,32 +1543,12 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-
-                <!-- Promotional Card in Sidebar Bottom -->
-                <!-- <div class="mt-auto p-4 border-t border-gray-700">
-                    <div class="promo-card p-4 text-white">
-                        <div class="relative z-10">
-                            <div class="flex items-center mb-2">
-                                <i class="fas fa-gem text-yellow-300 mr-2"></i>
-                                <h4 class="font-semibold text-sm">Free 14-Day Trial</h4>
-                            </div>
-                            <p class="text-xs mb-3 opacity-90">Try every feature in our Professional Plan for 14 days
-                                with no commitment.</p>
-                            <button
-                                class="w-full bg-white text-purple-600 hover:bg-gray-100 text-xs font-semibold py-2 px-3 rounded-lg transition-colors">
-                                Start Trial
-                            </button>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </nav>
 
         <!-- Main Content -->
         <main class="flex-1 lg:pl-[235px] lg:pr-[210px] min-h-screen bg-gray-50">
-
             <!-- Top Bar - Hidden on Mobile -->
             <div
                 class="bg-white border-b border-gray-200 px-8 py-4 justify-between items-center sticky top-0 z-20 lg:flex hidden">
@@ -2082,7 +1979,6 @@
                     </button>
                 </div>
 
-
                 <!-- Promotional Section -->
                 <div class="mt-4 promo-card p-3 text-white rounded-lg">
                     <div class="relative z-10">
@@ -2100,7 +1996,6 @@
                         </button>
                     </div>
                 </div>
-
             </div>
         </aside>
     </div>
@@ -2115,7 +2010,6 @@
     <!-- Mobile TOC Panel -->
     <div class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 lg:hidden" id="mobileTOC">
         <div class="p-6 h-full overflow-y-auto">
-            <!-- Enhanced Header -->
             <div class="flex justify-between items-center mb-6 pb-4 border-b border-gray-200">
                 <div class="flex items-center">
                     <i class="fas fa-list-ol text-blue-500 text-xl mr-3"></i>
@@ -2126,12 +2020,1074 @@
                 </button>
             </div>
 
-            <!-- Enhanced TOC Content -->
             <nav class="space-y-1" id="mobilePageToc">
                 <!-- Mobile TOC items -->
             </nav>
         </div>
     </div>
+
+    <!-- Search Index Data -->
+    <!-- Search Index Data -->
+    <script>
+        // Search index data with all routes
+        window.docsSearchIndex = [
+            // Getting Started Section
+            {
+                id: 'getting-started',
+                title: 'Getting Started',
+                url: '<?php echo base_url('documentation/getting-started'); ?>',
+                content: 'Get started with Editflo documentation. Learn about features and capabilities of Editflo rich text editor.',
+                category: 'Getting Started'
+            },
+            {
+                id: 'introduction',
+                title: 'Introduction to Editflo',
+                url: '<?php echo base_url('documentation/getting-started/introduction'); ?>',
+                content: 'Introduction to Editflo. Learn about features and capabilities of Editflo rich text editor.',
+                category: 'Getting Started'
+            },
+            {
+                id: 'installation',
+                title: 'Installation',
+                url: '<?php echo base_url('documentation/getting-started/installation'); ?>',
+                content: 'Installation guide for Editflo. Choose between cloud, self-hosted, or ZIP installation methods.',
+                category: 'Installation'
+            },
+
+            // Cloud Installation Routes
+            {
+                id: 'cloud-installation',
+                title: 'Cloud Installation',
+                url: '<?php echo base_url('documentation/getting-started/installation/cloud'); ?>',
+                content: 'Cloud installation guide for Editflo. Quick start guide for cloud installation.',
+                category: 'Installation'
+            },
+            {
+                id: 'cloud-quick-start',
+                title: 'Cloud Quick Start',
+                url: '<?php echo base_url('documentation/getting-started/installation/cloud/quick-start'); ?>',
+                content: 'Quick start guide for cloud installation of Editflo. Learn how to set up Editflo using cloud services.',
+                category: 'Installation'
+            },
+            {
+                id: 'react-cloud',
+                title: 'React Cloud Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/cloud/react'); ?>',
+                content: 'How to integrate Editflo with React applications using cloud installation. Step by step guide for React developers.',
+                category: 'Integration'
+            },
+            {
+                id: 'angular-cloud',
+                title: 'Angular Cloud Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/cloud/angular'); ?>',
+                content: 'Guide for integrating Editflo with Angular applications using cloud installation. Complete setup instructions.',
+                category: 'Integration'
+            },
+            {
+                id: 'vue-cloud',
+                title: 'Vue.js Cloud Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/cloud/vue'); ?>',
+                content: 'Integrate Editflo with Vue.js applications using cloud installation. Vue 2 and Vue 3 support.',
+                category: 'Integration'
+            },
+            {
+                id: 'blazor-cloud',
+                title: 'Blazor Cloud Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/cloud/blazor'); ?>',
+                content: 'Blazor integration with Editflo cloud installation. Guide for .NET developers.',
+                category: 'Integration'
+            },
+            {
+                id: 'blazor-ref-cloud',
+                title: 'Blazor Reference Cloud',
+                url: '<?php echo base_url('documentation/getting-started/installation/cloud/blazor-ref'); ?>',
+                content: 'Blazor reference documentation for cloud installation. API references and advanced configurations.',
+                category: 'Integration'
+            },
+            {
+                id: 'svelte-cloud',
+                title: 'Svelte Cloud Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/cloud/svelte'); ?>',
+                content: 'Svelte integration with Editflo cloud installation. Modern JavaScript framework support.',
+                category: 'Integration'
+            },
+            {
+                id: 'webcomponent-cloud',
+                title: 'Web Component Cloud Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/cloud/web-component'); ?>',
+                content: 'Web Component integration with Editflo cloud installation. Custom element implementation.',
+                category: 'Integration'
+            },
+            {
+                id: 'jquery-cloud',
+                title: 'jQuery Cloud Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/cloud/jquery'); ?>',
+                content: 'jQuery integration with Editflo cloud installation. Traditional JavaScript library support.',
+                category: 'Integration'
+            },
+            {
+                id: 'django-cloud',
+                title: 'Django Cloud Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/cloud/django'); ?>',
+                content: 'Django backend integration with Editflo cloud installation. Python web framework support.',
+                category: 'Backend'
+            },
+            {
+                id: 'laravel-cloud',
+                title: 'Laravel Cloud Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/cloud/laravel'); ?>',
+                content: 'Laravel backend integration with Editflo cloud installation. PHP web framework support.',
+                category: 'Backend'
+            },
+            {
+                id: 'rails-cloud',
+                title: 'Ruby on Rails Cloud Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/cloud/ruby-on-rails'); ?>',
+                content: 'Ruby on Rails backend integration with Editflo cloud installation. Ruby web framework support.',
+                category: 'Backend'
+            },
+            {
+                id: 'bootstrap-cloud',
+                title: 'Bootstrap Cloud Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/cloud/bootstrap'); ?>',
+                content: 'Bootstrap integration with Editflo cloud installation. CSS framework styling.',
+                category: 'Frontend'
+            },
+
+            // Self-hosted Installation Routes
+            {
+                id: 'self-hosted',
+                title: 'Self-hosted Installation',
+                url: '<?php echo base_url('documentation/getting-started/installation/self-hosted'); ?>',
+                content: 'Self-hosted installation guide for Editflo. Install on your own servers and infrastructure.',
+                category: 'Installation'
+            },
+            {
+                id: 'self-hosted-quick-start',
+                title: 'Self-hosted Quick Start',
+                url: '<?php echo base_url('documentation/getting-started/installation/self-hosted/quick-start'); ?>',
+                content: 'Quick start guide for self-hosted installation of Editflo. Server setup and configuration.',
+                category: 'Installation'
+            },
+            {
+                id: 'self-hosted-integrations',
+                title: 'Self-hosted Supported Integrations',
+                url: '<?php echo base_url('documentation/getting-started/installation/self-hosted/supported-integrations'); ?>',
+                content: 'Supported integrations for self-hosted Editflo installation. Framework compatibility list.',
+                category: 'Installation'
+            },
+            {
+                id: 'self-hosted-react',
+                title: 'Self-hosted React Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/self-hosted/react'); ?>',
+                content: 'React integration for self-hosted Editflo. Package manager and hosting options.',
+                category: 'Integration'
+            },
+            {
+                id: 'self-hosted-react-package-hosting',
+                title: 'Self-hosted React Package Manager on Hosting',
+                url: '<?php echo base_url('documentation/getting-started/installation/self-hosted/react/package-manager-hosting'); ?>',
+                content: 'React package manager installation on hosting for self-hosted Editflo.',
+                category: 'Integration'
+            },
+            {
+                id: 'self-hosted-react-package-bundling',
+                title: 'Self-hosted React Package Manager + Bundling',
+                url: '<?php echo base_url('documentation/getting-started/installation/self-hosted/react/package-manager-bundling'); ?>',
+                content: 'React package manager with bundling for self-hosted Editflo installation.',
+                category: 'Integration'
+            },
+            {
+                id: 'self-hosted-angular',
+                title: 'Self-hosted Angular Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/self-hosted/angular'); ?>',
+                content: 'Angular integration for self-hosted Editflo. Package manager installation guide.',
+                category: 'Integration'
+            },
+            {
+                id: 'self-hosted-angular-package',
+                title: 'Self-hosted Angular Package Manager',
+                url: '<?php echo base_url('documentation/getting-started/installation/self-hosted/angular/package-manager'); ?>',
+                content: 'Angular package manager installation for self-hosted Editflo.',
+                category: 'Integration'
+            },
+            {
+                id: 'self-hosted-vue',
+                title: 'Self-hosted Vue.js Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/self-hosted/vue'); ?>',
+                content: 'Vue.js integration for self-hosted Editflo. Package manager installation.',
+                category: 'Integration'
+            },
+            {
+                id: 'self-hosted-vue-package',
+                title: 'Self-hosted Vue.js Package Manager',
+                url: '<?php echo base_url('documentation/getting-started/installation/self-hosted/vue/package-manager'); ?>',
+                content: 'Vue.js package manager installation for self-hosted Editflo.',
+                category: 'Integration'
+            },
+            {
+                id: 'self-hosted-blazor',
+                title: 'Self-hosted Blazor Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/self-hosted/blazor'); ?>',
+                content: 'Blazor integration for self-hosted Editflo. .NET framework support.',
+                category: 'Integration'
+            },
+            {
+                id: 'self-hosted-blazor-package',
+                title: 'Self-hosted Blazor Package Manager',
+                url: '<?php echo base_url('documentation/getting-started/installation/self-hosted/blazor/package-manager'); ?>',
+                content: 'Blazor package manager installation for self-hosted Editflo.',
+                category: 'Integration'
+            },
+            {
+                id: 'self-hosted-svelte',
+                title: 'Self-hosted Svelte Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/self-hosted/svelte'); ?>',
+                content: 'Svelte integration for self-hosted Editflo. Modern JavaScript framework.',
+                category: 'Integration'
+            },
+            {
+                id: 'self-hosted-svelte-package',
+                title: 'Self-hosted Svelte Package Manager',
+                url: '<?php echo base_url('documentation/getting-started/installation/self-hosted/svelte/package-manager'); ?>',
+                content: 'Svelte package manager installation for self-hosted Editflo.',
+                category: 'Integration'
+            },
+            {
+                id: 'self-hosted-webcomponent',
+                title: 'Self-hosted Web Component Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/self-hosted/web-component'); ?>',
+                content: 'Web Component integration for self-hosted Editflo. Custom elements implementation.',
+                category: 'Integration'
+            },
+            {
+                id: 'self-hosted-webcomponent-package',
+                title: 'Self-hosted Web Component Package Manager',
+                url: '<?php echo base_url('documentation/getting-started/installation/self-hosted/web-component/package-manager'); ?>',
+                content: 'Web Component package manager installation for self-hosted Editflo.',
+                category: 'Integration'
+            },
+            {
+                id: 'self-hosted-jquery',
+                title: 'Self-hosted jQuery Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/self-hosted/jquery'); ?>',
+                content: 'jQuery integration for self-hosted Editflo. Traditional JavaScript library.',
+                category: 'Integration'
+            },
+            {
+                id: 'self-hosted-jquery-package',
+                title: 'Self-hosted jQuery Package Manager',
+                url: '<?php echo base_url('documentation/getting-started/installation/self-hosted/jquery/package-manager'); ?>',
+                content: 'jQuery package manager installation for self-hosted Editflo.',
+                category: 'Integration'
+            },
+            {
+                id: 'self-hosted-java-swing',
+                title: 'Self-hosted Java Swing Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/self-hosted/java-swing'); ?>',
+                content: 'Java Swing integration for self-hosted Editflo. Desktop application support.',
+                category: 'Integration'
+            },
+
+            // ZIP Installation Routes
+            {
+                id: 'zip-installation',
+                title: 'ZIP Installation',
+                url: '<?php echo base_url('documentation/getting-started/installation/zip'); ?>',
+                content: 'ZIP package installation for Editflo. Manual installation using ZIP files.',
+                category: 'Installation'
+            },
+            {
+                id: 'zip-quick-start',
+                title: 'ZIP Quick Start',
+                url: '<?php echo base_url('documentation/getting-started/installation/zip/quick-start'); ?>',
+                content: 'Quick start guide for ZIP installation of Editflo. Manual setup instructions.',
+                category: 'Installation'
+            },
+            {
+                id: 'zip-supported-integrations',
+                title: 'ZIP Supported Integrations',
+                url: '<?php echo base_url('documentation/getting-started/installation/zip/supported-integrations'); ?>',
+                content: 'Supported integrations for ZIP installation of Editflo. Framework compatibility.',
+                category: 'Installation'
+            },
+            {
+                id: 'zip-react',
+                title: 'ZIP React Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/zip/react'); ?>',
+                content: 'React integration using ZIP package installation. Hosting and bundling options.',
+                category: 'Integration'
+            },
+            {
+                id: 'zip-react-hosting',
+                title: 'ZIP React Hosting',
+                url: '<?php echo base_url('documentation/getting-started/installation/zip/react/hosting'); ?>',
+                content: 'React hosting with ZIP package installation for Editflo.',
+                category: 'Integration'
+            },
+            {
+                id: 'zip-react-bundling',
+                title: 'ZIP React Bundling',
+                url: '<?php echo base_url('documentation/getting-started/installation/zip/react/bundling'); ?>',
+                content: 'React bundling with ZIP package installation for Editflo.',
+                category: 'Integration'
+            },
+            {
+                id: 'zip-angular',
+                title: 'ZIP Angular Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/zip/angular'); ?>',
+                content: 'Angular integration using ZIP package installation for Editflo.',
+                category: 'Integration'
+            },
+            {
+                id: 'zip-angular-package',
+                title: 'ZIP Angular Package',
+                url: '<?php echo base_url('documentation/getting-started/installation/zip/angular/package'); ?>',
+                content: 'Angular package installation using ZIP for Editflo.',
+                category: 'Integration'
+            },
+            {
+                id: 'zip-vue',
+                title: 'ZIP Vue.js Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/zip/vue'); ?>',
+                content: 'Vue.js integration using ZIP package installation for Editflo.',
+                category: 'Integration'
+            },
+            {
+                id: 'zip-vue-package',
+                title: 'ZIP Vue.js Package',
+                url: '<?php echo base_url('documentation/getting-started/installation/zip/vue/package'); ?>',
+                content: 'Vue.js package installation using ZIP for Editflo.',
+                category: 'Integration'
+            },
+            {
+                id: 'zip-blazor',
+                title: 'ZIP Blazor Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/zip/blazor'); ?>',
+                content: 'Blazor integration using ZIP package installation for Editflo.',
+                category: 'Integration'
+            },
+            {
+                id: 'zip-blazor-package',
+                title: 'ZIP Blazor Package',
+                url: '<?php echo base_url('documentation/getting-started/installation/zip/blazor/package'); ?>',
+                content: 'Blazor package installation using ZIP for Editflo.',
+                category: 'Integration'
+            },
+            {
+                id: 'zip-svelte',
+                title: 'ZIP Svelte Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/zip/svelte'); ?>',
+                content: 'Svelte integration using ZIP package installation for Editflo.',
+                category: 'Integration'
+            },
+            {
+                id: 'zip-svelte-package',
+                title: 'ZIP Svelte Package',
+                url: '<?php echo base_url('documentation/getting-started/installation/zip/svelte/package'); ?>',
+                content: 'Svelte package installation using ZIP for Editflo.',
+                category: 'Integration'
+            },
+            {
+                id: 'zip-webcomponent',
+                title: 'ZIP Web Component Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/zip/web-component'); ?>',
+                content: 'Web Component integration using ZIP package installation for Editflo.',
+                category: 'Integration'
+            },
+            {
+                id: 'zip-webcomponent-package',
+                title: 'ZIP Web Component Package',
+                url: '<?php echo base_url('documentation/getting-started/installation/zip/web-component/package'); ?>',
+                content: 'Web Component package installation using ZIP for Editflo.',
+                category: 'Integration'
+            },
+            {
+                id: 'zip-java',
+                title: 'ZIP Java Swing Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/zip/java-swing'); ?>',
+                content: 'Java Swing integration using ZIP package installation for Editflo.',
+                category: 'Integration'
+            },
+            {
+                id: 'zip-django',
+                title: 'ZIP Django Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/zip/django'); ?>',
+                content: 'Django backend integration using ZIP package installation for Editflo.',
+                category: 'Backend'
+            },
+            {
+                id: 'zip-laravel',
+                title: 'ZIP Laravel Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/zip/laravel'); ?>',
+                content: 'Laravel backend integration using ZIP package installation for Editflo.',
+                category: 'Backend'
+            },
+            {
+                id: 'zip-rails',
+                title: 'ZIP Ruby on Rails Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/zip/ruby-on-rails'); ?>',
+                content: 'Ruby on Rails backend integration using ZIP package installation for Editflo.',
+                category: 'Backend'
+            },
+            {
+                id: 'zip-bootstrap',
+                title: 'ZIP Bootstrap Integration',
+                url: '<?php echo base_url('documentation/getting-started/installation/zip/bootstrap'); ?>',
+                content: 'Bootstrap integration using ZIP package installation for Editflo.',
+                category: 'Frontend'
+            },
+            {
+                id: 'upgrading',
+                title: 'Upgrading Editflo',
+                url: '<?php echo base_url('documentation/getting-started/upgrading'); ?>',
+                content: 'Guide for upgrading Editflo to newer versions. Migration and update instructions.',
+                category: 'Maintenance'
+            },
+
+            // Examples Routes
+            {
+                id: 'examples',
+                title: 'Examples',
+                url: '<?php echo base_url('documentation/examples'); ?>',
+                content: 'Live examples of Editflo in action. Demo implementations for different use cases.',
+                category: 'Examples'
+            },
+            {
+                id: 'examples-general',
+                title: 'General Examples',
+                url: '<?php echo base_url('documentation/examples/general'); ?>',
+                content: 'General examples of Editflo usage. Basic to advanced implementation demos.',
+                category: 'Examples'
+            },
+            {
+                id: 'basic-example',
+                title: 'Basic Example',
+                url: '<?php echo base_url('documentation/examples/general/basic'); ?>',
+                content: 'Basic example of Editflo implementation. Simple setup and configuration.',
+                category: 'Examples'
+            },
+            {
+                id: 'full-featured-open-source',
+                title: 'Full-featured Open Source Demo',
+                url: '<?php echo base_url('documentation/examples/general/full-featured-open-source'); ?>',
+                content: 'Full-featured demo showing all open source features of Editflo.',
+                category: 'Examples'
+            },
+            {
+                id: 'full-featured-premium',
+                title: 'Full-featured Premium Demo',
+                url: '<?php echo base_url('documentation/examples/general/full-featured-premium'); ?>',
+                content: 'Full-featured demo showing both open source and premium features of Editflo.',
+                category: 'Examples'
+            },
+            {
+                id: 'classic-editor',
+                title: 'Classic Editor Mode',
+                url: '<?php echo base_url('documentation/examples/general/classic-editor'); ?>',
+                content: 'Classic editor mode example of Editflo. Traditional toolbar interface.',
+                category: 'Examples'
+            },
+            {
+                id: 'inline-editor',
+                title: 'Inline Editor',
+                url: '<?php echo base_url('documentation/examples/general/inline-editor'); ?>',
+                content: 'Inline editor example of Editflo. Edit content directly on the page.',
+                category: 'Examples'
+            },
+            {
+                id: 'distraction-free-editor',
+                title: 'Distraction-free Editor',
+                url: '<?php echo base_url('documentation/examples/general/distraction-free-editor'); ?>',
+                content: 'Distraction-free editor mode example of Editflo. Minimal interface for focused writing.',
+                category: 'Examples'
+            },
+            {
+                id: 'integration-examples',
+                title: 'Integration Examples',
+                url: '<?php echo base_url('documentation/examples/integration'); ?>',
+                content: 'Integration examples of Editflo with different frameworks and platforms.',
+                category: 'Examples'
+            },
+            {
+                id: 'template-creation',
+                title: 'Template Creation Example',
+                url: '<?php echo base_url('documentation/examples/integration/template-creation'); ?>',
+                content: 'Template creation example using Editflo. Create and manage document templates.',
+                category: 'Examples'
+            },
+            {
+                id: 'skins-icons',
+                title: 'Skins and Icons Examples',
+                url: '<?php echo base_url('documentation/examples/skins-icons'); ?>',
+                content: 'Skins and icons examples for Editflo. Customize appearance and icons.',
+                category: 'Examples'
+            },
+            {
+                id: 'bootstrap-demo',
+                title: 'Bootstrap Demo',
+                url: '<?php echo base_url('documentation/examples/skins-icons/bootstrap'); ?>',
+                content: 'Bootstrap skin demo for Editflo. Bootstrap-styled interface.',
+                category: 'Examples'
+            },
+            {
+                id: 'borderless-demo',
+                title: 'Borderless Demo',
+                url: '<?php echo base_url('documentation/examples/skins-icons/borderless'); ?>',
+                content: 'Borderless skin demo for Editflo. Clean, borderless interface design.',
+                category: 'Examples'
+            },
+            {
+                id: 'fabric-demo',
+                title: 'Fabric Demo',
+                url: '<?php echo base_url('documentation/examples/skins-icons/fabric'); ?>',
+                content: 'Fabric skin demo for Editflo. Microsoft Fabric design system.',
+                category: 'Examples'
+            },
+            {
+                id: 'fluent-demo',
+                title: 'Fluent Demo',
+                url: '<?php echo base_url('documentation/examples/skins-icons/fluent'); ?>',
+                content: 'Fluent skin demo for Editflo. Microsoft Fluent design system.',
+                category: 'Examples'
+            },
+            {
+                id: 'jam-icons-demo',
+                title: 'Jam Icons Demo',
+                url: '<?php echo base_url('documentation/examples/skins-icons/jam-icons'); ?>',
+                content: 'Jam icons demo for Editflo. Jam icon set implementation.',
+                category: 'Examples'
+            },
+            {
+                id: 'material-classic-demo',
+                title: 'Material Classic Demo',
+                url: '<?php echo base_url('documentation/examples/skins-icons/material-classic'); ?>',
+                content: 'Material Classic skin demo for Editflo. Classic Material Design.',
+                category: 'Examples'
+            },
+            {
+                id: 'material-outline-demo',
+                title: 'Material Outline Demo',
+                url: '<?php echo base_url('documentation/examples/skins-icons/material-outline'); ?>',
+                content: 'Material Outline skin demo for Editflo. Outlined Material Design.',
+                category: 'Examples'
+            },
+            {
+                id: 'naked-demo',
+                title: 'Naked Demo',
+                url: '<?php echo base_url('documentation/examples/skins-icons/naked'); ?>',
+                content: 'Naked skin demo for Editflo. Minimal, unstyled interface.',
+                category: 'Examples'
+            },
+            {
+                id: 'outside-demo',
+                title: 'Outside Demo',
+                url: '<?php echo base_url('documentation/examples/skins-icons/outside'); ?>',
+                content: 'Outside skin demo for Editflo. External toolbar placement.',
+                category: 'Examples'
+            },
+            {
+                id: 'small-icons-demo',
+                title: 'Small Icons Demo',
+                url: '<?php echo base_url('documentation/examples/skins-icons/small-icons'); ?>',
+                content: 'Small icons demo for Editflo. Compact toolbar icons.',
+                category: 'Examples'
+            },
+            {
+                id: 'snow-demo',
+                title: 'Snow Demo',
+                url: '<?php echo base_url('documentation/examples/skins-icons/snow'); ?>',
+                content: 'Snow skin demo for Editflo. Clean, white interface design.',
+                category: 'Examples'
+            },
+
+            // Initial Configuration Routes
+            {
+                id: 'initial-configuration',
+                title: 'Initial Configuration',
+                url: '<?php echo base_url('documentation/initial-configuration'); ?>',
+                content: 'Initial configuration options for Editflo. Setup and customization guide.',
+                category: 'Configuration'
+            },
+            {
+                id: 'integration-options',
+                title: 'Integration Options',
+                url: '<?php echo base_url('documentation/initial-configuration/integration-options'); ?>',
+                content: 'Integration options for Editflo. Framework and platform integration methods.',
+                category: 'Configuration'
+            },
+            {
+                id: 'size',
+                title: 'Size Configuration',
+                url: '<?php echo base_url('documentation/initial-configuration/size'); ?>',
+                content: 'Size configuration for Editflo. Editor dimensions and responsive settings.',
+                category: 'Configuration'
+            },
+            {
+                id: 'save-submit',
+                title: 'Save and Submit',
+                url: '<?php echo base_url('documentation/initial-configuration/save-submit'); ?>',
+                content: 'Save and submit configuration for Editflo. Form handling and data submission.',
+                category: 'Configuration'
+            },
+            {
+                id: 'promotions',
+                title: 'Promotions',
+                url: '<?php echo base_url('documentation/initial-configuration/promotions'); ?>',
+                content: 'Promotional settings for Editflo. Upsell and feature promotion configurations.',
+                category: 'Configuration'
+            },
+
+            // Security Routes
+            {
+                id: 'security',
+                title: 'Security',
+                url: '<?php echo base_url('documentation/security'); ?>',
+                content: 'Security guide for Editflo. Best practices for secure implementation.',
+                category: 'Security'
+            },
+            {
+                id: 'security-guide',
+                title: 'Security Guide',
+                url: '<?php echo base_url('documentation/security/guide'); ?>',
+                content: 'Comprehensive security guide for Editflo. Security best practices and guidelines.',
+                category: 'Security'
+            },
+            {
+                id: 'reporting-issues',
+                title: 'Reporting Security Issues',
+                url: '<?php echo base_url('documentation/security/guide/reporting-issues'); ?>',
+                content: 'Guide for reporting security issues in Editflo. Vulnerability disclosure process.',
+                category: 'Security'
+            },
+            {
+                id: 'maintenance',
+                title: 'Security Maintenance',
+                url: '<?php echo base_url('documentation/security/guide/maintenance'); ?>',
+                content: 'Security maintenance procedures for Editflo. Regular security updates and patches.',
+                category: 'Security'
+            },
+            {
+                id: 'configuring-csp',
+                title: 'Configuring Content Security Policy',
+                url: '<?php echo base_url('documentation/security/guide/configuring-csp'); ?>',
+                content: 'Guide for configuring Content Security Policy (CSP) for Editflo.',
+                category: 'Security'
+            },
+            {
+                id: 'general-risks',
+                title: 'General Security Risks',
+                url: '<?php echo base_url('documentation/security/guide/general-risks'); ?>',
+                content: 'General security risks for user input elements. Security considerations for rich text editors.',
+                category: 'Security'
+            },
+            {
+                id: 'content-security-policies',
+                title: 'Content Security Policies',
+                url: '<?php echo base_url('documentation/security/guide/content-security-policies'); ?>',
+                content: 'Content Security Policies (CSP) configuration for Editflo.',
+                category: 'Security'
+            },
+            {
+                id: 'cors',
+                title: 'CORS Configuration',
+                url: '<?php echo base_url('documentation/security/guide/cors'); ?>',
+                content: 'Cross-Origin Resource Sharing (CORS) configuration for Editflo.',
+                category: 'Security'
+            },
+
+            // Release Notes Routes
+            {
+                id: 'release-notes',
+                title: 'Release Notes',
+                url: '<?php echo base_url('documentation/release-notes/editflo'); ?>',
+                content: 'Release notes for Editflo versions. Changelog and version history.',
+                category: 'Updates'
+            },
+            {
+                id: 'editflo-0-1',
+                title: 'Editflo 0.1',
+                url: '<?php echo base_url('documentation/release-notes/editflo/0-1'); ?>',
+                content: 'Release notes for Editflo version 0.1. Initial release features and changes.',
+                category: 'Updates'
+            },
+            {
+                id: 'editflo-0-1-overview',
+                title: 'Editflo 0.1 Overview',
+                url: '<?php echo base_url('documentation/release-notes/editflo/0-1/overview'); ?>',
+                content: 'Overview of Editflo version 0.1 release. Summary of new features and improvements.',
+                category: 'Updates'
+            },
+            {
+                id: 'editflo-0-1-new-premium-plugins',
+                title: 'Editflo 0.1 New Premium Plugins',
+                url: '<?php echo base_url('documentation/release-notes/editflo/0-1/new-premium-plugins'); ?>',
+                content: 'New premium plugins in Editflo version 0.1. Additional paid features.',
+                category: 'Updates'
+            },
+            {
+                id: 'editflo-0-1-premium-plugin-changes',
+                title: 'Editflo 0.1 Premium Plugin Changes',
+                url: '<?php echo base_url('documentation/release-notes/editflo/0-1/premium-plugin-changes'); ?>',
+                content: 'Premium plugin changes in Editflo version 0.1. Updates to existing premium features.',
+                category: 'Updates'
+            },
+            {
+                id: 'editflo-0-1-improvements',
+                title: 'Editflo 0.1 Improvements',
+                url: '<?php echo base_url('documentation/release-notes/editflo/0-1/improvements'); ?>',
+                content: 'Improvements in Editflo version 0.1. Performance and feature enhancements.',
+                category: 'Updates'
+            },
+            {
+                id: 'editflo-0-1-additions',
+                title: 'Editflo 0.1 Additions',
+                url: '<?php echo base_url('documentation/release-notes/editflo/0-1/additions'); ?>',
+                content: 'New additions in Editflo version 0.1. Additional features and capabilities.',
+                category: 'Updates'
+            },
+
+            // API Reference Routes
+            {
+                id: 'api-reference',
+                title: 'API Reference',
+                url: '<?php echo base_url('documentation/api-reference/editflo'); ?>',
+                content: 'Complete API reference for Editflo. All methods, properties, and events documentation.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-addon-manager',
+                title: 'editflo.AddOnManager',
+                url: '<?php echo base_url('documentation/api-reference/editflo/add-on-manager'); ?>',
+                content: 'Editflo AddOnManager API reference. Add-on management and extension system.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-annotator',
+                title: 'editflo.Annotator',
+                url: '<?php echo base_url('documentation/api-reference/editflo/annotator'); ?>',
+                content: 'Editflo Annotator API reference. Annotation and commenting features.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-editor',
+                title: 'editflo.Editor',
+                url: '<?php echo base_url('documentation/api-reference/editflo/editor'); ?>',
+                content: 'Editflo Editor API reference. Main editor instance and methods.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-editor-manager',
+                title: 'editflo.EditorManager',
+                url: '<?php echo base_url('documentation/api-reference/editflo/editor-manager'); ?>',
+                content: 'Editflo EditorManager API reference. Multiple editor instance management.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-editor-mode',
+                title: 'editflo.EditorMode',
+                url: '<?php echo base_url('documentation/api-reference/editflo/editor-mode'); ?>',
+                content: 'Editflo EditorMode API reference. Editor mode configurations and states.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-editor-options',
+                title: 'editflo.EditorOptions',
+                url: '<?php echo base_url('documentation/api-reference/editflo/editor-options'); ?>',
+                content: 'Editflo EditorOptions API reference. Editor configuration options.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-editor-upload',
+                title: 'editflo.EditorUpload',
+                url: '<?php echo base_url('documentation/api-reference/editflo/editor-upload'); ?>',
+                content: 'Editflo EditorUpload API reference. File upload functionality.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-env',
+                title: 'editflo.Env',
+                url: '<?php echo base_url('documentation/api-reference/editflo/env'); ?>',
+                content: 'Editflo Env API reference. Environment detection and configuration.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-event',
+                title: 'editflo.Event',
+                url: '<?php echo base_url('documentation/api-reference/editflo/event'); ?>',
+                content: 'Editflo Event API reference. Event system and handlers.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-fake-clipboard',
+                title: 'editflo.FakeClipboard',
+                url: '<?php echo base_url('documentation/api-reference/editflo/fake-clipboard'); ?>',
+                content: 'Editflo FakeClipboard API reference. Clipboard simulation and handling.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-formatter',
+                title: 'editflo.Formatter',
+                url: '<?php echo base_url('documentation/api-reference/editflo/formatter'); ?>',
+                content: 'Editflo Formatter API reference. Text formatting and styling.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-notification-manager',
+                title: 'editflo.NotificationManager',
+                url: '<?php echo base_url('documentation/api-reference/editflo/notification-manager'); ?>',
+                content: 'Editflo NotificationManager API reference. Notification system and alerts.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-plugin',
+                title: 'editflo.Plugin',
+                url: '<?php echo base_url('documentation/api-reference/editflo/plugin'); ?>',
+                content: 'Editflo Plugin API reference. Plugin system and extensions.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-shortcuts',
+                title: 'editflo.Shortcuts',
+                url: '<?php echo base_url('documentation/api-reference/editflo/shortcuts'); ?>',
+                content: 'Editflo Shortcuts API reference. Keyboard shortcuts and hotkeys.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-theme',
+                title: 'editflo.Theme',
+                url: '<?php echo base_url('documentation/api-reference/editflo/theme'); ?>',
+                content: 'Editflo Theme API reference. Theme system and customization.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-undo-manager',
+                title: 'editflo.UndoManager',
+                url: '<?php echo base_url('documentation/api-reference/editflo/undo-manager'); ?>',
+                content: 'Editflo UndoManager API reference. Undo/redo functionality.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-user-lookup',
+                title: 'editflo.UserLookup',
+                url: '<?php echo base_url('documentation/api-reference/editflo/user-lookup'); ?>',
+                content: 'Editflo UserLookup API reference. User search and mention system.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-window-manager',
+                title: 'editflo.WindowManager',
+                url: '<?php echo base_url('documentation/api-reference/editflo/window-manager'); ?>',
+                content: 'Editflo WindowManager API reference. Dialog and window management.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-editor-ui',
+                title: 'editflo.editor.ui',
+                url: '<?php echo base_url('documentation/api-reference/editflo-editor-ui'); ?>',
+                content: 'Editflo editor.ui API reference. User interface components and system.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-editor-ui-registry',
+                title: 'editflo.editor.ui.Registry',
+                url: '<?php echo base_url('documentation/api-reference/editflo-editor-ui/registry'); ?>',
+                content: 'Editflo editor.ui.Registry API reference. UI component registry system.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-editor-ui-ui',
+                title: 'editflo.editor.ui.Ui',
+                url: '<?php echo base_url('documentation/api-reference/editflo-editor-ui/ui'); ?>',
+                content: 'Editflo editor.ui.Ui API reference. Main UI interface and methods.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-html',
+                title: 'editflo.html',
+                url: '<?php echo base_url('documentation/api-reference/editflo-html'); ?>',
+                content: 'Editflo html API reference. HTML parsing, serialization, and manipulation.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-html-domparser',
+                title: 'editflo.html.DomParser',
+                url: '<?php echo base_url('documentation/api-reference/editflo-html/domparser'); ?>',
+                content: 'Editflo html.DomParser API reference. DOM parsing and manipulation.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-html-entities',
+                title: 'editflo.html.Entities',
+                url: '<?php echo base_url('documentation/api-reference/editflo-html/entities'); ?>',
+                content: 'Editflo html.Entities API reference. HTML entity encoding and decoding.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-html-node',
+                title: 'editflo.html.Node',
+                url: '<?php echo base_url('documentation/api-reference/editflo-html/node'); ?>',
+                content: 'Editflo html.Node API reference. DOM node manipulation and traversal.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-html-schema',
+                title: 'editflo.html.Schema',
+                url: '<?php echo base_url('documentation/api-reference/editflo-html/schema'); ?>',
+                content: 'Editflo html.Schema API reference. HTML schema validation and rules.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-html-serializer',
+                title: 'editflo.html.Serializer',
+                url: '<?php echo base_url('documentation/api-reference/editflo-html/serializer'); ?>',
+                content: 'Editflo html.Serializer API reference. HTML serialization and output.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-html-styles',
+                title: 'editflo.html.Styles',
+                url: '<?php echo base_url('documentation/api-reference/editflo-html/styles'); ?>',
+                content: 'Editflo html.Styles API reference. CSS style manipulation and parsing.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-html-writer',
+                title: 'editflo.html.Writer',
+                url: '<?php echo base_url('documentation/api-reference/editflo-html/writer'); ?>',
+                content: 'Editflo html.Writer API reference. HTML writing and output generation.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-util',
+                title: 'editflo.util',
+                url: '<?php echo base_url('documentation/api-reference/editflo-util'); ?>',
+                content: 'Editflo util API reference. Utility functions and helpers.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-util-delay',
+                title: 'editflo.util.Delay',
+                url: '<?php echo base_url('documentation/api-reference/editflo-util/delay'); ?>',
+                content: 'Editflo util.Delay API reference. Delay and timing utilities.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-util-event-dispatcher',
+                title: 'editflo.util.EventDispatcher',
+                url: '<?php echo base_url('documentation/api-reference/editflo-util/event-dispatcher'); ?>',
+                content: 'Editflo util.EventDispatcher API reference. Event dispatching system.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-util-i18n',
+                title: 'editflo.util.I18n',
+                url: '<?php echo base_url('documentation/api-reference/editflo-util/i18n'); ?>',
+                content: 'Editflo util.I18n API reference. Internationalization and localization.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-util-image-uploader',
+                title: 'editflo.util.ImageUploader',
+                url: '<?php echo base_url('documentation/api-reference/editflo-util/image-uploader'); ?>',
+                content: 'Editflo util.ImageUploader API reference. Image upload utilities.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-util-observable',
+                title: 'editflo.util.Observable',
+                url: '<?php echo base_url('documentation/api-reference/editflo-util/observable'); ?>',
+                content: 'Editflo util.Observable API reference. Observable pattern implementation.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-util-tools',
+                title: 'editflo.util.Tools',
+                url: '<?php echo base_url('documentation/api-reference/editflo-util/tools'); ?>',
+                content: 'Editflo util.Tools API reference. General utility tools and functions.',
+                category: 'API'
+            },
+            {
+                id: 'editflo-util-uri',
+                title: 'editflo.util.URI',
+                url: '<?php echo base_url('documentation/api-reference/editflo-util/uri'); ?>',
+                content: 'Editflo util.URI API reference. URI parsing and manipulation.',
+                category: 'API'
+            },
+
+            // Other Main Sections
+            {
+                id: 'integration',
+                title: 'Integration',
+                url: '<?php echo base_url('documentation/integration'); ?>',
+                content: 'Integration guide for Editflo. Framework and platform integration overview.',
+                category: 'Integration'
+            },
+            {
+                id: 'configuration',
+                title: 'Configuration',
+                url: '<?php echo base_url('documentation/configuration'); ?>',
+                content: 'Configuration guide for Editflo. Advanced settings and customization options.',
+                category: 'Configuration'
+            },
+            {
+                id: 'basic-setup',
+                title: 'Basic Setup',
+                url: '<?php echo base_url('documentation/basic-setup'); ?>',
+                content: 'Basic setup guide for Editflo. Quick start and initial configuration.',
+                category: 'Getting Started'
+            },
+            {
+                id: 'invalid-api-key',
+                title: 'Invalid API Key',
+                url: '<?php echo base_url('documentation/invalid-api-key'); ?>',
+                content: 'Troubleshooting guide for invalid API key errors in Editflo.',
+                category: 'Troubleshooting'
+            },
+            {
+                id: 'license-key',
+                title: 'License Key',
+                url: '<?php echo base_url('documentation/license-key'); ?>',
+                content: 'License key management and configuration for Editflo.',
+                category: 'Administration'
+            },
+            {
+                id: 'support',
+                title: 'Support',
+                url: '<?php echo base_url('documentation/support'); ?>',
+                content: 'Support resources and contact information for Editflo.',
+                category: 'Help'
+            },
+            {
+                id: 'usage-based-billing',
+                title: 'Usage-Based Billing',
+                url: '<?php echo base_url('documentation/usage-based-billing'); ?>',
+                content: 'Usage-based billing information and configuration for Editflo.',
+                category: 'Billing'
+            },
+            {
+                id: 'api',
+                title: 'API',
+                url: '<?php echo base_url('documentation/editflo_api_reference'); ?>',
+                content: 'API overview and general information for Editflo.',
+                category: 'API'
+            },
+            {
+                id: 'overview',
+                title: 'Documentation Overview',
+                url: '<?php echo base_url('documentation'); ?>',
+                content: 'Editflo documentation overview and getting started guide.',
+                category: 'Documentation'
+            },
+            {
+                id: 'editflo-blazor-integration',
+                title: 'Editflo Blazor Integration',
+                url: '<?php echo base_url('documentation/documentation?section=editflo-blazor-integration'); ?>',
+                content: 'Blazor integration documentation for Editflo. .NET framework support.',
+                category: 'Integration'
+            }
+        ];
+    </script>
 
     <script>
         // Mobile menu functionality
@@ -2143,8 +3099,11 @@
                 leftSidebar.classList.remove('-translate-x-full');
             });
 
-            // Generate Table of Contents for desktop and mobile
+            // Generate Table of Contents
             generateTOC();
+
+            // Initialize search functionality
+            initSearch();
 
             function generateTOC() {
                 const contentArea = document.querySelector('.content-area');
@@ -2160,16 +3119,12 @@
 
                         const level = parseInt(heading.tagName.substring(1));
                         let indentClass = '';
-                        let prefix = '';
 
                         if (level === 2) {
-                            prefix = '';
                             indentClass = 'pl-0';
                         } else if (level === 3) {
-                            prefix = '';
                             indentClass = 'pl-4';
                         } else if (level === 4) {
-                            prefix = '';
                             indentClass = 'pl-8';
                         }
 
@@ -2178,7 +3133,7 @@
                         listItem.className = `toc-item ${indentClass}`;
                         listItem.innerHTML = `
                             <a href="#${heading.id}" class="toc-link flex items-center py-2 px-3 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 group border-l-2 border-transparent">
-                                <span class="text-sm flex-1">${prefix}${heading.textContent}</span>
+                                <span class="text-sm flex-1">${heading.textContent}</span>
                                 <i class="fas fa-arrow-right text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity"></i>
                             </a>
                         `;
@@ -2189,7 +3144,7 @@
                         mobileListItem.className = `toc-item ${indentClass}`;
                         mobileListItem.innerHTML = `
                             <a href="#${heading.id}" class="flex items-center py-3 px-3 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 group border-l-2 border-transparent">
-                                <span class="text-sm flex-1">${prefix}${heading.textContent}</span>
+                                <span class="text-sm flex-1">${heading.textContent}</span>
                             </a>
                         `;
                         if (mobileTocContainer) mobileTocContainer.appendChild(mobileListItem);
@@ -2229,20 +3184,17 @@
                     if (mobileTocContainer) mobileTocContainer.innerHTML = noContentMsg;
                 }
 
-                // Add scroll spy to highlight active TOC link
+                // Add scroll spy
                 window.addEventListener('scroll', debounce(highlightActiveTOCLink, 100));
-                highlightActiveTOCLink(); // Initial highlight
+                highlightActiveTOCLink();
             }
 
             function setActiveTOCLink(link) {
-                // Remove active class from all TOC links
                 document.querySelectorAll('.toc-link').forEach(el => {
-                    el.classList.remove('active');
-                    el.classList.remove('bg-blue-50', 'text-blue-600', 'border-blue-500');
+                    el.classList.remove('active', 'bg-blue-50', 'text-blue-600', 'border-blue-500');
                     el.classList.add('border-transparent');
                 });
 
-                // Add active class to clicked link
                 link.classList.add('active', 'bg-blue-50', 'text-blue-600', 'border-blue-500');
                 link.classList.remove('border-transparent');
             }
@@ -2284,15 +3236,202 @@
             }
         });
 
-        // Improved Dropdown functionality
+        // Search functionality
+        function initSearch() {
+            const searchInputs = [
+                document.getElementById('desktopSearchInput'),
+                document.getElementById('mobileSearchInput'),
+                document.getElementById('mobileMenuSearchInput')
+            ].filter(input => input);
+
+            searchInputs.forEach(input => {
+                let searchTimeout;
+
+                input.addEventListener('input', function(e) {
+                    clearTimeout(searchTimeout);
+
+                    searchTimeout = setTimeout(() => {
+                        const query = e.target.value.trim();
+                        const results = performSearch(query);
+                        displayResults(results, input);
+                    }, 300);
+                });
+
+                input.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') {
+                        const container = input.parentNode.parentNode;
+                        const results = container.querySelector('.search-results');
+                        if (results) {
+                            results.remove();
+                        }
+                    }
+
+                    // Ctrl+K shortcut
+                    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                        e.preventDefault();
+                        input.focus();
+                    }
+                });
+
+                // Clear results when input loses focus
+                input.addEventListener('blur', function() {
+                    setTimeout(() => {
+                        const container = input.parentNode.parentNode;
+                        const results = container.querySelector('.search-results');
+                        if (results && !results.contains(document.activeElement)) {
+                            results.remove();
+                        }
+                    }, 200);
+                });
+            });
+
+            // Global keyboard shortcut for search (Ctrl+K)
+            document.addEventListener('keydown', function(e) {
+                if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                    e.preventDefault();
+                    // Try desktop search first, then mobile
+                    const desktopInput = document.getElementById('desktopSearchInput');
+                    const mobileInput = document.getElementById('mobileSearchInput') || document.getElementById('mobileMenuSearchInput');
+
+                    if (desktopInput && window.innerWidth >= 768) {
+                        desktopInput.focus();
+                    } else if (mobileInput) {
+                        mobileInput.focus();
+                    }
+                }
+            });
+        }
+
+        function performSearch(query) {
+            if (!query || query.length < 2) {
+                return [];
+            }
+
+            try {
+                const fuse = new Fuse(window.docsSearchIndex || [], {
+                    keys: ['title', 'content', 'category'],
+                    threshold: 0.4,
+                    includeScore: true,
+                    includeMatches: true,
+                    minMatchCharLength: 2
+                });
+                return fuse.search(query);
+            } catch (error) {
+                console.error('Search error:', error);
+                return [];
+            }
+        }
+
+        function displayResults(results, searchBox) {
+            // Remove existing results if any
+            const container = searchBox.parentNode.parentNode;
+            const existingResults = container.querySelector('.search-results');
+            if (existingResults) {
+                existingResults.remove();
+            }
+
+            if (results.length === 0) {
+                // Show "no results" message only if query is long enough
+                if (searchBox.value.trim().length >= 2) {
+                    const noResults = document.createElement('div');
+                    noResults.className = 'search-results absolute z-50 mt-1 w-full bg-white rounded-lg shadow-lg border border-gray-200 p-4';
+                    noResults.innerHTML = `
+                        <div class="text-center py-2">
+                            <i class="fas fa-search text-gray-400 text-lg mb-2"></i>
+                            <p class="text-gray-600">No results found for "${searchBox.value.trim()}"</p>
+                            <p class="text-gray-500 text-sm mt-1">Try different keywords</p>
+                        </div>
+                    `;
+                    container.appendChild(noResults);
+                }
+                return;
+            }
+
+            const resultsContainer = document.createElement('div');
+            resultsContainer.className = 'search-results absolute z-50 mt-1 w-full bg-white rounded-lg shadow-lg border border-gray-200 max-h-96 overflow-y-auto';
+
+            results.slice(0, 8).forEach(result => {
+                const item = result.item;
+
+                const resultItem = document.createElement('a');
+                resultItem.href = item.url;
+                resultItem.className = 'block p-3 hover:bg-gray-50 border-b border-gray-100 last:border-b-0 transition-colors';
+                resultItem.innerHTML = `
+                    <div class="flex justify-between items-start">
+                        <div class="flex-1">
+                            <div class="flex items-center mb-1">
+                                <span class="inline-block px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded mr-2">${item.category}</span>
+                                <h4 class="font-medium text-gray-900">${highlightMatches(item.title, result.matches, 'title')}</h4>
+                            </div>
+                            <p class="text-sm text-gray-600 truncate">${highlightMatches(item.content.substring(0, 100), result.matches, 'content')}...</p>
+                            <div class="text-xs text-gray-500 mt-1">${item.url.replace(window.location.origin, '')}</div>
+                        </div>
+                    </div>
+                `;
+
+                resultItem.addEventListener('click', function(e) {
+                    if (window.innerWidth < 1024) {
+                        const mobileSearchBar = document.getElementById('mobileSearchBar');
+                        const mobileMenu = document.getElementById('mobileMenu');
+                        if (mobileSearchBar) mobileSearchBar.classList.add('hidden');
+                        if (mobileMenu) mobileMenu.classList.add('hidden');
+                    }
+                });
+
+                resultsContainer.appendChild(resultItem);
+            });
+
+            // Add "View all results" link if there are more results
+            if (results.length > 8) {
+                const viewAll = document.createElement('div');
+                viewAll.className = 'p-3 text-center border-t border-gray-100';
+                viewAll.innerHTML = `<a href="#" class="text-sm text-blue-600 hover:text-blue-800 font-medium">View all ${results.length} results</a>`;
+                viewAll.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    // You can implement a dedicated search results page here
+                    alert('Show all results feature would go here');
+                });
+                resultsContainer.appendChild(viewAll);
+            }
+
+            container.appendChild(resultsContainer);
+
+            // Close results when clicking outside
+            document.addEventListener('click', function closeResults(e) {
+                if (!container.contains(e.target)) {
+                    resultsContainer.remove();
+                    document.removeEventListener('click', closeResults);
+                }
+            });
+        }
+
+        function highlightMatches(text, matches, key) {
+            if (!matches || !text) return text;
+
+            const match = matches.find(m => m.key === key);
+            if (!match) return text;
+
+            let highlighted = text;
+            // Sort indices in reverse order to avoid index shifting issues
+            const sortedIndices = match.indices.sort((a, b) => b[0] - a[0]);
+
+            sortedIndices.forEach(([start, end]) => {
+                const before = highlighted.substring(0, start);
+                const matchText = highlighted.substring(start, end + 1);
+                const after = highlighted.substring(end + 1);
+                highlighted = `${before}<mark class="bg-yellow-200 px-0.5 rounded">${matchText}</mark>${after}`;
+            });
+
+            return highlighted;
+        }
+
+        // Dropdown functionality
         function toggleDropdown(dropdownId) {
             const dropdown = document.getElementById(dropdownId);
             if (!dropdown) return;
 
-            // Find the arrow element - try multiple possible ID formats
             let arrow = document.getElementById(dropdownId.replace('-dropdown', '-arrow'));
             if (!arrow) {
-                // Try alternative ID format
                 arrow = document.getElementById(dropdownId + '-arrow');
             }
 
@@ -2314,180 +3453,37 @@
             mobileTOC.classList.toggle('translate-x-full');
         }
 
-        // Enhanced auto-open dropdowns based on active states
-        document.addEventListener('DOMContentLoaded', function() {
-            // Function to open dropdown and rotate arrow
-            function openDropdown(dropdownId, arrowId) {
-                const dropdown = document.getElementById(dropdownId);
-                const arrow = document.getElementById(arrowId);
-                if (dropdown && arrow) {
-                    dropdown.classList.remove('hidden');
-                    arrow.classList.add('rotate-180');
-                }
+        // Mobile menu and search toggles
+        document.getElementById('mobileSearchBtn')?.addEventListener('click', function() {
+            const mobileSearchBar = document.getElementById('mobileSearchBar');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            mobileSearchBar.classList.toggle('hidden');
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
             }
 
-            <?php if ($active_page == 'getting-started'): ?>
-                openDropdown('getting-started-dropdown', 'getting-started-arrow');
-            <?php endif; ?>
-
-            <?php if ($active_section == 'installation'): ?>
-                openDropdown('installation-dropdown', 'installation-arrow');
-            <?php endif; ?>
-
-            <?php if (strpos($active_subsection, 'cloud') === 0): ?>
-                openDropdown('cloud-dropdown', 'cloud-arrow');
-            <?php endif; ?>
-
-            <?php if (strpos($active_subsection, 'self-hosted') === 0): ?>
-                openDropdown('self-hosted-dropdown', 'self-hosted-arrow');
-            <?php endif; ?>
-
-            <?php if (strpos($active_subsection, 'self-hosted-react') === 0): ?>
-                openDropdown('self-hosted-react-dropdown', 'self-hosted-react-arrow');
-            <?php endif; ?>
-
-            <?php if (strpos($active_subsection, 'self-hosted-angular') === 0): ?>
-                openDropdown('self-hosted-angular-dropdown', 'self-hosted-angular-arrow');
-            <?php endif; ?>
-
-            <?php if (strpos($active_subsection, 'self-hosted-vue') === 0): ?>
-                openDropdown('self-hosted-vue-dropdown', 'self-hosted-vue-arrow');
-            <?php endif; ?>
-
-            <?php if (strpos($active_subsection, 'self-hosted-blazor') === 0): ?>
-                openDropdown('self-hosted-blazor-dropdown', 'self-hosted-blazor-arrow');
-            <?php endif; ?>
-
-            <?php if (strpos($active_subsection, 'self-hosted-svelte') === 0): ?>
-                openDropdown('self-hosted-svelte-dropdown', 'self-hosted-svelte-arrow');
-            <?php endif; ?>
-
-            <?php if (strpos($active_subsection, 'self-hosted-webcomponent') === 0): ?>
-                openDropdown('self-hosted-webcomponent-dropdown', 'self-hosted-webcomponent-arrow');
-            <?php endif; ?>
-
-            <?php if (strpos($active_subsection, 'self-hosted-jquery') === 0): ?>
-                openDropdown('self-hosted-jquery-dropdown', 'self-hosted-jquery-arrow');
-            <?php endif; ?>
-
-            <?php if (strpos($active_subsection, 'zip') === 0): ?>
-                openDropdown('zip-dropdown', 'zip-arrow');
-            <?php endif; ?>
-
-            <?php if (strpos($active_subsection, 'zip-react') === 0): ?>
-                openDropdown('zip-react-dropdown', 'zip-react-arrow');
-            <?php endif; ?>
-
-            <?php if (strpos($active_subsection, 'zip-angular') === 0): ?>
-                openDropdown('zip-angular-dropdown', 'zip-angular-arrow');
-            <?php endif; ?>
-
-            <?php if (strpos($active_subsection, 'zip-vue') === 0): ?>
-                openDropdown('zip-vue-dropdown', 'zip-vue-arrow');
-            <?php endif; ?>
-
-            <?php if (strpos($active_subsection, 'zip-blazor') === 0): ?>
-                openDropdown('zip-blazor-dropdown', 'zip-blazor-arrow');
-            <?php endif; ?>
-
-            <?php if (strpos($active_subsection, 'zip-svelte') === 0): ?>
-                openDropdown('zip-svelte-dropdown', 'zip-svelte-arrow');
-            <?php endif; ?>
-
-            <?php if (strpos($active_subsection, 'zip-webcomponent') === 0): ?>
-                openDropdown('zip-webcomponent-dropdown', 'zip-webcomponent-arrow');
-            <?php endif; ?>
-
-            <?php if ($active_page == 'examples'): ?>
-                openDropdown('examples-dropdown', 'examples-arrow');
-            <?php endif; ?>
-
-            <?php if ($active_section == 'general-examples'): ?>
-                openDropdown('general-examples-dropdown', 'general-examples-arrow');
-            <?php endif; ?>
-
-            <?php if ($active_section == 'integration-examples'): ?>
-                openDropdown('integration-examples-dropdown', 'integration-examples-arrow');
-            <?php endif; ?>
-
-            <?php if ($active_section == 'skins-icons-examples'): ?>
-                openDropdown('skins-icons-dropdown', 'skins-icons-arrow');
-            <?php endif; ?>
-            <?php if ($active_page == 'initial-configuration'): ?>
-                openDropdown('initial-configuration-dropdown', 'initial-configuration-arrow');
-            <?php endif; ?>
-
-            <?php if ($active_page == 'security'): ?>
-                openDropdown('security-dropdown', 'security-arrow');
-            <?php endif; ?>
-
-            <?php if ($active_section == 'security-guide'): ?>
-                openDropdown('security-guide-dropdown', 'security-guide-arrow');
-            <?php endif; ?>
-
-            <?php if ($active_page == 'release-notes'): ?>
-                openDropdown('release-notes-dropdown', 'release-notes-arrow');
-            <?php endif; ?>
-
-            <?php if ($active_page == 'api-reference'): ?>
-                openDropdown('api-reference-dropdown', 'api-reference-arrow');
-            <?php endif; ?>
-
-            <?php if ($active_section == 'editflo' && $active_page == 'api-reference'): ?>
-                openDropdown('editflo-api-dropdown', 'editflo-api-arrow');
-            <?php endif; ?>
-            <?php if ($active_section == 'editflo-editor-ui' && $active_page == 'api-reference'): ?>
-                openDropdown('editflo-editor-ui-dropdown', 'editflo-editor-ui-arrow');
-            <?php endif; ?>
-            <?php if ($active_section == 'editflo-html' && $active_page == 'api-reference'): ?>
-                openDropdown('editflo-html-dropdown', 'editflo-html-arrow');
-            <?php endif; ?>
-
-            <?php if ($active_section == 'editflo'): ?>
-                openDropdown('editflo-dropdown', 'editflo-arrow');
-            <?php endif; ?>
-
-            <?php if ($active_subsection == '0-1' || strpos($active_subsection, '0-1-') === 0): ?>
-                // Editflo 0.1 dropdown open kare (both 0-1 and 0-1-* pages ke liye)
-                openDropdown('editflo-0-1-dropdown', 'editflo-0-1-arrow');
-            <?php endif; ?>
+            // Focus on input when opened
+            setTimeout(() => {
+                const searchInput = document.getElementById('mobileSearchInput');
+                if (searchInput) searchInput.focus();
+            }, 100);
         });
 
-        // Enhanced click handler for all dropdown buttons
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add click event listeners to all dropdown buttons
-            const dropdownButtons = document.querySelectorAll('button[onclick*="toggleDropdown"]');
-            dropdownButtons.forEach(button => {
-                // Extract dropdown ID from onclick attribute
-                const onclickAttr = button.getAttribute('onclick');
-                const dropdownIdMatch = onclickAttr.match(/toggleDropdown\('([^']+)'\)/);
-                if (dropdownIdMatch) {
-                    const dropdownId = dropdownIdMatch[1];
+        document.getElementById('mobileMenuBtn')?.addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileSearchBar = document.getElementById('mobileSearchBar');
 
-                    // Remove the existing onclick and add proper event listener
-                    button.removeAttribute('onclick');
-                    button.addEventListener('click', function(e) {
-                        e.stopPropagation();
-                        toggleDropdown(dropdownId);
-                    });
-                }
-            });
+            mobileMenu.classList.toggle('hidden');
+            if (!mobileSearchBar.classList.contains('hidden')) {
+                mobileSearchBar.classList.add('hidden');
+            }
 
-            // Close dropdowns when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.dropdown-container')) {
-                    const allDropdowns = document.querySelectorAll('[id$="-dropdown"]');
-                    const allArrows = document.querySelectorAll('.fa-chevron-down');
-
-                    allDropdowns.forEach(dropdown => {
-                        dropdown.classList.add('hidden');
-                    });
-
-                    allArrows.forEach(arrow => {
-                        arrow.classList.remove('rotate-180');
-                    });
-                }
-            });
+            // Focus on search input in mobile menu when opened
+            setTimeout(() => {
+                const searchInput = document.getElementById('mobileMenuSearchInput');
+                if (searchInput) searchInput.focus();
+            }, 100);
         });
 
         // Handle window resize
@@ -2496,43 +3492,12 @@
                 closeMobileSidebar();
                 const mobileTOC = document.getElementById('mobileTOC');
                 mobileTOC.classList.add('translate-x-full');
-            }
-        });
 
-        // Prevent dropdown closing when clicking inside dropdown
-        document.addEventListener('DOMContentLoaded', function() {
-            const dropdowns = document.querySelectorAll('[id$="-dropdown"]');
-            dropdowns.forEach(dropdown => {
-                dropdown.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                });
-            });
-        });
-    </script>
-
-    <!-- navbar script -->
-    <script>
-        // Toggle mobile search
-        document.getElementById('mobileSearchBtn')?.addEventListener('click', function() {
-            const mobileSearchBar = document.getElementById('mobileSearchBar');
-            const mobileMenu = document.getElementById('mobileMenu');
-
-            mobileSearchBar.classList.toggle('hidden');
-            // Close mobile menu if open
-            if (!mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.add('hidden');
-            }
-        });
-
-        // Toggle mobile menu
-        document.getElementById('mobileMenuBtn')?.addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobileMenu');
-            const mobileSearchBar = document.getElementById('mobileSearchBar');
-
-            mobileMenu.classList.toggle('hidden');
-            // Close mobile search if open
-            if (!mobileSearchBar.classList.contains('hidden')) {
-                mobileSearchBar.classList.add('hidden');
+                // Close mobile search and menu
+                const mobileSearchBar = document.getElementById('mobileSearchBar');
+                const mobileMenu = document.getElementById('mobileMenu');
+                if (mobileSearchBar) mobileSearchBar.classList.add('hidden');
+                if (mobileMenu) mobileMenu.classList.add('hidden');
             }
         });
     </script>

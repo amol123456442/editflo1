@@ -21,11 +21,11 @@
                         Sign in with Google
                     </button>
 
-                    <button type="button"
+                    <!-- <button type="button"
                         class="text-white bg-[#0f1419] hover:bg-[#0f1419]/90 focus:ring-4 focus:outline-none focus:ring-[#0f1419]/50 box-border border border-transparent font-medium leading-5 rounded-base text-sm px-4 py-2.5 text-center inline-flex items-center dark:hover:bg-[#24292F] dark:focus:ring-[#24292F]/55">
                         <i class="fa-brands fa-github mr-2"></i>
                         Sign in with Github
-                    </button>
+                    </button> -->
 
 
                 </div>
@@ -177,31 +177,29 @@
                     <p class="text-gray-700 text-sm sm:text-base mb-4">For information on:</p>
 
                     <ul class="list-disc list-inside text-gray-700 text-sm sm:text-base space-y-2 mb-6">
-                        <li>Customizing Editflo, see: <a href="#"
+                        <li>Customizing Editflo, see: <a href="<?php echo base_url('documentation/basic-setup'); ?>"
                                 class="text-blue-600 hover:text-blue-800 underline">Basic
                                 Setup</a>.</li>
                         <li>The three editor modes, see:
                             <ul class="list-circle list-inside ml-6 mt-2 space-y-1">
-                                <li><a href="#" class="text-blue-600 hover:text-blue-800 underline">Editflo classic
-                                        editing
-                                        mode</a>.</li>
-                                <li><a href="#" class="text-blue-600 hover:text-blue-800 underline">Editflo inline
-                                        editing
-                                        mode</a>.</li>
-                                <li><a href="#" class="text-blue-600 hover:text-blue-800 underline">Editflo
-                                        distraction-free
-                                        editing mode</a>.</li>
+                                <li>Editflo classic
+                                    editing
+                                    mode.</li>
+                                <li>Editflo inline
+                                    editing
+                                    mode.</li>
+                                <li>Editflo
+                                    distraction-free
+                                    editing mode.</li>
                             </ul>
                         </li>
-                        <li>Adding Editflo plugins, see: <a href="#"
-                                class="text-blue-600 hover:text-blue-800 underline">Work
-                                with plugins to extend Editflo</a>.</li>
-                        <li>Localizing the Editflo editor, see: <a href="#"
-                                class="text-blue-600 hover:text-blue-800 underline">Localize Editflo</a>.</li>
+                        <li>Adding Editflo plugins, see: Work
+                            with plugins to extend Editflo.</li>
+                        <li>Localizing the Editflo editor, see:Localize Editflo.</li>
                         <li>For information on the CSS required to render some Editflo elements outside of the
-                            editor, see: <a href="#" class="text-blue-600 hover:text-blue-800 underline">CSS for
-                                rendering Editflo content
-                                outside the editor</a>.</li>
+                            editor, see: CSS for
+                            rendering Editflo content
+                            outside the editor.</li>
                     </ul>
                     <!-- Code Block for API Key Update -->
                     <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm overflow-x-auto">

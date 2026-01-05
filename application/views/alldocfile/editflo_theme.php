@@ -10,7 +10,7 @@
                 <br><br>
                 See AddOnManager for more information about the methods available on the ThemeManager instance.
                 <br><br>
-                Warning: Much of Editflo’s functionality is provided by the default Silver theme. Creating a custom theme may require the re-implementation of this functionality. To change Editflo’s appearance, Tiny recommends changing the Skin instead.
+                Warning: Much of Editflo’s functionality is provided by the default Silver theme. Creating a custom theme may require the re-implementation of this functionality. To change Editflo’s appearance, Editflo recommends changing the Skin instead.
             </p>
         </div>
 

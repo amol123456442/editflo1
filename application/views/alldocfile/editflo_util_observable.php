@@ -92,7 +92,7 @@
                         <td class="px-3 py-2 md:px-4 md:py-3 align-top w-[50%] md:w-auto">
                             <p class="text-xs md:text-sm text-gray-900">
                                 Fires the specified event by name. Consult the event reference for more details on each event. <br>
-                                Deprecated in TinyMCE 6.0 and has been marked for removal in TinyMCE 9.0. Use <code class="text-md text-gray-600 border border-gray-300 bg-gray-100 p-1">dispatch</code>instead.
+                                Deprecated in editflo 6.0 and has been marked for removal in editflo 9.0. Use <code class="text-md text-gray-600 border border-gray-300 bg-gray-100 p-1">dispatch</code>instead.
                             </p>
                         </td>
                         <td class="px-3 py-2 md:px-4 md:py-3 align-top w-[20%] md:w-auto">
@@ -292,7 +292,7 @@
 
             <p class="text-gray-700 text-lg sm:text-base mb-4 mt-5 w-full">
                 Fires the specified event by name. Consult the event reference for more details on each event. <br>
-                Deprecated in TinyMCE 6.0 and has been marked for removal in Editflo 9.0. Use <code class="text-md text-gray-600 border border-gray-300 bg-gray-100 p-1">dispatch</code> instead.
+                Deprecated in editflo 6.0 and has been marked for removal in Editflo 9.0. Use <code class="text-md text-gray-600 border border-gray-300 bg-gray-100 p-1">dispatch</code> instead.
             <p>
         </div>
         <h2 class="text-2xl sm:text-xl md:text-2xl font-bold text-gray-800 mb-3 sm:mb-4 pb-2 border-gray-200 break-words">Examples</h2>

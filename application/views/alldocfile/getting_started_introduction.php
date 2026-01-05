@@ -54,10 +54,6 @@
                     Sign in with Google
                 </button>
 
-                <button type="button" class="text-white bg-[#0f1419] hover:bg-[#0f1419]/90 focus:ring-4 focus:outline-none focus:ring-[#0f1419]/50 box-border border border-transparent font-medium leading-5 rounded-base text-sm px-4 py-2.5 text-center inline-flex items-center dark:hover:bg-[#24292F] dark:focus:ring-[#24292F]/55">
-                    <i class="fa-brands fa-github mr-2"></i>
-                    Sign in with Github
-                </button>
 
 
             </div>

@@ -12,7 +12,7 @@
                 <div class="bg-gray-900 text-gray-100 rounded-lg w-full">
                     <div class="p-3 sm:p-4 overflow-x-auto">
                         <div class="text-lg sm:text-sm inline-block min-w-full sm:min-w-0">
-                            <span class="text-blue-400">if (tinymce.activeEditor.schema.</span>
+                            <span class="text-blue-400">if (editflo.activeEditor.schema.</span>
                             <span class="text-green-300">isValidChild</span>
                             <span class="text-blue-400">(</span>
                             <span class="text-green-300">'p', 'span'</span>
@@ -25,7 +25,7 @@
                                 <br>
                                 <span class="text-green-300">}</span>
                                 <br>
-                                <span class="text-blue-400">if (tinymce.activeEditor.schema.</span>
+                                <span class="text-blue-400">if (editflo.activeEditor.schema.</span>
                                 <span class="text-green-300">getElementRule</span>
                                 <span class="text-blue-400">(</span>
                                 <span class="text-green-300">'p'</span>

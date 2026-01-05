@@ -4,7 +4,7 @@
     <div class="max-w-full">
         <div class="mb-8">
             <h1 class="page text-3xl font-bold text-gray-800 mb-2">editflo.editor.ui.Registry</h1>
-            <p class="text-gray-700 text-sm sm:text-base">TinyMCE UI registration API.
+            <p class="text-gray-700 text-sm sm:text-base">Editflo UI registration API.
             </p>
         </div>
 
@@ -144,7 +144,7 @@
                                         <td class="px-6 py-4">
                                             <span class="text-gray-700 text-sm sm:text-base">
 
-                                                Registers a new SVG icon. The icon name reference can be configured by any TinyMCE UI components that can display an icon. The icon is only available to the editor instance it was configured for.
+                                                Registers a new SVG icon. The icon name reference can be configured by any Editflo UI components that can display an icon. The icon is only available to the editor instance it was configured for.
                                             </span>
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
@@ -204,7 +204,7 @@
                                         </td>
                                         <td class="px-6 py-4">
                                             <span class="text-gray-700 text-sm sm:text-base">
-                                                Registers a new sidebar container. This sidebar container is attached to the right side of the editor and can be toggled open or closed. When registered, a new toolbar toggle button with the same sidebar name is created. Additionally there is a ToggleSidebar command and a 'ToggleSidebar' event that can used to manage the sidebar open/closed state. The tinycomments plugin uses a sidebar for its Ui components.
+                                                Registers a new sidebar container. This sidebar container is attached to the right side of the editor and can be toggled open or closed. When registered, a new toolbar toggle button with the same sidebar name is created. Additionally there is a ToggleSidebar command and a 'ToggleSidebar' event that can used to manage the sidebar open/closed state. The editflocomments plugin uses a sidebar for its Ui components.
                                                 <br><br>
                                                 For information on creating a custom sidebar, see: <a href="" class="text-blue-600 hover: underline">UI Components - Custom sidebar.</a>
                                             </span>
@@ -646,7 +646,7 @@
                     </div>
 
                     <div class="paragraph mb-4">
-                        <p class="text-gray-700 text-sm sm:text-base">Registers a new SVG icon. The icon name reference can be configured by any TinyMCE UI components that can display an icon. The icon is only available to the editor instance it was configured for.</p>
+                        <p class="text-gray-700 text-sm sm:text-base">Registers a new SVG icon. The icon name reference can be configured by any Editflo UI components that can display an icon. The icon is only available to the editor instance it was configured for.</p>
                     </div>
                     <h4 class="text-lg font-semibold text-gray-800 mb-2">Parameters</h4>
                     <ul class="list-disc pl-5 text-gray-700 text-sm sm:text-base">
@@ -833,7 +833,7 @@
 
                     <div class="paragraph mb-4">
                         <p class="text-gray-700 text-sm sm:text-base">
-                            Registers a new sidebar container. This sidebar container is attached to the right side of the editor and can be toggled open or closed. When registered, a new toolbar toggle button with the same sidebar name is created. Additionally there is a ToggleSidebar command and a 'ToggleSidebar' event that can used to manage the sidebar open/closed state. The tinycomments plugin uses a sidebar for its Ui components.
+                            Registers a new sidebar container. This sidebar container is attached to the right side of the editor and can be toggled open or closed. When registered, a new toolbar toggle button with the same sidebar name is created. Additionally there is a ToggleSidebar command and a 'ToggleSidebar' event that can used to manage the sidebar open/closed state. editflocomments plugin uses a sidebar for its Ui components.
                             <br><br>
                             For information on creating a custom sidebar, see: <a href="" class="text-blue-600 hover: underline">UI Components - Custom sidebar.</a>
                         </p>

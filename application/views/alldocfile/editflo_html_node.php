@@ -12,7 +12,7 @@
                 <div class="bg-gray-900 text-gray-100 rounded-lg w-full">
                     <div class="p-3 sm:p-4 overflow-x-auto">
                         <div class="text-lg sm:text-sm inline-block min-w-full sm:min-w-0">
-                            <span class="text-blue-400">const node = new tinymce.html.</span>
+                            <span class="text-blue-400">const node = new editflo.html.</span>
                             <span class="text-green-300">Node</span>
                             <span class="text-blue-400">(</span>
                             <span class="text-green-300">'strong'</span>
@@ -428,7 +428,7 @@
                 <div class="p-3 sm:p-4 overflow-x-auto">
                     <div class="text-lg sm:text-sm font-mono inline-block min-w-full sm:min-w-0">
                         <span class="text-blue-400">append</span>
-                        <span class="text-green-300">(node: tinymce.html.Node): tinymce.html.Node</span>
+                        <span class="text-green-300">(node: editflo.html.Node): editflo.html.Node</span>
                     </div>
                 </div>
             </div>
@@ -490,7 +490,7 @@
                         <span class="text-blue-400">String</span>
                         <span class="text-green-300">):</span>
                         <span class="text-blue-400">String</span>
-                        <span class="text-green-300">| tinymce.html.Node</span>
+                        <span class="text-green-300">| editflo.html.Node</span>
                     </div>
                 </div>
             </div>
@@ -604,7 +604,7 @@
                 <div class="p-3 sm:p-4 overflow-x-auto">
                     <div class="text-lg sm:text-sm font-mono inline-block min-w-full sm:min-w-0">
                         <span class="text-blue-400">clone</span>
-                        <span class="text-green-300">(): tinymce.html.Node </span>
+                        <span class="text-green-300">(): editflo.html.Node </span>
                     </div>
                 </div>
             </div>
@@ -690,7 +690,7 @@
                 <div class="p-3 sm:p-4 overflow-x-auto">
                     <div class="text-xl sm:text-sm inline-block min-w-full sm:min-w-0">
                         <span class="text-blue-400">empty</span>
-                        <span class="text-green-300">(): tinymce.html.Node</span>
+                        <span class="text-green-300">(): editflo.html.Node</span>
                     </div>
                 </div>
             </div>
@@ -769,9 +769,9 @@
             <div class="p-3 sm:p-4 overflow-x-auto">
                 <div class="text-lg sm:text-sm inline-block min-w-full sm:min-w-0">
                     <span class="text-blue-400">insert</span>
-                    <span class="text-green-300">(node: tinymce.html.Node, refNode: tinymce.html.Node, before:</span>
+                    <span class="text-green-300">(node: editflo.html.Node, refNode: editflo.html.Node, before:</span>
                     <span class="text-blue-400">Boolean</span>
-                    <span class="text-blue-400">): tinymce.html.Node</span>
+                    <span class="text-blue-400">): editflo.html.Node</span>
                 </div>
             </div>
         </div>
@@ -908,7 +908,7 @@
             <div class="p-3 sm:p-4 overflow-x-auto">
                 <div class="text-lg sm:text-sm font-mono inline-block min-w-full sm:min-w-0">
                     <span class="text-blue-400">remove</span>
-                    <span class="text-green-300">(): tinymce.html.Node</span>
+                    <span class="text-green-300">(): editflo.html.Node</span>
                 </div>
             </div>
         </div>
@@ -952,7 +952,7 @@
             <div class="p-3 sm:p-4 overflow-x-auto">
                 <div class="text-lg sm:text-sm inline-block min-w-full sm:min-w-0">
                     <span class="text-blue-400">replace</span>
-                    <span class="text-green-300">(node: tinymce.html.Node): tinymce.html.Node</span>
+                    <span class="text-green-300">(node: editflo.html.Node): editflo.html.Node</span>
                 </div>
             </div>
         </div>
@@ -1042,7 +1042,7 @@
                     <span class="text-blue-400">walk</span>
                     <span class="text-green-300">(prev:</span>
                     <span class="text-blue-400">Boolean</span>
-                    <span class="text-green-300">): tinymce.html.Node</span>
+                    <span class="text-green-300">): editflo.html.Node</span>
                 </div>
             </div>
         </div>

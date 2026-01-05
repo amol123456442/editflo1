@@ -395,7 +395,7 @@
                 <div class="p-3 sm:p-4 overflow-x-auto">
                     <div class="text-lg sm:text-sm inline-block min-w-full sm:min-w-0">
                         <span class="text-blue-400">isSameOrigin</span>
-                        <span class="text-green-300">(uri: tinymce.util.URI): </span>
+                        <span class="text-green-300">(uri: editflo.util.URI): </span>
                         <span class="text-blue-400">Boolean </span>
                     </div>
                 </div>

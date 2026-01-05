@@ -172,7 +172,7 @@
                 <div class="p-3 sm:p-4 overflow-x-auto">
                     <div class="text-lg sm:text-sm inline-block min-w-full sm:min-w-0">
                         <span class="text-blue-400">setEditorTimeout</span>
-                        <span class="text-green-300">(editor: tinymce.Editor, callback:</span>
+                        <span class="text-green-300">(editor: editflo.Editor, callback:</span>
                         <span class="text-blue-400">Function </span>
                         <span class="text-green-300">, time: </span>
                         <span class="text-blue-400">Number </span>

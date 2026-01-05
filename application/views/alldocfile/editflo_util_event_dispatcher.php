@@ -84,7 +84,7 @@
                         <td class="px-3 py-2 md:px-4 md:py-3 align-top w-[50%] md:w-auto">
                             <p class="text-xs md:text-sm text-gray-900">
                                 Fires the specified event by name. <br>
-                                Marked for removal in TinyMCE 8.0. Use <code class="text-md text-gray-600 border border-gray-300 bg-gray-100 p-1">dispatch</code> instead.
+                                Marked for removal in editflo 8.0. Use <code class="text-md text-gray-600 border border-gray-300 bg-gray-100 p-1">dispatch</code> instead.
                             </p>
                         </td>
                         <td class="px-3 py-2 md:px-4 md:py-3 align-top w-[20%] md:w-auto">
@@ -300,7 +300,7 @@
 
             <p class="text-gray-700 text-lg sm:text-base mb-4 mt-5 w-full">
                 Fires the specified event by name. <br>
-                Marked for removal in TinyMCE 8.0. Use <code class="text-md text-gray-600 border border-gray-300 bg-gray-100 p-1">dispatch</code>instead.
+                Marked for removal in editflo 8.0. Use <code class="text-md text-gray-600 border border-gray-300 bg-gray-100 p-1">dispatch</code>instead.
             </p>
         </div>
 
